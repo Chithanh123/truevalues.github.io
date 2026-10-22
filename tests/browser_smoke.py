@@ -13,6 +13,21 @@ from playwright.sync_api import expect, sync_playwright
 BASE = os.environ.get("POLITICAL_CONTEXT_TEST_URL", "http://127.0.0.1:8000").rstrip("/")
 KEY = "political-context-session"
 errors, external_requests, failed_requests = [], [], []
+COUNTRY_NAMES = re.compile(
+    r"\b(?:United States|United Kingdom|Germany|Japan|Fiji|Viet ?Nam|Vietnam|India|Central African Republic)\b",
+    re.IGNORECASE,
+)
+
+
+def no_country_correspondence(page, state):
+    """Explicit real-world labels stay outside the visible participant experience."""
+    text = page.locator("body").inner_text()
+    assert not COUNTRY_NAMES.search(text), (state, COUNTRY_NAMES.findall(text))
+    accessible_labels = page.locator('[aria-label], [title]').evaluate_all(
+        "elements => elements.map(element => [element.getAttribute('aria-label'), element.getAttribute('title')].filter(Boolean).join(' ')).join(' ')"
+    )
+    assert not COUNTRY_NAMES.search(accessible_labels), (state, accessible_labels)
+
 
 
 def observe(page):
@@ -37,7 +52,7 @@ def saved(page, store="sessionStorage"):
 def action(page, name):
     if name == "close-dialog":
         page.get_by_role("button", name="Close dialog", exact=True).click()
-    elif name in {"worlds", "review"}:
+    elif name in {"worlds", "review", "method"}:
         page.locator(f'[data-action="{name}"]:visible').first.click()
     elif name == "packet":
         page.locator('#info-dialog [data-action="packet"]').click()
@@ -77,9 +92,24 @@ def validate_export(payload, instrument):
     assert session["version"] == instrument["version"]
     assert session["worldId"] in {world["id"] for world in instrument["worlds"]}
     expected_ids = {f"statement:{item['id']}" for item in instrument["statements"]}
+    expected_ids |= {f"foundation:{item['id']}" for item in instrument["foundations"]["items"]}
     expected_ids |= {f"scenario:{item['id']}" for item in instrument["scenarios"]}
     assert set(session["answers"]) == expected_ids
-    assert len(expected_ids) == len(instrument["statements"]) + len(instrument["scenarios"])
+    assert len(expected_ids) == 49
+    foundation_rows = payload["summary"]["foundations"]
+    assert [row["itemId"] for row in foundation_rows] == [
+        item["id"] for item in instrument["foundations"]["items"]
+    ]
+    for row in foundation_rows:
+        answer = session["answers"][f"foundation:{row['itemId']}"]
+        assert row == {
+            "itemId": row["itemId"], "kind": answer["kind"],
+            "value": answer["value"] if answer["kind"] == "value" else None,
+        }
+    assigned = next(world for world in instrument["worlds"] if world["id"] == session["worldId"])
+    assert payload["assignmentReveal"] == {
+        "worldId": assigned["id"], "name": assigned["name"], "inspiration": assigned["inspiration"],
+    }
     for scene in instrument["scenarios"]:
         assert payload["presentedOptionOrder"][scene["id"]] == [
             option["id"] for option in scene["options"]
@@ -118,6 +148,9 @@ def validate_export(payload, instrument):
             and item.get("scoring") != "descriptive"
             for item in instrument["scenarios"]
         )
+        assert result["statements"]["total"] == sum(
+            item["dimension"] == result["id"] for item in instrument["statements"]
+        )
         assert result["scenarios"]["total"] == expected_main_total
         if result["id"] == "civil":
             assert result["scenarios"]["total"] == 1
@@ -139,11 +172,27 @@ def review_packet(page, instrument, current_session=None):
     expect(page.locator("#info-dialog")).to_be_visible()
     for world in instrument["worlds"]:
         expect(page.locator("#dialog-content")).to_contain_text(world["name"])
+    if current_session and current_session["completed"]:
+        for world in instrument["worlds"]:
+            expect(page.locator("#dialog-content")).to_contain_text(world["inspiration"])
+    else:
+        page.locator('#dialog-content details').evaluate_all(
+            "elements => elements.forEach(element => { element.open = true; })"
+        )
+        no_country_correspondence(page, "pre-debrief world directory")
     mobile_fit(page, "world directory dialog")
     action(page, "close-dialog")
     action(page, "review")
     expect(page.locator("#info-dialog")).to_be_visible()
     mobile_fit(page, "review dialog")
+    if not current_session or not current_session["completed"]:
+        expect(page.locator('#info-dialog [data-action="packet"]')).to_have_count(0)
+        expect(page.locator('#info-dialog a[href="review.html"]')).to_have_count(0)
+        no_country_correspondence(page, "pre-debrief review explanation")
+        action(page, "close-dialog")
+        assert saved(page) == before_session
+        assert saved(page, "localStorage") == before_device
+        return
     with page.expect_download() as download_info:
         action(page, "packet")
     payload = json.loads(Path(download_info.value.path()).read_text())
@@ -171,6 +220,7 @@ def bilingual_review_workspace(page, instrument, current_session=None):
     translations = page.evaluate("""async () => ({
         items: (await import('./js/translations/vi-items.js')).viItems,
         worlds: (await import('./js/translations/vi-worlds.js')).viWorlds,
+        foundations: (await import('./js/translations/vi-foundations.js')).viFoundations,
     })""")
     page.locator("#review-kind").select_option("statements")
     page.locator("#review-language").select_option("parallel")
@@ -197,6 +247,22 @@ def bilingual_review_workspace(page, instrument, current_session=None):
     expect(page.locator('#review-cards [lang="vi"]:visible')).to_have_count(0)
     assert page.locator('#review-cards [lang="en"]:visible').count() > 0
     page.locator("#review-language").select_option("parallel")
+    page.locator("#review-kind").select_option("foundations")
+    expect(cards).to_have_count(len(instrument["foundations"]["items"]))
+    foundation = instrument["foundations"]["items"][0]
+    expect(cards.first.locator('[lang="en"]').first).to_contain_text(foundation["text"])
+    expect(cards.first.locator('[lang="vi"]').first).to_contain_text(
+        translations["foundations"]["items"][foundation["id"]]["text"]
+    )
+    mobile_fit(page, "bilingual foundation review")
+    page.locator("#review-kind").select_option("lenses")
+    expect(cards).to_have_count(len(instrument["foundations"]["lenses"]) + 1)
+    for lens in instrument["foundations"]["lenses"]:
+        expect(page.locator("#review-cards")).to_contain_text(lens["label"])
+        expect(page.locator("#review-cards")).to_contain_text(
+            translations["foundations"]["lenses"][lens["id"]]["label"]
+        )
+    mobile_fit(page, "bilingual lens framework review")
     page.locator("#review-kind").select_option("scenarios")
     expect(cards).to_have_count(len(instrument["scenarios"]))
     for world in instrument["worlds"]:
@@ -216,7 +282,7 @@ def bilingual_review_workspace(page, instrument, current_session=None):
         page.locator("#review-export").click()
     payload = json.loads(Path(export.value.path()).read_text())
     assert payload["format"] == "political-context-bilingual-review"
-    assert payload["packetVersion"] == 1
+    assert payload["packetVersion"] == 2
     assert payload["instrumentId"] == instrument["id"]
     assert payload["version"] == instrument["version"]
     assert payload["reviewStatus"] == "draft"
@@ -233,7 +299,7 @@ def bilingual_review_workspace(page, instrument, current_session=None):
     if current_session:
         action(page, "resume")
         expect(page).to_have_title("Your debrief — Political Context")
-    print("PASS: bilingual author-review filters, all world notes, language views, and response-free export.")
+    print("PASS: bilingual statements, foundations, lens framework, all world notes, language views, and response-free export.")
 
 
 def seed_world_at_briefing(page, world_id):
@@ -241,7 +307,7 @@ def seed_world_at_briefing(page, world_id):
     result = page.evaluate(
         """async ([key, worldId]) => {
             const {instrument} = await import('./js/content.js');
-            const {createSession,setAnswer,validateSession} = await import('./js/engine.js');
+            const {createSession,setAnswer,validateSession,makeSteps} = await import('./js/engine.js');
             let session;
             for (let index=0; index<10000; index++) {
                 const candidate = createSession(instrument, `browser-world-${index}`);
@@ -251,7 +317,10 @@ def seed_world_at_briefing(page, world_id):
             for (const item of instrument.statements) {
                 session=setAnswer(session, `statement:${item.id}`, {kind:'value', value:0});
             }
-            session.stepIndex=instrument.statements.length;
+            for (const item of instrument.foundations.items) {
+                session=setAnswer(session, `foundation:${item.id}`, {kind:'value', value:0});
+            }
+            session.stepIndex=makeSteps(instrument).findIndex(step => step.type==='briefing');
             if (!validateSession(instrument,session).valid) throw new Error('Invalid seeded route');
             sessionStorage.setItem(key,JSON.stringify(session));
             return session;
@@ -271,6 +340,12 @@ with sync_playwright() as playwright:
     page.goto(BASE + "/", wait_until="networkidle")
     expect(page.locator("#hero-title")).to_contain_text("Your values.")
     mobile_fit(page, "home")
+    no_country_correspondence(page, "home")
+    action(page, "method")
+    no_country_correspondence(page, "pre-debrief method")
+    expect(page.locator('#info-dialog a[href="docs/RESEARCH.md"]')).to_have_count(0)
+    expect(page.locator('#info-dialog a[href="js/content.js"]')).to_have_count(0)
+    action(page, "close-dialog")
     instrument = page.evaluate("async () => (await import('./js/content.js')).instrument")
     review_packet(page, instrument)
     bilingual_review_workspace(page, instrument)
@@ -307,12 +382,37 @@ with sync_playwright() as playwright:
         else:
             choose(page, "value", [-1, 0, 1][number % 3])
         action(page, "next")
+    for number, item in enumerate(instrument["foundations"]["items"]):
+        expect(page.locator("#step-title")).to_have_text(item["text"])
+        no_country_correspondence(page, f"foundation {number + 1}")
+        if number == 0:
+            mobile_fit(page, "foundation")
+            expect(page.locator('[data-action="next"]')).to_be_disabled()
+            choose(page, "value", 2)
+            action(page, "next")
+            action(page, "back")
+            expect(page.locator('input[data-response="value"][value="2"]')).to_be_checked()
+            before_foundation_reload = saved(page)
+            page.reload(wait_until="networkidle")
+            action(page, "resume")
+            assert saved(page) == before_foundation_reload
+            expect(page.locator('input[data-response="value"][value="2"]')).to_be_checked()
+        elif number == 1:
+            choose(page, "uncertain")
+        elif number == 2:
+            action(page, "skip")
+            continue
+        else:
+            choose(page, "value", [-2, -1, 0, 1, 2][number % 5])
+        action(page, "next")
     expect(page.locator(".world-brief")).to_be_visible()
+    no_country_correspondence(page, "world briefing")
     mobile_fit(page, "world briefing")
     action(page, "next")
     for number, scene in enumerate(instrument["scenarios"]):
         expect(page.locator("#step-title")).to_have_text(scene["title"])
         mobile_fit(page, f"scenario {number + 1}")
+        no_country_correspondence(page, f"scenario {number + 1}")
         if number == 1:
             choose(page, "none")
             expect(page.locator("#reason")).to_be_disabled()
@@ -350,8 +450,13 @@ with sync_playwright() as playwright:
             assert saved(page)["answers"][f"scenario:{scene['id']}"].get("preference") is None
         action(page, "next")
     expect(page).to_have_title("Your debrief — Political Context")
+    assigned_world = next(world for world in instrument["worlds"] if world["id"] == saved(page)["worldId"])
+    expect(page.locator("#country-reveal")).to_contain_text(assigned_world["inspiration"])
+    expect(page.locator(".foundation-debrief")).to_be_visible()
+    for item in instrument["foundations"]["items"]:
+        expect(page.locator(".foundation-debrief")).to_contain_text(item["text"])
     expect(page.locator(".dimension-row")).to_have_count(len(instrument["dimensions"]))
-    expect(page.locator(".comparison-card")).to_contain_text("You chose a different action")
+    expect(page.locator(".comparison-card:not(#country-reveal)")).to_contain_text("You chose a different action")
     mobile_fit(page, "debrief")
     assert saved(page, "localStorage") is None
     with page.expect_download() as download_info:
@@ -360,6 +465,36 @@ with sync_playwright() as playwright:
     payload = json.loads(Path(download.path()).read_text())
     validate_export(payload, instrument)
     assert payload["summary"]["comparisons"][0]["changed"] is True
+    assert payload["summary"]["foundations"][0]["value"] == 2
+    assert payload["summary"]["foundations"][1] == {
+        "itemId": instrument["foundations"]["items"][1]["id"], "kind": "uncertain", "value": None,
+    }
+    assert payload["summary"]["foundations"][2] == {
+        "itemId": instrument["foundations"]["items"][2]["id"], "kind": "skip", "value": None,
+    }
+    foundation_steps = page.evaluate("async () => (await import('./js/engine.js')).makeSteps((await import('./js/content.js')).instrument).filter(step => step.type==='foundation')")
+    assert len(foundation_steps) == 16
+    altered = page.evaluate("""async session => {
+        const {instrument}=await import('./js/content.js');
+        const {summarize}=await import('./js/engine.js');
+        for (const item of instrument.foundations.items) {
+            session.answers[`foundation:${item.id}`]={kind:'value',value:-2};
+        }
+        return summarize(instrument,session);
+    }""", payload["session"])
+    assert altered["dimensions"] == payload["summary"]["dimensions"]
+    assert altered["comparisons"] == payload["summary"]["comparisons"]
+    assert altered["preferences"] == payload["summary"]["preferences"]
+    missing_foundation = page.evaluate("""async session => {
+        const {instrument}=await import('./js/content.js');
+        const {summarize,validateSession}=await import('./js/engine.js');
+        delete session.answers[`foundation:${instrument.foundations.items[0].id}`];
+        return {summary:summarize(instrument,session),validation:validateSession(instrument,session)};
+    }""", payload["session"])
+    assert missing_foundation["summary"]["foundations"][0] == {
+        "itemId": instrument["foundations"]["items"][0]["id"], "kind": "unanswered", "value": None,
+    }
+    assert missing_foundation["validation"]["valid"] is False
     assert payload["session"]["answers"]["scenario:public-assembly"]["kind"] == "none"
     assert payload["session"]["answers"]["scenario:water-partnership"]["kind"] == "uncertain"
     assert payload["session"]["answers"]["scenario:water-partnership"]["preference"] == {"kind": "none"}
@@ -382,6 +517,14 @@ with sync_playwright() as playwright:
         option["label"] for option in records["options"]
         if option["id"] == records_answer["optionId"]
     ))
+    action(page, "back")
+    expect(page.locator("#step-title")).to_have_text(instrument["scenarios"][-1]["title"])
+    no_country_correspondence(page, "back from debrief")
+    action(page, "review")
+    expect(page.locator('#info-dialog [data-action="packet"]')).to_have_count(0)
+    action(page, "close-dialog")
+    action(page, "next")
+    expect(page.locator("#country-reveal")).to_contain_text(assigned_world["inspiration"])
     page.reload(wait_until="networkidle")
     action(page, "resume")
     expect(page).to_have_title("Your debrief — Political Context")
@@ -389,7 +532,7 @@ with sync_playwright() as playwright:
     review_packet(page, instrument, current_session=before_packet)
     bilingual_review_workspace(page, instrument, current_session=before_packet)
     assert saved(page) == before_packet
-    print("PASS: complete assessment, keyboard controls, Back replacement, uncertainty/skip/none, reasons, unscored personal preference, export, reload.")
+    print("PASS: complete 49-response assessment, foundation back/reload/uncertainty/skip, unscored premises, country reveal, keyboard controls, preferences, export.")
 
     action(page, "privacy")
     mobile_fit(page, "data dialog")
@@ -453,6 +596,10 @@ with sync_playwright() as playwright:
         expect(world_page.locator(".world-brief")).to_contain_text(world["name"])
         expect(world_page.locator(".institution-grid > div")).to_have_count(len(world["institutions"]))
         mobile_fit(world_page, f"{world['id']} briefing")
+        no_country_correspondence(world_page, f"{world['id']} briefing")
+        action(world_page, "method")
+        no_country_correspondence(world_page, f"{world['id']} method")
+        action(world_page, "close-dialog")
         action(world_page, "next")
         seen_roles = set()
         for number, scene in enumerate(instrument["scenarios"]):
@@ -466,6 +613,7 @@ with sync_playwright() as playwright:
             details.locator("summary").click()
             expect(details.locator("p")).to_be_visible()
             expect(details.locator("p")).to_have_text(note)
+            no_country_correspondence(world_page, f"{world['id']} {scene['id']} expanded institutions")
             if scene["role"] in {"civil_society", "public_servant", "national_leader"}:
                 mobile_fit(world_page, f"{world['id']} {scene['role']}")
             option = scene["options"][-1 if scene.get("comparisonOf") else number % len(scene["options"])]
@@ -475,10 +623,11 @@ with sync_playwright() as playwright:
         assert seen_roles == {role["id"] for role in instrument["roles"]}
         expect(world_page).to_have_title("Your debrief — Political Context")
         expect(world_page.locator(".result-meta")).to_contain_text(world["name"])
+        expect(world_page.locator("#country-reveal")).to_contain_text(world["inspiration"])
         completed = saved(world_page)
         assert completed["completed"] is True
         assert completed["worldId"] == world["id"]
-        assert len(completed["answers"]) == len(instrument["statements"]) + len(instrument["scenarios"])
+        assert len(completed["answers"]) == 49
         world_context.close()
     print(f"PASS: all {len(instrument['worlds'])} worlds complete their routes, all roles, and institutional notes.")
     browser.close()

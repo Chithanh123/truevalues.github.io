@@ -1,5 +1,5 @@
 /**
- * Authored fictional setting briefs for instrument 0.2.0.
+ * Authored fictional setting briefs for instrument 0.4.0.
  * These working drafts are not country simulations or descriptions of populations.
  * Scenario permissions are stipulated for the fictional task, not claims about
  * present-day law in the country that inspired a setting. External review is pending.
@@ -108,7 +108,7 @@ export const worlds = [
         'service-contract': 'You administer a rural service under an express delegation that permits all listed delivery arrangements. Regional performance standards remain fixed. The exercise does not ask you to infer that public employees must prefer a particular provider.',
         'community-history': 'Your independent urban association is responsible to its members for the exhibition theme. A venue agreement protects its editorial discretion. Members differ in how they interpret local history, migration, and generational change.',
         'public-records': 'Your office has an explicit authorization for discretionary access above the common legal minimum. Required disclosure and independent review remain fixed. Administrative convenience alone cannot remove the rights stipulated in the scenario.',
-        'regional-cooperation': 'For this invented case, Hoshima shares one island with a neighboring state, and a river catchment crosses their border. This task-specific geography does not describe Japan. As cabinet leader, you recommend a flood-investment allocation to parliament within a previously approved international cooperation framework. Regional rural authorities have accepted the listed delivery terms. Technical preparedness does not determine which allocation you must prefer.',
+        'regional-cooperation': 'For this invented case, Hoshima shares one island with a neighboring state, and a river catchment crosses their border. This geography is stipulated only for the fictional exercise. As cabinet leader, you recommend a flood-investment allocation to parliament within a previously approved international cooperation framework. Regional rural authorities have accepted the listed delivery terms. Technical preparedness does not determine which allocation you must prefer.',
       },
     ),
   },
@@ -133,7 +133,7 @@ export const worlds = [
         'service-contract': 'You manage a rural service under a delegation allowing the stated public and contracted arrangements. Transport and access requirements have already been assessed for each. Every option preserves the same service eligibility and appeal rights.',
         'community-history': 'Your independent urban association includes members with different family histories and community ties. It has permission to choose among all exhibition themes under its member mandate. No customary or state institution selects the answer for you.',
         'public-records': 'An express administrative authorization allows the listed levels of additional access above a shared disclosure floor. The case includes a review route under every option, and required records cannot be withheld because travel to the office is difficult.',
-        'regional-cooperation': 'For this invented case, Namoa shares one island with a neighboring state, and a river catchment crosses their border. This task-specific geography does not describe Fiji. As cabinet leader, you recommend an authorized flood-investment allocation for parliamentary approval. Island and rural delivery partners have accepted the scenario’s terms. Geography explains delivery conditions, but does not predetermine the domestic or international priority.',
+        'regional-cooperation': 'For this invented case, Namoa shares one island with a neighboring state, and a river catchment crosses their border. This geography is stipulated only for the fictional exercise. As cabinet leader, you recommend an authorized flood-investment allocation for parliamentary approval. Island and rural delivery partners have accepted the scenario’s terms. Geography explains delivery conditions, but does not predetermine the domestic or international priority.',
       },
     ),
   },
@@ -152,7 +152,7 @@ export const worlds = [
     scenarioNotes: notes(
       'A fictional provincial pilot expressly authorizes all three packages for this publicly owned depot, including the listed financing. The local council must approve the recommendation within provincial oversight. The pilot authorization is identical in both versions.',
       {
-        'public-assembly': 'This fictional local consultation expressly protects the described peaceful campaign and permits all listed regulatory packages, with the stipulated appeal route. Those task permissions are not a statement about assembly law in present-day Viet Nam.',
+        'public-assembly': 'This fictional local consultation expressly protects the described peaceful campaign and permits all listed regulatory packages, with the stipulated appeal route. These task permissions are stipulated for this exercise and do not describe real-world assembly law.',
         'water-partnership': 'Provincial and national agencies have already authorized the rural district’s grant to fund either domestic work or the named overseas partnership. All packages satisfy that authorization. You cannot infer permission for unrelated international spending.',
         'community-festival': 'The local council has authorized a resident consultation on this civic festival’s program. An appointed committee reviews submissions under the same published criteria. This task gives residents a proposal channel, not final control of the public budget.',
         'service-contract': 'You are a non-elected district officer with a written provincial delegation to select among the stated service arrangements. Eligibility, procurement safeguards, and review remain fixed. Following those duties is separate from endorsing a political system.',

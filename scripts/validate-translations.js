@@ -9,7 +9,7 @@ const own = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
 const numericTokens = value => (typeof value === 'string' ? value.match(/\d+(?:[.,]\d+)?/g) ?? [] : []).sort();
 const same = (left, right) => JSON.stringify(left) === JSON.stringify(right);
 
-export function validateTranslations(english, items, worlds) {
+export function validateTranslations(english, items, worlds, foundations) {
   const errors = [];
   const fail = message => errors.push(message);
   const keys = (value, expected, at) => {
@@ -94,6 +94,36 @@ export function validateTranslations(english, items, worlds) {
     }
   }
 
+  if (own(english, 'foundations')) {
+    const source = english.foundations;
+    if (!record(source) || !['aims', 'categories', 'lenses', 'items'].every(key => Array.isArray(source[key]))) {
+      fail('The English foundation framework must define aims, categories, lenses, and items.');
+    } else if (keys(foundations, ['version', 'reviewStatus', 'aims', 'categories', 'lenses', 'items'], 'viFoundations')) {
+      if (foundations.version !== english.version) fail('viFoundations.version must match the English instrument.');
+      if (foundations.reviewStatus !== 'draft') fail('viFoundations.reviewStatus must remain draft until a reviewed release is authorized.');
+      if (!Array.isArray(foundations.aims) || foundations.aims.length !== source.aims.length) {
+        fail('viFoundations.aims must preserve the source array length.');
+      } else {
+        source.aims.forEach((aim, index) => text(foundations.aims[index], aim, `viFoundations.aims[${index}]`));
+      }
+      for (const [category, names] of [
+        ['categories', ['label', 'description']],
+        ['lenses', ['label', 'description', 'cautions']],
+        ['items', ['text', 'rationale']],
+      ]) {
+        const at = `viFoundations.${category}`;
+        if (!keys(foundations[category], source[category].map(entry => entry.id), at)) continue;
+        for (const original of source[category]) {
+          const translated = foundations[category][original.id];
+          if (!keys(translated, names, `${at}.${original.id}`)) continue;
+          fields(translated, original, names, `${at}.${original.id}`);
+        }
+      }
+    }
+  } else if (foundations !== undefined) {
+    fail('A foundation translation was supplied without an English foundation framework.');
+  }
+
   for (const comparison of english.scenarios.filter(scene => scene.comparisonOf)) {
     const original = english.scenarios.find(scene => scene.id === comparison.comparisonOf);
     const first = items.scenarios?.[original?.id];
@@ -121,14 +151,14 @@ export function validateTranslations(english, items, worlds) {
 
 if (process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url) {
   try {
-    const [{ instrument }, { viItems }, { viWorlds }] = await Promise.all([
-      import('../js/content.js'), import('../js/translations/vi-items.js'), import('../js/translations/vi-worlds.js'),
+    const [{ instrument }, { viItems }, { viWorlds }, { viFoundations }] = await Promise.all([
+      import('../js/content.js'), import('../js/translations/vi-items.js'), import('../js/translations/vi-worlds.js'), import('../js/translations/vi-foundations.js'),
     ]);
-    const errors = validateTranslations(instrument, viItems, viWorlds);
+    const errors = validateTranslations(instrument, viItems, viWorlds, viFoundations);
     const report = {
       instrumentId: instrument.id, version: instrument.version,
       reviewStatus: 'draft', valid: errors.length === 0,
-      translated: { statements: Object.keys(viItems.statements ?? {}).length, scenarios: Object.keys(viItems.scenarios ?? {}).length, worlds: Object.keys(viWorlds.worlds ?? {}).length },
+      translated: { statements: Object.keys(viItems.statements ?? {}).length, foundationItems: Object.keys(viFoundations.items ?? {}).length, researchLenses: Object.keys(viFoundations.lenses ?? {}).length, scenarios: Object.keys(viItems.scenarios ?? {}).length, worlds: Object.keys(viWorlds.worlds ?? {}).length },
       errors,
       limitation: 'Structural, numeric-token, and paired-case checks do not establish linguistic or measurement equivalence. Independent bilingual review and cognitive interviews remain pending.',
     };

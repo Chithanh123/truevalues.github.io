@@ -1,14 +1,16 @@
 # Political Context: research specification draft
 
-Instrument: `political-context-pilot`, version `0.3.0`.
+Instrument: `political-context-pilot`, version `0.4.0`.
 
 This prototype is an instrument under development. Its items, world briefs, and scoring rubric have not undergone an external expert review, cognitive interviews, a completed literature review, or psychometric validation. Technical coverage checks establish that the authored content can run; they do not establish the validity of its measures. No research participants have been recruited and no study data are collected by the application.
 
 ## Current content and intended interpretation
 
-The instrument contains 24 candidate statements, six in each of four provisional domains; eight main scenarios, two authored for each content domain; and one repeated housing scenario in which the school-repair deadline changes. Seven main scenarios contribute provisional directional scores. The eighth, `public-records`, is descriptive-only and contributes no score or denominator to any domain. Every route includes the five requested roles: ordinary constituent, civil society leader, non-elected public servant/local official, local leader, and national leader. It includes urban and rural surroundings.
+The instrument contains 24 candidate value statements, six in each of four provisional domains; 16 additional descriptive foundation statements; eight main scenarios, two authored for each content domain; and one repeated housing scenario in which the school-repair deadline changes. The full route has 49 primary response items, plus optional reasons and personal preferences. A provisional 25–35 minute completion estimate requires observation in the comprehension pilot. Seven main scenarios contribute provisional directional scores. The eighth, `public-records`, is descriptive-only and contributes no score or denominator to any domain. Every route includes the five requested roles: ordinary constituent, civil society leader, non-elected public servant/local official, local leader, and national leader. It includes urban and rural surroundings.
 
-A route uses one randomly assigned fictional setting. The eight settings draw selected institutional features from the United States, United Kingdom, Germany, Japan, Fiji, Viet Nam, India, and the Central African Republic. The same anchor dilemmas appear across settings, with an authored note explaining the institutional context. These are fictional profile packages, not representative descriptions of real countries or their populations. The stated scenario powers and constraints govern the decision; recognizing the inspiration should not be necessary.
+This is an author-review document and contains country inspirations. Participants who wish to preserve the delayed reveal should finish their assessment before inspecting this document or the separate reviewer workspace.
+
+A route uses one randomly assigned fictional setting. The eight settings draw selected institutional features from the United States, United Kingdom, Germany, Japan, Fiji, Viet Nam, India, and the Central African Republic. The same anchor dilemmas appear across settings, with an authored note explaining the institutional context. These are fictional profile packages, not representative descriptions of real countries or their populations. The stated scenario powers and constraints govern the decision; recognizing the inspiration should not be necessary. Explicit correspondence labels are withheld from participant pages and dialogs until the final debrief. Institutional facts remain available throughout. The separate author-review workspace and public static source still disclose mappings, so this is a presentation rule rather than secure experimental blinding. Names or institutions may also permit inference; delayed labels do not establish that participants were unaware of a correspondence.
 
 The current route and option order are fixed. It is not a balanced experimental design, a full factorial study, or a representative sample of the possible dilemmas in each society. The eight-world by five-role by two-locality space contains 80 context cells before adding dilemmas, but this version does not claim to cover every cell with an independently authored story.
 
@@ -20,10 +22,11 @@ The [design matrix](DESIGN-MATRIX.md) records every statement and situation, its
 
 ## Research question and candidate outcomes
 
-The proposed central question is: **How do explicitly stated political values relate to decisions made under specified responsibilities and constraints?**
+The proposed central question is: **How do explicitly stated political values and underlying assumptions relate to decisions made under specified responsibilities and constraints?**
 
 | Proposed question | Candidate outcome | Limits to specify in a protocol |
 | --- | --- | --- |
+| How do people interpret premises about society, knowledge, values, and institutions? | Item-level foundation responses and paraphrases | The new items are descriptive probes, not validated ontology scales or political-identity indicators. |
 | Do value endorsements relate to decisions in the same content domain? | Association between a defined statement summary and a chosen action | Categories and rubrics require validation; association does not identify a cause. |
 | How do people respond to a changed repair deadline? | Housing action in each version and whether the recorded actions differ | The current repeated, fixed-order presentation permits recognition, practice, and consistency effects. |
 | Do participants understand the scope of their assigned powers? | Correct paraphrase of who decides, what is permitted, and what is constrained | This is a comprehension outcome; it does not measure political sophistication or ideology. |
@@ -44,9 +47,26 @@ These are protocol candidates, not preregistered hypotheses. Before a study, cho
 
 Review political theory and existing measurement literature before adopting a final scale structure. The matrix flags `civil-records` and `civil-withholding` as priority cases: those statement rubrics still require review because transparency and staff capacity need not indicate civil-rights or public-order preferences. Prepare a source-by-construct map, identify omissions and rival interpretations, and obtain independent rubric review across political viewpoints. More items alone do not establish reliability, dimensionality, or comparability between statement and scenario summaries.
 
+## Broader ideological-premise aims
+
+Version 0.4 adds a separate framework for examining assumptions that policy-level statements can leave implicit. The aim is a more comprehensive, source-traceable bank spanning disagreements within and across political traditions, rather than treating “leftist” or “liberal” as a single ontology. The [foundations framework](FOUNDATIONS.md) documents the candidate map and item rationales.
+
+The draft distinguishes four kinds of question:
+
+| Category | Question being explored | Interpretation boundary |
+| --- | --- | --- |
+| Social ontology | What kinds of persons, relationships, groups, structures, and dependencies make up social life? | Describing a social relation does not itself prescribe a policy. |
+| Normative premises | Which goods, obligations, freedoms, and forms of equality deserve priority? | Shared values can support different actions under different empirical assumptions. |
+| Epistemology | Whose knowledge is relevant, and how should claims and uncertainty be assessed? | Support for a knowledge source does not settle its reliability in every setting. |
+| Institutions | How should power, coordination, accountability, and collective action be organized? | An institutional preference need not imply one exclusive philosophical foundation. |
+
+The 16 candidate items are a small starting bank. Political-tradition associations are overlapping author-review metadata, with internal disagreements and cautions. No tradition receives a similarity score, and no response is converted into a leftist, liberal, or other identity. The four existing policy domains cannot stand in for this wider framework.
+
+Next aims are to verify primary and measurement sources; document rival interpretations; obtain independent review from different traditions and relevant cultural settings; expand underrepresented premises; and develop balanced forms only after burden and comprehension are understood. A larger bank must preserve item-level provenance, wording history, category rationale, and evidence for any proposed summary. It must be tested for dimensionality and cross-language interpretation before proposing ontology profiles or comparing groups. The present draft is not exhaustive or a completed literature synthesis.
+
 ## Provisional scoring contract
 
-Agreement responses run from -2 to +2 and are multiplied by the statement's recorded `direction`. A reverse-keyed item aligns endorsement of the left endpoint with the same display direction. The instrument has six candidate statements per domain.
+The original 24 value-statement agreement responses run from -2 to +2 and are multiplied by the statement's recorded `direction`. A reverse-keyed item aligns endorsement of the left endpoint with the same display direction. The instrument has six candidate value statements per domain. The 16 foundation items use the same response categories for accessibility, but have no direction, domain score, average, or ideology classifier. Their individual answers, uncertainty, and skips are retained separately in the debrief and response export and contribute no weight or denominator to the four profiles.
 
 Each of the seven directionally scored main scenarios has one provisional domain and three authored option scores: -2, 0, and +2. A zero score describes the author's intermediate package in that situation. It does not establish that the participant is politically centrist. Each scored scenario has equal maximum influence within its domain. Statements and scenarios are summarized separately.
 
@@ -77,9 +97,9 @@ The debrief may describe what was recorded, such as choosing one package in the 
 
 ## Bilingual author review
 
-`review.html` is a read-only workspace showing English source content alongside draft Vietnamese translations. It covers the statement bank, contextual situations and choices, fictional world briefs, and institutional notes. The participant assessment remains English. This workspace is not a complete Vietnamese participant version, a validated translation, a recruitment form, or a response-collection service.
+`review.html` is a read-only workspace showing English source content alongside draft Vietnamese translations. It covers the value and foundation banks, conceptual categories and political-tradition review lenses, contextual situations and choices, fictional world briefs, and institutional notes. It is explicitly marked as an author workspace with country-correspondence spoilers. The participant assessment remains English. This workspace is not a complete Vietnamese participant version, a validated translation, a recruitment form, or a response-collection service.
 
-Vietnamese text in `js/translations/vi-items.js` and `js/translations/vi-worlds.js` is an author draft awaiting independent bilingual review. Do not infer semantic equivalence from complete field coverage, fluent wording, or a passing technical check. Keep the English source version, translation revision, disputed terms, and reconciled decisions identifiable.
+Vietnamese text in `js/translations/vi-items.js`, `js/translations/vi-foundations.js`, and `js/translations/vi-worlds.js` is an author draft awaiting independent bilingual review. Do not infer semantic equivalence from complete field coverage, fluent wording, or a passing technical check. Keep the English source version, translation revision, disputed terms, and reconciled decisions identifiable.
 
 Use independent forward review, a separate bilingual review perspective, reconciliation, and cognitive probing in both languages. Back-translation may reveal discrepancies but is not sufficient validation by itself. Review role authority, negation, quantifiers, obligation versus discretion, non-sensitive versus protected information, response intensity, and neutral versus uncertain categories. The protocol is detailed in [PILOT-GUIDE.md](PILOT-GUIDE.md).
 
@@ -103,7 +123,7 @@ Role titles also bundle powers, obligations, and accountability. A public servan
 
 The current implemented route remains fixed, with no balanced form schedule. Candidate counterbalanced and between-participant forms are proposals in the design matrix, not deployed study allocation.
 
-Statements appear first as part of the intended experience. Later choices can reflect explicit value reflection or consistency pressure. Record this interpretation and evaluate order effects separately if the research question requires unprimed decisions.
+Value statements, then foundation statements, appear before contextual decisions as part of the intended experience. The added premise section can prime conceptual interpretations even without showing political-tradition labels. Later choices can reflect explicit value reflection or consistency pressure. Record this interpretation and evaluate order effects separately if the research question requires unprimed decisions.
 
 ## Review and pilot sequence
 
@@ -121,7 +141,7 @@ See [PILOT-GUIDE.md](PILOT-GUIDE.md) for the draft interview sequence and decisi
 
 The application is local-only: no advertising, analytics, research submission endpoint, or automatic transmission of political responses. Default progress uses the current tab's session storage; optional device saving uses local storage. Erasure removes this tab's data and the saved device copy. Other open tabs may retain separate copies.
 
-The v0.3 response export (export format version 2) is a voluntary download containing sensitive political answers, optional personal preferences, reasons, assigned world, instrument version, and summaries. Participants control whether to download or share it. Erasing browser storage cannot erase files already downloaded or shared. Do not place responses or identifiable study IDs in shareable URLs.
+The v0.4 response export is a voluntary download containing sensitive political answers, including separate foundation responses, optional personal preferences, reasons, assigned world, instrument version, and summaries. Participants control whether to download or share it. Erasing browser storage cannot erase files already downloaded or shared. Do not place responses or identifiable study IDs in shareable URLs.
 
 The review-packet download is different: it contains authored instrument and review metadata, without a participant's responses. It supports content review and should not be represented as a research response submission.
 
@@ -134,7 +154,8 @@ Formal collection requires a separate consented workflow with a named operator, 
 | `0.1.0` | 12 statements; two worlds; four main scenarios and the housing comparison; two roles | Initial working prototype. |
 | `0.2.0` | 24 statements; eight worlds; eight main scenarios (seven scored, one descriptive) and the excluded housing comparison; five roles | Expanded author draft for review and cognitive-pilot preparation. |
 | `0.3.0` | Same authored bank; optional unscored personal preferences; paired English–Vietnamese review workspace | English participant assessment with Vietnamese author-review material; human translation review and validation remain pending. |
+| `0.4.0` | Adds 16 descriptive foundation statements and an overlapping political-tradition review map; delays explicit country correspondences until debrief | A broader premise framework under development; no ideological-identity inference, validated ontology scale, or secure experimental blinding is claimed. |
 
-Statement, world, scenario, option, and reason IDs remain stable where meaning is retained. Version changes are intentional when wording, context, route coverage, or scoring meaning changes. Saves from `0.1.0` or `0.2.0` are rejected by `0.3.0`; there is no silent migration or reinterpretation. The previous-save download preserves incompatible data explicitly rather than applying the new meaning or export schema to it. Existing export files need their original instrument version for analysis. Preserve an old export if it is already available; starting a new assessment can replace old browser saves.
+Statement, world, scenario, option, and reason IDs remain stable where meaning is retained. Version changes are intentional when wording, context, route coverage, or scoring meaning changes. Saves from earlier versions, including `0.3.0`, are rejected by `0.4.0`; there is no silent migration or reinterpretation. The previous-save download preserves incompatible data explicitly rather than applying the new meaning or export schema to it. Existing export files need their original instrument version for analysis. Preserve an old export if it is already available; starting a new assessment can replace old browser saves.
 
 Run `npm run validate:content` to inspect authored coverage and structure, `npm run validate:translations` for author-translation field coverage, `npm test` for engine checks, and the documented browser checks for application behavior. Translation coverage checks cannot establish linguistic accuracy or equivalence. Passing these checks is a technical readiness condition, not evidence that human review or measurement validation has occurred.

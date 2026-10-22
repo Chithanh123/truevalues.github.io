@@ -10,7 +10,7 @@ const notes = (housing, other) => ({
 });
 
 export const viWorlds = {
-  version: '0.3.0',
+  version: '0.4.0',
   reviewStatus: 'draft',
   worlds: {
     linden: {
@@ -105,7 +105,7 @@ export const viWorlds = {
           'service-contract': 'Bạn quản lý một dịch vụ nông thôn theo sự giao quyền rõ ràng, cho phép tất cả các hình thức cung cấp đã nêu. Các tiêu chuẩn thực hiện của cấp vùng được giữ cố định. Bài tập không yêu cầu bạn suy ra rằng nhân viên khu vực công phải ưu tiên một loại nhà cung cấp cụ thể.',
           'community-history': 'Hội độc lập của bạn ở đô thị chịu trách nhiệm trước thành viên về chủ đề triển lãm. Thỏa thuận sử dụng địa điểm bảo vệ quyền quyết định biên tập của hội. Các thành viên diễn giải lịch sử địa phương, di cư và thay đổi thế hệ theo những cách khác nhau.',
           'public-records': 'Cơ quan của bạn được cho phép rõ ràng để quyết định cung cấp thêm khả năng tiếp cận vượt trên mức tối thiểu chung theo luật. Nghĩa vụ công khai và việc xem xét lại độc lập được giữ nguyên. Chỉ riêng sự thuận tiện hành chính không thể loại bỏ các quyền đã được quy định trong tình huống.',
-          'regional-cooperation': 'Trong tình huống hư cấu này, Hoshima cùng một quốc gia láng giềng chia sẻ một hòn đảo, và một lưu vực sông trải qua đường biên giới giữa hai nước. Địa lý riêng của bài tập này không mô tả Nhật Bản. Với vai trò người đứng đầu nội các, bạn kiến nghị cách phân bổ đầu tư phòng chống lũ lên nghị viện trong khuôn khổ hợp tác quốc tế đã được phê duyệt trước đó. Chính quyền nông thôn cấp vùng đã chấp nhận các điều kiện triển khai được nêu. Mức độ sẵn sàng về kỹ thuật không quyết định thay việc bạn phải ưu tiên cách phân bổ nào.',
+          'regional-cooperation': 'Trong tình huống hư cấu này, Hoshima cùng một quốc gia láng giềng chia sẻ một hòn đảo, và một lưu vực sông trải qua đường biên giới giữa hai nước. Địa lý này chỉ được giả định cho bài tập hư cấu. Với vai trò người đứng đầu nội các, bạn kiến nghị cách phân bổ đầu tư phòng chống lũ lên nghị viện trong khuôn khổ hợp tác quốc tế đã được phê duyệt trước đó. Chính quyền nông thôn cấp vùng đã chấp nhận các điều kiện triển khai được nêu. Mức độ sẵn sàng về kỹ thuật không quyết định thay việc bạn phải ưu tiên cách phân bổ nào.',
         },
       ),
     },
@@ -129,7 +129,7 @@ export const viWorlds = {
           'service-contract': 'Bạn quản lý một dịch vụ nông thôn theo sự giao quyền cho phép các hình thức cung cấp công và theo hợp đồng đã nêu. Các yêu cầu về vận tải và tiếp cận đã được đánh giá cho từng hình thức. Mọi phương án đều giữ nguyên điều kiện được hưởng dịch vụ và quyền khiếu nại.',
           'community-history': 'Hội độc lập của bạn ở đô thị có thành viên với những lịch sử gia đình và mối gắn kết cộng đồng khác nhau. Hội được phép lựa chọn bất kỳ chủ đề triển lãm nào đã nêu theo nhiệm vụ do thành viên giao. Không có thiết chế tập quán hoặc nhà nước nào chọn câu trả lời thay bạn.',
           'public-records': 'Một sự cho phép hành chính rõ ràng cho phép các mức tiếp cận bổ sung đã nêu, vượt trên mức công khai tối thiểu chung. Mọi phương án trong tình huống đều có cơ chế xem xét lại; không được giữ lại hồ sơ bắt buộc phải cung cấp vì việc đi đến cơ quan gặp khó khăn.',
-          'regional-cooperation': 'Trong tình huống hư cấu này, Namoa cùng một quốc gia láng giềng chia sẻ một hòn đảo, và một lưu vực sông trải qua đường biên giới giữa hai nước. Địa lý riêng của bài tập này không mô tả Fiji. Với vai trò người đứng đầu nội các, bạn kiến nghị một cách phân bổ đầu tư phòng chống lũ đã được cho phép để nghị viện phê duyệt. Các đối tác triển khai trên đảo và ở nông thôn đã chấp nhận điều kiện của tình huống. Địa lý giải thích các điều kiện triển khai, nhưng không quyết định trước việc ưu tiên trong nước hay quốc tế.',
+          'regional-cooperation': 'Trong tình huống hư cấu này, Namoa cùng một quốc gia láng giềng chia sẻ một hòn đảo, và một lưu vực sông trải qua đường biên giới giữa hai nước. Địa lý này chỉ được giả định cho bài tập hư cấu. Với vai trò người đứng đầu nội các, bạn kiến nghị một cách phân bổ đầu tư phòng chống lũ đã được cho phép để nghị viện phê duyệt. Các đối tác triển khai trên đảo và ở nông thôn đã chấp nhận điều kiện của tình huống. Địa lý giải thích các điều kiện triển khai, nhưng không quyết định trước việc ưu tiên trong nước hay quốc tế.',
         },
       ),
     },
@@ -147,7 +147,7 @@ export const viWorlds = {
       scenarioNotes: notes(
         'Một chương trình thí điểm hư cấu cấp tỉnh cho phép rõ ràng cả ba gói đối với khu nhà kho thuộc sở hữu công này, bao gồm các hình thức tài trợ đã nêu. Hội đồng địa phương phải phê duyệt kiến nghị trong khuôn khổ giám sát của cấp tỉnh. Sự cho phép trong chương trình thí điểm giống hệt nhau ở cả hai phiên bản.',
         {
-          'public-assembly': 'Cuộc tham vấn địa phương hư cấu này bảo vệ rõ ràng chiến dịch ôn hòa được mô tả và cho phép tất cả các gói quy định đã nêu, kèm cơ chế khiếu nại được quy định. Những quyền được cho phép trong bài tập này không phải mô tả pháp luật về tụ họp tại Việt Nam hiện nay.',
+          'public-assembly': 'Cuộc tham vấn địa phương hư cấu này bảo vệ rõ ràng chiến dịch ôn hòa được mô tả và cho phép tất cả các gói quy định đã nêu, kèm cơ chế khiếu nại được quy định. Những quyền được cho phép này được giả định cho bài tập và không mô tả pháp luật về tụ họp ngoài đời thực.',
           'water-partnership': 'Các cơ quan cấp tỉnh và quốc gia đã cho phép khoản tài trợ của huyện nông thôn chi cho công việc trong nước hoặc quan hệ hợp tác với đối tác ở nước ngoài được nêu tên. Mọi gói đều đáp ứng sự cho phép đó. Bạn không được suy ra rằng các khoản chi quốc tế không liên quan cũng được phép.',
           'community-festival': 'Hội đồng địa phương đã cho phép tham vấn người dân về chương trình của lễ hội dân sự này. Một ban được bổ nhiệm xem xét các ý kiến gửi đến theo cùng các tiêu chí đã công bố. Tình huống trao cho người dân một kênh đề xuất, không trao quyền quyết định cuối cùng đối với ngân sách công.',
           'service-contract': 'Bạn là cán bộ cấp huyện không do bầu cử, được cấp tỉnh giao quyền bằng văn bản để lựa chọn giữa các hình thức cung cấp dịch vụ đã nêu. Điều kiện được hưởng dịch vụ, các bảo đảm trong mua sắm công và cơ chế xem xét lại được giữ cố định. Việc thực hiện các nghĩa vụ đó là vấn đề riêng với việc tán thành một hệ thống chính trị.',

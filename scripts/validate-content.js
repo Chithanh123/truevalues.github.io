@@ -8,6 +8,9 @@ const statements = list(instrument.statements);
 const worlds = list(instrument.worlds);
 const scenarios = list(instrument.scenarios);
 const dimensions = list(instrument.dimensions);
+const foundationItems = list(instrument.foundations?.items);
+const foundationCategories = list(instrument.foundations?.categories);
+const foundationLenses = list(instrument.foundations?.lenses);
 const main = scenarios.filter(scene => !scene.comparisonOf);
 const comparisons = scenarios.filter(scene => scene.comparisonOf);
 const directionalMain = main.filter(scene => scene.scoring !== 'descriptive');
@@ -23,6 +26,14 @@ const requireCount = (label, actual, expected) => {
 
 requireCount('Worlds', worlds.length, 8);
 requireCount('Statements', statements.length, 24);
+requireCount('Foundation statements', foundationItems.length, 16);
+requireCount('Foundation categories', foundationCategories.length, 4);
+for (const category of foundationCategories) {
+  if (!foundationItems.some(item => item.category === category.id)) errors.push(`No foundation item covers ${category.id}.`);
+}
+for (const lens of foundationLenses) {
+  if (!foundationItems.some(item => item.lenses.includes(lens.id))) errors.push(`No foundation item engages research lens ${lens.id}.`);
+}
 requireCount('Main scenarios', main.length, 8);
 requireCount('Directional main scenarios', directionalMain.length, 7);
 requireCount('Descriptive main scenarios', descriptiveMain.length, 1);
@@ -85,12 +96,19 @@ const report = {
     roles: roles.length,
     localities: localities.length,
     statements: statements.length,
+    foundationStatements: foundationItems.length,
+    foundationLenses: foundationLenses.length,
     mainScenarios: main.length,
     directionalMainScenarios: directionalMain.length,
     descriptiveMainScenarios: descriptiveMain.length,
     comparisons: comparisons.length,
   },
   domainCoverage,
+  foundationCoverage: foundationCategories.map(category => ({
+    category: category.id,
+    items: foundationItems.filter(item => item.category === category.id).length,
+    scoring: 'descriptive only',
+  })),
   roleCoverage,
   worldCoverage,
   errors,
@@ -104,6 +122,8 @@ if (process.argv.includes('--json')) {
   console.table([report.counts]);
   console.log('Domains');
   console.table(domainCoverage);
+  console.log('Assumption categories (unscored)');
+  console.table(report.foundationCoverage);
   console.log('Roles');
   console.table(roleCoverage);
   console.log('Settings and authored scenario contexts');

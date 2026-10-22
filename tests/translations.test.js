@@ -3,18 +3,23 @@ import assert from 'node:assert/strict';
 import { instrument } from '../js/content.js';
 import { viItems } from '../js/translations/vi-items.js';
 import { viWorlds } from '../js/translations/vi-worlds.js';
+import { viFoundations } from '../js/translations/vi-foundations.js';
 import { validateTranslations } from '../scripts/validate-translations.js';
 
-const copyDrafts = () => ({ items: structuredClone(viItems), worlds: structuredClone(viWorlds) });
-const errorsFor = ({ items, worlds }) => validateTranslations(instrument, items, worlds);
+const copyDrafts = () => ({ items: structuredClone(viItems), worlds: structuredClone(viWorlds), foundations: structuredClone(viFoundations) });
+const errorsFor = ({ items, worlds, foundations }) => validateTranslations(instrument, items, worlds, foundations);
 
 test('the bilingual review draft covers the current authored instrument without changing identities or figures', () => {
-  assert.deepEqual(validateTranslations(instrument, viItems, viWorlds), []);
+  assert.deepEqual(validateTranslations(instrument, viItems, viWorlds, viFoundations), []);
   assert.equal(Object.keys(viItems.statements).length, 24);
   assert.equal(Object.keys(viItems.scenarios).length, 9);
   assert.equal(Object.keys(viWorlds.worlds).length, 8);
+  assert.equal(Object.keys(viFoundations.items).length, 16);
+  assert.equal(Object.keys(viFoundations.categories).length, instrument.foundations.categories.length);
+  assert.equal(Object.keys(viFoundations.lenses).length, instrument.foundations.lenses.length);
   assert.equal(viItems.reviewStatus, 'draft');
   assert.equal(viWorlds.reviewStatus, 'draft');
+  assert.equal(viFoundations.reviewStatus, 'draft');
 });
 
 test('translation checks detect missing, foreign, and reordered response identities', () => {
@@ -50,6 +55,8 @@ test('translation metadata cannot silently use an older instrument or claim comp
     draft => { draft.worlds.version = '0.2.0'; },
     draft => { draft.items.reviewStatus = 'validated'; },
     draft => { draft.worlds.reviewStatus = 'human-reviewed'; },
+    draft => { draft.foundations.version = '0.3.0'; },
+    draft => { draft.foundations.reviewStatus = 'validated'; },
     draft => { draft.worlds.worlds.linden.code = 'Other'; },
     draft => { draft.items.scenarios['public-records'].options[0].score = -2; },
   ]) {
@@ -57,6 +64,51 @@ test('translation metadata cannot silently use an older instrument or claim comp
     mutate(draft);
     assert.ok(errorsFor(draft).length > 0);
   }
+});
+
+test('foundation translation coverage preserves every premise, category, lens, and aim', () => {
+  const firstItem = instrument.foundations.items[0].id;
+  const firstCategory = instrument.foundations.categories[0].id;
+  const firstLens = instrument.foundations.lenses[0].id;
+  const cases = [
+    draft => { delete draft.foundations.items[firstItem]; },
+    draft => { draft.foundations.items['foreign-premise'] = { text: 'Nhận định khác', rationale: 'Lý do khác' }; },
+    draft => { delete draft.foundations.categories[firstCategory]; },
+    draft => { draft.foundations.categories['foreign-category'] = { label: 'Khác', description: 'Mô tả khác' }; },
+    draft => { delete draft.foundations.lenses[firstLens]; },
+    draft => { draft.foundations.lenses['foreign-lens'] = { label: 'Khác', description: 'Mô tả khác', cautions: 'Lưu ý khác' }; },
+    draft => { draft.foundations.items[firstItem].text = ' '; },
+    draft => { draft.foundations.items[firstItem].rationale = ''; },
+    draft => { draft.foundations.categories[firstCategory].description = null; },
+    draft => { draft.foundations.lenses[firstLens].cautions = ''; },
+    draft => { draft.foundations.aims.pop(); },
+    draft => { draft.foundations.aims = 'Mục tiêu'; },
+    draft => { draft.foundations.aims[0] = ' '; },
+    draft => { draft.foundations.items[firstItem].score = 1; },
+    draft => { draft.foundations.lenses[firstLens].membershipThreshold = 2; },
+  ];
+  for (const mutate of cases) {
+    const draft = copyDrafts();
+    mutate(draft);
+    assert.ok(errorsFor(draft).length > 0);
+  }
+});
+
+test('foundation wording receives the same numeric-token protection as the rest of the draft', () => {
+  const source = structuredClone(instrument);
+  const draft = copyDrafts();
+  const firstItem = source.foundations.items[0].id;
+  source.foundations.items[0].text += ' 10';
+  draft.foundations.items[firstItem].text += ' 11';
+  assert.ok(validateTranslations(source, draft.items, draft.worlds, draft.foundations)
+    .some(message => /numeric tokens/.test(message)));
+});
+
+test('the foundation translation is required only when the instrument contains the foundation bank', () => {
+  assert.ok(validateTranslations(instrument, viItems, viWorlds).length > 0);
+  const legacy = structuredClone(instrument);
+  delete legacy.foundations;
+  assert.deepEqual(validateTranslations(legacy, viItems, viWorlds), []);
 });
 
 test('the translated housing contrast preserves the shared action, authority, and context wording', () => {

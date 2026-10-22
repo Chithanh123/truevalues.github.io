@@ -217,6 +217,9 @@ test("the shipped pilot has valid routes with statement and main-case evidence i
   for (const item of pilotInstrument.statements) {
     session = setAnswer(session, `statement:${item.id}`, { kind: "value", value: 0 });
   }
+  for (const item of pilotInstrument.foundations?.items ?? []) {
+    session = setAnswer(session, `foundation:${item.id}`, { kind: "value", value: 0 });
+  }
   for (const item of pilotInstrument.scenarios) {
     session = setAnswer(session, `scenario:${item.id}`, {
       kind: "choice", optionId: item.options[0].id, reasonId: null,
@@ -307,7 +310,7 @@ test("a comparison preserves option wording/order, reasons, authority, and world
 });
 
 test("the expanded instrument covers every requested setting, role, and domain", () => {
-  assert.equal(pilotInstrument.version, "0.3.0");
+  assert.equal(pilotInstrument.version, "0.4.0");
   assert.equal(pilotInstrument.worlds.length, 8);
   assert.equal(pilotInstrument.statements.length, 24);
   const mainCases = pilotInstrument.scenarios.filter((scene) => !scene.comparisonOf);
@@ -341,6 +344,9 @@ test("all eight assigned worlds support a complete versioned assessment", () => 
   for (let session of assignments.values()) {
     for (const item of pilotInstrument.statements) {
       session = setAnswer(session, `statement:${item.id}`, { kind: "value", value: 0 });
+    }
+    for (const item of pilotInstrument.foundations?.items ?? []) {
+      session = setAnswer(session, `foundation:${item.id}`, { kind: "uncertain" });
     }
     for (const item of pilotInstrument.scenarios) {
       session = setAnswer(session, `scenario:${item.id}`, {
@@ -527,12 +533,136 @@ test("descriptive and comparison personal preferences never acquire directional 
   assert.equal(summarize(pilotInstrument, session).preferences.filter((row) => row.status === "choice").length, 2);
 });
 
-test("the preference protocol version rejects old saves without changing their source data", () => {
-  assert.equal(pilotInstrument.version, "0.3.0");
+test("the foundation protocol version rejects old saves without changing their source data", () => {
+  assert.equal(pilotInstrument.version, "0.4.0");
   const current = createSession(pilotInstrument, "new-protocol");
-  const old = { ...current, version: "0.2.0" };
+  const old = { ...current, version: "0.3.0" };
   const serialized = JSON.stringify(old);
   assert.equal(validateSession(pilotInstrument, old).valid, false);
   assert.equal(JSON.stringify(old), serialized);
   assert.equal(validateSession(pilotInstrument, current).valid, true);
+});
+
+function foundationInstrument() {
+  return {
+    ...structuredClone(instrument),
+    foundations: {
+      reviewStatus: "author-draft",
+      aims: ["Explore assumptions without assigning an ideological identity."],
+      categories: [{ id: "ontology", label: "Social ontology", description: "What constitutes social life." }],
+      lenses: [
+        { id: "liberal", label: "Liberal traditions", description: "Plural approaches to liberty.", cautions: "Not one doctrine." },
+        { id: "socialist", label: "Socialist traditions", description: "Plural approaches to collective life.", cautions: "Not one doctrine." },
+      ],
+      items: ["agency", "relations", "institutions", "context"].map((id) => ({
+        id, category: "ontology", text: `A candidate premise about ${id}.`,
+        lenses: ["liberal", "socialist"], rationale: "A contested premise shared across debates.",
+      })),
+    },
+  };
+}
+
+test("foundation items sit between policy statements and the setting briefing", () => {
+  const expanded = foundationInstrument();
+  assert.deepEqual(validateInstrument(expanded), []);
+  const routes = makeSteps(expanded);
+  assert.deepEqual(routes.slice(instrument.statements.length, instrument.statements.length + 4), [
+    { id: "foundation:agency", type: "foundation", itemId: "agency" },
+    { id: "foundation:relations", type: "foundation", itemId: "relations" },
+    { id: "foundation:institutions", type: "foundation", itemId: "institutions" },
+    { id: "foundation:context", type: "foundation", itemId: "context" },
+  ]);
+  assert.equal(routes[instrument.statements.length + 4].id, "briefing");
+  assert.deepEqual(summarize(instrument, filledSession()).foundations, []);
+});
+
+test("foundation evidence keeps neutrality, uncertainty, skipping, and missing responses distinct", () => {
+  const expanded = foundationInstrument();
+  let session = createSession(expanded, "foundations");
+  session = setAnswer(session, "foundation:agency", { kind: "value", value: 0 });
+  session = setAnswer(session, "foundation:relations", { kind: "uncertain" });
+  session = setAnswer(session, "foundation:institutions", { kind: "skip" });
+  assert.deepEqual(summarize(expanded, session).foundations, [
+    { itemId: "agency", kind: "value", value: 0 },
+    { itemId: "relations", kind: "uncertain", value: null },
+    { itemId: "institutions", kind: "skip", value: null },
+    { itemId: "context", kind: "unanswered", value: null },
+  ]);
+  assert.equal(validateSession(expanded, JSON.parse(JSON.stringify(session))).valid, true);
+});
+
+test("foundation responses never change scores, denominators, comparisons, or preference evidence", () => {
+  const expanded = foundationInstrument();
+  let session = filledSession();
+  const baseline = summarize(expanded, session);
+  for (const value of [-2, 2]) {
+    for (const item of expanded.foundations.items) {
+      session = setAnswer(session, `foundation:${item.id}`, { kind: "value", value });
+    }
+    const summary = summarize(expanded, session);
+    assert.deepEqual(summary.dimensions, baseline.dimensions);
+    assert.deepEqual(summary.comparisons, baseline.comparisons);
+    assert.deepEqual(summary.preferences, baseline.preferences);
+    assert.ok(summary.foundations.every((row) => row.value === value));
+    assert.deepEqual(Object.keys(summary).sort(), ["comparisons", "dimensions", "foundations", "preferences"]);
+    assert.ok(summary.foundations.every((row) => Object.keys(row).sort().join() === "itemId,kind,value"));
+  }
+});
+
+test("foundation answers must be valid before progress advances to the setting", () => {
+  const expanded = foundationInstrument();
+  let session = filledSession();
+  const steps = makeSteps(expanded);
+  session = { ...session, stepIndex: steps.findIndex((step) => step.type === "briefing") };
+  assert.equal(validateSession(expanded, session).valid, false);
+  for (const item of expanded.foundations.items) {
+    session = setAnswer(session, `foundation:${item.id}`, { kind: "skip" });
+  }
+  assert.equal(validateSession(expanded, session).valid, true);
+  session = { ...session, stepIndex: steps.length - 1, completed: true };
+  assert.equal(validateSession(expanded, JSON.parse(JSON.stringify(session))).valid, true);
+  for (const answer of [
+    { kind: "value", value: 3 }, { kind: "value", value: "1" },
+    { kind: "uncertain", value: 0 }, { kind: "none" },
+    { kind: "choice", optionId: "liberal" }, { kind: "skip", preference: null },
+  ]) {
+    assert.equal(validateSession(expanded, setAnswer(session, "foundation:agency", answer)).valid, false);
+  }
+  assert.equal(validateSession(expanded, setAnswer(session, "foundation:unknown", { kind: "skip" })).valid, false);
+  const missing = structuredClone(session);
+  delete missing.answers["foundation:context"];
+  assert.equal(validateSession(expanded, missing).valid, false);
+});
+
+test("foundation metadata rejects broken references, duplicated IDs, missing text, and score fields", () => {
+  const valid = foundationInstrument();
+  const cases = [
+    (copy) => { copy.foundations = null; },
+    (copy) => { delete copy.foundations.reviewStatus; },
+    (copy) => { copy.foundations.reviewStatus = "validated"; },
+    (copy) => { copy.foundations.aims = []; },
+    (copy) => { copy.foundations.aims = [" "]; },
+    (copy) => { copy.foundations.categories = []; },
+    (copy) => { copy.foundations.categories[0].description = ""; },
+    (copy) => { copy.foundations.lenses = null; },
+    (copy) => { copy.foundations.lenses[1].id = "liberal"; },
+    (copy) => { copy.foundations.lenses[0].cautions = ["Not one doctrine."]; },
+    (copy) => { copy.foundations.items = []; },
+    (copy) => { copy.foundations.items[0] = null; },
+    (copy) => { copy.foundations.items[1].id = "agency"; },
+    (copy) => { copy.foundations.items[0].category = "unknown"; },
+    (copy) => { copy.foundations.items[0].text = " "; },
+    (copy) => { delete copy.foundations.items[0].rationale; },
+    (copy) => { copy.foundations.items[0].lenses = []; },
+    (copy) => { copy.foundations.items[0].lenses = ["unknown"]; },
+    (copy) => { copy.foundations.items[0].lenses = ["liberal", "liberal"]; },
+    (copy) => { copy.foundations.items[0].score = 1; },
+    (copy) => { copy.foundations.items[0].direction = -1; },
+  ];
+  for (const mutate of cases) {
+    const copy = structuredClone(valid);
+    mutate(copy);
+    assert.ok(validateInstrument(copy).length > 0);
+    assert.throws(() => createSession(copy, "invalid-foundations"), /Invalid instrument/);
+  }
 });

@@ -1,4 +1,5 @@
 import { worlds } from "./worlds.js";
+import { foundations } from "./foundations.js";
 
 const housingOptions = [
   {
@@ -44,8 +45,9 @@ const housingWorldNotes = {
 
 export const instrument = {
   id: "political-context-pilot",
-  version: "0.3.0",
+  version: "0.4.0",
   title: "Political Context",
+  foundations,
   roles: [
     { id: "constituent", label: "Ordinary constituent" },
     { id: "civil_society", label: "Civil society group leader" },

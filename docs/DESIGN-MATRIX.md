@@ -1,8 +1,8 @@
 # Political Context: authored design matrix
 
-Instrument: `political-context-pilot`, development version **0.3.0**. Status: **author draft; independent human review pending**.
+Instrument: `political-context-pilot`, development version **0.4.0**. Status: **author draft; independent human review pending**.
 
-This matrix records what each authored item is intended to explore and what else might explain a response. It is a content-review artifact, not a validated scale model, preregistration, or finding about a population. The English source in `js/content.js` and the world notes in `js/worlds.js` remain authoritative for the current wording.
+This matrix records what each authored item is intended to explore and what else might explain a response. It is a content-review artifact, not a validated scale model, preregistration, or finding about a population. The English sources in `js/content.js`, `js/foundations.js`, and `js/worlds.js` remain authoritative for the current wording. This author-review document contains country correspondences; complete a participant route first to preserve the delayed reveal.
 
 The first comprehension-pilot audience is **bilingual English–Vietnamese adults**. Geography, recruitment method, exact eligibility and proficiency criteria, responsible operator, primary outcomes, and data handling still need decisions before recruitment. Bilingual review cannot establish generalization to monolingual English or Vietnamese populations.
 
@@ -48,6 +48,21 @@ Agreement responses use the recorded `direction`: `+1` aligns agreement with the
 
 The `civil-records` and `civil-withholding` statements remain in the current candidate bank with their author directions. Their inclusion does not settle the construct concern. The analogous `public-records` scenario is explicitly descriptive-only. Independent review must decide whether these statements should be rewritten, separated, or excluded before stronger measurement claims.
 
+## Foundation matrix: 16 descriptive premise items
+
+The separate foundation bank broadens the aims beyond policy preferences. It distinguishes social ontology (what society and its actors consist of), normative premises (what ought to matter), epistemology (how political knowledge is justified), and institutions (how coordination and power should work). The exact items, rationales, and overlapping political-tradition associations are versioned in `js/foundations.js` and explained in [FOUNDATIONS.md](FOUNDATIONS.md). Vietnamese author drafts are in `js/translations/vi-foundations.js`.
+
+| Review layer | Review question | Main rival interpretation or omission to inspect |
+| --- | --- | --- |
+| Ontology | Does the item concern persons, relations, social structures, or ecological dependence? | Descriptive explanation can be mistaken for moral approval or an assumption about all people. |
+| Normative | Which good, freedom, obligation, or equality is being prioritized? | Different traditions can share the same value while disagreeing about its meaning or implementation. |
+| Epistemology | What source or method of knowledge is being endorsed? | Expertise, lived experience, local practice, and public contestation need not be mutually exclusive. |
+| Institutions | What mechanism of power or coordination is favored? | Instrumental effectiveness, trust, and a preferred value can independently motivate the same mechanism. |
+
+All 16 items are descriptive. The familiar agreement categories do not create an ontology score: there is no direction, aggregate, ideological match, or contribution to any existing domain denominator. Uncertainty, neutral answers, and skips remain distinct. An item's tradition associations are author-review prompts, not membership evidence; multiple traditions can endorse or contest it for different reasons. Each rationale needs independent, source-informed review, including dissent within the associated traditions.
+
+A comprehensive future bank should add source provenance, rival readings, omitted traditions, culturally specific premises, and independently reviewed variants before selecting study forms. Sixteen candidate items cannot represent the full range of leftist, liberal, conservative, feminist, ecological, decolonial, or other thought. The new section also increases burden and may prime later decisions; assess both in comprehension work rather than treating added content as automatic measurement improvement.
+
 ## Situation matrix: eight main cases and one comparison
 
 | Stable scenario ID | Content domain | Assigned role | Locality | Profile contribution | Main interpretation limits |
@@ -72,7 +87,11 @@ Record this preference separately from the role action and the selected reason. 
 
 The preference question follows the action in this prototype. It may create consistency pressure, reflection, or demand effects; its inclusion needs comprehension review and later methodological evaluation.
 
-## World/context coverage
+## World/context coverage and delayed reveal
+
+The participant route shows fictional names, institutions, and decision-relevant notes while withholding explicit real-country correspondence labels until the final debrief. The following table belongs to author review. The separate reviewer workspace and public source files also expose mappings, and fictional details can invite guesses. This is not a secure blinding mechanism. Do not infer that a participant failed to recognize an inspiration just because the label was hidden.
+
+## Authored settings
 
 | Setting ID | Fictional setting | Inspiration | Authored scenario notes |
 | --- | --- | --- | --- |
@@ -93,12 +112,12 @@ Within each world, the urgent and planned housing notes must be identical. The r
 
 | Form concept | Implementation status | What it would support or require |
 | --- | --- | --- |
-| Current fixed route: statements, briefing, eight main cases, later housing comparison | Implemented | Descriptive inspection of this authored experience. Seeded world assignment is reproducible, but route/option order is fixed and no formal study allocation is provided. |
+| Current fixed route: 24 value statements, 16 foundation statements, briefing, eight main cases, later housing comparison, correspondence reveal | Implemented | Descriptive inspection of this authored experience. Seeded world assignment is reproducible, but route/option order is fixed and no formal study allocation is provided. |
 | Counterbalanced urgency order | Proposal only | Requires a versioned form definition, a valid presentation without an earlier-case assumption, order recording, and a planned analysis of repetition/carryover. |
 | Between-participant urgent versus planned case | Proposal only | Requires controlled assignment, comparable forms, shared anchors, a specified outcome, and a sample-size rationale. |
 | Balanced subset of dilemma families across roles/localities | Proposal only | Requires authored role-appropriate variants, a supported-cell matrix, allocation rules, and enough observations for the chosen contrasts. |
 
-Do not describe these proposed forms as implemented, balanced, randomized trials. Decide primary contrasts and intended claims before selecting the forms and analysis. Statement-first presentation, fixed option order, recognition, self-selection, restarting, and optional export all remain potential influences.
+Do not describe these proposed forms as implemented, balanced, randomized trials. Decide primary contrasts and intended claims before selecting the forms and analysis. Value- and foundation-first presentation, fixed option order, recognition, self-selection, restarting, and optional export all remain potential influences. The new foundation section has not been evaluated for conceptual priming or added burden.
 
 ## Evidence and review work still required
 

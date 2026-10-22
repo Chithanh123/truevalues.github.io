@@ -3,7 +3,8 @@
  * These summaries describe this instrument's responses; they are not validated
  * ideological scales. Comparison variants and descriptive observations never
  * add weight or coverage to the directional profile. Optional personal
- * preferences are self-reported evidence and never affect those scores.
+ * preferences and foundation statements are self-reported evidence and never
+ * affect those scores. Foundation responses do not infer ideological membership.
  */
 
 const ITEM_ID = /^[a-z][a-z0-9_-]*$/;
@@ -44,6 +45,9 @@ export function makeSteps(instrument) {
     ...instrument.statements.map((statement) => ({
       id: `statement:${statement.id}`, type: "statement", itemId: statement.id,
     })),
+    ...(instrument.foundations?.items ?? []).map((item) => ({
+      id: `foundation:${item.id}`, type: "foundation", itemId: item.id,
+    })),
     { id: "briefing", type: "briefing" },
     ...instrument.scenarios.map((scenario) => ({
       id: `scenario:${scenario.id}`, type: "scenario", itemId: scenario.id,
@@ -71,8 +75,8 @@ export function createSession(instrument, seed = freshSeed()) {
 }
 
 export function setAnswer(session, stepId, answer) {
-  if (typeof stepId !== "string" || !/^(statement|scenario):[a-z][a-z0-9_-]*$/.test(stepId)) {
-    throw new Error("Only statement and scenario steps accept responses.");
+  if (typeof stepId !== "string" || !/^(statement|foundation|scenario):[a-z][a-z0-9_-]*$/.test(stepId)) {
+    throw new Error("Only statement, foundation, and scenario steps accept responses.");
   }
   if (!isRecord(answer)) throw new Error("A response must be an object.");
   const copiedAnswer = {
@@ -126,6 +130,14 @@ export function summarize(instrument, session) {
           : null,
       ),
     })),
+    foundations: (instrument.foundations?.items ?? []).map((item) => {
+      const answer = answers[`foundation:${item.id}`];
+      return {
+        itemId: item.id,
+        kind: answer?.kind ?? "unanswered",
+        value: answer?.kind === "value" ? answer.value : null,
+      };
+    }),
     comparisons: instrument.scenarios.filter((item) => item.comparisonOf).map((item) => {
       const original = answers[`scenario:${item.comparisonOf}`];
       const comparison = answers[`scenario:${item.id}`];
@@ -219,9 +231,11 @@ export function validateSession(instrument, candidate) {
   }
   if (!isRecord(candidate.answers)) return invalid("The saved responses are invalid.");
   const statementMap = new Map(instrument.statements.map((item) => [`statement:${item.id}`, item]));
+  const foundationMap = new Map((instrument.foundations?.items ?? [])
+    .map((item) => [`foundation:${item.id}`, item]));
   const scenarioMap = new Map(instrument.scenarios.map((item) => [`scenario:${item.id}`, item]));
   for (const [id, answer] of Object.entries(candidate.answers)) {
-    if (statementMap.has(id)) {
+    if (statementMap.has(id) || foundationMap.has(id)) {
       if (!validStatementAnswer(answer)) return invalid(`Invalid response for ${id}.`);
     } else if (scenarioMap.has(id)) {
       if (!validScenarioAnswer(answer, scenarioMap.get(id))) return invalid(`Invalid response for ${id}.`);
@@ -230,7 +244,7 @@ export function validateSession(instrument, candidate) {
     }
   }
   const priorSteps = steps.slice(0, candidate.stepIndex)
-    .filter((step) => step.type === "statement" || step.type === "scenario");
+    .filter((step) => ["statement", "foundation", "scenario"].includes(step.type));
   if (priorSteps.some((step) => !own(candidate.answers, step.id))) {
     return invalid("The save advances past an unanswered item.");
   }
@@ -290,6 +304,61 @@ export function validateInstrument(instrument) {
       labels.add(row.label);
     }
   };
+  if (own(instrument, "foundations")) {
+    const foundations = instrument.foundations;
+    const exactKeys = (value, keys, label) => {
+      if (!isRecord(value) || !onlyKeys(value, keys) || !keys.every((key) => own(value, key))) {
+        errors.push(`${label} has an unexpected structure.`);
+        return false;
+      }
+      return true;
+    };
+    if (exactKeys(foundations, ["reviewStatus", "aims", "categories", "lenses", "items"], "Foundations")) {
+      if (foundations.reviewStatus !== "author-draft") {
+        errors.push("Foundations must declare their author-draft review status.");
+      }
+      if (!Array.isArray(foundations.aims) || !foundations.aims.length
+        || foundations.aims.some((aim) => !hasText(aim))) {
+        errors.push("Foundation aims must be a non-empty array of non-empty text.");
+      }
+      const rows = {};
+      const ids = {};
+      for (const key of ["categories", "lenses", "items"]) {
+        if (!Array.isArray(foundations[key]) || !foundations[key].length) {
+          errors.push(`Foundation ${key} must be a non-empty array.`);
+          rows[key] = [];
+        } else rows[key] = foundations[key];
+        ids[key] = checkIds(rows[key], `Foundation ${key}`);
+      }
+      for (const category of rows.categories) {
+        if (exactKeys(category, ["id", "label", "description"], "Foundation category")) {
+          textFields(category, ["label", "description"], `Foundation category ${category.id}`, true);
+        }
+      }
+      for (const lens of rows.lenses) {
+        if (exactKeys(lens, ["id", "label", "description", "cautions"], "Foundation lens")) {
+          textFields(lens, ["label", "description", "cautions"], `Foundation lens ${lens.id}`, true);
+        }
+      }
+      for (const item of rows.items) {
+        if (!exactKeys(item, ["id", "category", "text", "lenses", "rationale"], "Foundation item")) continue;
+        textFields(item, ["text", "rationale"], `Foundation item ${item.id}`, true);
+        if (!ids.categories.has(item.category)) {
+          errors.push(`Foundation item ${item.id} has an unknown category.`);
+        }
+        if (!Array.isArray(item.lenses) || !item.lenses.length) {
+          errors.push(`Foundation item ${item.id} needs a non-empty lenses array.`);
+        } else {
+          if (new Set(item.lenses).size !== item.lenses.length) {
+            errors.push(`Foundation item ${item.id} repeats a lens.`);
+          }
+          for (const lensId of item.lenses) {
+            if (!ids.lenses.has(lensId)) errors.push(`Foundation item ${item.id} has an unknown lens.`);
+          }
+        }
+      }
+    }
+  }
   const dimensions = checkIds(instrument.dimensions, "dimensions");
   checkIds(instrument.statements, "statements");
   const worldIds = checkIds(instrument.worlds, "worlds");

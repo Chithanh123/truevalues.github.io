@@ -1,6 +1,7 @@
 import { instrument } from './content.js';
 import { viItems } from './translations/vi-items.js';
 import { viWorlds } from './translations/vi-worlds.js';
+import { viFoundations } from './translations/vi-foundations.js';
 
 // A separate entry point: no assessment engine or browser storage is accessed.
 const cards = document.querySelector('#review-cards');
@@ -31,6 +32,32 @@ function statementCard(item) {
     `<h2>${escape(item.text)}</h2><p class="review-rubric">Provisional domain: ${escape(domain.label)}. Agreement is aligned toward ${escape(item.direction === 1 ? domain.right : domain.left)} under the author rubric.</p>`,
     `<h2>${escape(translated.text)}</h2><p class="review-rubric">Nhóm nội dung dự kiến: ${escape(translatedDomain.label)}. Theo quy tắc chấm điểm nháp, đồng ý với nhận định này tương ứng với phía ${escape(item.direction === 1 ? translatedDomain.right : translatedDomain.left)}.</p>`,
   ));
+}
+
+function foundationColumn(item, translated, vi = false) {
+  const category = instrument.foundations.categories.find(entry => entry.id === item.category);
+  const categoryText = vi ? viFoundations.categories[category.id] : category;
+  const lensNames = item.lenses.map(id => vi ? viFoundations.lenses[id].label : instrument.foundations.lenses.find(lens => lens.id === id).label);
+  return `<p class="review-context-label">${escape(categoryText.label)}</p><h2>${escape(translated.text)}</h2><p>${escape(categoryText.description)}</p><h3>${vi ? 'Mục đích của nhận định' : 'Item rationale'}</h3><p>${escape(translated.rationale)}</p><p class="review-rubric">${vi ? 'Các hướng tư tưởng có liên quan trong bản đồ nghiên cứu' : 'Related lenses in the research map'}: ${lensNames.map(escape).join('; ')}.</p><p class="review-rubric">${vi ? 'Chỉ ghi nhận câu trả lời để mô tả; không chấm điểm hay suy ra bản sắc tư tưởng. Một nhận định có thể được chia sẻ hoặc tranh luận trong nhiều truyền thống.' : 'Responses are descriptive and unscored; they do not identify an ideology. A premise may be shared or contested across traditions.'}</p>`;
+}
+
+function foundationCard(item) {
+  const category = instrument.foundations.categories.find(entry => entry.id === item.category);
+  return card(item.id, `${category.label} / ${viFoundations.categories[category.id].label}`, pair(
+    foundationColumn(item, item),
+    foundationColumn(item, viFoundations.items[item.id], true),
+  ));
+}
+
+function lensCard(lens) {
+  const translated = viFoundations.lenses[lens.id];
+  const column = (text, vi = false) => `<h2>${escape(text.label)}</h2><p>${escape(text.description)}</p><h3>${vi ? 'Giới hạn của cách diễn giải' : 'Interpretive caution'}</h3><p>${escape(text.cautions)}</p><p class="review-rubric">${vi ? 'Hướng tư tưởng dùng trong nghiên cứu; không phải nhãn kết quả của người tham gia.' : 'Research lens; never a participant result label.'}</p>`;
+  return card(lens.id, 'Research lens / Hướng tư tưởng trong nghiên cứu', pair(column(lens), column(translated, true)));
+}
+
+function aimsCard() {
+  const column = (aims, vi = false) => `<h2>${vi ? 'Mục tiêu của hệ thống nhận định rộng hơn' : 'Aims for a broader statement system'}</h2><ul>${aims.map(aim => `<li>${escape(aim)}</li>`).join('')}</ul><p class="review-rubric">${vi ? 'Bản nháp của nhóm biên soạn; chưa phải một hệ phân loại đầy đủ hay một thang đo đã được kiểm định.' : 'Author draft; neither an exhaustive taxonomy nor a validated scale.'}</p>`;
+  return card('foundation-aims', 'Framework aims / Mục tiêu của khung nghiên cứu', pair(column(instrument.foundations.aims), column(viFoundations.aims, true)));
 }
 
 function scenarioColumn(scene, text, world, translated, language) {
@@ -78,30 +105,31 @@ function render() {
   const world = instrument.worlds.find(item => item.id === worldControl.value) || instrument.worlds[0];
   worldControl.disabled = kind !== 'scenarios';
   const search = normalize(searchControl.value.trim());
-  const source = kind === 'statements' ? instrument.statements : kind === 'scenarios' ? instrument.scenarios : instrument.worlds;
+  const source = kind === 'statements' ? instrument.statements : kind === 'foundations' ? instrument.foundations.items : kind === 'lenses' ? instrument.foundations.lenses : kind === 'scenarios' ? instrument.scenarios : instrument.worlds;
   const rows = source.filter(item => {
     if (!search) return true;
-    const translation = kind === 'statements' ? viItems.statements[item.id] : kind === 'scenarios' ? viItems.scenarios[item.id] : viWorlds.worlds[item.id];
-    const contexts = kind === 'scenarios' ? [world.scenarioNotes[item.id], viWorlds.worlds[world.id].scenarioNotes[item.id]] : [];
+    const translation = kind === 'statements' ? viItems.statements[item.id] : kind === 'foundations' ? viFoundations.items[item.id] : kind === 'lenses' ? viFoundations.lenses[item.id] : kind === 'scenarios' ? viItems.scenarios[item.id] : viWorlds.worlds[item.id];
+    const contexts = kind === 'scenarios' ? [world.scenarioNotes[item.id], viWorlds.worlds[world.id].scenarioNotes[item.id]] : kind === 'foundations' ? [instrument.foundations.categories.find(category => category.id === item.category), viFoundations.categories[item.category], ...item.lenses.flatMap(id => [instrument.foundations.lenses.find(lens => lens.id === id), viFoundations.lenses[id]])] : [];
     return normalize(JSON.stringify([item, translation, contexts])).includes(search);
   });
-  cards.innerHTML = rows.map(item => kind === 'statements' ? statementCard(item) : kind === 'scenarios' ? scenarioCard(item, world) : worldCard(item)).join('');
+  cards.innerHTML = rows.map(item => kind === 'statements' ? statementCard(item) : kind === 'foundations' ? foundationCard(item) : kind === 'lenses' ? lensCard(item) : kind === 'scenarios' ? scenarioCard(item, world) : worldCard(item)).join('');
+  if (kind === 'lenses' && !search) cards.innerHTML = aimsCard() + cards.innerHTML;
   if (!rows.length) cards.innerHTML = '<p class="review-empty">No matching content / Không tìm thấy nội dung phù hợp.</p>';
-  status.textContent = `${rows.length} / ${source.length} items · mục nội dung · v${instrument.version} · draft / bản nháp`;
+  status.textContent = `${rows.length} / ${source.length} ${kind === 'lenses' ? 'research lenses · hướng tư tưởng' : 'items · mục nội dung'} · v${instrument.version} · draft / bản nháp`;
 }
 
 function exportPacket() {
   const payload = {
     format: 'political-context-bilingual-review',
-    packetVersion: 1,
+    packetVersion: 2,
     instrumentId: instrument.id,
     version: instrument.version,
     reviewStatus: 'draft',
     originalLanguage: 'en',
     translationLanguage: 'vi',
     english: instrument,
-    vietnamese: {items: viItems, worlds: viWorlds},
-    limitations: ['Author translation drafts; independent bilingual review and cognitive interviews are pending.', 'Structural checks do not establish linguistic or measurement equivalence.', 'This packet contains authored content, not assessment responses.'],
+    vietnamese: {items: viItems, worlds: viWorlds, foundations: viFoundations},
+    limitations: ['Author translation drafts; independent bilingual review and cognitive interviews are pending.', 'Structural checks do not establish linguistic or measurement equivalence.', 'Foundation lens associations are research metadata, not ideological classification rules.', 'This researcher packet reveals country inspirations and contains authored content, not assessment responses.'],
   };
   const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'}));
   const link = document.createElement('a');
@@ -111,8 +139,8 @@ function exportPacket() {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-if (viItems.version !== instrument.version || viWorlds.version !== instrument.version
-  || viItems.reviewStatus !== 'draft' || viWorlds.reviewStatus !== 'draft') {
+if (viItems.version !== instrument.version || viWorlds.version !== instrument.version || viFoundations.version !== instrument.version
+  || viItems.reviewStatus !== 'draft' || viWorlds.reviewStatus !== 'draft' || viFoundations.reviewStatus !== 'draft') {
   status.textContent = 'The review drafts do not match this instrument version. / Bản nháp không khớp phiên bản công cụ.';
 } else {
   worldControl.innerHTML = instrument.worlds.map(world => `<option value="${escape(world.id)}">${escape(world.name)} / ${escape(viWorlds.worlds[world.id].name)}</option>`).join('');

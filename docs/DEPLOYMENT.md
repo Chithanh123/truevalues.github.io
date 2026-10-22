@@ -11,7 +11,7 @@ This is the expected address, not a claim that the current local changes are alr
 ## One-time GitHub setup
 
 1. Open the repository's **Settings → Pages**. Under **Build and deployment**, choose **GitHub Actions** as the source. If this setting is unavailable, ask a repository administrator to enable it.
-2. Review and merge the prepared feature branch into `master` through a pull request **inside `Chithanh123/truevalues.github.io`**. Verify that both the base repository and head repository show `Chithanh123/truevalues.github.io`; the base branch is `master`. The current v0.3 branch is `research/bilingual-pilot`. Use an explicit comparison within this fork rather than accepting GitHub's upstream-fork default. The merge starts the publishing workflow automatically.
+2. Review and merge the prepared feature branch into `master` through a pull request **inside `Chithanh123/truevalues.github.io`**. Verify that both the base repository and head repository show `Chithanh123/truevalues.github.io`; the base branch is `master`. The current v0.4 branch is `research/ideological-foundations`, which includes the earlier `research/bilingual-pilot` work. Use an explicit comparison within this fork rather than accepting GitHub's upstream-fork default. The merge starts the publishing workflow automatically.
 3. To publish again manually, open **Actions → Deploy Political Context to GitHub Pages**, choose **Run workflow**, select `master`, and run it.
 4. Wait for both the build and deploy jobs to succeed. The deployment's `github-pages` environment reports the actual published URL. Open that URL over HTTPS and complete a short assessment check.
 
@@ -33,7 +33,7 @@ npm run build
 python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
-The deployment directory contains the current HTML entry points, CSS, authored JavaScript modules, the SVG mark, the bilingual review workspace, draft translations, participant-facing research/review documents, the license, and `.nojekyll`. It excludes Git metadata, tests, tools, unused legacy assets, and browser-generated responses. Rebuilding replaces the generated artifact. `dist/` is ignored by Git.
+The deployment directory contains the current HTML entry points, CSS, authored JavaScript modules, the SVG mark, the bilingual review workspace, foundation framework, draft translations, authored research/review documents, the license, and `.nojekyll`. It excludes Git metadata, tests, tools, unused legacy assets, and browser-generated responses. Rebuilding replaces the generated artifact. `dist/` is ignored by Git.
 
 All site assets and module imports use relative paths. The packaged site is tested under the repository subpath `/truevalues.github.io/`, not only at a server root. Legacy quiz URLs redirect back to the new assessment within that same subpath.
 
@@ -41,10 +41,11 @@ For another static host, upload the **contents** of `dist/` so that its `index.h
 
 ## Check after publication
 
-- The homepage loads its styling, world list, and method/privacy dialogs.
+- The homepage loads its styling and method/privacy dialogs without exposing real-country correspondences.
 - Begin an assessment, answer a statement, reload, and resume.
-- Continue through a setting briefing and a contextual decision; verify its institutional note.
-- Finish or skip through the remaining items and confirm the debrief and local export work.
+- Continue through value and foundation items, a setting briefing, and a contextual decision; verify its institutional note without an explicit real-country correspondence.
+- Finish or skip through the remaining items and confirm that the debrief reveals the assigned country inspiration, records foundation answers separately, and offers local export.
+- Inspect the separate author-review workspace; its country-correspondence spoiler notice and bilingual foundation material should be present.
 - Open one of the old `quiz.html` or `results.html` paths and confirm it redirects within the project site.
 - Use **Erase my answers** to remove the test data from the current tab and saved device copy.
 

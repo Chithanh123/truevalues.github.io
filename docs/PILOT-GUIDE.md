@@ -1,6 +1,6 @@
 # Political Context: cognitive pilot and review guide
 
-Instrument version: `0.3.0`. Status: **draft protocol; no interviews or external reviews completed**.
+Instrument version: `0.4.0`. Status: **draft protocol; no interviews or external reviews completed**.
 
 AI-assisted technical review and automated checks have occurred during development; they do not constitute independent human content review or cognitive interviews.
 
@@ -27,19 +27,20 @@ Do not ask people to send political answers through chat to make these decisions
 
 ## Prepare a review packet
 
-1. Run the application and inspect the method and settings explanations.
-2. Use **Download review packet** for the authored instrument/review metadata. It contains no participant responses. Record its instrument version. Open `review.html` for paired source/translation inspection and record the translation revision separately.
+1. Complete or inspect the participant route, including the delayed country reveal, before opening author materials if preserving that first-use experience matters. Institutional facts remain visible during decisions; country correspondence labels belong at the final debrief.
+2. Open the explicitly marked `review.html` author workspace, or use the review packet available from the debrief, for authored instrument/review metadata. These materials disclose country correspondences and political-tradition associations; they contain no participant responses. Record the instrument version and translation revision separately.
 3. Run `npm run validate:content`, `npm run validate:translations`, `npm test`, and the documented browser checks. Keep the outcome with the reviewed version. Technical checks cannot approve wording or cultural accuracy.
 4. Assign content reviewers with different political viewpoints, including people familiar with each setting's inspiration. Review one complete world brief and all applicable notes together; reviewing isolated national labels is insufficient.
 5. Copy the header-only `review-log-template.csv` into an access-controlled review log. Use reviewer codes rather than full names. Never fill it with invented observations or dummy participants presented as findings.
 
 ## Content-review rubric
 
-Use the following rubric for each statement, scenario, and world-specific note. The log records the criterion, a concrete observation, severity, proposed change, and resolution.
+Use the following rubric for each value statement, foundation statement, scenario, and world-specific note. The log records the criterion, a concrete observation, severity, proposed change, and resolution.
 
 | Criterion | Reviewer questions | Examples that require revision |
 | --- | --- | --- |
 | Construct rationale | What preference could this response inform? What else could explain it? | An action scores coercion simply because an official follows a binding duty. |
+| Foundation premise | Does the wording distinguish social reality, normative priorities, knowledge, and institutional mechanisms? Is agreement being mistaken for political membership? | An ontology claim quietly implies a moral endorsement; a shared premise is described as exclusive to one political camp. |
 | Authority | Who is deciding? What can this assigned role actually do? Who approves or reviews the action? | A constituent spends public funds; a group leader makes a government order; a leader bypasses the stated budget authority. |
 | Feasibility | Are all options permitted, affordable under the common assumptions, and practically possible? | An apparently moderate option cannot meet its own stated costs or timing. |
 | Balanced wording | Do options receive similar detail and intelligible benefits and costs? | One option is “protect people” while another is framed only as selfish or malicious. |
@@ -50,7 +51,8 @@ Use the following rubric for each statement, scenario, and world-specific note. 
 | Scoring/exclusion | Are the sign and intended inference documented? Are uncertainty and “none” excluded rather than made neutral? Are descriptive-only cases excluded from scores and denominators? | Reasons add hidden weight; the housing comparison counts twice; the descriptive public-records case is assigned a civil-rights score. |
 | Personal preference | Does the reader keep the same feasible packages and constraints while putting the assigned responsibility aside? | The prompt is understood as unlimited money or permission to ignore the scenario's safety facts; a missing preference is treated as agreement. |
 | Translation | Do source and Vietnamese draft preserve meaning, role powers, negation, intensity, and the neutral/uncertain distinction? | A translation changes an obligation into an option, equates uncertain with neutral, or introduces a country stereotype. |
-| Debrief | Can a reader explain what the summary supports? | A midpoint is presented as a definitive ideology, a percentile, or evidence of hypocrisy. |
+| Delayed reveal | Are explicit real-country labels absent until the final debrief, while decision-relevant institutions remain available? | The homepage, a dialog, or context note reveals the correspondence early; concealment is claimed to prevent inference or source inspection. |
+| Debrief | Can a reader explain what the summary supports? | A midpoint or foundation answer is presented as a definitive ideology, a percentile, or evidence of hypocrisy. |
 
 Use severity codes consistently:
 
@@ -71,7 +73,7 @@ This procedure is prospective. The Vietnamese text is a generated author draft; 
 5. **Probe comprehension.** Test selected revised items with intended bilingual adult readers after the logistical and consent requirements are settled. Ask for paraphrases in each language, who can act, and what facts must stay fixed. Record reading order, switching, and prompts. Do not treat recall from a first language version as independent comprehension of the second.
 6. **Recheck and version.** Recheck changed items in a later round; retain an issue until there is evidence the original problem was resolved. Track source and translation revisions together. A checked field count does not close a semantic issue.
 
-Priority concepts include public provision versus ownership, rights versus discretion, non-sensitive records versus protected information, constituent versus office holder, proposal versus final decision, and cultural continuity versus exclusion. Preserve negation, qualifiers such as “generally,” feasibility assumptions, costs, deadlines, and response intensity. Neutrality, uncertainty, none of the offered choices, and an omitted optional response must remain distinct.
+Priority concepts include social ontology versus moral obligation, individual versus relational explanations, knowledge versus authority, public provision versus ownership, rights versus discretion, non-sensitive records versus protected information, constituent versus office holder, proposal versus final decision, and cultural continuity versus exclusion. Preserve negation, qualifiers such as “generally,” feasibility assumptions, costs, deadlines, and response intensity. Neutrality, uncertainty, none of the offered choices, and an omitted optional response must remain distinct.
 
 The same role and budget constraints must be understood in the optional personal-preference prompt. Ask whether the person is still choosing among the same packages; do not coach them toward a particular action or urge consistency with a previous answer.
 
@@ -83,17 +85,17 @@ A starting estimate is **12–20 bilingual English–Vietnamese adult readers in
 
 Begin with a small round on two settings to detect interaction and wording problems. Revise before the next round. Use a coverage matrix to add readers for the remaining settings and to revisit changed items. All five roles appear in a complete route, but hearing one person interpret a role does not validate it. Country-context specialists and independent rubric reviewers are additional review functions, not substitutes for participant comprehension work.
 
-Each complete route uses one world, 24 statements, eight main scenarios, and one comparison. Seven main scenarios have provisional directional rubrics; `public-records` is descriptive-only. Its choices and reasons are recorded, but it contributes no domain score or denominator. The civil profile has only one scored main scenario, while the other domains each have two. For an interview, selected item probing may reduce burden, but record which items were actually reviewed. Do not describe a sampled interview as a completed full assessment. Do not collect political demographics simply to make a small group look representative.
+Each complete route uses one world, 24 value statements, 16 descriptive foundation statements, eight main scenarios, and one comparison: 49 primary response items before optional reasons and personal preferences. The provisional 25–35 minute development estimate must be checked against observed burden. Foundation responses are recorded individually and excluded from every domain score and denominator. Seven main scenarios have provisional directional rubrics; `public-records` is descriptive-only. Its choices and reasons are recorded, but it contributes no domain score or denominator. The civil profile has only one scored main scenario, while the other domains each have two. For an interview, selected item probing may reduce burden, but record which items were actually reviewed. Do not describe a sampled interview as a completed full assessment. Do not collect political demographics simply to make a small group look representative.
 
 ### Suggested session sequence
 
 1. **Opening, about five minutes.** Explain the exploratory purpose, voluntary nature, recording/notes decision, ability to skip, and agreed handling of any data. Verify that the person understands the prototype is not enrolling them in an online study or assigning a definitive ideology.
 2. **Unassisted first use.** Ask the reader to start without coaching. Observe whether the distinction between personal values and assigned responsibilities is clear. Record navigation or accessibility problems separately from item interpretation.
-3. **Statement probing.** Select items from different domains and directions, and sample both English and Vietnamese review material under the recorded language order. Ask for a paraphrase before asking whether response categories express the reader's intended answer. Avoid suggesting the intended pole or praising a political choice.
-4. **World-brief probing.** Ask what institutions matter for the forthcoming decisions and which details are fictional. Check that the reader does not need to identify the real country or infer a population's character.
+3. **Statement probing.** Select value items from different domains and directions, and sample foundation items from each conceptual category. Sample both English and Vietnamese review material under the recorded language order. Ask for a paraphrase before asking whether response categories express the reader's intended answer. For foundations, check whether the person read a descriptive premise as a moral prescription or an exclusive political identity. Keep tradition associations out of the unassisted participant task. Avoid suggesting a pole or praising a political choice.
+4. **World-brief probing.** Ask what institutions matter for the forthcoming decisions and which details are fictional. Do not disclose or prompt guesses about the real-country correspondence before the final debrief. Check that the reader can decide using the stated facts. After the reveal, ask whether they had already recognized an inspiration and whether that affected their reading; do not treat delayed labels as proof of blinding.
 5. **Role/scenario probing.** Ask who can act, what limits apply, and the main benefit and cost of each option. For the optional personal preference, ask which facts and constraints still apply when the assigned responsibility is put aside. Record invented assumptions, unclear words, or infeasible interpretations. The participant may explain a personal reason voluntarily, but the facilitator should not demand a political justification.
 6. **Housing comparison.** Ask which facts changed and which stayed the same. Do this after the answer, so the prompt does not coach the decision. Ask whether seeing the earlier case affected how they approached the second version.
-7. **Debrief interpretation.** Ask what the markers and coverage counts mean, how missing answers and descriptive-only exercises are treated, and whether the result says what ideology someone truly holds. Check that the reader understands why a recorded public-records choice does not contribute a civil-rights score, and why personal preferences do not affect any marker or diagnose hypocrisy. Correct misunderstandings after recording them.
+7. **Debrief interpretation.** Ask what the markers and coverage counts mean, how missing answers and descriptive-only exercises are treated, and whether the result says what ideology someone truly holds. Check that the reader understands why foundation responses and the public-records choice do not contribute to the four domain scores, and why personal preferences do not affect any marker or diagnose hypocrisy. Ask what the country reveal establishes and what it cannot say about a real population or the participant's nationality. Correct misunderstandings after recording them.
 8. **Data controls and close.** Ask the reader to explain tab-only progress, optional device saving, response export, review packet, and erase controls. Follow the agreed data-handling procedure, including deleting test saves if requested. Ask for any remaining confusing or burdensome part.
 
 Keep durations provisional and report observed burden rather than promising a fixed completion time. Think-aloud prompts can themselves affect choices, so interview answers should not be pooled with unassisted assessment responses as if the conditions were identical.
@@ -124,9 +126,9 @@ A separate coverage sheet should record which setting, item, role, locality, and
 For response exports:
 
 - Downloading is optional and local; it does not submit data to the developer or a study.
-- A v0.3 response export includes sensitive political responses, optional personal preferences, and reasons. Explain this before asking for a download.
+- A v0.4 response export includes sensitive political responses, including individual foundation answers, optional personal preferences, and reasons. Explain this before asking for a download.
 - Collect or transfer a file only under the specified consent and approved storage workflow. Do not ask readers to upload it to chat by default.
-- The review-packet download contains authored content/metadata and no participant responses. It is suitable for inspecting the rubric but should not be confused with an answer export.
+- The review-packet download contains authored content/metadata and no participant responses. It exposes country correspondences and author political-tradition metadata. It is suitable for inspecting the rubric after the first-use route, and must not be confused with an answer export.
 - Erasure clears this tab's answers and the saved device copy; other tabs and already downloaded files may retain copies.
 
 ## Decision gates and outputs

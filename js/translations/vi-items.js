@@ -1,5 +1,5 @@
 /**
- * Vietnamese author draft for bilingual cognitive review, instrument 0.3.0.
+ * Vietnamese author draft for bilingual cognitive review, instrument 0.4.0.
  * Not an independently reviewed or validated translation. Stable source IDs are
  * retained for comparison; this file defines no scores or answer interpretation.
  */
@@ -39,7 +39,7 @@ const housingFacts = [
 ];
 
 export const viItems = {
-  version: '0.3.0',
+  version: '0.4.0',
   reviewStatus: 'draft',
   dimensions: {
     economic: {
