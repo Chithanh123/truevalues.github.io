@@ -34,6 +34,10 @@ test('site artifact contains exactly the public allowlist and preserves file byt
     assert.ok(!result.files.some(file => /(^|\/)(\.git|tests|scripts)(\/|$)/.test(file)));
     assert.ok(!result.files.includes('package.json'));
     assert.ok(!result.files.includes('questions.js'));
+    for (const reviewFile of [
+      'review.html', 'js/review.js', 'js/translations/vi-items.js',
+      'js/translations/vi-worlds.js', 'docs/DESIGN-MATRIX.md', 'docs/PROGRESS.md',
+    ]) assert.ok(result.files.includes(reviewFile), `Missing bilingual review asset: ${reviewFile}`);
   });
 });
 

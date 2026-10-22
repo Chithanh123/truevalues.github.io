@@ -1,8 +1,8 @@
 # Political Context: research specification draft
 
-Instrument: `political-context-pilot`, version `0.2.0`.
+Instrument: `political-context-pilot`, version `0.3.0`.
 
-This local prototype is an instrument under development. Its items, world briefs, and scoring rubric have not undergone an external expert review, cognitive interviews, a completed literature review, or psychometric validation. Technical coverage checks establish that the authored content can run; they do not establish the validity of its measures. No research participants have been recruited and no study data are collected by the application.
+This prototype is an instrument under development. Its items, world briefs, and scoring rubric have not undergone an external expert review, cognitive interviews, a completed literature review, or psychometric validation. Technical coverage checks establish that the authored content can run; they do not establish the validity of its measures. No research participants have been recruited and no study data are collected by the application.
 
 ## Current content and intended interpretation
 
@@ -12,7 +12,11 @@ A route uses one randomly assigned fictional setting. The eight settings draw se
 
 The current route and option order are fixed. It is not a balanced experimental design, a full factorial study, or a representative sample of the possible dilemmas in each society. The eight-world by five-role by two-locality space contains 80 context cells before adding dilemmas, but this version does not claim to cover every cell with an independently authored story.
 
+The first comprehension-pilot audience is **bilingual English–Vietnamese adults**, as chosen for this development phase. Recruitment geography, exact age and language-proficiency eligibility, responsible operator, primary outcomes, and data handling remain undecided. This audience choice does not establish representativeness of either language population.
+
 Every item and setting remains an **author draft**. The [pilot guide](PILOT-GUIDE.md) and [empty review log](review-log-template.csv) support the next review stage. They contain no findings or invented participant records. AI-assisted technical and content checks are development work; the empty log does not represent completed independent human review.
+
+The [design matrix](DESIGN-MATRIX.md) records every statement and situation, its intended rationale, rival explanations, scoring status, and authored world coverage. The [progress ledger](PROGRESS.md) separates software integration and prepared materials from completed research and public-site verification.
 
 ## Research question and candidate outcomes
 
@@ -24,6 +28,7 @@ The proposed central question is: **How do explicitly stated political values re
 | How do people respond to a changed repair deadline? | Housing action in each version and whether the recorded actions differ | The current repeated, fixed-order presentation permits recognition, practice, and consistency effects. |
 | Do participants understand the scope of their assigned powers? | Correct paraphrase of who decides, what is permitted, and what is constrained | This is a comprehension outcome; it does not measure political sophistication or ideology. |
 | Which item wording or contextual assumptions generate uncertainty? | Item-level uncertainty, skips, unrepresented choices, and interview observations | Missing responses have different meanings; they should not be collapsed into ideological neutrality. |
+| How do personal preferences relate to actions selected within an assigned responsibility? | Separately recorded preference and role action for the same feasible packages | Optional answers and fixed action-first order can affect the contrast; it is not a causal role effect or a measure of hypocrisy. |
 | Can people understand the debrief without overinterpreting it? | Explanation of what a marker, coverage count, and comparison do and do not imply | A completed test or an attractive result screen does not demonstrate measurement validity. |
 
 These are protocol candidates, not preregistered hypotheses. Before a study, choose a small set of primary outcomes and contrasts, define an analysis and exclusion plan, and justify the sample size for those choices. Preserve a separate exploratory analysis category.
@@ -37,7 +42,7 @@ These are protocol candidates, not preregistered hypotheses. Before a study, cho
 | Civil | Public-order powers | Civil protections | Administrative capacity is not coercion; complying with a duty is not endorsement. |
 | Societal | Cultural continuity | Cultural change | Continuity, pluralism, equal opportunity, and attitudes to particular customs may differ. |
 
-Review political theory and existing measurement literature before adopting a final scale structure. Prepare a source-by-construct map, identify omissions and rival interpretations, and obtain independent rubric review across political viewpoints. More items alone do not establish reliability, dimensionality, or comparability between statement and scenario summaries.
+Review political theory and existing measurement literature before adopting a final scale structure. The matrix flags `civil-records` and `civil-withholding` as priority cases: those statement rubrics still require review because transparency and staff capacity need not indicate civil-rights or public-order preferences. Prepare a source-by-construct map, identify omissions and rival interpretations, and obtain independent rubric review across political viewpoints. More items alone do not establish reliability, dimensionality, or comparability between statement and scenario summaries.
 
 ## Provisional scoring contract
 
@@ -47,7 +52,7 @@ Each of the seven directionally scored main scenarios has one provisional domain
 
 The `public-records` scenario has `scoring: "descriptive"` and null option scores. Transparency, information usability, and staff capacity have not been established as indicators on the civil-rights/public-order axis. Its actual choices and reasons remain in the evidence and export, but it is excluded from every domain aggregate and denominator. Economic, diplomatic, and societal profiles therefore each have two scored main scenarios; the civil profile has one. Coverage counts must disclose this asymmetry.
 
-Uncertain, skipped, and unrepresented responses are excluded from means, while their original response types remain available. A genuine neutral statement response or midpoint action remains included. Reasons are explanatory labels and do not change scores. The repeated housing variant is excluded from the main scenario profile to avoid double-weighting that dilemma.
+Uncertain, skipped, and unrepresented responses are excluded from means, while their original response types remain available. A genuine neutral statement response or midpoint action remains included. Reasons are explanatory labels and do not change scores. Optional personal-preference responses are also unscored and excluded from every profile denominator; their raw response categories remain separate from role actions and reasons. The repeated housing variant is excluded from the main scenario profile to avoid double-weighting that dilemma.
 
 | Main scenario ID | Provisional scoring direction | Important rival explanations |
 | --- | --- | --- |
@@ -61,6 +66,24 @@ Uncertain, skipped, and unrepresented responses are excluded from means, while t
 | `regional-cooperation` | Domestic-first allocation toward domestic priority; larger shared regional commitment toward cooperation; a split package at the midpoint | Expected benefits, national responsibilities, implementation risk, and cross-border obligations can influence the allocation. |
 
 Exact option IDs and scores are published in `js/content.js`. Display actual selections, unscored reasons, and evidence counts alongside summaries. The domains have only one or two scored main situations, which still provide limited coverage. Do not publish population percentiles, confidence percentages, authoritative ideology labels, or a numeric hypocrisy or belief/action-gap score.
+
+## Personal preference versus role action
+
+Version 0.3 adds an optional personal-preference response after a situation's role action. It uses the same feasible packages, facts, resources, and constraints while asking the person to put the assigned responsibility aside. It does not invite unlimited spending, changed legal permissions, different safety facts, or an alternative invented world.
+
+Store and display preference independently of the chosen role action and reason. A missing, uncertain, or unrepresented preference is not evidence that the person personally endorses their role action. Preferences do not change ideology summaries, coverage counts, or the comparison of actions in the housing pair. This remains true for the descriptive public-records exercise.
+
+The debrief may describe what was recorded, such as choosing one package in the role and preferring another personally. It cannot establish that the role caused the difference, identify a more authentic ideology, or diagnose hypocrisy. Additional reflection, wording, responsibilities, or uncertainty could explain it. Because the preference prompt follows the action, it may also introduce consistency pressure and demand effects. Review these interpretations in the comprehension pilot before selecting any study outcome.
+
+## Bilingual author review
+
+`review.html` is a read-only workspace showing English source content alongside draft Vietnamese translations. It covers the statement bank, contextual situations and choices, fictional world briefs, and institutional notes. The participant assessment remains English. This workspace is not a complete Vietnamese participant version, a validated translation, a recruitment form, or a response-collection service.
+
+Vietnamese text in `js/translations/vi-items.js` and `js/translations/vi-worlds.js` is an author draft awaiting independent bilingual review. Do not infer semantic equivalence from complete field coverage, fluent wording, or a passing technical check. Keep the English source version, translation revision, disputed terms, and reconciled decisions identifiable.
+
+Use independent forward review, a separate bilingual review perspective, reconciliation, and cognitive probing in both languages. Back-translation may reveal discrepancies but is not sufficient validation by itself. Review role authority, negation, quantifiers, obligation versus discretion, non-sensitive versus protected information, response intensity, and neutral versus uncertain categories. The protocol is detailed in [PILOT-GUIDE.md](PILOT-GUIDE.md).
+
+Bilingual adult readers are the first intended review audience, not a representative cross-national sample. Their answers cannot establish equivalence for monolingual populations. Record language order and any switching during interviews; reading both versions or thinking aloud can itself influence interpretation and subsequent answers.
 
 ## Controlled housing contrast
 
@@ -78,12 +101,14 @@ Shared anchor situations allow reviewers to compare the same authored dilemma ac
 
 Role titles also bundle powers, obligations, and accountability. A public servant's authorized discretion differs from a national leader's proposal power. Unless those components are controlled, describe a contrast as an assigned-role package. The current route associates each dilemma with one role; it cannot isolate a pure role effect independently of dilemma content.
 
+The current implemented route remains fixed, with no balanced form schedule. Candidate counterbalanced and between-participant forms are proposals in the design matrix, not deployed study allocation.
+
 Statements appear first as part of the intended experience. Later choices can reflect explicit value reflection or consistency pressure. Record this interpretation and evaluate order effects separately if the research question requires unprimed decisions.
 
 ## Review and pilot sequence
 
-1. Define the target population, languages, study operator, intended claims, and primary research questions.
-2. Complete a literature-informed construct map and independent content/rubric review. Review every setting with people familiar with its inspiration.
+1. Operationalize the chosen bilingual English–Vietnamese adult audience: define geography, age/eligibility, language proficiency, operator, intended claims, primary questions, and data handling before recruitment.
+2. Complete a literature-informed construct map and independent content/rubric review. Review every setting with people familiar with its inspiration. Independently review and reconcile the Vietnamese author draft with bilingual reviewers before using it as participant material.
 3. Use the cognitive-interview guide to test comprehension, powers, feasibility, hidden assumptions, and debrief interpretation. Record issues rather than inventing validation findings.
 4. Revise and version the content. Pilot burden, missingness, assignment fidelity, and candidate item behavior under an approved protocol.
 5. Freeze the instrument and preregister a confirmatory design and analysis. Justify sample size using the planned contrasts and repeated-measures structure.
@@ -96,7 +121,7 @@ See [PILOT-GUIDE.md](PILOT-GUIDE.md) for the draft interview sequence and decisi
 
 The application is local-only: no advertising, analytics, research submission endpoint, or automatic transmission of political responses. Default progress uses the current tab's session storage; optional device saving uses local storage. Erasure removes this tab's data and the saved device copy. Other open tabs may retain separate copies.
 
-The response export is a voluntary download containing sensitive political answers, reasons, assigned world, instrument version, and summaries. Participants control whether to download or share it. Erasing browser storage cannot erase files already downloaded or shared. Do not place responses or identifiable study IDs in shareable URLs.
+The v0.3 response export (export format version 2) is a voluntary download containing sensitive political answers, optional personal preferences, reasons, assigned world, instrument version, and summaries. Participants control whether to download or share it. Erasing browser storage cannot erase files already downloaded or shared. Do not place responses or identifiable study IDs in shareable URLs.
 
 The review-packet download is different: it contains authored instrument and review metadata, without a participant's responses. It supports content review and should not be represented as a research response submission.
 
@@ -108,7 +133,8 @@ Formal collection requires a separate consented workflow with a named operator, 
 | --- | --- | --- |
 | `0.1.0` | 12 statements; two worlds; four main scenarios and the housing comparison; two roles | Initial working prototype. |
 | `0.2.0` | 24 statements; eight worlds; eight main scenarios (seven scored, one descriptive) and the excluded housing comparison; five roles | Expanded author draft for review and cognitive-pilot preparation. |
+| `0.3.0` | Same authored bank; optional unscored personal preferences; paired English–Vietnamese review workspace | English participant assessment with Vietnamese author-review material; human translation review and validation remain pending. |
 
-Statement, world, scenario, option, and reason IDs remain stable where meaning is retained. Version changes are intentional when wording, context, route coverage, or scoring meaning changes. A save from `0.1.0` is rejected by `0.2.0`; there is no silent migration or reinterpretation. Existing export files need their original instrument version for analysis. Preserve an old export if it is already available; starting a new assessment can replace old browser saves.
+Statement, world, scenario, option, and reason IDs remain stable where meaning is retained. Version changes are intentional when wording, context, route coverage, or scoring meaning changes. Saves from `0.1.0` or `0.2.0` are rejected by `0.3.0`; there is no silent migration or reinterpretation. The previous-save download preserves incompatible data explicitly rather than applying the new meaning or export schema to it. Existing export files need their original instrument version for analysis. Preserve an old export if it is already available; starting a new assessment can replace old browser saves.
 
-Run `npm run validate:content` to inspect authored coverage and structure, `npm test` for engine checks, and the documented browser suite for application behavior. Passing these checks is a technical readiness condition, not evidence that human review or measurement validation has occurred.
+Run `npm run validate:content` to inspect authored coverage and structure, `npm run validate:translations` for author-translation field coverage, `npm test` for engine checks, and the documented browser checks for application behavior. Translation coverage checks cannot establish linguistic accuracy or equivalence. Passing these checks is a technical readiness condition, not evidence that human review or measurement validation has occurred.

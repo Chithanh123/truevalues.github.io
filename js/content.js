@@ -44,7 +44,7 @@ const housingWorldNotes = {
 
 export const instrument = {
   id: "political-context-pilot",
-  version: "0.2.0",
+  version: "0.3.0",
   title: "Political Context",
   roles: [
     { id: "constituent", label: "Ordinary constituent" },

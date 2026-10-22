@@ -2,6 +2,7 @@
 import json
 import math
 import os
+import re
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from urllib.parse import urlsplit
@@ -70,7 +71,7 @@ def choose(page, kind, value=None):
 
 def validate_export(payload, instrument):
     assert payload["format"] == "political-context-response-export"
-    assert payload["exportVersion"] == 1
+    assert payload["exportVersion"] == 2
     session = payload["session"]
     assert session["completed"] is True
     assert session["version"] == instrument["version"]
@@ -83,6 +84,19 @@ def validate_export(payload, instrument):
         assert payload["presentedOptionOrder"][scene["id"]] == [
             option["id"] for option in scene["options"]
         ]
+    preference_rows = {row["scenarioId"]: row for row in payload["summary"]["preferences"]}
+    assert set(preference_rows) == {scene["id"] for scene in instrument["scenarios"]}
+    for scene in instrument["scenarios"]:
+        answer = session["answers"][f"scenario:{scene['id']}"]
+        preference = answer.get("preference")
+        action_id = answer.get("optionId") if answer["kind"] == "choice" else None
+        preferred_id = preference.get("optionId") if preference and preference["kind"] == "choice" else None
+        expected_status = preference["kind"] if preference else "not-provided"
+        assert preference_rows[scene["id"]] == {
+            "scenarioId": scene["id"], "actionOptionId": action_id,
+            "preferredOptionId": preferred_id, "status": expected_status,
+            "different": action_id != preferred_id if action_id and preferred_id else None,
+        }
     for result in payload["summary"]["dimensions"]:
         statement_values, scenario_values = [], []
         for item in instrument["statements"]:
@@ -146,6 +160,82 @@ def review_packet(page, instrument, current_session=None):
     assert saved(page, "localStorage") == before_device
 
 
+
+def bilingual_review_workspace(page, instrument, current_session=None):
+    """Bilingual author-review browsing cannot create or modify assessment answers."""
+    before_session = saved(page)
+    before_device = saved(page, "localStorage")
+    page.goto(BASE + "/review.html", wait_until="networkidle")
+    expect(page.locator("#review-kind")).to_be_visible()
+    expect(page.locator("body")).to_contain_text(re.compile("draft", re.I))
+    translations = page.evaluate("""async () => ({
+        items: (await import('./js/translations/vi-items.js')).viItems,
+        worlds: (await import('./js/translations/vi-worlds.js')).viWorlds,
+    })""")
+    page.locator("#review-kind").select_option("statements")
+    page.locator("#review-language").select_option("parallel")
+    cards = page.locator("#review-cards .review-card")
+    expect(cards).to_have_count(len(instrument["statements"]))
+    first = instrument["statements"][0]
+    expect(cards.first.locator('[lang="en"]').first).to_contain_text(first["text"])
+    expect(cards.first.locator('[lang="vi"]').first).to_contain_text(
+        translations["items"]["statements"][first["id"]]["text"]
+    )
+    mobile_fit(page, "bilingual statement review")
+    search = page.locator("#review-search")
+    search.focus()
+    search.fill(first["id"])
+    expect(cards).to_have_count(1)
+    search.fill("missing-review-item-000")
+    expect(cards).to_have_count(0)
+    search.fill("")
+    expect(cards).to_have_count(len(instrument["statements"]))
+    page.locator("#review-language").select_option("vi")
+    expect(page.locator('#review-cards [lang="en"]:visible')).to_have_count(0)
+    assert page.locator('#review-cards [lang="vi"]:visible').count() > 0
+    page.locator("#review-language").select_option("en")
+    expect(page.locator('#review-cards [lang="vi"]:visible')).to_have_count(0)
+    assert page.locator('#review-cards [lang="en"]:visible').count() > 0
+    page.locator("#review-language").select_option("parallel")
+    page.locator("#review-kind").select_option("scenarios")
+    expect(cards).to_have_count(len(instrument["scenarios"]))
+    for world in instrument["worlds"]:
+        page.locator("#review-world").select_option(world["id"])
+        for scene in instrument["scenarios"]:
+            card = cards.filter(has_text=scene["title"])
+            expect(card).to_have_count(1)
+            expect(card).to_contain_text(world["scenarioNotes"][scene["id"]])
+            expect(card).to_contain_text(
+                translations["worlds"]["worlds"][world["id"]]["scenarioNotes"][scene["id"]]
+            )
+    mobile_fit(page, "bilingual situation review")
+    page.locator("#review-kind").select_option("worlds")
+    expect(cards).to_have_count(len(instrument["worlds"]))
+    mobile_fit(page, "bilingual setting review")
+    with page.expect_download() as export:
+        page.locator("#review-export").click()
+    payload = json.loads(Path(export.value.path()).read_text())
+    assert payload["format"] == "political-context-bilingual-review"
+    assert payload["packetVersion"] == 1
+    assert payload["instrumentId"] == instrument["id"]
+    assert payload["version"] == instrument["version"]
+    assert payload["reviewStatus"] == "draft"
+    assert payload["originalLanguage"] == "en"
+    assert payload["translationLanguage"] == "vi"
+    assert payload["english"] == instrument
+    assert payload["vietnamese"] == translations
+    assert not {"session", "answers", "responses"}.intersection(payload)
+    if current_session:
+        assert current_session["seed"] not in json.dumps(payload)
+    assert saved(page) == before_session
+    assert saved(page, "localStorage") == before_device
+    page.goto(BASE + "/", wait_until="networkidle")
+    if current_session:
+        action(page, "resume")
+        expect(page).to_have_title("Your debrief — Political Context")
+    print("PASS: bilingual author-review filters, all world notes, language views, and response-free export.")
+
+
 def seed_world_at_briefing(page, world_id):
     """Use a valid assignment and answered baseline, then exercise the real scenario UI."""
     result = page.evaluate(
@@ -183,6 +273,7 @@ with sync_playwright() as playwright:
     mobile_fit(page, "home")
     instrument = page.evaluate("async () => (await import('./js/content.js')).instrument")
     review_packet(page, instrument)
+    bilingual_review_workspace(page, instrument)
     assert saved(page) is None
     assert saved(page, "localStorage") is None
     begin(page)
@@ -232,6 +323,31 @@ with sync_playwright() as playwright:
             option = scene["options"][0 if number == 0 else -1]
             choose(page, "choice", option["id"])
             page.locator("#reason").select_option(scene["reasons"][0]["id"])
+        preference = page.locator("#personal-preference")
+        expect(preference).to_be_enabled()
+        if number == 0:
+            preference.select_option("option:" + scene["options"][-1]["id"])
+            recorded = saved(page)["answers"][f"scenario:{scene['id']}"]
+            assert recorded["preference"] == {"kind": "choice", "optionId": scene["options"][-1]["id"]}
+            choose(page, "choice", scene["options"][1]["id"])
+            expect(preference).to_have_value("option:" + scene["options"][-1]["id"])
+            choose(page, "choice", scene["options"][0]["id"])
+            action(page, "next")
+            action(page, "back")
+            expect(page.locator("#personal-preference")).to_have_value("option:" + scene["options"][-1]["id"])
+            page.reload(wait_until="networkidle")
+            action(page, "resume")
+            expect(page.locator("#personal-preference")).to_have_value("option:" + scene["options"][-1]["id"])
+        elif number == 1:
+            preference.select_option("option:" + scene["options"][1]["id"])
+        elif number == 2:
+            preference.select_option("none")
+        elif number == 3:
+            preference.select_option("uncertain")
+        elif number == 4:
+            preference.select_option("none")
+            preference.select_option("")
+            assert saved(page)["answers"][f"scenario:{scene['id']}"].get("preference") is None
         action(page, "next")
     expect(page).to_have_title("Your debrief — Political Context")
     expect(page.locator(".dimension-row")).to_have_count(len(instrument["dimensions"]))
@@ -246,6 +362,13 @@ with sync_playwright() as playwright:
     assert payload["summary"]["comparisons"][0]["changed"] is True
     assert payload["session"]["answers"]["scenario:public-assembly"]["kind"] == "none"
     assert payload["session"]["answers"]["scenario:water-partnership"]["kind"] == "uncertain"
+    assert payload["session"]["answers"]["scenario:water-partnership"]["preference"] == {"kind": "none"}
+    assert payload["session"]["answers"]["scenario:community-festival"]["preference"] == {"kind": "uncertain"}
+    assert payload["summary"]["preferences"][0]["different"] is True
+    first_scene = instrument["scenarios"][0]
+    preference_evidence = page.locator(".evidence-section details").filter(has_text=first_scene["title"])
+    preference_evidence.locator("summary").click()
+    expect(preference_evidence.locator(".evidence-body")).to_contain_text(first_scene["options"][-1]["label"])
     records = next(scene for scene in instrument["scenarios"] if scene["id"] == "public-records")
     assert records["scoring"] == "descriptive"
     assert all(option["score"] is None for option in records["options"])
@@ -264,8 +387,9 @@ with sync_playwright() as playwright:
     expect(page).to_have_title("Your debrief — Political Context")
     before_packet = saved(page)
     review_packet(page, instrument, current_session=before_packet)
+    bilingual_review_workspace(page, instrument, current_session=before_packet)
     assert saved(page) == before_packet
-    print("PASS: complete assessment, keyboard controls, Back replacement, uncertainty/skip/none, reasons, export, reload.")
+    print("PASS: complete assessment, keyboard controls, Back replacement, uncertainty/skip/none, reasons, unscored personal preference, export, reload.")
 
     action(page, "privacy")
     mobile_fit(page, "data dialog")
@@ -296,7 +420,7 @@ with sync_playwright() as playwright:
     action(recovery_page, "start")
     expect(recovery_page.locator("#step-title")).to_have_text(instrument["statements"][0]["text"])
     stale = saved(recovery_page)
-    stale["version"] = "0.1.0"
+    stale["version"] = "0.2.0"
     assert stale["version"] != instrument["version"]
     recovery_page.evaluate(
         "([key, data]) => sessionStorage.setItem(key, JSON.stringify(data))", [KEY, stale]

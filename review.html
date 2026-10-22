@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#243f38">
+  <meta name="description" content="Compare English source content and draft Vietnamese wording for Political Context. A read-only workspace for bilingual review.">
+  <title>Bilingual review — Political Context</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/review.js"></script>
+</head>
+<body class="review-page">
+  <a class="skip-link" href="#review-main">Skip to review content / Đến nội dung rà soát</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="./" aria-label="Political Context home"><svg class="brand-mark" width="44" height="44" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v40M4 24h40M10 10l28 28M10 38l28-28" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg><span>political<span class="wordmark-second">context</span></span></a>
+    <nav aria-label="Review navigation"><a class="nav-link" href="./">Assessment</a><a class="nav-link" href="docs/PILOT-GUIDE.md">Pilot guide</a><span class="pilot-badge"><span></span> EN / VI · Draft</span></nav>
+  </header>
+  <main id="review-main" class="shell" tabindex="-1">
+    <section class="review-intro">
+      <span class="eyebrow orange">BILINGUAL REVIEW · RÀ SOÁT SONG NGỮ</span>
+      <h1>One meaning.<br><em>Two languages.</em></h1>
+      <p lang="vi" class="review-vietnamese-title">Cùng một ý nghĩa. Hai ngôn ngữ.</p>
+      <div class="review-intro-grid"><p>Compare the English instrument with its draft Vietnamese wording. Review the meaning, role boundaries, numbers, and tradeoffs before using a translated assessment.</p><p lang="vi">Đối chiếu bản gốc tiếng Anh với bản dịch tiếng Việt nháp. Rà soát ý nghĩa, giới hạn của vai trò, số liệu và sự đánh đổi trước khi sử dụng một phiên bản đánh giá đã dịch.</p></div>
+      <aside class="review-draft-note"><p><strong>Translation draft, awaiting human review.</strong> The participant assessment remains in English. This page only browses authored content; it does not open, record, or change personal assessment answers.</p><p lang="vi"><strong>Bản dịch nháp, đang chờ con người rà soát.</strong> Phần đánh giá dành cho người tham gia vẫn bằng tiếng Anh. Trang này chỉ hiển thị nội dung được biên soạn; không mở, ghi lại hay thay đổi câu trả lời đánh giá cá nhân.</p></aside>
+    </section>
+    <section class="review-controls" aria-label="Content filters / Bộ lọc nội dung">
+      <div><label for="review-kind">Content / Nội dung</label><select id="review-kind"><option value="statements">Value statements / Nhận định về giá trị</option><option value="scenarios">Situations / Tình huống</option><option value="worlds">Settings / Bối cảnh</option></select></div>
+      <div><label for="review-world">Situation setting / Bối cảnh tình huống</label><select id="review-world" disabled></select></div>
+      <div><label for="review-language">View / Chế độ xem</label><select id="review-language"><option value="parallel">English + Tiếng Việt</option><option value="en">English only</option><option value="vi">Chỉ tiếng Việt</option></select></div>
+      <div><label for="review-search">Find wording or ID / Tìm nội dung hoặc mã</label><input id="review-search" type="search" autocomplete="off" placeholder="e.g. housing / nhà ở"></div>
+    </section>
+    <div class="review-toolbar"><p id="review-status" role="status" aria-live="polite">Loading draft content / Đang tải bản nháp…</p><button class="button secondary small" id="review-export" disabled>Download paired packet / Tải bộ đối chiếu ↓</button></div>
+    <details class="review-followup"><summary>New optional follow-up / Câu hỏi bổ sung không bắt buộc</summary><div class="review-pair"><section lang="en"><h2>Your personal preference</h2><p>Putting this assigned role aside, which of these same packages would you personally prefer? Keep the budget, facts, and other people’s rights unchanged.</p><p>The preference remains separate from the role action and reason. It does not change a profile score or establish the cause of any difference.</p></section><section lang="vi"><h2>Lựa chọn theo quan điểm cá nhân</h2><p>Đặt vai trò được giao sang một bên, với cùng các phương án này, bạn muốn chọn phương án nào theo quan điểm cá nhân? Giữ nguyên ngân sách, dữ kiện và quyền của những người khác.</p><p>Lựa chọn này được ghi riêng với hành động trong vai trò và lý do. Nó không làm thay đổi điểm hồ sơ và không chứng minh nguyên nhân của bất kỳ sự khác biệt nào.</p></section></div></details>
+    <div id="review-cards" aria-label="Paired authored content / Nội dung đối chiếu"></div>
+    <noscript><p>This read-only workspace needs JavaScript to display the paired content. / Không gian rà soát này cần JavaScript để hiển thị nội dung đối chiếu.</p></noscript>
+    <section class="review-closing"><p>Record wording issues in the <a href="docs/review-log-template.csv" download>empty review log</a>. The <a href="docs/DESIGN-MATRIX.md">design matrix</a> explains candidate constructs; the <a href="docs/PROGRESS.md">progress ledger</a> distinguishes completed engineering from pending research.</p><p lang="vi">Ghi vấn đề về cách diễn đạt vào <a href="docs/review-log-template.csv" download>biểu mẫu rà soát trống</a>. <a href="docs/DESIGN-MATRIX.md">Ma trận thiết kế</a> giải thích các khái niệm dự kiến; <a href="docs/PROGRESS.md">bản theo dõi tiến độ</a> phân biệt phần kỹ thuật đã hoàn thành với công việc nghiên cứu còn chờ thực hiện.</p></section>
+  </main>
+  <footer class="site-footer shell"><div><span class="footer-name">Political Context</span><span>Author translations · Bản dịch của nhóm biên soạn</span></div><a class="nav-link" href="./">Return to assessment / Về phần đánh giá →</a></footer>
+</body>
+</html>

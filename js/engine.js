@@ -2,7 +2,8 @@
  * Political Context's local prototype engine.
  * These summaries describe this instrument's responses; they are not validated
  * ideological scales. Comparison variants and descriptive observations never
- * add weight or coverage to the directional profile.
+ * add weight or coverage to the directional profile. Optional personal
+ * preferences are self-reported evidence and never affect those scores.
  */
 
 const ITEM_ID = /^[a-z][a-z0-9_-]*$/;
@@ -74,9 +75,13 @@ export function setAnswer(session, stepId, answer) {
     throw new Error("Only statement and scenario steps accept responses.");
   }
   if (!isRecord(answer)) throw new Error("A response must be an object.");
+  const copiedAnswer = {
+    ...answer,
+    ...(isRecord(answer.preference) ? { preference: { ...answer.preference } } : {}),
+  };
   return {
     ...session,
-    answers: { ...session.answers, [stepId]: { ...answer } },
+    answers: { ...session.answers, [stepId]: copiedAnswer },
     completed: false,
   };
 }
@@ -136,6 +141,22 @@ export function summarize(instrument, session) {
           : null,
       };
     }),
+    preferences: instrument.scenarios.map((item) => {
+      const answer = answers[`scenario:${item.id}`];
+      const preference = answer?.preference;
+      const status = ["choice", "uncertain", "none"].includes(preference?.kind)
+        ? preference.kind : "not-provided";
+      const actionOptionId = answer?.kind === "choice" ? answer.optionId : null;
+      const preferredOptionId = status === "choice" ? preference.optionId : null;
+      return {
+        scenarioId: item.id,
+        actionOptionId,
+        preferredOptionId,
+        status,
+        different: actionOptionId && preferredOptionId
+          ? actionOptionId !== preferredOptionId : null,
+      };
+    }),
   };
 }
 
@@ -148,16 +169,28 @@ function validStatementAnswer(answer) {
   return ["uncertain", "skip"].includes(answer.kind) && onlyKeys(answer, ["kind"]);
 }
 
+function validPreference(preference, item) {
+  if (preference === null) return true;
+  if (!isRecord(preference)) return false;
+  if (preference.kind === "choice") {
+    return onlyKeys(preference, ["kind", "optionId"])
+      && item.options.some((option) => option.id === preference.optionId);
+  }
+  return ["uncertain", "none"].includes(preference.kind)
+    && onlyKeys(preference, ["kind"]);
+}
+
 function validScenarioAnswer(answer, item) {
   if (!isRecord(answer)) return false;
+  if (own(answer, "preference") && !validPreference(answer.preference, item)) return false;
   if (answer.kind === "choice") {
-    return onlyKeys(answer, ["kind", "optionId", "reasonId"])
+    return onlyKeys(answer, ["kind", "optionId", "reasonId", "preference"])
       && item.options.some((option) => option.id === answer.optionId)
       && (answer.reasonId === null
         || item.reasons.some((reason) => reason.id === answer.reasonId));
   }
   return ["uncertain", "none", "skip"].includes(answer.kind)
-    && onlyKeys(answer, ["kind", "reasonId"]) && answer.reasonId === null;
+    && onlyKeys(answer, ["kind", "reasonId", "preference"]) && answer.reasonId === null;
 }
 
 export function validateSession(instrument, candidate) {

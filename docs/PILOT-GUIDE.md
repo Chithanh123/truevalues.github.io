@@ -1,17 +1,21 @@
 # Political Context: cognitive pilot and review guide
 
-Instrument version: `0.2.0`. Status: **draft protocol; no interviews or external reviews completed**.
+Instrument version: `0.3.0`. Status: **draft protocol; no interviews or external reviews completed**.
 
 AI-assisted technical review and automated checks have occurred during development; they do not constitute independent human content review or cognitive interviews.
 
 This guide turns the next research steps into reviewable work. Its purpose is to find misunderstandings, unrealistic authority, hidden assumptions, and overinterpretation before a larger study. It does not authorize recruitment, establish a validated scale, or substitute for the operator's consent and data-management decisions.
 
+The first audience direction is **bilingual English–Vietnamese adults**. The current participant assessment is English; the paired English/Vietnamese workspace is draft review material. This choice does not settle recruitment geography, exact adult eligibility, language proficiency, operator, outcomes, or data handling, and does not authorize recruitment.
+
+Use the [design matrix](DESIGN-MATRIX.md) to allocate content coverage and inspect rival explanations. Consult [PROGRESS.md](PROGRESS.md) for completed engineering work and open human-research gates.
+
 ## Questions that must be settled before recruitment
 
 | Decision | Current status | Required concrete output |
 | --- | --- | --- |
-| Target population and eligibility | Open | Define whom the instrument is intended to describe; specify age and inclusion/exclusion rules. |
-| Pilot and study languages | Open | Select languages, review translations, and document what comparisons are intended. An English draft does not validate other languages. |
+| Target population and eligibility | Audience direction chosen; operational criteria open | Bilingual English–Vietnamese adults. Define geography, recruitment, the applicable adult-age threshold, inclusion/exclusion rules, and proficiency criteria. |
+| Pilot and study languages | English–Vietnamese bilingual review selected; translations unreviewed | Independently review the Vietnamese author draft and define language order and intended comparisons. The English assessment and paired review page do not establish a validated Vietnamese assessment. |
 | Study operator and reviewers | Open | Name the responsible operator and reviewers; establish required institutional review. |
 | Primary outcomes | Draft candidates in `RESEARCH.md` | Choose comprehension outcomes and later substantive contrasts before collecting study data. |
 | Consent and recording | Open | Decide whether notes, audio, timings, or exports are needed, and provide an accurate consent process. |
@@ -24,8 +28,8 @@ Do not ask people to send political answers through chat to make these decisions
 ## Prepare a review packet
 
 1. Run the application and inspect the method and settings explanations.
-2. Use **Download review packet** for the authored instrument/review metadata. It contains no participant responses. Record its instrument version.
-3. Run `npm run validate:content`, `npm test`, and the documented browser suite. Keep the outcome with the reviewed version. Technical checks cannot approve wording or cultural accuracy.
+2. Use **Download review packet** for the authored instrument/review metadata. It contains no participant responses. Record its instrument version. Open `review.html` for paired source/translation inspection and record the translation revision separately.
+3. Run `npm run validate:content`, `npm run validate:translations`, `npm test`, and the documented browser checks. Keep the outcome with the reviewed version. Technical checks cannot approve wording or cultural accuracy.
 4. Assign content reviewers with different political viewpoints, including people familiar with each setting's inspiration. Review one complete world brief and all applicable notes together; reviewing isolated national labels is insufficient.
 5. Copy the header-only `review-log-template.csv` into an access-controlled review log. Use reviewer codes rather than full names. Never fill it with invented observations or dummy participants presented as findings.
 
@@ -44,6 +48,8 @@ Use the following rubric for each statement, scenario, and world-specific note. 
 | Shared assumptions | Does the same anchor retain its decision-relevant premises across settings? | A supposedly comparable option changes legal availability or material cost without being recorded. |
 | Housing treatment | Is the deadline the only changed decision condition? | Role, option wording, school costs, housing totals, powers, or institutional notes change between versions. |
 | Scoring/exclusion | Are the sign and intended inference documented? Are uncertainty and “none” excluded rather than made neutral? Are descriptive-only cases excluded from scores and denominators? | Reasons add hidden weight; the housing comparison counts twice; the descriptive public-records case is assigned a civil-rights score. |
+| Personal preference | Does the reader keep the same feasible packages and constraints while putting the assigned responsibility aside? | The prompt is understood as unlimited money or permission to ignore the scenario's safety facts; a missing preference is treated as agreement. |
+| Translation | Do source and Vietnamese draft preserve meaning, role powers, negation, intensity, and the neutral/uncertain distinction? | A translation changes an obligation into an option, equates uncertain with neutral, or introduces a country stereotype. |
 | Debrief | Can a reader explain what the summary supports? | A midpoint is presented as a definitive ideology, a percentile, or evidence of hypocrisy. |
 
 Use severity codes consistently:
@@ -54,9 +60,26 @@ Use severity codes consistently:
 
 A blank log does not mean the content passed review. Use `unreviewed`, `open`, `revised-awaiting-check`, and `resolved` statuses, with a concrete resolution record.
 
+## English–Vietnamese translation-review procedure
+
+This procedure is prospective. The Vietnamese text is a generated author draft; no independent human translation review, reconciliation committee, or bilingual interview is represented as completed.
+
+1. **Freeze the review material.** Record the English instrument version and source commit, Vietnamese draft revision, item/field IDs, and the exact pages or exported authored material reviewed. A changed English source needs renewed checking of its Vietnamese counterpart.
+2. **Review the forward draft.** Assign bilingual reviewers to compare the English and Vietnamese meanings. Include experience with survey wording and the institutional contexts where available. Separate linguistic comprehension from agreement with the political proposition.
+3. **Use an independent perspective.** Obtain a second bilingual review without treating the first reviewer's preferred wording as authoritative. Where useful, use an independent back-translation made without consulting the English original; record discrepancies. Back-translation is a diagnostic aid, not proof of validity or a substitute for direct bilingual review.
+4. **Reconcile decisions.** A documented review discussion should consider the source intent, natural Vietnamese, rival interpretations, and likely reader comprehension. Record the disputed phrase, alternatives, rationale, reviewer codes, unresolved questions, and revision. A machine-generated suggestion is not independent human adjudication.
+5. **Probe comprehension.** Test selected revised items with intended bilingual adult readers after the logistical and consent requirements are settled. Ask for paraphrases in each language, who can act, and what facts must stay fixed. Record reading order, switching, and prompts. Do not treat recall from a first language version as independent comprehension of the second.
+6. **Recheck and version.** Recheck changed items in a later round; retain an issue until there is evidence the original problem was resolved. Track source and translation revisions together. A checked field count does not close a semantic issue.
+
+Priority concepts include public provision versus ownership, rights versus discretion, non-sensitive records versus protected information, constituent versus office holder, proposal versus final decision, and cultural continuity versus exclusion. Preserve negation, qualifiers such as “generally,” feasibility assumptions, costs, deadlines, and response intensity. Neutrality, uncertainty, none of the offered choices, and an omitted optional response must remain distinct.
+
+The same role and budget constraints must be understood in the optional personal-preference prompt. Ask whether the person is still choosing among the same packages; do not coach them toward a particular action or urge consistency with a previous answer.
+
+Use `review.html` for source/draft comparison rather than representing it as a Vietnamese participant flow. Consider screen size, stacked language panels, readable Vietnamese accents, and language labels as presentation checks; these checks cannot establish translation equivalence. Bilingual readers do not supply evidence of validity for either monolingual population by themselves.
+
 ## Cognitive-interview plan
 
-A starting estimate is **12–20 readers in iterative rounds**, with the final number determined by the issues found. This is a comprehension-planning estimate, not a statistical validation sample or a claim that every setting receives adequate coverage.
+A starting estimate is **12–20 bilingual English–Vietnamese adult readers in iterative rounds**, with the final number determined by the issues found. This is a comprehension-planning estimate, not a statistical validation sample or a claim that every setting receives adequate coverage.
 
 Begin with a small round on two settings to detect interaction and wording problems. Revise before the next round. Use a coverage matrix to add readers for the remaining settings and to revisit changed items. All five roles appear in a complete route, but hearing one person interpret a role does not validate it. Country-context specialists and independent rubric reviewers are additional review functions, not substitutes for participant comprehension work.
 
@@ -66,11 +89,11 @@ Each complete route uses one world, 24 statements, eight main scenarios, and one
 
 1. **Opening, about five minutes.** Explain the exploratory purpose, voluntary nature, recording/notes decision, ability to skip, and agreed handling of any data. Verify that the person understands the prototype is not enrolling them in an online study or assigning a definitive ideology.
 2. **Unassisted first use.** Ask the reader to start without coaching. Observe whether the distinction between personal values and assigned responsibilities is clear. Record navigation or accessibility problems separately from item interpretation.
-3. **Statement probing.** Select items from different domains and directions. Ask for a paraphrase before asking whether response categories express the reader's intended answer. Avoid suggesting the intended pole or praising a political choice.
+3. **Statement probing.** Select items from different domains and directions, and sample both English and Vietnamese review material under the recorded language order. Ask for a paraphrase before asking whether response categories express the reader's intended answer. Avoid suggesting the intended pole or praising a political choice.
 4. **World-brief probing.** Ask what institutions matter for the forthcoming decisions and which details are fictional. Check that the reader does not need to identify the real country or infer a population's character.
-5. **Role/scenario probing.** Ask who can act, what limits apply, and the main benefit and cost of each option. Record invented assumptions, unclear words, or infeasible interpretations. The participant may explain a personal reason voluntarily, but the facilitator should not demand a political justification.
+5. **Role/scenario probing.** Ask who can act, what limits apply, and the main benefit and cost of each option. For the optional personal preference, ask which facts and constraints still apply when the assigned responsibility is put aside. Record invented assumptions, unclear words, or infeasible interpretations. The participant may explain a personal reason voluntarily, but the facilitator should not demand a political justification.
 6. **Housing comparison.** Ask which facts changed and which stayed the same. Do this after the answer, so the prompt does not coach the decision. Ask whether seeing the earlier case affected how they approached the second version.
-7. **Debrief interpretation.** Ask what the markers and coverage counts mean, how missing answers and descriptive-only exercises are treated, and whether the result says what ideology someone truly holds. Check that the reader understands why a recorded public-records choice does not contribute a civil-rights score. Correct misunderstandings after recording them.
+7. **Debrief interpretation.** Ask what the markers and coverage counts mean, how missing answers and descriptive-only exercises are treated, and whether the result says what ideology someone truly holds. Check that the reader understands why a recorded public-records choice does not contribute a civil-rights score, and why personal preferences do not affect any marker or diagnose hypocrisy. Correct misunderstandings after recording them.
 8. **Data controls and close.** Ask the reader to explain tab-only progress, optional device saving, response export, review packet, and erase controls. Follow the agreed data-handling procedure, including deleting test saves if requested. Ask for any remaining confusing or burdensome part.
 
 Keep durations provisional and report observed burden rather than promising a fixed completion time. Think-aloud prompts can themselves affect choices, so interview answers should not be pooled with unassisted assessment responses as if the conditions were identical.
@@ -87,19 +110,21 @@ Useful prompts:
 - “What did ‘uncertain’ mean to you here?”
 - “What changed between these two versions?”
 - “What do you think this result lets you conclude?”
+- “Which facts still apply when you answer the personal-preference question?”
+- “Do these English and Vietnamese phrases suggest the same choice to you? Which words change your interpretation?”
 
 Avoid prompts that announce the rubric or imply a preferred answer, such as “Would a more democratic person choose this?” or “Why did you contradict your values?” Do not treat a facilitator's preferred politics as the criterion for a correct interpretation.
 
 ## What to record
 
-Use the review log for item-level issues. Record instrument version, reviewer/reader code, item and setting IDs, role, criterion, the observed misunderstanding, severity, and the proposed action. Keep notes focused on comprehension. Avoid unnecessary verbatim political opinions or identifying life stories.
+Use the review log for item-level issues. Record instrument version, reviewer/reader code, item and setting IDs, role, criterion, source/translation revision, language(s) and reading order, the observed misunderstanding, severity, and the proposed action. Keep notes focused on comprehension. Avoid unnecessary verbatim political opinions or identifying life stories.
 
 A separate coverage sheet should record which setting, item, role, locality, and device/language were actually reviewed in each round. A participant's assigned setting is not their nationality. Maintain the private link between any contact details and participant codes separately, if such a link is needed at all.
 
 For response exports:
 
 - Downloading is optional and local; it does not submit data to the developer or a study.
-- An export includes sensitive political responses and reasons. Explain this before asking for a download.
+- A v0.3 response export includes sensitive political responses, optional personal preferences, and reasons. Explain this before asking for a download.
 - Collect or transfer a file only under the specified consent and approved storage workflow. Do not ask readers to upload it to chat by default.
 - The review-packet download contains authored content/metadata and no participant responses. It is suitable for inspecting the rubric but should not be confused with an answer export.
 - Erasure clears this tab's answers and the saved device copy; other tabs and already downloaded files may retain copies.

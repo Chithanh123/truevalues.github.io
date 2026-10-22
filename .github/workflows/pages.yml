@@ -26,6 +26,8 @@ jobs:
           node-version: '24'
       - name: Validate authored content
         run: npm run validate:content
+      - name: Validate Vietnamese review drafts
+        run: npm run validate:translations
       - name: Test assessment and deployment packaging
         run: npm test
       - name: Build the static site

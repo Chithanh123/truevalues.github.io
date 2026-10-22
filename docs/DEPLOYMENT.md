@@ -11,7 +11,7 @@ This is the expected address, not a claim that the current local changes are alr
 ## One-time GitHub setup
 
 1. Open the repository's **Settings → Pages**. Under **Build and deployment**, choose **GitHub Actions** as the source. If this setting is unavailable, ask a repository administrator to enable it.
-2. Review and merge the prepared `site/political-context` deployment branch into `master` through a pull request. Include the application, package scripts, tests, and `.github/workflows/pages.yml`. The merge starts the publishing workflow automatically.
+2. Review and merge the prepared feature branch into `master` through a pull request **inside `Chithanh123/truevalues.github.io`**. Verify that both the base repository and head repository show `Chithanh123/truevalues.github.io`; the base branch is `master`. The current v0.3 branch is `research/bilingual-pilot`. Use an explicit comparison within this fork rather than accepting GitHub's upstream-fork default. The merge starts the publishing workflow automatically.
 3. To publish again manually, open **Actions → Deploy Political Context to GitHub Pages**, choose **Run workflow**, select `master`, and run it.
 4. Wait for both the build and deploy jobs to succeed. The deployment's `github-pages` environment reports the actual published URL. Open that URL over HTTPS and complete a short assessment check.
 
@@ -27,12 +27,13 @@ From the repository root:
 
 ```sh
 npm run validate:content
+npm run validate:translations
 npm test
 npm run build
 python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
-The deployment directory contains the current HTML entry points, CSS, authored JavaScript modules, the SVG mark, participant-facing research/review documents, the license, and `.nojekyll`. It excludes Git metadata, tests, tools, unused legacy assets, and browser-generated responses. Rebuilding replaces the generated artifact. `dist/` is ignored by Git.
+The deployment directory contains the current HTML entry points, CSS, authored JavaScript modules, the SVG mark, the bilingual review workspace, draft translations, participant-facing research/review documents, the license, and `.nojekyll`. It excludes Git metadata, tests, tools, unused legacy assets, and browser-generated responses. Rebuilding replaces the generated artifact. `dist/` is ignored by Git.
 
 All site assets and module imports use relative paths. The packaged site is tested under the repository subpath `/truevalues.github.io/`, not only at a server root. Legacy quiz URLs redirect back to the new assessment within that same subpath.
 

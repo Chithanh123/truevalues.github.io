@@ -307,7 +307,7 @@ test("a comparison preserves option wording/order, reasons, authority, and world
 });
 
 test("the expanded instrument covers every requested setting, role, and domain", () => {
-  assert.equal(pilotInstrument.version, "0.2.0");
+  assert.equal(pilotInstrument.version, "0.3.0");
   assert.equal(pilotInstrument.worlds.length, 8);
   assert.equal(pilotInstrument.statements.length, 24);
   const mainCases = pilotInstrument.scenarios.filter((scene) => !scene.comparisonOf);
@@ -413,4 +413,126 @@ test("null option scores are permitted only on explicitly descriptive scenarios"
   const directional = structuredClone(instrument);
   directional.scenarios[0].scoring = "directional";
   assert.deepEqual(validateInstrument(directional), []);
+});
+
+test("optional personal preferences validate independently of the primary response kind", () => {
+  const base = filledSession();
+  for (const primary of [
+    { kind: "choice", optionId: "sell", reasonId: "capacity" },
+    { kind: "uncertain", reasonId: null },
+    { kind: "none", reasonId: null },
+    { kind: "skip", reasonId: null },
+  ]) {
+    for (const preference of [
+      null, { kind: "choice", optionId: "retain" }, { kind: "uncertain" }, { kind: "none" },
+    ]) {
+      const updated = setAnswer(base, "scenario:housing", { ...primary, preference });
+      assert.equal(validateSession(instrument, updated).valid, true);
+      assert.equal(validateSession(instrument, JSON.parse(JSON.stringify(updated))).valid, true);
+    }
+    assert.equal(validateSession(instrument, setAnswer(base, "scenario:housing", primary)).valid, true);
+  }
+});
+
+test("personal preferences reject unknown choices and malformed nested fields", () => {
+  const base = filledSession();
+  const invalidPreferences = [
+    undefined, [], "retain", 1, true, {},
+    { kind: "skip" }, { kind: "neutral" }, { kind: "choice" },
+    { kind: "choice", optionId: "permit" },
+    { kind: "choice", optionId: 1 },
+    { kind: "choice", optionId: "retain", score: 2 },
+    { kind: "choice", optionId: "retain", reasonId: null },
+    { kind: "uncertain", optionId: "retain" },
+    { kind: "none", value: 0 },
+    JSON.parse('{"kind":"none","__proto__":{}}'),
+  ];
+  for (const preference of invalidPreferences) {
+    const candidate = setAnswer(base, "scenario:housing", {
+      kind: "choice", optionId: "sell", reasonId: null, preference,
+    });
+    assert.equal(validateSession(instrument, candidate).valid, false, JSON.stringify(preference));
+  }
+  for (const answer of [
+    { kind: "value", value: 1, preference: null },
+    { kind: "uncertain", preference: { kind: "uncertain" } },
+    { kind: "skip", preference: { kind: "none" } },
+  ]) {
+    assert.equal(validateSession(instrument, setAnswer(base, "statement:ownership", answer)).valid, false);
+  }
+});
+
+test("personal preferences remain separate from scores and the controlled housing comparison", () => {
+  const initial = filledSession();
+  const baseline = summarize(instrument, initial);
+  let session = setAnswer(initial, "scenario:housing", {
+    ...initial.answers["scenario:housing"], preference: { kind: "choice", optionId: "retain" },
+  });
+  const first = summarize(instrument, session);
+  assert.deepEqual(first.dimensions, baseline.dimensions);
+  assert.deepEqual(first.comparisons, baseline.comparisons);
+  assert.deepEqual(first.preferences, [
+    { scenarioId: "housing", actionOptionId: "sell", preferredOptionId: "retain", status: "choice", different: true },
+    { scenarioId: "protest", actionOptionId: "permit", preferredOptionId: null, status: "not-provided", different: null },
+    { scenarioId: "housing_comparison", actionOptionId: "sell", preferredOptionId: null, status: "not-provided", different: null },
+  ]);
+  session = setAnswer(session, "scenario:housing", {
+    ...session.answers["scenario:housing"], preference: { kind: "choice", optionId: "sell" },
+  });
+  assert.equal(summarize(instrument, session).preferences[0].different, false);
+  for (const preference of [{ kind: "uncertain" }, { kind: "none" }, null]) {
+    session = setAnswer(session, "scenario:housing", { ...session.answers["scenario:housing"], preference });
+    const summary = summarize(instrument, session);
+    assert.equal(summary.preferences[0].status, preference?.kind ?? "not-provided");
+    assert.equal(summary.preferences[0].preferredOptionId, null);
+    assert.equal(summary.preferences[0].different, null);
+    assert.deepEqual(summary.dimensions, baseline.dimensions);
+    assert.deepEqual(summary.comparisons, baseline.comparisons);
+  }
+  session = setAnswer(session, "scenario:housing", {
+    kind: "uncertain", reasonId: null, preference: { kind: "choice", optionId: "retain" },
+  });
+  assert.equal(summarize(instrument, session).preferences[0].actionOptionId, null);
+  assert.equal(summarize(instrument, session).preferences[0].different, null);
+});
+
+test("updating an answer copies the nested preference without mutating earlier state", () => {
+  const initial = createSession(instrument, "preference-copy");
+  const preference = { kind: "choice", optionId: "retain" };
+  const first = setAnswer(initial, "scenario:housing", {
+    kind: "choice", optionId: "sell", reasonId: null, preference,
+  });
+  preference.optionId = "sell";
+  assert.equal(first.answers["scenario:housing"].preference.optionId, "retain");
+  const replacement = setAnswer(first, "scenario:housing", {
+    ...first.answers["scenario:housing"], preference: { kind: "none" },
+  });
+  replacement.answers["scenario:housing"].preference.kind = "uncertain";
+  assert.deepEqual(first.answers["scenario:housing"].preference, { kind: "choice", optionId: "retain" });
+  assert.deepEqual(initial.answers, {});
+});
+
+test("descriptive and comparison personal preferences never acquire directional weight", () => {
+  let session = createSession(pilotInstrument, "shipped-personal-preference");
+  const baseline = summarize(pilotInstrument, session);
+  for (const id of ["public-records", "housing-planned"]) {
+    const scene = pilotInstrument.scenarios.find((item) => item.id === id);
+    session = setAnswer(session, `scenario:${id}`, {
+      kind: "choice", optionId: scene.options[0].id, reasonId: scene.reasons[0].id,
+      preference: { kind: "choice", optionId: scene.options[1].id },
+    });
+  }
+  assert.equal(validateSession(pilotInstrument, session).valid, true);
+  assert.deepEqual(summarize(pilotInstrument, session).dimensions, baseline.dimensions);
+  assert.equal(summarize(pilotInstrument, session).preferences.filter((row) => row.status === "choice").length, 2);
+});
+
+test("the preference protocol version rejects old saves without changing their source data", () => {
+  assert.equal(pilotInstrument.version, "0.3.0");
+  const current = createSession(pilotInstrument, "new-protocol");
+  const old = { ...current, version: "0.2.0" };
+  const serialized = JSON.stringify(old);
+  assert.equal(validateSession(pilotInstrument, old).valid, false);
+  assert.equal(JSON.stringify(old), serialized);
+  assert.equal(validateSession(pilotInstrument, current).valid, true);
 });

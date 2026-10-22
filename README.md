@@ -2,7 +2,7 @@
 
 A research-first political assessment prototype built from the 8values static-site fork. Participants answer value statements, take decisions within fictional political settings, and receive a debrief that separates stated values from choices under constraints.
 
-Current instrument version: **0.2.0**. The assessment is experimental. Its four domains and scoring rubric are candidate measures, not validated ideological scales. It does not assign a definitive ideology, population percentile, or a “hypocrisy” score. See [the research notes](docs/RESEARCH.md) for construct definitions, scoring assumptions, confounds, and the work required before recruiting research participants.
+Current instrument version: **0.3.0**. The assessment is experimental. Its four domains and scoring rubric are candidate measures, not validated ideological scales. It does not assign a definitive ideology, population percentile, or a “hypocrisy” score. See [the research notes](docs/RESEARCH.md) for construct definitions, scoring assumptions, confounds, and the work required before recruiting research participants.
 
 ## Run locally
 
@@ -47,6 +47,16 @@ The expanded content is an author draft. The shared anchor cases and world-speci
 
 Use **Explore the settings** to inspect the authored worlds and **Download review packet** for instrument/review metadata without participant responses. The [cognitive pilot guide](docs/PILOT-GUIDE.md) provides neutral interview prompts, reviewer criteria, decision gates, and an [empty review-log template](docs/review-log-template.csv). No independent human content reviews, interviews, or participant findings are claimed. AI-assisted technical review and automated checks are development work, rather than evidence of human review.
 
+## Bilingual pilot preparation
+
+The first comprehension-pilot audience is bilingual English–Vietnamese adults. Open `review.html` for a read-only workspace pairing the English source with draft Vietnamese wording for all 24 statements, nine situations, and eight setting briefs. Filter by item type, search by ID or wording, select a setting for its institutional notes, or view either language alone. The paired download contains authored content and translation metadata; it does not open or include personal assessment answers.
+
+These are author translation drafts, pending independent bilingual review, reconciliation, and cognitive interviews. The participant assessment remains in English. This workspace does not establish translation equivalence or a validated Vietnamese assessment.
+
+Each assessment situation now offers an optional personal-preference question after the role response. It retains the same feasible packages and material constraints. Preferences, role actions, and reasons remain distinct in the debrief and response export. Preferences contribute no score or denominator, and any difference is descriptive rather than a finding about hypocrisy or causation.
+
+See the [progress ledger](docs/PROGRESS.md), [item-level design matrix](docs/DESIGN-MATRIX.md), and [pilot guide](docs/PILOT-GUIDE.md) for the completed engineering, unresolved research decisions, and translation-review procedure.
+
 ## Progress, privacy, and exports
 
 Answers are processed in the browser. The application has no analytics, advertising, research submission endpoint, or automatic transmission of responses.
@@ -63,6 +73,7 @@ Use a current Node.js release with the built-in test runner:
 
 ```sh
 npm run validate:content
+npm run validate:translations
 npm test
 ```
 
@@ -84,6 +95,9 @@ The browser checks exercise the participant journey, results, saved progress, an
 | --- | --- |
 | HTML entry points and `style.css` | Participant interface, assessment navigation, and responsive presentation |
 | `js/content.js` | Versioned statement bank, scenarios, options, and candidate rubrics |
+| `review.html` and `js/review.js` | Read-only English–Vietnamese paired review, filters, and metadata export |
+| `js/translations/` | Draft Vietnamese item and setting wording, with stable source IDs |
+| `scripts/validate-translations.js` | Mechanical coverage, number, and paired-case checks; not translation approval |
 | `js/worlds.js` | Eight fictional setting briefs and scenario-specific institutional notes |
 | `js/engine.js` | Assignment, assessment steps, immutable response updates, validation, and separate summaries |
 | `scripts/validate-content.js` | Authored-content structure and coverage report |
@@ -94,7 +108,7 @@ The browser checks exercise the participant journey, results, saved progress, an
 | `docs/review-log-template.csv` | Header-only issue log; no invented observations or participant records |
 | `LICENSE` | MIT license and original 8values attribution |
 
-Use stable content IDs and update the instrument version when changing wording, assumptions, or scoring. Saves from `0.1.0` are deliberately rejected by `0.2.0`; there is no silent migration. Starting a new assessment can replace the older browser save, while existing exported files retain their original version for interpretation. New scenarios should document the player's actual authority, viable alternatives, relevant facts, and which conclusions the choice cannot support.
+Use stable content IDs and update the instrument version when changing wording, assumptions, or scoring. Saves from earlier instrument versions are deliberately rejected by `0.3.0`; there is no silent migration. Starting a new assessment can replace the older browser save, while existing exported files retain their original version for interpretation. New scenarios should document the player's actual authority, viable alternatives, relevant facts, and which conclusions the choice cannot support.
 
 ## Attribution
 
