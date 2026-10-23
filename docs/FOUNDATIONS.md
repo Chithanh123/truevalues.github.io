@@ -1,6 +1,6 @@
 # Political premises: expanded research aims
 
-Development instrument **0.4.0**. English source and Vietnamese translation are **author drafts**. No literature review, independent tradition-specific review, translation adjudication, or measurement validation has been completed for this module.
+Development instrument **0.4.0**. English source and Vietnamese translation are **author drafts**. An initial unverified source-proposal map is available; no systematic literature synthesis, independent tradition-specific review, translation adjudication, or measurement validation has been completed for this module.
 
 The aim is to build a more comprehensive system of value statements by asking what different political approaches assume about people and society before asking which policies they prefer. “Left,” “liberal,” and other families contain conflicting accounts of human agency, power, freedom, knowledge, and institutions. Neither a single compass coordinate nor one definition of a tradition can represent those disagreements adequately.
 
@@ -50,9 +50,17 @@ Future conceptual questions should include accounts of human motivation (self-in
 
 The candidates intentionally do not form opposing pairs. For example, a person may regard agency as real while believing that interests are socially formed. The knowledge items concern different sources and tests of knowledge, not a single expertise-versus-experience axis. Several statements may draw widespread agreement; their usefulness must be investigated, rather than inferred from their conceptual appeal. Equal item counts across categories provide authored coverage, not equal measurement precision.
 
+## Source traceability and review records
+
+The separate [source-proposal map](SOURCES.md) links the sixteen candidate premises to proposed readings, interpretive notes, and open questions. Requests for the initial candidate texts were blocked by the development environment, so all initial proposals are explicitly unverified; authorship and section locators remain pending wherever they could not be checked. A background link identifies a debate; a contrast link points toward a rival account. Neither means that an author endorses this particular statement or that the linked tradition has one agreed position. Access and verification status are recorded separately from independent human review. No initial proposal is marked text-checked or metadata-checked. Adding citations does not validate a scale or complete a systematic literature review.
+
+The bilingual author workspace provides a structured worksheet for each item and setting-specific scenario. Reviewers can record a language, field, criterion, observation, proposed change, source note, and outcome. An explicit `no-issue` record distinguishes an inspected item from one that was merely opened. These records are local reviewer observations; they do not amend the authored instrument or certify a tradition’s representation.
+
+Each note retains a fingerprint of the content reviewed. A changed fingerprint marks an imported or restored observation as stale so that the reviewer can check it against the current wording and context. Fingerprints are change identifiers, not cryptographic proof of identity or integrity. Keep source questions and competing interpretations visible through reconciliation, including cases where wording has not changed but the reviewer’s reading has.
+
 ## Build toward a stronger bank
 
-1. Conduct a documented literature review and invite critics and informed representatives of multiple approaches to identify omissions, caricatures, and alternative readings. Record the source and intended meaning of each proposed premise.
+1. Verify the proposed references and locators against actual source texts, then expand the source map into a documented literature review and invite critics and informed representatives of multiple approaches to identify omissions, caricatures, and alternative readings. Record the source and intended meaning of each proposed premise.
 2. Expand each conceptual question into several clear candidate statements, including genuine rival accounts and within-tradition disagreements. Separate compound meanings discovered in interviews; avoid merely reversing words to manufacture opposites.
 3. Review English and Vietnamese independently, reconcile terminology such as agency, non-domination, community, coercion, and productive resources, and test paraphrases with bilingual adults. Do not equate a translation’s mechanical completeness with conceptual equivalence.
 4. Pilot comprehension and burden before recruitment for a larger measurement study. Preserve uncertainty and skipping; probe concrete examples, the source of a belief, confidence, and whether an answer changes when a premise is clarified. Sixteen additional statements make the assessment longer, so record actual completion time and fatigue.

@@ -16,10 +16,12 @@ export const SITE_FILES = Object.freeze([
   'assets/mark.svg',
   'js/app.js', 'js/content.js', 'js/engine.js', 'js/worlds.js', 'js/review.js',
   'js/foundations.js',
+  'js/foundation-evidence.js', 'js/review-evidence.js', 'js/review-notes.js',
   'js/translations/vi-items.js', 'js/translations/vi-worlds.js', 'js/translations/vi-foundations.js',
   'docs/RESEARCH.md', 'docs/PILOT-GUIDE.md', 'docs/review-log-template.csv',
   'docs/DESIGN-MATRIX.md', 'docs/PROGRESS.md',
   'docs/FOUNDATIONS.md',
+  'docs/SOURCES.md',
 ]);
 
 const within = (parent, child) => child === parent || child.startsWith(parent + path.sep);

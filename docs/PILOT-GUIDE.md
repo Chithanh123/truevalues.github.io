@@ -1,6 +1,6 @@
 # Political Context: cognitive pilot and review guide
 
-Instrument version: `0.4.0`. Status: **draft protocol; no interviews or external reviews completed**.
+Instrument version: `0.4.0`; reviewer tooling: `0.4.1`. The tooling update preserves the participant route and saved-response format. Status: **draft protocol; no interviews or external reviews completed**.
 
 AI-assisted technical review and automated checks have occurred during development; they do not constitute independent human content review or cognitive interviews.
 
@@ -29,9 +29,20 @@ Do not ask people to send political answers through chat to make these decisions
 
 1. Complete or inspect the participant route, including the delayed country reveal, before opening author materials if preserving that first-use experience matters. Institutional facts remain visible during decisions; country correspondence labels belong at the final debrief.
 2. Open the explicitly marked `review.html` author workspace, or use the review packet available from the debrief, for authored instrument/review metadata. These materials disclose country correspondences and political-tradition associations; they contain no participant responses. Record the instrument version and translation revision separately.
-3. Run `npm run validate:content`, `npm run validate:translations`, `npm test`, and the documented browser checks. Keep the outcome with the reviewed version. Technical checks cannot approve wording or cultural accuracy.
+3. Run `npm run validate:content`, `npm run validate:translations`, `npm run validate:evidence`, `npm test`, and the documented participant and reviewer browser checks. Keep the outcome with the reviewed version. Technical checks cannot approve wording or cultural accuracy.
 4. Assign content reviewers with different political viewpoints, including people familiar with each setting's inspiration. Review one complete world brief and all applicable notes together; reviewing isolated national labels is insufficient.
-5. Copy the header-only `review-log-template.csv` into an access-controlled review log. Use reviewer codes rather than full names. Never fill it with invented observations or dummy participants presented as findings.
+5. Use the local review worksheet or copy the header-only `review-log-template.csv` into a review log under the operator’s data-handling procedure. Use reviewer codes rather than full names. Never fill either with invented observations or dummy participants presented as findings.
+
+## Record a structured review
+
+1. Select the content kind and, for a scenario, the fictional setting. Inspect the English and Vietnamese text, authority, facts, and institutional note together. Foundation source panels and [SOURCES.md](SOURCES.md) identify proposed readings and open interpretation questions. The initial texts could not be retrieved in the development environment and are marked unverified. Review the actual publication before accepting a title, attribution, locator, or proposed link; verification status is not independent approval.
+2. Open the card’s review action. Check the stable target, language, field, and criterion before entering an observation. Use `revise` for a concrete problem, `discuss` for an unresolved interpretation, or `no-issue` when this review found none. A visit or an unsaved form does not establish coverage.
+3. Record the issue and proposed change without unnecessary identifying stories or political answers. Keep the source note distinct from a claim that a source supports the final wording. A resolution note records reasoning; it does not itself close the operator’s independent recheck gate.
+4. Keep notes in memory, or deliberately enable device saving. The reviewer draft uses its own storage key and does not read assessment answers. Export JSON to continue editing or CSV for the round log. Treat downloaded notes according to the operator’s access and retention procedure.
+5. Import only an expected reviewer-note JSON file. Check the replacement preview before confirming. Invalid or incompatible files leave the current draft unchanged. A valid note with an outdated source fingerprint is marked stale; compare it with the current material and explicitly recheck it before carrying the finding forward.
+6. Record missing coverage separately. An explicit observation shows that a particular target was considered, but does not establish full coverage of all fields, perspectives, languages, or study cells. The current participant route remains 49 items; reviewer notes do not add questions or change scores.
+
+Device-saving and deletion controls apply to reviewer notes separately from participant progress. A downloaded JSON/CSV file remains after clearing a browser draft. The authored paired-content download excludes notes, and the reviewer-note download excludes participant responses. Do not substitute either for a consented interview record.
 
 ## Content-review rubric
 
@@ -119,9 +130,9 @@ Avoid prompts that announce the rubric or imply a preferred answer, such as “W
 
 ## What to record
 
-Use the review log for item-level issues. Record instrument version, reviewer/reader code, item and setting IDs, role, criterion, source/translation revision, language(s) and reading order, the observed misunderstanding, severity, and the proposed action. Keep notes focused on comprehension. Avoid unnecessary verbatim political opinions or identifying life stories.
+Use the worksheet or review log for item-level observations, including explicit no-issue observations. Record instrument version, reviewer/reader code, item and setting IDs, role, criterion, source/translation revision, language(s) and reading order, the observed misunderstanding, severity, and the proposed action. The extended CSV adds language, target kind and field, source fingerprint, source note, and last-update time to the original columns. A content fingerprint identifies the target snapshot for change detection; it does not replace the operator’s full version and translation-reconciliation record. Keep notes focused on comprehension. Avoid unnecessary verbatim political opinions or identifying life stories.
 
-A separate coverage sheet should record which setting, item, role, locality, and device/language were actually reviewed in each round. A participant's assigned setting is not their nationality. Maintain the private link between any contact details and participant codes separately, if such a link is needed at all.
+The worksheet counts targets with explicit records rather than targets merely visited. A separate coverage sheet should still record which setting, item, role, locality, and device/language were actually reviewed in each round, including reviewer perspective and field coverage needed by the protocol. A participant's assigned setting is not their nationality. Maintain the private link between any contact details and participant codes separately, if such a link is needed at all.
 
 For response exports:
 

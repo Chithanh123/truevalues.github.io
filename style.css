@@ -62,7 +62,7 @@
 .preference-field select { width: 100%; max-width: 100%; border: 1px solid var(--line); border-radius: 4px; padding: 12px; background: var(--white); color: var(--ink); }
 .preference-field small { display: block; color: var(--muted); font-size: 11px; line-height: 1.7; margin-top: 7px; }
 
-/* Read-only bilingual review workspace. */
+/* Bilingual authored-content review and the separate local notebook. */
 .review-intro { padding: 48px 0 26px; }
 .review-intro h1 { font-size: clamp(43px, 5vw, 64px); margin: 20px 0 13px; }
 .review-intro h1 em { color: var(--orange); }
@@ -143,4 +143,73 @@
   .review-page .site-header, .review-controls, .review-toolbar button, .review-page .site-footer { display: none; }
   .review-page .shell { width: 100%; }
   .review-card { break-inside: auto; box-shadow: none; }
+}
+
+/* Reviewer notes never change participant answers or authored content. */
+.review-workbench { border: 1px solid var(--line); border-radius: 5px; padding: 26px; background: #eef1e7; margin: 0 0 30px; }
+.review-workbench-heading { display: grid; grid-template-columns: 1.2fr 1fr; gap: 35px; }
+.review-workbench h2 { font-size: 30px; margin: 12px 0; }
+.review-workbench-heading p, .review-notebook-settings p { font-size: 12px; line-height: 1.8; color: var(--muted); margin-bottom: 11px; }
+.review-notebook-settings > label:first-child { display: block; font-size: 11px; font-weight: 600; margin-bottom: 8px; }
+.review-notebook-settings > input { width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 4px; padding: 10px; background: var(--white); color: var(--ink); font-size: 12px; }
+.review-notebook-settings .check-label { margin: 15px 0 10px; }
+.review-notebook-tools { display: flex; flex-wrap: wrap; gap: 10px 17px; align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; }
+.review-notebook-tools .button, .review-notebook-tools .text-button { font-size: 11px; }
+.review-notes-status { font-size: 12px; line-height: 1.8; color: var(--muted); }
+.review-notes-status:empty { display: none; }
+.review-notes-warning { background: #f5e4d7; border-left: 3px solid #ba8563; color: #68452d; padding: 12px 15px; }
+.review-notes-summary { color: var(--muted); font-size: 11px; margin: 15px 0 11px; }
+.review-notebook-empty { color: var(--muted); font-size: 12px; margin-bottom: 0; }
+.review-notebook-entry { display: flex; justify-content: space-between; gap: 22px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 17px; margin: 10px 0; overflow-wrap: anywhere; }
+.review-notebook-entry > div:first-child { min-width: 0; }
+.review-entry-title { font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+.review-entry-title strong { font-weight: 500; }
+.review-entry-context { color: var(--muted); font-size: 10px; line-height: 1.7; margin-bottom: 7px; }
+.review-entry-context code { font-size: 10px; }
+.review-entry-outcome { color: var(--muted); font-size: 11px; margin-bottom: 7px; }
+.review-entry-observation { font-size: 12px; line-height: 1.8; color: var(--muted); white-space: pre-wrap; margin: 0; }
+.review-entry-actions { display: flex; gap: 14px; align-items: start; flex-shrink: 0; }
+.review-entry-actions .text-button { font-size: 11px; padding-top: 0; }
+.review-stale-badge { display: inline-block; color: #754b30; background: #f4e4d5; border-radius: 3px; padding: 3px 6px; margin-left: 7px; }
+.review-card-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 10px 25px; border-top: 1px solid var(--line); background: #f4f5ed; }
+.review-card-actions .text-button { font-size: 12px; }
+.review-target-coverage { color: var(--muted); font-size: 10px; }
+#review-note-dialog { max-width: 760px; }
+#review-note-dialog h2, #review-confirm-dialog h2 { font-size: 29px; margin-bottom: 15px; }
+.review-note-target { color: var(--muted); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.review-note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0 17px; }
+#review-note-form label:not(.check-label) { display: block; font-size: 11px; font-weight: 600; margin: 11px 0 7px; }
+#review-note-form input[type="text"], #review-note-form select, #review-note-form textarea { width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 4px; background: var(--white); color: var(--ink); padding: 10px; font-size: 12px; }
+#review-note-form textarea { display: block; line-height: 1.8; resize: vertical; }
+#review-note-form select:disabled { background: #e9ecdf; color: var(--muted); }
+.review-stale-confirm { background: #f4e4d5; padding: 12px; }
+.review-note-help { color: var(--muted); font-size: 11px; margin: 15px 0 0; }
+#review-confirm-body p { font-size: 13px; line-height: 1.8; color: var(--muted); overflow-wrap: anywhere; }
+.review-evidence { padding: 0 25px 22px; }
+.review-evidence details { border-top: 1px solid var(--line); padding-top: 16px; }
+.review-evidence summary { font-size: 12px; font-weight: 500; cursor: pointer; }
+.review-evidence details > div { padding-top: 14px; }
+.review-evidence p { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.review-evidence ol { padding-left: 22px; }
+.review-evidence li { padding: 12px 0; border-top: 1px solid var(--line); }
+.review-evidence h4 { font-size: 13px; font-weight: 600; margin: 0 0 8px; }
+.review-evidence .review-source-status { font-size: 10px; color: #7c5837; }
+@media (max-width: 720px) {
+  .review-workbench { padding: 20px 16px; }
+  .review-workbench-heading { grid-template-columns: 1fr; gap: 13px; }
+  .review-workbench h2 { font-size: 27px; }
+  .review-notebook-tools { align-items: stretch; }
+  .review-notebook-tools .button { width: 100%; }
+  .review-notebook-entry { flex-direction: column; gap: 10px; padding: 14px; }
+  .review-card-actions { padding-inline: 16px; }
+  .review-card-actions .text-button { text-align: left; }
+  .review-stale-badge { margin-left: 0; margin-top: 5px; }
+  .review-note-grid { grid-template-columns: 1fr; gap: 5px; }
+  #review-note-dialog { max-height: 90vh; padding: 20px; }
+  #review-note-dialog .dialog-actions .button { width: 100%; }
+  .review-evidence { padding: 0 16px 19px; }
+  .review-evidence ol { padding-left: 18px; }
+}
+@media print {
+  .review-card-actions, .review-notebook-tools, .review-notebook-settings, #review-note-dialog, #review-confirm-dialog { display: none; }
 }

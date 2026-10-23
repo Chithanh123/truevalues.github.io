@@ -38,6 +38,7 @@ test('site artifact contains exactly the public allowlist and preserves file byt
       'review.html', 'js/review.js', 'js/translations/vi-items.js',
       'js/translations/vi-worlds.js', 'docs/DESIGN-MATRIX.md', 'docs/PROGRESS.md',
       'js/foundations.js', 'js/translations/vi-foundations.js', 'docs/FOUNDATIONS.md',
+      'js/foundation-evidence.js', 'js/review-evidence.js', 'js/review-notes.js', 'docs/SOURCES.md',
     ]) assert.ok(result.files.includes(reviewFile), `Missing bilingual review asset: ${reviewFile}`);
   });
 });

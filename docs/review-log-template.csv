@@ -1,1 +1,1 @@
-review_id,instrument_version,reviewer_code,review_date,review_round,review_type,world_id,item_id,role_id,criterion,severity,observation,proposed_change,status,resolution,resolved_in_version
+review_id,instrument_version,reviewer_code,review_date,review_round,review_type,world_id,item_id,role_id,criterion,severity,observation,proposed_change,status,resolution,resolved_in_version,language,target_kind,target_field,source_fingerprint,source_note,updated_at

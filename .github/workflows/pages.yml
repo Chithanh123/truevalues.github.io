@@ -28,6 +28,8 @@ jobs:
         run: npm run validate:content
       - name: Validate Vietnamese review drafts
         run: npm run validate:translations
+      - name: Validate foundation source proposals
+        run: npm run validate:evidence
       - name: Test assessment and deployment packaging
         run: npm test
       - name: Build the static site
