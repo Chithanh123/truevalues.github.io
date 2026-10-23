@@ -1,6 +1,6 @@
 {
   "name": "political-context",
-  "version": "0.2.0",
+  "version": "0.4.1",
   "private": true,
   "type": "module",
   "description": "A local, research-first political values and context prototype.",
@@ -8,6 +8,8 @@
     "test": "node --test",
     "validate:content": "node scripts/validate-content.js",
     "serve": "python3 -m http.server 8000 --bind 127.0.0.1",
-    "build": "node scripts/build-site.js"
+    "build": "node scripts/build-site.js",
+    "validate:translations": "node scripts/validate-translations.js",
+    "validate:evidence": "node scripts/validate-evidence.js"
   }
 }
