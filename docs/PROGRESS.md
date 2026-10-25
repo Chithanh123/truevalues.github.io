@@ -8,7 +8,7 @@ This ledger distinguishes working software, drafted research materials, complete
 
 The [content-research pack, prepared 23 October and revised 25 October](content-research/README.md) adds a desk audit of all 24 value statements, 16 foundations, and nine scenario instances; 36 English–Vietnamese statement candidates in twelve conceptual disputes; six scenario-family drafts, including two complete bilingual examples; a reading-to-candidate dossier; and a concrete bilingual review protocol. Three proposed interview packets each contain twelve statements and two scenarios. They are review selections, not deployed forms or equivalent measures.
 
-This work changes documentation only. Instrument `0.4.0`, reviewer release `0.4.1`, the 49-item route, country-reveal behavior, application data, scoring, and translations remain unchanged. The candidates await source checks, independent viewpoint review, translation reconciliation, and comprehension evidence before adoption. Fourteen initial external retrieval attempts and four retries failed with proxy HTTP 403; no new text-verified sources or empirical findings are claimed. Existing technical test results elsewhere in this ledger apply to the existing software, not to the conceptual validity of these drafts.
+That content-preparation increment changed documentation only, preserving instrument `0.4.0` and reviewer release `0.4.1`. The later `0.4.2` presentation increment below also retains the 49-item route, country-reveal behavior, application data, scoring, and translations. The candidates await source checks, independent viewpoint review, translation reconciliation, and comprehension evidence before adoption. Fourteen initial external retrieval attempts and four retries failed with proxy HTTP 403; no new text-verified sources or empirical findings are claimed. Technical test results elsewhere in this ledger do not establish the conceptual validity of these drafts.
 
 ## Repository and publication evidence
 
@@ -20,7 +20,7 @@ All twelve catalog checks passed on 25 October, including original-content fidel
 - The merged work contains the v0.2 prototype, the static artifact builder, and the GitHub Pages workflow. A merge establishes source integration, not successful deployment.
 - The public project address is expected to be `https://chithanh123.github.io/truevalues.github.io/`. Public-site verification from this environment was blocked by an HTTP 403 network response. Neither a successful Pages run nor the live site's current content is claimed here.
 - [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
-- The content-research pack and database continue on `research/ideological-foundations`. Browser-readable package/outcome documentation and a repository download bundle are provided so access does not depend on links into the cloud workspace. Publishing this review branch does not merge these materials into `master` or deploy the participant site.
+- The content-research pack, database, and `0.4.2` debrief presentation continue on `research/ideological-foundations`. Browser-readable package/outcome documentation and a repository download bundle are provided so access does not depend on links into the cloud workspace. Publishing this review branch does not merge these materials into `master` or deploy the participant site.
 
 ## Milestone audit
 
@@ -45,9 +45,17 @@ Explicit real-country correspondences are withheld in the participant flow until
 
 The v0.4 route and schema are versioned separately from v0.3, preserving the previous-save recovery path rather than silently reinterpreting older progress. Human review and participant findings remain pending.
 
+## Participant-debrief increment 0.4.2
+
+The completed assessment now presents seven descriptive themes connecting the existing value statements, starting assumptions, role actions, selected reasons, and optional personal preferences. All 49 primary items appear once in that theme report. Transparency has a separate reading section; knowledge, care, and ecology explicitly lack dedicated situations in the current route. Generic reflection prompts support inspection without collecting additional answers or inferring motives.
+
+The original four provisional profiles remain in a collapsed optional view, using the unchanged scoring rubric. The two housing decisions remain a descriptive comparison, and the final debrief still reveals the fictional setting's country inspiration. Participants can download a readable `.txt` report or use a print / save-as-PDF layout, alongside the existing JSON export. These actions create local records and do not submit responses.
+
+Application release `0.4.2` preserves participant instrument `0.4.0`, the question bank, scores, saved-session compatibility, and JSON response-export format `2`. The descriptive reflection format is `1.0.0`. This is a presentation improvement, not seven new measures, a political-identity classifier, adoption of the draft candidate bank, or evidence of completed human validation. Release-specific verification is recorded separately from the historical results below.
+
 ## Reviewer-tooling increment 0.4.1
 
-The current increment turns the author workspace into a place to record findings against stable targets, languages, fields, and scenario settings. Outcomes are `revise`, `discuss`, or an explicit `no-issue` observation. Browsing does not count as review, and recorded coverage is not approval. Notes stay in memory by default, with a separate opt-in device save, validated JSON import with replacement preview, and JSON/CSV export. Source fingerprints identify changed content for rechecking; they are not security signatures.
+The `0.4.1` increment turned the author workspace into a place to record findings against stable targets, languages, fields, and scenario settings. Outcomes are `revise`, `discuss`, or an explicit `no-issue` observation. Browsing does not count as review, and recorded coverage is not approval. Notes stay in memory by default, with a separate opt-in device save, validated JSON import with replacement preview, and JSON/CSV export. Source fingerprints identify changed content for rechecking; they are not security signatures.
 
 The separate [source-proposal map](SOURCES.md) links foundation items to proposed readings and competing interpretations. Requests for the initial texts were blocked by the development environment, so the proposals are unverified and require checking against actual publications. This creates a verification queue; it is not a completed literature review or independent source endorsement.
 
@@ -94,6 +102,14 @@ The reviewer-tooling `0.4.1` checks completed on **23 October 2026**:
 
 These outcomes concern development and packaging. Source-proposal structure checks do not verify the linked publications.
 
+The `0.4.2` checks completed on **25 October 2026**:
+
+- **71 Node tests passed**, including completed-session gating, exact theme membership, response-status distinctions, unchanged scores and answers, context retention across all eight settings, and readable text output. An inconsistent save at the results step with `completed: false` is now rejected into the existing recovery flow without rewriting its answers.
+- Content, translation, and source-proposal validators passed. The deployment artifact contains **31 allowlisted files**.
+- Participant, reviewer, and new debrief browser suites passed against the packaged `/truevalues.github.io/` path. The participant and debrief suites also passed against the source site. Checks covered all 49 responses, eight settings, existing saves, final-only country disclosure, exact readable-download content, unchanged JSON export, optional profile markers, missing scenario coverage, all-skipped responses, malformed-save recovery, HTML escaping, and print expansion/restoration without response changes.
+- Desktop and 375-pixel mobile views were inspected. A generated A4 PDF contained all 49 item texts/titles and restored the page's expansion state after printing. No JavaScript errors, failed requests, or external requests were observed in the browser suites.
+- All **12 catalog tests passed** after refreshing the documentation and engine source hashes. The downloadable database bundle was refreshed and its 35 entries checked against the current catalog files.
+
 These results are development evidence. They do not establish independent human review, translated measurement equivalence, or secure country blinding. Reproduce the checks with:
 
 ```sh
@@ -104,6 +120,7 @@ npm test
 npm run build
 python3 tests/browser_smoke.py
 python3 tests/browser_review.py
+python3 tests/browser_debrief.py
 ```
 
 Run the browser suite with its documented local server. The browser suite includes the bilingual-workspace checks for this branch. Do not carry the previous test count forward as the result of a new version, and do not treat any technical check as completed human review.

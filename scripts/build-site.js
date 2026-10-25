@@ -15,6 +15,7 @@ export const SITE_FILES = Object.freeze([
   'index.html', 'instructions.html', 'quiz.html', 'results.html', 'review.html', 'style.css', 'LICENSE',
   'assets/mark.svg',
   'js/app.js', 'js/content.js', 'js/engine.js', 'js/worlds.js', 'js/review.js',
+  'js/debrief-content.js', 'js/debrief.js', 'js/debrief-view.js',
   'js/foundations.js',
   'js/foundation-evidence.js', 'js/review-evidence.js', 'js/review-notes.js',
   'js/translations/vi-items.js', 'js/translations/vi-worlds.js', 'js/translations/vi-foundations.js',

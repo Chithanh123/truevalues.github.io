@@ -1,7 +1,7 @@
 ﻿key,value
 catalog_version,1.0.0
 content_snapshot_date,2026-10-25
-base_commit,d0252e7e7bbc859c3ec8a1495f85c7fcdbbb0614
+base_commit,56b93b12f0b3ed283c66854e26990bdbd5d00603
 instrument_version,0.4.0
 scope,author_content_only_no_participant_answers
 validation_status,unvalidated_author_drafts

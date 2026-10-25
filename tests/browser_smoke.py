@@ -452,6 +452,7 @@ with sync_playwright() as playwright:
     expect(page).to_have_title("Your debrief — Political Context")
     assigned_world = next(world for world in instrument["worlds"] if world["id"] == saved(page)["worldId"])
     expect(page.locator("#country-reveal")).to_contain_text(assigned_world["inspiration"])
+    page.locator("#raw-foundations > summary").click()
     expect(page.locator(".foundation-debrief")).to_be_visible()
     for item in instrument["foundations"]["items"]:
         expect(page.locator(".foundation-debrief")).to_contain_text(item["text"])
@@ -501,6 +502,7 @@ with sync_playwright() as playwright:
     assert payload["session"]["answers"]["scenario:community-festival"]["preference"] == {"kind": "uncertain"}
     assert payload["summary"]["preferences"][0]["different"] is True
     first_scene = instrument["scenarios"][0]
+    page.locator("#raw-decisions > summary").click()
     preference_evidence = page.locator(".evidence-section details").filter(has_text=first_scene["title"])
     preference_evidence.locator("summary").click()
     expect(preference_evidence.locator(".evidence-body")).to_contain_text(first_scene["options"][-1]["label"])

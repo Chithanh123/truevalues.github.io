@@ -136,6 +136,20 @@ test("valid completion requires all answers; retaining later answers while going
   assert.equal(validateSession(instrument, { ...createSession(instrument, "seed"), stepIndex: 2 }).valid, false);
 });
 
+test("an incomplete results save is rejected without changing recoverable answers", () => {
+  const resultsIndex = makeSteps(instrument).length - 1;
+  const inconsistent = { ...filledSession(), stepIndex: resultsIndex, completed: false };
+  const original = structuredClone(inconsistent);
+  const validation = validateSession(instrument, inconsistent);
+  assert.equal(validation.valid, false);
+  assert.match(validation.error, /completion status/);
+  assert.deepEqual(inconsistent, original);
+  // Returning to a question retains the complete answer set without claiming
+  // completion; reaching results again is valid when completion is explicit.
+  assert.equal(validateSession(instrument, { ...inconsistent, stepIndex: resultsIndex - 1 }).valid, true);
+  assert.equal(validateSession(instrument, { ...inconsistent, completed: true }).valid, true);
+});
+
 test("skipped and uncertain responses count as completed items without generating scores", () => {
   let session = createSession(instrument, "seed");
   for (const item of instrument.statements) {
