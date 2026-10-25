@@ -1,0 +1,21 @@
+{
+  "docs/FOUNDATIONS.md": "43cef89a9ffca91828525ca011ff0eb757a36b502ea2d9f76aefd9f1d60d2514",
+  "docs/RESEARCH.md": "f1bba84694f0c4922f9229c3186a313a6008ff3959d6234e8b24f7f0a15e46f5",
+  "docs/content-research/CANDIDATE-BANK.md": "51a382d8cc917e3562cd29b590e6c958433cd10057f5f93cac99c57a2d4e1350",
+  "docs/content-research/CURRENT-CONTENT-AUDIT.md": "95cf7e7c0a245dc98cb72b00a82bea41eb330c485d5d1843e19f93eaf6dbd655",
+  "docs/content-research/REVIEW-PROTOCOL.md": "abb51157cd973076908f47218a6f6d5bec0f3b79ebe41556da5f4d9d9621a2d3",
+  "docs/content-research/SCENARIO-LAB.md": "be985b65efebc7a679c0221447a4785be13e0730874d9faf601b081bab963abf",
+  "docs/content-research/SOURCE-DOSSIER.md": "3a7dfbd735631c9caf4f71f5e6407daa0e1240c69acb8641fdbbc71025978245",
+  "js/content.js": "743b72d40451aeb0c1d849fdaec122d1cb5846c43df64d6e710ef74d16737150",
+  "js/engine.js": "34efe8991858785102280d1f82cb119775910d997cfd49766fe7448711403532",
+  "js/foundation-evidence.js": "560f70ae7bd273447673048e75d2745ef80578970aadd7a6db2a2f4947ffcbb5",
+  "js/foundations.js": "c1fca23f5d702d7ea3de56161eef0d2a24f892ff2316dbafffa7a26566c7185d",
+  "js/translations/vi-foundations.js": "43151a48161752985074db9ac80cee38dd36e35ab7c5c200549a93c3963a9e8d",
+  "js/translations/vi-items.js": "bcba9b78eb553383baa70f0f91928944fad3512d4a7b54ccfe34b4ecadc9666f",
+  "js/translations/vi-worlds.js": "5cab8a14582ebc5222ea0c1585873eb64976f4d0c722933b7405e5b5d216e74e",
+  "js/worlds.js": "1aec6e2f7d55c388e4fbbfd050f8de24199be83cbbe2cea036bbba93aad7cd0f",
+  "research/quiz-database/build.py": "54fa4a61134e393b848aa8ad626baa726f75f5da05a9a040199237b514ebcdc0",
+  "research/quiz-database/draft-scenarios.json": "9d54fab5518f1f215f3f01fd8bd4de81c1f0ca77dc7ffcbc4c205403e8605bf7",
+  "research/quiz-database/outcomes.json": "6da43831a16e57626d94096263638f815e4300dc61d7c56e33de1885a2e53e72",
+  "research/quiz-database/schema.sql": "1ef4049ef267b3ca276b8a09afae22f9d65d7f8385763a6d69ba1dbf0a4cdfab"
+}

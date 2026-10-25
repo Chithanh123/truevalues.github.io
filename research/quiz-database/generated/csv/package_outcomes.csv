@@ -1,0 +1,35 @@
+﻿package_id,outcome_id,purpose,coverage_scope
+PILOT-0.4.0,LEGACY-ECONOMIC,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,LEGACY-DIPLOMATIC,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,LEGACY-CIVIL,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,LEGACY-SOCIETAL,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,FOUNDATION-ONTOLOGY,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,FOUNDATION-NORMATIVE,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,FOUNDATION-EPISTEMOLOGY,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,FOUNDATION-INSTITUTIONS,Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.,linked_items
+PILOT-0.4.0,RECORD-ROLE-ACTION,Retain authored action and reason records under the assigned fictional responsibility.,linked_items
+PILOT-0.4.0,RECORD-PERSONAL-PREFERENCE,"Display optional preference separately from action, without treating a difference as hypocrisy.",linked_items
+PILOT-0.4.0,COMPARE-HOUSING-URGENCY,Report the repeated housing choices descriptively and exclude the later case from aggregate weights.,linked_items
+PILOT-0.4.0,TRANSPARENCY-ACCESS,Keep public-records descriptive and preserve the unresolved audit of the two transparency statements.,linked_items
+PILOT-0.4.0,REVIEW-COMPREHENSION,Use the implemented quiz as material for qualitative review; no completed interviews or measurement validation are implied.,whole_package
+REVIEW-A,DEBATE-02,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-A,DEBATE-03,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-A,DEBATE-05,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-A,DEBATE-06,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-A,SCENARIO-01,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
+REVIEW-A,SCENARIO-03,Use this held scenario as a comprehension probe pending redesign; it is not ideological evidence.,linked_items
+REVIEW-A,REVIEW-COMPREHENSION,"Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",whole_package
+REVIEW-B,DEBATE-01,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-B,DEBATE-04,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-B,DEBATE-11,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-B,DEBATE-12,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-B,SCENARIO-02,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
+REVIEW-B,SCENARIO-05,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
+REVIEW-B,REVIEW-COMPREHENSION,"Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",whole_package
+REVIEW-C,DEBATE-07,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-C,DEBATE-08,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-C,DEBATE-09,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-C,DEBATE-10,Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.,linked_items
+REVIEW-C,SCENARIO-04,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
+REVIEW-C,SCENARIO-06,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
+REVIEW-C,REVIEW-COMPREHENSION,"Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",whole_package

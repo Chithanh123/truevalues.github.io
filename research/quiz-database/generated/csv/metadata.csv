@@ -1,0 +1,10 @@
+﻿key,value
+catalog_version,1.0.0
+content_snapshot_date,2026-10-25
+base_commit,d0252e7e7bbc859c3ec8a1495f85c7fcdbbb0614
+instrument_version,0.4.0
+scope,author_content_only_no_participant_answers
+validation_status,unvalidated_author_drafts
+country_reveal_policy,after_completion
+source_verification,All bibliographic proposals remain unverified.
+working_tree_note,"Hashes identify the actual inputs, including uncommitted content drafts; base_commit alone does not identify this snapshot."

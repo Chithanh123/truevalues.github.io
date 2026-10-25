@@ -1,16 +1,26 @@
 # Political Context: progress ledger
 
-Review date: **23 October 2026**. Current development branch: `research/ideological-foundations`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's recorded `master` is `26940bc`.
+Review date: **25 October 2026**. Current development branch: `research/ideological-foundations`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's `master` was verified at `5d173d1` on 25 October.
 
 This ledger distinguishes working software, drafted research materials, completed human work, and publication evidence. It does not assign a completion percentage: the research gates cannot be inferred from the amount of code or content.
 
+## Content preparation following reviewer tooling
+
+The [content-research pack, prepared 23 October and revised 25 October](content-research/README.md) adds a desk audit of all 24 value statements, 16 foundations, and nine scenario instances; 36 English–Vietnamese statement candidates in twelve conceptual disputes; six scenario-family drafts, including two complete bilingual examples; a reading-to-candidate dossier; and a concrete bilingual review protocol. Three proposed interview packets each contain twelve statements and two scenarios. They are review selections, not deployed forms or equivalent measures.
+
+This work changes documentation only. Instrument `0.4.0`, reviewer release `0.4.1`, the 49-item route, country-reveal behavior, application data, scoring, and translations remain unchanged. The candidates await source checks, independent viewpoint review, translation reconciliation, and comprehension evidence before adoption. Fourteen initial external retrieval attempts and four retries failed with proxy HTTP 403; no new text-verified sources or empirical findings are claimed. Existing technical test results elsewhere in this ledger apply to the existing software, not to the conceptual validity of these drafts.
+
 ## Repository and publication evidence
+
+The author-facing [quiz-package database](../research/quiz-database/README.md), prepared 25 October 2026, catalogs five package records: the implemented 49-item prototype, three proposed 14-task content-interview packets, and an unassigned 24-task design budget. It includes 91 items, 31 intended outcomes, 87 Vietnamese item drafts, current and proposed variants, and a separate record of country correspondences for debrief. CR-S03 remains a comprehension probe; the future package has no selected items or outcomes. SQLite and CSV exports contain authored content only. This is research organization, not a participant database, deployment, new scoring model, or validation finding.
+
+All twelve catalog checks passed on 25 October, including original-content fidelity, foreign-key integrity, exact package membership, language gaps, excluded scores, source fingerprints, CSV preservation, and the eight example queries. The author database is outside the static-site artifact allowlist; the participant application has no database integration.
 
 - [Pull request #1](https://github.com/Chithanh123/truevalues.github.io/pull/1) was merged into **Chithanh123/truevalues.github.io**. The recorded merge commit is `26940bc45c1398f42d8f81d7d9430bdbd3f30508`.
 - The merged work contains the v0.2 prototype, the static artifact builder, and the GitHub Pages workflow. A merge establishes source integration, not successful deployment.
 - The public project address is expected to be `https://chithanh123.github.io/truevalues.github.io/`. Public-site verification from this environment was blocked by an HTTP 403 network response. Neither a successful Pages run nor the live site's current content is claimed here.
-- The v0.3 work is implemented and technically checked on `research/bilingual-pilot`. It is distinct from the already merged v0.2 work until its own review and merge are recorded.
-- The v0.4 development branch includes that v0.3 work and adds descriptive foundation statements and a delayed country-correspondence reveal. The `0.4.1` tooling increment on the same branch adds reviewer worksheets and source-proposal traceability while preserving participant instrument `0.4.0`. These branch changes are not a claim of integration into `master` or public deployment.
+- [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
+- The content-research pack and database continue on `research/ideological-foundations`. Browser-readable package/outcome documentation and a repository download bundle are provided so access does not depend on links into the cloud workspace. Publishing this review branch does not merge these materials into `master` or deploy the participant site.
 
 ## Milestone audit
 
