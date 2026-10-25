@@ -21,6 +21,8 @@ The workflow validates content, runs the Node tests, creates a clean `dist/` dir
 
 The build does not require `npm install`, third-party build dependencies, or environment variables. Browser tests are exercised locally; the Pages workflow runs the dependency-free content, engine, and artifact tests.
 
+Both jobs use `ubuntu-24.04` explicitly to avoid automatic operating-system changes from `ubuntu-latest`. The workflow uses Node 24 for project commands and action versions with Node 24 runtimes: checkout/setup-node `v6`, configure-pages `v6`, and deploy-pages `v5`. Upload-pages-artifact `v5` uses a Node 24 artifact uploader. An action's internal runtime is separate from the `node-version` used for the project.
+
 ## Build and inspect the exact artifact
 
 From the repository root:
@@ -60,6 +62,7 @@ The site processes answers in the browser. GitHub Pages does not collect submitt
 - **No Pages deployment created:** select GitHub Actions as the Pages source, then run the workflow on `master`.
 - **JavaScript 404 or MIME-type error:** deploy the entire generated artifact, preserve `js/`, and keep the project prefix in the URL.
 - **The old site still appears:** inspect the latest workflow's commit and deployment URL, then reload after the deployment completes. Building locally does not update the public site.
+- **Node 20 deprecation or `ubuntu-latest` migration annotations:** these annotations do not by themselves indicate a failed deployment. Merge the updated workflow and start a new run on `master`; rerunning an older workflow uses its older definitions, and historical annotations remain visible.
 - **An older save is rejected:** assessment versions are deliberately checked. Use the previous-save download offered by the app before beginning a fresh assessment.
 
 Cloud environment publication and website deployment are separate operations. Publishing a Codex environment preserves the development machine; GitHub Pages publishes the web artifact through the repository workflow.
