@@ -1,0 +1,113 @@
+﻿item_id,outcome_id,relationship,rationale
+economic-ownership,LEGACY-ECONOMIC,primary,Examines retention of public assets when sale proceeds could meet immediate needs; ownership and urgency may both motivate the answer.
+civil-dissent,LEGACY-CIVIL,primary,Examines protection for peaceful dissent when other residents experience inconvenience.
+societal-tradition,LEGACY-SOCIETAL,primary,"Examines a special public place for established traditions; recognition, funding and legal privilege are rival readings."
+diplomatic-obligation,LEGACY-DIPLOMATIC,primary,"Examines obligations beyond national borders despite remaining local need; aid, repair and reciprocity may differ."
+economic-market,LEGACY-ECONOMIC,primary,"Examines a preference for competitive private delivery where alternatives are feasible, without holding all access or quality expectations equal."
+civil-discretion,LEGACY-CIVIL,primary,Examines official discretion to prevent disruption where peaceful activity would be limited.
+societal-revision,LEGACY-SOCIETAL,primary,"Examines revision of public traditions as community composition changes, with inclusion and replacement potentially distinct."
+diplomatic-domestic,LEGACY-DIPLOMATIC,primary,Examines priority for domestic needs before support abroad; absolute sequencing and ordinary priority may be different readings.
+economic-services,LEGACY-ECONOMIC,primary,Examines shared responsibility for essential needs alongside higher taxes; the provider's ownership is not specified.
+civil-review,LEGACY-CIVIL,primary,Examines independent scrutiny of restrictions despite slower official action.
+societal-continuity,LEGACY-SOCIETAL,primary,Examines preserving customs despite greater interest in alternatives; the kind of preservation is unspecified.
+diplomatic-coordination,LEGACY-DIPLOMATIC,primary,Examines limits on national discretion in exchange for solving shared problems.
+economic-user-charges,LEGACY-ECONOMIC,primary,Examines user charges rather than general taxation for local amenities; the imagined amenity and access rules matter.
+civil-management,LEGACY-CIVIL,primary,Examines temporary restrictions justified by management of shared space; the meaning of disruption needs probing.
+societal-emerging,LEGACY-SOCIETAL,primary,Examines opportunities for emerging practices to replace established ones; procedural access does not guarantee replacement.
+diplomatic-discretion,LEGACY-DIPLOMATIC,primary,Examines retaining national authority over resources despite benefits from common international rules.
+economic-access,LEGACY-ECONOMIC,primary,Examines publicly supported access despite different ability to pay; financing and ownership are distinct.
+civil-records,LEGACY-CIVIL,primary,"Currently contributes to the authored civil profile, but the audit identifies transparency and administrative workload as distinct constructs requiring reclassification review."
+civil-records,TRANSPARENCY-ACCESS,context,The audit asks whether transparency and administrative burden better describe this item; this catalog does not alter its implemented score.
+societal-inherited,LEGACY-SOCIETAL,primary,Examines reserving a core of inherited customs in public cultural programs despite different demand.
+diplomatic-shared-rules,LEGACY-DIPLOMATIC,primary,Examines acceptance of rules for cross-border problems without specifying their domestic cost.
+economic-choice,LEGACY-ECONOMIC,primary,"Examines choice between providers versus a single public provider; responsiveness, exit and ownership may be different motives."
+civil-withholding,LEGACY-CIVIL,primary,"Currently contributes to the authored civil profile, but withholding non-sensitive details may concern publication duties or capacity rather than civil protection."
+civil-withholding,TRANSPARENCY-ACCESS,context,The audit asks whether transparency and administrative burden better describe this item; this catalog does not alter its implemented score.
+societal-new-voices,LEGACY-SOCIETAL,primary,Examines inclusion of previously absent groups in shared culture; inclusion need not remove existing customs.
+diplomatic-responsibility,LEGACY-DIPLOMATIC,primary,Examines a government's special responsibility to residents when needs elsewhere are comparable.
+premise-personal-agency,FOUNDATION-ONTOLOGY,primary,Explores the relative independence of agency from group membership. Agreement may concern the possibility of dissent rather than an individualist account of society.
+premise-social-relations,FOUNDATION-ONTOLOGY,primary,"Explores a relational account of interests. Social influence, identity formation, and economic dependence are rival interpretations; it is not the reverse of personal agency."
+premise-economic-power,FOUNDATION-ONTOLOGY,primary,"Explores the explanatory importance of economic power. Respondents may instead be describing corruption, lobbying, or one particular economy."
+premise-ecological-dependence,FOUNDATION-ONTOLOGY,primary,Explores ecological embeddedness as an explanatory premise. Factual assent or concern about a recent disaster need not imply a broader ecological philosophy.
+premise-own-good,FOUNDATION-NORMATIVE,primary,Explores equal freedom among different ways of living. The meaning of respect and the social conditions of freedom remain open.
+premise-nondomination,FOUNDATION-NORMATIVE,primary,Explores freedom as protection against uncontrolled power. Participants may read interference as actual harm rather than a standing capacity to dominate.
+premise-care-obligations,FOUNDATION-NORMATIVE,primary,"Explores care and dependency as grounds of obligation. Family responsibility, public provision, and recognition of unpaid work may lead to different readings."
+premise-inherited-obligations,FOUNDATION-NORMATIVE,primary,"Explores unchosen obligations. Agreement might refer to mutual support, historic repair, customary authority, or legal duties; it does not establish support for hierarchy."
+premise-dispersed-knowledge,FOUNDATION-EPISTEMOLOGY,primary,"Explores dispersed knowledge. Limits of information do not by themselves settle whether markets, public planning, or participatory coordination work better."
+premise-inherited-knowledge,FOUNDATION-EPISTEMOLOGY,primary,Explores tacit knowledge in inherited practice. Useful knowledge does not establish the legitimacy of every tradition or immunity from criticism.
+premise-situated-knowledge,FOUNDATION-EPISTEMOLOGY,primary,Explores the contribution of situated experience. It does not claim that experience is infallible or that everyone within a group has the same knowledge.
+premise-testable-explanations,FOUNDATION-EPISTEMOLOGY,primary,Explores fallibility and public scrutiny of explanatory claims. Social desirability and differing access to recognized evidence may explain agreement; moral commitments are not reducible to empirical tests.
+premise-property-independence,FOUNDATION-INSTITUTIONS,primary,"Explores an institutional argument for property. Distribution, the kind of property, and dependence on private actors require separate follow-up items."
+premise-workplace-control,FOUNDATION-INSTITUTIONS,primary,"Explores economic democracy. Consultation, co-determination, cooperative ownership, and full worker control are different institutional interpretations."
+premise-contestable-power,FOUNDATION-INSTITUTIONS,primary,"Explores contestability across public and private power. Courts, direct participation, appeals, and collective organization may implement the principle differently."
+premise-gradual-reform,FOUNDATION-INSTITUTIONS,primary,"Explores continuity in institutional change. Risk tolerance, feasibility, and assumptions about the severity of current injustice may matter more than attachment to tradition."
+housing-urgent,LEGACY-ECONOMIC,primary,"Retains a complex choice among sale, municipal housing and cooperative lease; housing totals, timing, repair funding and control are bundled."
+housing-urgent,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+housing-urgent,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+housing-urgent,COMPARE-HOUSING-URGENCY,context,Supplies the first observation for comparison with housing-planned; its ordinary main-scenario contribution remains distinct from the unscored comparison.
+public-assembly,LEGACY-CIVIL,primary,"Records a resident's consultation preference among relocation, new conditions and existing freedoms; it is the only scored civil scenario."
+public-assembly,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+public-assembly,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+water-partnership,LEGACY-DIPLOMATIC,primary,Records allocation of a rural grant between local works and cross-border partnership; altruism and reciprocal practical benefit may differ.
+water-partnership,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+water-partnership,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+community-festival,LEGACY-SOCIETAL,primary,Records a cultural-program recommendation; preservation and open selection procedures are not a single construct.
+community-festival,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+community-festival,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+service-contract,LEGACY-ECONOMIC,primary,"Records delivery arrangements under common baseline service conditions; ownership, managerial control and expected reliability remain distinct."
+service-contract,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+service-contract,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+community-history,LEGACY-SOCIETAL,primary,Records an association's exhibition choice within its member mandate; representation and cultural replacement may differ.
+community-history,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+community-history,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+public-records,TRANSPARENCY-ACCESS,primary,"All options share the legal disclosure floor. Publication, information usability and staff capacity remain descriptive and excluded from every aggregate."
+public-records,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+public-records,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+regional-cooperation,LEGACY-DIPLOMATIC,primary,Records a national flood-investment recommendation; domestic benefit and duties beyond borders may favor the same package.
+regional-cooperation,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+regional-cooperation,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+housing-planned,COMPARE-HOUSING-URGENCY,primary,This repeats the housing dilemma with a changed engineering deadline; it is excluded from main scenario means and paired descriptively with housing-urgent.
+housing-planned,RECORD-ROLE-ACTION,context,"Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+housing-planned,RECORD-PERSONAL-PREFERENCE,context,The implemented optional preference uses the same feasible packages and contributes no score or denominator.
+CR-01A,DEBATE-01,primary,"Objective interests attributed from a position versus the person's account of their interests. Agreement does not establish that economic position determines every belief, or that the respondent supports a particular class politics."
+CR-01B,DEBATE-01,primary,"First-person reasons as explanations versus explanation by social location. Disagreement might concern rationalization, limited self-knowledge, or unreliable reporting; it does not establish that agency is unreal."
+CR-01C,DEBATE-01,primary,Institutions as producers of goals versus instruments for prior goals. Agreement does not identify which institutions matter or deny that people can change them.
+CR-02A,DEBATE-02,primary,"Durable power beyond formal electoral participation. Agreement does not establish that every business owner acts together, or that abolishing private ownership is the desired remedy."
+CR-02B,DEBATE-02,primary,"Negotiated plural influence versus predominant class rule. Agreement does not establish that bargaining power is equal, fair, or open to everyone."
+CR-02C,DEBATE-02,primary,"State autonomy from owners of capital. Agreement does not show approval of bureaucracy, support for authoritarian rule, or rejection of class explanations in other cases."
+CR-03A,DEBATE-03,primary,"Voluntary acceptance under constrained alternatives. Agreement does not establish that the wage is fair, the contract is legitimate in every respect, or the employer owes no duties."
+CR-03B,DEBATE-03,primary,"Material conditions as part of freedom. Agreement does not identify the institution that should secure those conditions, or imply support for any particular benefit program."
+CR-03C,DEBATE-03,primary,"A standing capacity to exercise power versus actual interference. Agreement does not establish opposition to all dismissals, management authority, or private employment."
+CR-04A,DEBATE-04,primary,"Equal formal rules as a sufficient basis for deserved earnings despite unequal starting resources. Agreement does not establish opposition to taxes, support for every existing law, or a belief that effort alone causes income."
+CR-04B,DEBATE-04,primary,Need relative to contribution in allocating support. Agreement does not establish that all people have identical needs or that every resource should be allocated by need.
+CR-04C,DEBATE-04,primary,"Relationship-based obligations relative to impartial need. Agreement does not imply that caring duties are unlimited, naturally assigned to women, or exclusively private."
+CR-05A,DEBATE-05,primary,"Non-working ownership as a basis of final authority. The stated ownership arrangement keeps owners and workers distinct in this case without assuming that all enterprises are organized this way. Agreement does not establish support for unlimited authority, exemption from law, or the claim that investors alone bear risks."
+CR-05B,DEBATE-05,primary,"Worker majority control, rather than consultation or a minority of seats. Agreement does not establish employee ownership, opposition to managers with specialist skills, or a preferred economy-wide allocation system."
+CR-05C,DEBATE-05,primary,"User representation beyond owner or producer authority. Agreement does not establish a user majority, state ownership, or direct votes on every operational choice."
+CR-06A,DEBATE-06,primary,A default evidential priority when sources conflict. Agreement does not establish blind trust in statistics; disagreement may mean insufficient information about either source rather than rejection of research.
+CR-06B,DEBATE-06,primary,"Situated experience as an epistemic reason. Agreement does not establish infallibility, unanimity within a group, or exclusive authority to speak about it."
+CR-06C,DEBATE-06,primary,"Context-specific and time-sensitive knowledge limits. Agreement does not establish that prices transmit all relevant knowledge, that markets are fair, or that participatory planning is impossible."
+CR-07A,DEBATE-07,primary,A presumption and burden of proof favoring the existing institution. Agreement does not establish approval of every tradition or immunity from criticism.
+CR-07B,DEBATE-07,primary,"Political exclusion as a reason to act despite uncertainty about a replacement. Agreement does not establish support for violence, abrupt abolition of all services, or disregard of foreseeable consequences."
+CR-07C,DEBATE-07,primary,Reversibility as a reason for incremental change. Agreement does not establish that the current institution deserves moral deference or that all major changes can be reversed.
+CR-08A,DEBATE-08,primary,"Special duties of political membership relative to equal need. Agreement does not establish hostility toward foreigners, opposition to immigration, or rejection of universal minimum duties."
+CR-08B,DEBATE-08,primary,"Political inclusion relative to cultural assimilation. Agreement does not establish that membership has no conditions, that laws need not be followed, or that language requirements are always unacceptable."
+CR-08C,DEBATE-08,primary,"Collective self-rule as a claim not exhausted by individual rights. Agreement does not establish which groups constitute a people, endorsement of every secession claim, or acceptance of minority exclusion within the new unit."
+CR-09A,DEBATE-09,primary,"Religious teaching as sufficient public justification. Agreement does not establish support for every religious interpretation, preference for a particular religion, or a claim that religious authority should directly govern."
+CR-09B,DEBATE-09,primary,"Public assessability of reasons across faith commitments. Agreement does not require actual consensus, prohibit religious motivation, or exclude religious people from public debate."
+CR-09C,DEBATE-09,primary,"Public funding for majority-religion worship, with equal freedom of belief fixed as a condition rather than a second proposition to endorse. Agreement does not establish exclusive funding for that religion, an official religious test for office, or the legal inferiority of other believers."
+CR-10A,DEBATE-10,primary,"Individual need versus inherited group membership as the eligibility basis for remedial assistance in a specified system of social closure. Agreement does not establish opposition to recording discrimination, denial of its history, or a general prohibition on every use of group identity."
+CR-10B,DEBATE-10,primary,"Continuing benefit as a ground of present responsibility, separate from personal causation or guilt. Agreement does not specify compensation, punishment, a policy instrument, or the extent of a duty."
+CR-10C,DEBATE-10,primary,"Guaranteed group representation beyond formally open elections. Agreement does not establish who selects representatives, how groups are defined, or whether reserved seats should be permanent."
+CR-11A,DEBATE-11,primary,Non-instrumental ecological standing. Agreement does not establish equal moral standing for every organism or a rule for every conflict with human needs.
+CR-11B,DEBATE-11,primary,Obligations across generations involving a present sacrifice. Agreement does not establish that all income groups owe the same sacrifice or that every present luxury and basic need has equal weight.
+CR-11C,DEBATE-11,primary,"Constraints on trading ecological damage for aggregate benefit. Agreement does not identify the limits, deny all technology-based solutions, or establish that every ecological loss is irreplaceable."
+CR-12A,DEBATE-12,primary,"Revocable authorization relative to competence. Agreement does not establish a preference for direct democracy, a right to veto every decision, or agreement on who counts among those subject to a power."
+CR-12B,DEBATE-12,primary,"Performance as a possible basis of legitimacy without electoral competition. Agreement does not establish support for arbitrary repression, hereditary office, or any particular real government."
+CR-12C,DEBATE-12,primary,"A presumption for voluntary association relative to compulsory public coordination. Agreement does not specify whether the associations use markets, common ownership, mutual aid, or another arrangement."
+CR-S01,SCENARIO-01,primary,"Describe the consultation package favored when municipal ownership is fixed and residents can gain moving assistance, collective rule approval or individual review. Retain the reason separately."
+CR-S02,SCENARIO-02,primary,Describe the allocation rule favored when total additional care capacity is fixed and recipient needs partly overlap with carer exhaustion.
+CR-S03,SCENARIO-03,probe,Held for a qualitative check of method–purpose comprehension; the current mandate risks determining the appropriate method before political disagreement enters.
+CR-S04,SCENARIO-04,primary,"Describe whether equal eligibility, longer residence or documented contribution receives priority in a fixed public grant lottery."
+CR-S05,SCENARIO-05,primary,Describe the chosen tradeoff between specified local jobs and the risk of losing an ecological community under a national recommendation mandate.
+CR-S06,SCENARIO-06,primary,"Describe whether a training association's limited places are allocated through equal chance, a response to its own exclusionary history or current low-income priority."

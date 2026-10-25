@@ -1,0 +1,1194 @@
+{
+  "outcomes": [
+    {
+      "id": "LEGACY-ECONOMIC",
+      "title": "Economic priorities in the current provisional profile",
+      "claim_kind": "provisional_profile",
+      "intended_interpretation": "Summarize the authored responses about ownership, financing, access and service delivery, with statement and scenario summaries shown separately. These topics are grouped by the current implementation; the content audit recommends separating their meanings.",
+      "evidence_required": "Applicable instrument 0.4.0 answers, authored direction and option scores, evidence counts, and exclusion of the repeated housing case. A construct argument and participant evidence are required before treating the summary as one economic trait.",
+      "unsupported_inferences": "Public funding, public ownership, competition and worker control are not interchangeable. A cooperative is not inherently moderate. The mean does not establish a party identity, economic ideology or policy competence.",
+      "status": "provisional",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "LEGACY-DIPLOMATIC",
+      "title": "Shared obligations in the current provisional profile",
+      "claim_kind": "provisional_profile",
+      "intended_interpretation": "Describe responses grouped around obligations beyond borders, domestic priority and international cooperation. Preserve distinctions between special duties, practical shared benefits and delegated authority when interpreting the separate statement and scenario summaries.",
+      "evidence_required": "Applicable scored statements and the water-partnership and regional-cooperation responses, with counts and original choices. Interviews and reviewed construct evidence are needed to determine which motive or institutional commitment the answers express.",
+      "unsupported_inferences": "Agreement with cooperation does not establish equal priority for outsiders, acceptance of supranational authority or the respondent's nationality. The grouping is not a validated nationalism–cosmopolitanism scale.",
+      "status": "provisional",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "LEGACY-CIVIL",
+      "title": "Civil protections in the current provisional profile",
+      "claim_kind": "provisional_profile",
+      "intended_interpretation": "Describe the current provisional grouping of protected dissent, official discretion and independent review. Its transparency statements require explicit caution because administrative disclosure and civil-protection commitments may differ.",
+      "evidence_required": "Applicable scored statement responses and public-assembly choice. The descriptive public-records scenario must remain excluded. The audit of civil-records and civil-withholding is unresolved; current scoring is recorded rather than endorsed by this catalog.",
+      "unsupported_inferences": "A preference about paperwork, noise or predictable rules does not establish authoritarianism, support for repression or a general civil-liberties disposition. One scored scenario cannot establish broad coverage.",
+      "status": "provisional",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "LEGACY-SOCIETAL",
+      "title": "Cultural continuity in the current provisional profile",
+      "claim_kind": "provisional_profile",
+      "intended_interpretation": "Describe choices and statements about preserving, revising and widening participation in public cultural programs. The implemented summary concerns this narrow authored subject matter.",
+      "evidence_required": "Applicable authored statements, community-festival and community-history choices, their reasons and evidence counts. Review is needed to separate preservation, equal access, inclusion and replacement.",
+      "unsupported_inferences": "These responses do not establish a general attitude toward all social change, religion, gender, migration or moral conservatism. An open selection process does not guarantee replacement of an inherited practice.",
+      "status": "provisional",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "FOUNDATION-ONTOLOGY",
+      "title": "Existing premises: social explanation",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Retain each response about agency, social relations, productive power and ecological dependence as a separate description of the respondent's stated premise.",
+      "evidence_required": "The four individual premise responses, uncertainty and skips, plus paraphrases showing whether each answer concerns possibility, explanation or moral approval.",
+      "unsupported_inferences": "These four heterogeneous statements are not an ontology total or an ideology classifier. Agreement with social formation does not deny agency, and ecological dependence does not establish a conservation policy.",
+      "status": "author_draft",
+      "source_path": "docs/FOUNDATIONS.md"
+    },
+    {
+      "id": "FOUNDATION-NORMATIVE",
+      "title": "Existing premises: grounds of obligation",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Retain separate responses about pursuing a good life, protection from uncontrolled power, care obligations and obligations through community membership.",
+      "evidence_required": "Individual item responses and clarification of the duty bearer, affected people and meaning of freedom or obligation.",
+      "unsupported_inferences": "Acceptance of several obligations is compatible. No score establishes which obligation would dominate a concrete conflict, which institution should deliver it or which tradition the person belongs to.",
+      "status": "author_draft",
+      "source_path": "docs/FOUNDATIONS.md"
+    },
+    {
+      "id": "FOUNDATION-EPISTEMOLOGY",
+      "title": "Existing premises: sources and tests of knowledge",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Record individual judgments about dispersed information, tacit knowledge, situated experience and revisability of explanations.",
+      "evidence_required": "Item-level responses and probes separating a source of insight from infallibility or a right to govern.",
+      "unsupported_inferences": "The four statements are not an expertise-versus-experience scale. Agreement does not establish research literacy, epistemic virtue, a preferred coordination system or a single political identity.",
+      "status": "author_draft",
+      "source_path": "docs/FOUNDATIONS.md"
+    },
+    {
+      "id": "FOUNDATION-INSTITUTIONS",
+      "title": "Existing premises: institutional mechanisms",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Record individual responses about property as independence, workplace control, contestable power and gradual reform.",
+      "evidence_required": "Each authored response with clarification of the powers, property types, decision rights and assumed consequences the reader imagined.",
+      "unsupported_inferences": "The category is not an institutional ideology score. Participation is not identical to ownership, gradual change is not necessarily conservative attachment, and a preferred mechanism does not prove it is effective.",
+      "status": "author_draft",
+      "source_path": "docs/FOUNDATIONS.md"
+    },
+    {
+      "id": "DEBATE-01",
+      "title": "How political interests and goals are explained",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe the separate weight a respondent gives to interests attributed from economic position, people's own reasons, and institutions that help form goals.",
+      "evidence_required": "Responses to CR-01A/B/C plus paraphrases distinguishing interests, goals, explanations and social influence. Ask which society or example grounds the judgment.",
+      "unsupported_inferences": "The cluster does not directly test the ability to dissent, measure agency or establish an individualist/collectivist identity. First-person explanations and social formation can both matter.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-02",
+      "title": "Sources and persistence of political power",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe beliefs about business ownership beyond voting, bargaining among groups, and public officials' capacity to develop an independent power base.",
+      "evidence_required": "Responses to CR-02A/B/C with examples of mechanisms and clarification of whether the claim concerns a possible state, most states or a specific society.",
+      "unsupported_inferences": "Explanatory beliefs do not indicate approval of inequality, denial of elections, support for authoritarian government or membership in a class-based political tradition.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-03",
+      "title": "Different meanings of freedom",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe whether the respondent counts unthreatened agreement, secure means to meet needs and protection from unreviewable dismissal as aspects of freedom.",
+      "evidence_required": "Responses to CR-03A/B/C and probes about alternatives, resources, standing power and effective appeal. Keep each proposition separate.",
+      "unsupported_inferences": "The three responses do not form a validated freedom continuum. A judgment that an action is free does not establish that it is fair; concern about domination does not identify a preferred ownership system.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-04",
+      "title": "Desert, need and care-based obligation",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Distinguish judgments about deserved earnings under equal formal rules, public support based on need rather than contribution, and stronger personal duties within care relationships.",
+      "evidence_required": "Responses to CR-04A/B/C with clarification of contribution, effective support, deserving versus legal entitlement and the difference between a person's duty and a public official's mandate.",
+      "unsupported_inferences": "A person's care duties cannot be generalized to a state's obligations. The cluster is not a generosity score, compassion test or complete theory of distributive justice.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-05",
+      "title": "Claims to govern economic enterprises",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe the decision rights a respondent supports for non-working owners, workers and essential-service users.",
+      "evidence_required": "Responses to CR-05A/B/C and concrete examples of the decisions, voting powers, investment expectations and affected groups the reader imagines.",
+      "unsupported_inferences": "Owner control, worker majority control and user representation are different arrangements, not positions on a public/private ownership scale. These responses do not select a complete economic system.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-06",
+      "title": "Evidential priorities and coordination knowledge",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe default judgments about statistical studies, experience of exclusion and limits on collecting dispersed information.",
+      "evidence_required": "Responses to CR-06A/B/C, reasons for trusting each source, and probes about reliability, common outcomes and what would change the respondent's judgment.",
+      "unsupported_inferences": "Agreement is not evidence of scientific competence, rejection of expertise, group infallibility or a uniquely market-based coordination preference. Underspecified source quality may explain an answer.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-07",
+      "title": "Continuity, reform and transition risk",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Distinguish presumptions favoring inherited institutions, reasons to replace exclusionary institutions and a preference for reversible reform steps.",
+      "evidence_required": "Responses to CR-07A/B/C with the imagined harm of delay, meaning of institutional improvement and assumptions about transition risk made explicit.",
+      "unsupported_inferences": "Gradualism does not by itself identify conservatism; support for replacement does not establish support for violence. Different answers may reflect different assumed risks rather than different principles.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-08",
+      "title": "Membership, inclusion and collective self-rule",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe commitments concerning special duties to citizens, political membership without cultural assimilation and collective self-rule beyond protected individual rights.",
+      "evidence_required": "Responses to CR-08A/B/C plus explanations of citizenship, residence, culture, who constitutes a political community and who counts as an outsider.",
+      "unsupported_inferences": "The cluster is not one nationalism–globalism axis and cannot infer nationality, immigration preferences or endorsement of every secession claim.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-09",
+      "title": "Religion and reasons for binding public rules",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Distinguish religious teaching as sufficient justification, publicly assessable reasons across faiths, and public funding for majority-religion worship under stipulated equal belief freedom.",
+      "evidence_required": "Responses to CR-09A/B/C with probes separating moral justification, legal authorization, religious motivation, worship funding and freedom of belief.",
+      "unsupported_inferences": "The answers do not measure personal religiosity, theological belief, tolerance in every context or support for exclusive majority funding. Religious traditions are not uniform positions.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-10",
+      "title": "Inherited exclusion and grounds for repair",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe judgments about need versus birth-assigned group membership in remedial support, responsibility through continuing benefit and guaranteed representation after exclusion.",
+      "evidence_required": "Responses to CR-10A/B/C and clear readings of inherited hierarchy, the basis of responsibility, group definitions and how representatives would be selected.",
+      "unsupported_inferences": "Caste, race, class and colonial relations cannot be treated as interchangeable. These generic drafts do not establish a complete view of any affected community, its history or the correct remedy.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-11",
+      "title": "Ecological standing and limits on tradeoffs",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe whether nonhuman systems, future generations and ecological constraints provide political reasons that may limit present benefits.",
+      "evidence_required": "Responses to CR-11A/B/C with explanations of human benefit, moral duty, who bears present sacrifice and what counts as a non-substitutable ecological limit.",
+      "unsupported_inferences": "These responses do not establish a position on all economic growth, equal sacrifice by all households, a specific environmental policy or an Indigenous political identity.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "DEBATE-12",
+      "title": "Grounds and limits of binding authority",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Distinguish revocable powers, performance as a possible basis of legitimacy without competitive elections, and a presumption for voluntary coordination.",
+      "evidence_required": "Responses to CR-12A/B/C with probes distinguishing legitimacy from legal power, removing a leader from revoking a power, and voluntary coordination from its expected feasibility.",
+      "unsupported_inferences": "No single response establishes an authoritarian personality, acceptance of repression, a preferred regime in every circumstance or a complete anarchist/libertarian identity.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CANDIDATE-BANK.md"
+    },
+    {
+      "id": "SCENARIO-01",
+      "title": "Housing governance: exit, voice and individual appeal",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the consultation package favored when municipal ownership is fixed and residents can gain moving assistance, collective rule approval or individual review. Retain the reason separately.",
+      "evidence_required": "The CR-S01 action, its stated reason, understood consultation authority and the exact base or variant facts shown. The variant needs a planned design before estimating an effect.",
+      "unsupported_inferences": "A moving grant does not necessarily indicate market ideology; collective voice and individual appeal do not uniquely identify traditions. Choice changes cannot identify a causal role effect or a definitive belief about non-domination.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/SCENARIO-LAB.md"
+    },
+    {
+      "id": "SCENARIO-02",
+      "title": "Respite allocation: recipient needs, carer needs and equal additions",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the allocation rule favored when total additional care capacity is fixed and recipient needs partly overlap with carer exhaustion.",
+      "evidence_required": "The CR-S02 choice and reason, understanding of the 20/20/10 overlap, freedom to refuse care and the fixed present willingness of carers. Record the history-of-consent version.",
+      "unsupported_inferences": "The choice does not measure compassion or preference for public versus private provision. Prior consent does not establish present coercion, and care responsibilities must not be assumed to belong to women or relatives.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/SCENARIO-LAB.md"
+    },
+    {
+      "id": "SCENARIO-03",
+      "title": "Comprehension of the relationship between evidence and its purpose",
+      "claim_kind": "comprehension",
+      "intended_interpretation": "Investigate whether a reader distinguishes the authorized research purpose from the types of claim each sampling method can support. CR-S03 is held as a comprehension probe pending redesign.",
+      "evidence_required": "An uncoached CR-S03 response, explanation of what the selected sample can establish, and a record of whether average exposure or localized peaks was the mandated primary task.",
+      "unsupported_inferences": "This probe supplies no ideological indicator or assessment score. A response may reflect method–purpose matching, unfamiliarity with sampling or a reading of the member mandate rather than a political commitment.",
+      "status": "probe_only",
+      "source_path": "docs/content-research/SCENARIO-LAB.md"
+    },
+    {
+      "id": "SCENARIO-04",
+      "title": "Standing in a shared fund: membership and contribution",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe whether equal eligibility, longer residence or documented contribution receives priority in a fixed public grant lottery.",
+      "evidence_required": "The CR-S04 choice, reason, understanding of the two-stage lotteries and confirmation that newer households are not assumed to be foreign. Record the funding-origin version while preserving the accumulation period.",
+      "unsupported_inferences": "Residence preference is not necessarily ethnic nationalism; contribution priority is not a judgment of human worth. The variant does not isolate nationality, ancestry, immigration or culture.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/SCENARIO-LAB.md"
+    },
+    {
+      "id": "SCENARIO-05",
+      "title": "Ecological loss, employment and responsibility under risk",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the chosen tradeoff between specified local jobs and the risk of losing an ecological community under a national recommendation mandate.",
+      "evidence_required": "The CR-S05 package and reason, comprehension of probability ranges and background versus project-caused risk, and the local-loss or species-extinction version shown.",
+      "unsupported_inferences": "The choice cannot separate intrinsic ecological value from all future human interests, establish an attitude toward growth generally or predict decisions in a real country. Confidence in estimates is a rival explanation.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/SCENARIO-LAB.md"
+    },
+    {
+      "id": "SCENARIO-06",
+      "title": "Course access: present need, equal procedure and institutional repair",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe whether a training association's limited places are allocated through equal chance, a response to its own exclusionary history or current low-income priority.",
+      "evidence_required": "The CR-S06 choice and reason, understanding of overlapping applicant groups and the exact prior-remedy condition. Ask whether admission is viewed as an appropriate form of repair.",
+      "unsupported_inferences": "A lottery preference can coexist with support for a different remedy. The scenario does not establish a complete view of caste, race, merit, colonialism or whether a previous agreement extinguishes every obligation.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/SCENARIO-LAB.md"
+    },
+    {
+      "id": "RECORD-ROLE-ACTION",
+      "title": "Chosen action within an assigned responsibility",
+      "claim_kind": "response_record",
+      "intended_interpretation": "Retain the actual option, uncertainty, unrepresented response or skip under the scenario's stated role, powers and constraints. A reason is a separate unscored explanation.",
+      "evidence_required": "An authored scenario/version, assigned fictional world, selected response category, option and any voluntarily provided reason.",
+      "unsupported_inferences": "A role action is not an authentic-ideology diagnosis, evidence of consistency or hypocrisy, or a causal effect of role. The dilemma and role are bundled in the current route.",
+      "status": "author_draft",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "RECORD-PERSONAL-PREFERENCE",
+      "title": "Optional personal preference under unchanged facts",
+      "claim_kind": "response_record",
+      "intended_interpretation": "Record a separately offered preference among the same feasible packages while setting aside the assigned responsibility. Describe whether a stated preference and role action differ.",
+      "evidence_required": "Both responses where supplied, their distinct response categories, and confirmation that resources, permissions and material facts were held fixed.",
+      "unsupported_inferences": "Missing preference does not mean agreement. A difference does not identify hypocrisy, a more authentic self, or a causal role effect; fixed prompt order may influence answers.",
+      "status": "author_draft",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "COMPARE-HOUSING-URGENCY",
+      "title": "Descriptive response comparison when repair urgency changes",
+      "claim_kind": "response_record",
+      "intended_interpretation": "Describe whether the selected housing package differs between the urgent and planned repair conditions while their shared facts and options remain fixed.",
+      "evidence_required": "Both housing-urgent and housing-planned responses in the recorded fixed order, their version and common scenario facts. Missing or non-choice responses remain distinct.",
+      "unsupported_inferences": "The repeated case contributes no additional aggregate score. A within-person difference is not an individual causal urgency estimate, a test of ideological consistency or a pure role effect.",
+      "status": "author_draft",
+      "source_path": "docs/RESEARCH.md"
+    },
+    {
+      "id": "TRANSPARENCY-ACCESS",
+      "title": "Transparency, usable access and administrative capacity",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe the balance favored between access to non-sensitive decision information, usability and available staff effort. Keep legal disclosure duties distinct from optional additional publication.",
+      "evidence_required": "The specific statement or public-records scenario response, the interpreted legal floor and form of access, and the administrative cost the reader understood.",
+      "unsupported_inferences": "This is not an established civil-rights/public-order measure. The public-records scenario remains descriptive; the current civil-records and civil-withholding statement scores are recorded as existing behavior, not endorsed by this mapping.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/CURRENT-CONTENT-AUDIT.md"
+    },
+    {
+      "id": "REVIEW-COMPREHENSION",
+      "title": "Question interpretation and bilingual response fit",
+      "claim_kind": "comprehension",
+      "intended_interpretation": "Identify where readers interpret a different claim, invent a material fact, misunderstand authority or cannot express their answer with the offered categories. Record differences between English and Vietnamese readings.",
+      "evidence_required": "Neutral item probes, exact wording and language order, observed interpretation, response-category meaning and a documented revision/recheck record.",
+      "unsupported_inferences": "An author draft, passing structural check or fluent translation is not evidence of human comprehension, semantic equivalence, population representativeness or measurement validity. Review observations are not political scores.",
+      "status": "author_draft",
+      "source_path": "docs/content-research/REVIEW-PROTOCOL.md"
+    }
+  ],
+  "item_outcomes": [
+    {
+      "item_id": "economic-ownership",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Examines retention of public assets when sale proceeds could meet immediate needs; ownership and urgency may both motivate the answer."
+    },
+    {
+      "item_id": "civil-dissent",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Examines protection for peaceful dissent when other residents experience inconvenience."
+    },
+    {
+      "item_id": "societal-tradition",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Examines a special public place for established traditions; recognition, funding and legal privilege are rival readings."
+    },
+    {
+      "item_id": "diplomatic-obligation",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Examines obligations beyond national borders despite remaining local need; aid, repair and reciprocity may differ."
+    },
+    {
+      "item_id": "economic-market",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Examines a preference for competitive private delivery where alternatives are feasible, without holding all access or quality expectations equal."
+    },
+    {
+      "item_id": "civil-discretion",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Examines official discretion to prevent disruption where peaceful activity would be limited."
+    },
+    {
+      "item_id": "societal-revision",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Examines revision of public traditions as community composition changes, with inclusion and replacement potentially distinct."
+    },
+    {
+      "item_id": "diplomatic-domestic",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Examines priority for domestic needs before support abroad; absolute sequencing and ordinary priority may be different readings."
+    },
+    {
+      "item_id": "economic-services",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Examines shared responsibility for essential needs alongside higher taxes; the provider's ownership is not specified."
+    },
+    {
+      "item_id": "civil-review",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Examines independent scrutiny of restrictions despite slower official action."
+    },
+    {
+      "item_id": "societal-continuity",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Examines preserving customs despite greater interest in alternatives; the kind of preservation is unspecified."
+    },
+    {
+      "item_id": "diplomatic-coordination",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Examines limits on national discretion in exchange for solving shared problems."
+    },
+    {
+      "item_id": "economic-user-charges",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Examines user charges rather than general taxation for local amenities; the imagined amenity and access rules matter."
+    },
+    {
+      "item_id": "civil-management",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Examines temporary restrictions justified by management of shared space; the meaning of disruption needs probing."
+    },
+    {
+      "item_id": "societal-emerging",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Examines opportunities for emerging practices to replace established ones; procedural access does not guarantee replacement."
+    },
+    {
+      "item_id": "diplomatic-discretion",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Examines retaining national authority over resources despite benefits from common international rules."
+    },
+    {
+      "item_id": "economic-access",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Examines publicly supported access despite different ability to pay; financing and ownership are distinct."
+    },
+    {
+      "item_id": "civil-records",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Currently contributes to the authored civil profile, but the audit identifies transparency and administrative workload as distinct constructs requiring reclassification review."
+    },
+    {
+      "item_id": "civil-records",
+      "outcome_id": "TRANSPARENCY-ACCESS",
+      "relationship": "context",
+      "rationale": "The audit asks whether transparency and administrative burden better describe this item; this catalog does not alter its implemented score."
+    },
+    {
+      "item_id": "societal-inherited",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Examines reserving a core of inherited customs in public cultural programs despite different demand."
+    },
+    {
+      "item_id": "diplomatic-shared-rules",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Examines acceptance of rules for cross-border problems without specifying their domestic cost."
+    },
+    {
+      "item_id": "economic-choice",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Examines choice between providers versus a single public provider; responsiveness, exit and ownership may be different motives."
+    },
+    {
+      "item_id": "civil-withholding",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Currently contributes to the authored civil profile, but withholding non-sensitive details may concern publication duties or capacity rather than civil protection."
+    },
+    {
+      "item_id": "civil-withholding",
+      "outcome_id": "TRANSPARENCY-ACCESS",
+      "relationship": "context",
+      "rationale": "The audit asks whether transparency and administrative burden better describe this item; this catalog does not alter its implemented score."
+    },
+    {
+      "item_id": "societal-new-voices",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Examines inclusion of previously absent groups in shared culture; inclusion need not remove existing customs."
+    },
+    {
+      "item_id": "diplomatic-responsibility",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Examines a government's special responsibility to residents when needs elsewhere are comparable."
+    },
+    {
+      "item_id": "premise-personal-agency",
+      "outcome_id": "FOUNDATION-ONTOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores the relative independence of agency from group membership. Agreement may concern the possibility of dissent rather than an individualist account of society."
+    },
+    {
+      "item_id": "premise-social-relations",
+      "outcome_id": "FOUNDATION-ONTOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores a relational account of interests. Social influence, identity formation, and economic dependence are rival interpretations; it is not the reverse of personal agency."
+    },
+    {
+      "item_id": "premise-economic-power",
+      "outcome_id": "FOUNDATION-ONTOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores the explanatory importance of economic power. Respondents may instead be describing corruption, lobbying, or one particular economy."
+    },
+    {
+      "item_id": "premise-ecological-dependence",
+      "outcome_id": "FOUNDATION-ONTOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores ecological embeddedness as an explanatory premise. Factual assent or concern about a recent disaster need not imply a broader ecological philosophy."
+    },
+    {
+      "item_id": "premise-own-good",
+      "outcome_id": "FOUNDATION-NORMATIVE",
+      "relationship": "primary",
+      "rationale": "Explores equal freedom among different ways of living. The meaning of respect and the social conditions of freedom remain open."
+    },
+    {
+      "item_id": "premise-nondomination",
+      "outcome_id": "FOUNDATION-NORMATIVE",
+      "relationship": "primary",
+      "rationale": "Explores freedom as protection against uncontrolled power. Participants may read interference as actual harm rather than a standing capacity to dominate."
+    },
+    {
+      "item_id": "premise-care-obligations",
+      "outcome_id": "FOUNDATION-NORMATIVE",
+      "relationship": "primary",
+      "rationale": "Explores care and dependency as grounds of obligation. Family responsibility, public provision, and recognition of unpaid work may lead to different readings."
+    },
+    {
+      "item_id": "premise-inherited-obligations",
+      "outcome_id": "FOUNDATION-NORMATIVE",
+      "relationship": "primary",
+      "rationale": "Explores unchosen obligations. Agreement might refer to mutual support, historic repair, customary authority, or legal duties; it does not establish support for hierarchy."
+    },
+    {
+      "item_id": "premise-dispersed-knowledge",
+      "outcome_id": "FOUNDATION-EPISTEMOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores dispersed knowledge. Limits of information do not by themselves settle whether markets, public planning, or participatory coordination work better."
+    },
+    {
+      "item_id": "premise-inherited-knowledge",
+      "outcome_id": "FOUNDATION-EPISTEMOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores tacit knowledge in inherited practice. Useful knowledge does not establish the legitimacy of every tradition or immunity from criticism."
+    },
+    {
+      "item_id": "premise-situated-knowledge",
+      "outcome_id": "FOUNDATION-EPISTEMOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores the contribution of situated experience. It does not claim that experience is infallible or that everyone within a group has the same knowledge."
+    },
+    {
+      "item_id": "premise-testable-explanations",
+      "outcome_id": "FOUNDATION-EPISTEMOLOGY",
+      "relationship": "primary",
+      "rationale": "Explores fallibility and public scrutiny of explanatory claims. Social desirability and differing access to recognized evidence may explain agreement; moral commitments are not reducible to empirical tests."
+    },
+    {
+      "item_id": "premise-property-independence",
+      "outcome_id": "FOUNDATION-INSTITUTIONS",
+      "relationship": "primary",
+      "rationale": "Explores an institutional argument for property. Distribution, the kind of property, and dependence on private actors require separate follow-up items."
+    },
+    {
+      "item_id": "premise-workplace-control",
+      "outcome_id": "FOUNDATION-INSTITUTIONS",
+      "relationship": "primary",
+      "rationale": "Explores economic democracy. Consultation, co-determination, cooperative ownership, and full worker control are different institutional interpretations."
+    },
+    {
+      "item_id": "premise-contestable-power",
+      "outcome_id": "FOUNDATION-INSTITUTIONS",
+      "relationship": "primary",
+      "rationale": "Explores contestability across public and private power. Courts, direct participation, appeals, and collective organization may implement the principle differently."
+    },
+    {
+      "item_id": "premise-gradual-reform",
+      "outcome_id": "FOUNDATION-INSTITUTIONS",
+      "relationship": "primary",
+      "rationale": "Explores continuity in institutional change. Risk tolerance, feasibility, and assumptions about the severity of current injustice may matter more than attachment to tradition."
+    },
+    {
+      "item_id": "housing-urgent",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Retains a complex choice among sale, municipal housing and cooperative lease; housing totals, timing, repair funding and control are bundled."
+    },
+    {
+      "item_id": "housing-urgent",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "housing-urgent",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "housing-urgent",
+      "outcome_id": "COMPARE-HOUSING-URGENCY",
+      "relationship": "context",
+      "rationale": "Supplies the first observation for comparison with housing-planned; its ordinary main-scenario contribution remains distinct from the unscored comparison."
+    },
+    {
+      "item_id": "public-assembly",
+      "outcome_id": "LEGACY-CIVIL",
+      "relationship": "primary",
+      "rationale": "Records a resident's consultation preference among relocation, new conditions and existing freedoms; it is the only scored civil scenario."
+    },
+    {
+      "item_id": "public-assembly",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "public-assembly",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "water-partnership",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Records allocation of a rural grant between local works and cross-border partnership; altruism and reciprocal practical benefit may differ."
+    },
+    {
+      "item_id": "water-partnership",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "water-partnership",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "community-festival",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Records a cultural-program recommendation; preservation and open selection procedures are not a single construct."
+    },
+    {
+      "item_id": "community-festival",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "community-festival",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "service-contract",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "relationship": "primary",
+      "rationale": "Records delivery arrangements under common baseline service conditions; ownership, managerial control and expected reliability remain distinct."
+    },
+    {
+      "item_id": "service-contract",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "service-contract",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "community-history",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "relationship": "primary",
+      "rationale": "Records an association's exhibition choice within its member mandate; representation and cultural replacement may differ."
+    },
+    {
+      "item_id": "community-history",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "community-history",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "public-records",
+      "outcome_id": "TRANSPARENCY-ACCESS",
+      "relationship": "primary",
+      "rationale": "All options share the legal disclosure floor. Publication, information usability and staff capacity remain descriptive and excluded from every aggregate."
+    },
+    {
+      "item_id": "public-records",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "public-records",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "regional-cooperation",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "relationship": "primary",
+      "rationale": "Records a national flood-investment recommendation; domestic benefit and duties beyond borders may favor the same package."
+    },
+    {
+      "item_id": "regional-cooperation",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "regional-cooperation",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "housing-planned",
+      "outcome_id": "COMPARE-HOUSING-URGENCY",
+      "relationship": "primary",
+      "rationale": "This repeats the housing dilemma with a changed engineering deadline; it is excluded from main scenario means and paired descriptively with housing-urgent."
+    },
+    {
+      "item_id": "housing-planned",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "relationship": "context",
+      "rationale": "Retain the chosen action and optional reason within the stated authority; uncertainty, none-of-these and skips remain separate."
+    },
+    {
+      "item_id": "housing-planned",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "relationship": "context",
+      "rationale": "The implemented optional preference uses the same feasible packages and contributes no score or denominator."
+    },
+    {
+      "item_id": "CR-01A",
+      "outcome_id": "DEBATE-01",
+      "relationship": "primary",
+      "rationale": "Objective interests attributed from a position versus the person's account of their interests. Agreement does not establish that economic position determines every belief, or that the respondent supports a particular class politics."
+    },
+    {
+      "item_id": "CR-01B",
+      "outcome_id": "DEBATE-01",
+      "relationship": "primary",
+      "rationale": "First-person reasons as explanations versus explanation by social location. Disagreement might concern rationalization, limited self-knowledge, or unreliable reporting; it does not establish that agency is unreal."
+    },
+    {
+      "item_id": "CR-01C",
+      "outcome_id": "DEBATE-01",
+      "relationship": "primary",
+      "rationale": "Institutions as producers of goals versus instruments for prior goals. Agreement does not identify which institutions matter or deny that people can change them."
+    },
+    {
+      "item_id": "CR-02A",
+      "outcome_id": "DEBATE-02",
+      "relationship": "primary",
+      "rationale": "Durable power beyond formal electoral participation. Agreement does not establish that every business owner acts together, or that abolishing private ownership is the desired remedy."
+    },
+    {
+      "item_id": "CR-02B",
+      "outcome_id": "DEBATE-02",
+      "relationship": "primary",
+      "rationale": "Negotiated plural influence versus predominant class rule. Agreement does not establish that bargaining power is equal, fair, or open to everyone."
+    },
+    {
+      "item_id": "CR-02C",
+      "outcome_id": "DEBATE-02",
+      "relationship": "primary",
+      "rationale": "State autonomy from owners of capital. Agreement does not show approval of bureaucracy, support for authoritarian rule, or rejection of class explanations in other cases."
+    },
+    {
+      "item_id": "CR-03A",
+      "outcome_id": "DEBATE-03",
+      "relationship": "primary",
+      "rationale": "Voluntary acceptance under constrained alternatives. Agreement does not establish that the wage is fair, the contract is legitimate in every respect, or the employer owes no duties."
+    },
+    {
+      "item_id": "CR-03B",
+      "outcome_id": "DEBATE-03",
+      "relationship": "primary",
+      "rationale": "Material conditions as part of freedom. Agreement does not identify the institution that should secure those conditions, or imply support for any particular benefit program."
+    },
+    {
+      "item_id": "CR-03C",
+      "outcome_id": "DEBATE-03",
+      "relationship": "primary",
+      "rationale": "A standing capacity to exercise power versus actual interference. Agreement does not establish opposition to all dismissals, management authority, or private employment."
+    },
+    {
+      "item_id": "CR-04A",
+      "outcome_id": "DEBATE-04",
+      "relationship": "primary",
+      "rationale": "Equal formal rules as a sufficient basis for deserved earnings despite unequal starting resources. Agreement does not establish opposition to taxes, support for every existing law, or a belief that effort alone causes income."
+    },
+    {
+      "item_id": "CR-04B",
+      "outcome_id": "DEBATE-04",
+      "relationship": "primary",
+      "rationale": "Need relative to contribution in allocating support. Agreement does not establish that all people have identical needs or that every resource should be allocated by need."
+    },
+    {
+      "item_id": "CR-04C",
+      "outcome_id": "DEBATE-04",
+      "relationship": "primary",
+      "rationale": "Relationship-based obligations relative to impartial need. Agreement does not imply that caring duties are unlimited, naturally assigned to women, or exclusively private."
+    },
+    {
+      "item_id": "CR-05A",
+      "outcome_id": "DEBATE-05",
+      "relationship": "primary",
+      "rationale": "Non-working ownership as a basis of final authority. The stated ownership arrangement keeps owners and workers distinct in this case without assuming that all enterprises are organized this way. Agreement does not establish support for unlimited authority, exemption from law, or the claim that investors alone bear risks."
+    },
+    {
+      "item_id": "CR-05B",
+      "outcome_id": "DEBATE-05",
+      "relationship": "primary",
+      "rationale": "Worker majority control, rather than consultation or a minority of seats. Agreement does not establish employee ownership, opposition to managers with specialist skills, or a preferred economy-wide allocation system."
+    },
+    {
+      "item_id": "CR-05C",
+      "outcome_id": "DEBATE-05",
+      "relationship": "primary",
+      "rationale": "User representation beyond owner or producer authority. Agreement does not establish a user majority, state ownership, or direct votes on every operational choice."
+    },
+    {
+      "item_id": "CR-06A",
+      "outcome_id": "DEBATE-06",
+      "relationship": "primary",
+      "rationale": "A default evidential priority when sources conflict. Agreement does not establish blind trust in statistics; disagreement may mean insufficient information about either source rather than rejection of research."
+    },
+    {
+      "item_id": "CR-06B",
+      "outcome_id": "DEBATE-06",
+      "relationship": "primary",
+      "rationale": "Situated experience as an epistemic reason. Agreement does not establish infallibility, unanimity within a group, or exclusive authority to speak about it."
+    },
+    {
+      "item_id": "CR-06C",
+      "outcome_id": "DEBATE-06",
+      "relationship": "primary",
+      "rationale": "Context-specific and time-sensitive knowledge limits. Agreement does not establish that prices transmit all relevant knowledge, that markets are fair, or that participatory planning is impossible."
+    },
+    {
+      "item_id": "CR-07A",
+      "outcome_id": "DEBATE-07",
+      "relationship": "primary",
+      "rationale": "A presumption and burden of proof favoring the existing institution. Agreement does not establish approval of every tradition or immunity from criticism."
+    },
+    {
+      "item_id": "CR-07B",
+      "outcome_id": "DEBATE-07",
+      "relationship": "primary",
+      "rationale": "Political exclusion as a reason to act despite uncertainty about a replacement. Agreement does not establish support for violence, abrupt abolition of all services, or disregard of foreseeable consequences."
+    },
+    {
+      "item_id": "CR-07C",
+      "outcome_id": "DEBATE-07",
+      "relationship": "primary",
+      "rationale": "Reversibility as a reason for incremental change. Agreement does not establish that the current institution deserves moral deference or that all major changes can be reversed."
+    },
+    {
+      "item_id": "CR-08A",
+      "outcome_id": "DEBATE-08",
+      "relationship": "primary",
+      "rationale": "Special duties of political membership relative to equal need. Agreement does not establish hostility toward foreigners, opposition to immigration, or rejection of universal minimum duties."
+    },
+    {
+      "item_id": "CR-08B",
+      "outcome_id": "DEBATE-08",
+      "relationship": "primary",
+      "rationale": "Political inclusion relative to cultural assimilation. Agreement does not establish that membership has no conditions, that laws need not be followed, or that language requirements are always unacceptable."
+    },
+    {
+      "item_id": "CR-08C",
+      "outcome_id": "DEBATE-08",
+      "relationship": "primary",
+      "rationale": "Collective self-rule as a claim not exhausted by individual rights. Agreement does not establish which groups constitute a people, endorsement of every secession claim, or acceptance of minority exclusion within the new unit."
+    },
+    {
+      "item_id": "CR-09A",
+      "outcome_id": "DEBATE-09",
+      "relationship": "primary",
+      "rationale": "Religious teaching as sufficient public justification. Agreement does not establish support for every religious interpretation, preference for a particular religion, or a claim that religious authority should directly govern."
+    },
+    {
+      "item_id": "CR-09B",
+      "outcome_id": "DEBATE-09",
+      "relationship": "primary",
+      "rationale": "Public assessability of reasons across faith commitments. Agreement does not require actual consensus, prohibit religious motivation, or exclude religious people from public debate."
+    },
+    {
+      "item_id": "CR-09C",
+      "outcome_id": "DEBATE-09",
+      "relationship": "primary",
+      "rationale": "Public funding for majority-religion worship, with equal freedom of belief fixed as a condition rather than a second proposition to endorse. Agreement does not establish exclusive funding for that religion, an official religious test for office, or the legal inferiority of other believers."
+    },
+    {
+      "item_id": "CR-10A",
+      "outcome_id": "DEBATE-10",
+      "relationship": "primary",
+      "rationale": "Individual need versus inherited group membership as the eligibility basis for remedial assistance in a specified system of social closure. Agreement does not establish opposition to recording discrimination, denial of its history, or a general prohibition on every use of group identity."
+    },
+    {
+      "item_id": "CR-10B",
+      "outcome_id": "DEBATE-10",
+      "relationship": "primary",
+      "rationale": "Continuing benefit as a ground of present responsibility, separate from personal causation or guilt. Agreement does not specify compensation, punishment, a policy instrument, or the extent of a duty."
+    },
+    {
+      "item_id": "CR-10C",
+      "outcome_id": "DEBATE-10",
+      "relationship": "primary",
+      "rationale": "Guaranteed group representation beyond formally open elections. Agreement does not establish who selects representatives, how groups are defined, or whether reserved seats should be permanent."
+    },
+    {
+      "item_id": "CR-11A",
+      "outcome_id": "DEBATE-11",
+      "relationship": "primary",
+      "rationale": "Non-instrumental ecological standing. Agreement does not establish equal moral standing for every organism or a rule for every conflict with human needs."
+    },
+    {
+      "item_id": "CR-11B",
+      "outcome_id": "DEBATE-11",
+      "relationship": "primary",
+      "rationale": "Obligations across generations involving a present sacrifice. Agreement does not establish that all income groups owe the same sacrifice or that every present luxury and basic need has equal weight."
+    },
+    {
+      "item_id": "CR-11C",
+      "outcome_id": "DEBATE-11",
+      "relationship": "primary",
+      "rationale": "Constraints on trading ecological damage for aggregate benefit. Agreement does not identify the limits, deny all technology-based solutions, or establish that every ecological loss is irreplaceable."
+    },
+    {
+      "item_id": "CR-12A",
+      "outcome_id": "DEBATE-12",
+      "relationship": "primary",
+      "rationale": "Revocable authorization relative to competence. Agreement does not establish a preference for direct democracy, a right to veto every decision, or agreement on who counts among those subject to a power."
+    },
+    {
+      "item_id": "CR-12B",
+      "outcome_id": "DEBATE-12",
+      "relationship": "primary",
+      "rationale": "Performance as a possible basis of legitimacy without electoral competition. Agreement does not establish support for arbitrary repression, hereditary office, or any particular real government."
+    },
+    {
+      "item_id": "CR-12C",
+      "outcome_id": "DEBATE-12",
+      "relationship": "primary",
+      "rationale": "A presumption for voluntary association relative to compulsory public coordination. Agreement does not specify whether the associations use markets, common ownership, mutual aid, or another arrangement."
+    },
+    {
+      "item_id": "CR-S01",
+      "outcome_id": "SCENARIO-01",
+      "relationship": "primary",
+      "rationale": "Describe the consultation package favored when municipal ownership is fixed and residents can gain moving assistance, collective rule approval or individual review. Retain the reason separately."
+    },
+    {
+      "item_id": "CR-S02",
+      "outcome_id": "SCENARIO-02",
+      "relationship": "primary",
+      "rationale": "Describe the allocation rule favored when total additional care capacity is fixed and recipient needs partly overlap with carer exhaustion."
+    },
+    {
+      "item_id": "CR-S03",
+      "outcome_id": "SCENARIO-03",
+      "relationship": "probe",
+      "rationale": "Held for a qualitative check of method–purpose comprehension; the current mandate risks determining the appropriate method before political disagreement enters."
+    },
+    {
+      "item_id": "CR-S04",
+      "outcome_id": "SCENARIO-04",
+      "relationship": "primary",
+      "rationale": "Describe whether equal eligibility, longer residence or documented contribution receives priority in a fixed public grant lottery."
+    },
+    {
+      "item_id": "CR-S05",
+      "outcome_id": "SCENARIO-05",
+      "relationship": "primary",
+      "rationale": "Describe the chosen tradeoff between specified local jobs and the risk of losing an ecological community under a national recommendation mandate."
+    },
+    {
+      "item_id": "CR-S06",
+      "outcome_id": "SCENARIO-06",
+      "relationship": "primary",
+      "rationale": "Describe whether a training association's limited places are allocated through equal chance, a response to its own exclusionary history or current low-income priority."
+    }
+  ],
+  "package_outcomes": [
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "LEGACY-ECONOMIC",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "LEGACY-DIPLOMATIC",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "LEGACY-CIVIL",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "LEGACY-SOCIETAL",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "FOUNDATION-ONTOLOGY",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "FOUNDATION-NORMATIVE",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "FOUNDATION-EPISTEMOLOGY",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "FOUNDATION-INSTITUTIONS",
+      "purpose": "Describe this implemented content grouping under instrument 0.4.0. Category membership is not a new score or evidence of validation.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "RECORD-ROLE-ACTION",
+      "purpose": "Retain authored action and reason records under the assigned fictional responsibility.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "RECORD-PERSONAL-PREFERENCE",
+      "purpose": "Display optional preference separately from action, without treating a difference as hypocrisy.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "COMPARE-HOUSING-URGENCY",
+      "purpose": "Report the repeated housing choices descriptively and exclude the later case from aggregate weights.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "TRANSPARENCY-ACCESS",
+      "purpose": "Keep public-records descriptive and preserve the unresolved audit of the two transparency statements.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "PILOT-0.4.0",
+      "outcome_id": "REVIEW-COMPREHENSION",
+      "purpose": "Use the implemented quiz as material for qualitative review; no completed interviews or measurement validation are implied.",
+      "coverage_scope": "whole_package"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "DEBATE-02",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "DEBATE-03",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "DEBATE-05",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "DEBATE-06",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "SCENARIO-01",
+      "purpose": "Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "SCENARIO-03",
+      "purpose": "Use this held scenario as a comprehension probe pending redesign; it is not ideological evidence.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-A",
+      "outcome_id": "REVIEW-COMPREHENSION",
+      "purpose": "Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",
+      "coverage_scope": "whole_package"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "DEBATE-01",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "DEBATE-04",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "DEBATE-11",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "DEBATE-12",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "SCENARIO-02",
+      "purpose": "Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "SCENARIO-05",
+      "purpose": "Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-B",
+      "outcome_id": "REVIEW-COMPREHENSION",
+      "purpose": "Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",
+      "coverage_scope": "whole_package"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "DEBATE-07",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "DEBATE-08",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "DEBATE-09",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "DEBATE-10",
+      "purpose": "Review the interpretation of all three propositions in this debate cluster; the packet does not produce a cluster score or ideology classification.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "SCENARIO-04",
+      "purpose": "Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "SCENARIO-06",
+      "purpose": "Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",
+      "coverage_scope": "linked_items"
+    },
+    {
+      "package_id": "REVIEW-C",
+      "outcome_id": "REVIEW-COMPREHENSION",
+      "purpose": "Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",
+      "coverage_scope": "whole_package"
+    }
+  ]
+}

@@ -36,6 +36,26 @@ The proposed central question is: **How do explicitly stated political values an
 
 These are protocol candidates, not preregistered hypotheses. Before a study, choose a small set of primary outcomes and contrasts, define an analysis and exclusion plan, and justify the sample size for those choices. Preserve a separate exploratory analysis category.
 
+## Descriptive reflection report
+
+Application release `0.4.2` organizes all 49 existing primary responses into seven author-chosen themes. Each item appears once in the theme report; the optional full records and housing comparison provide additional ways to inspect the same answers. The themes are navigation and discussion aids, not seven scales, latent constructs, ideology affinities, or causal explanations. No candidate items from the content-research pack are activated by this release.
+
+| Report theme | Existing response coverage | Main interpretation limit |
+| --- | --- | --- |
+| Ownership, provision and control | Six value statements, three premises, three situations including the housing comparison | Funding, ownership, access, control, and delivery constraints remain distinct. |
+| Freedoms and contesting power | Four value statements, three premises, one gathering situation | One gathering decision cannot establish preferences across all institutions or restrictions. |
+| Transparency and access to records | Two value statements and the descriptive records situation | Additional access, usability, and staff capacity are separate from public-order restrictions. The original civil profile still includes these two statements. |
+| Belonging, obligations and cooperation | Six value statements, three premises, two situations | Answers do not establish which view of agency or belonging explains a decision. |
+| Continuity and inclusion | Six value statements, one premise, two cultural situations | Cultural-program choices do not establish a general attitude to social change. |
+| Knowledge and judgment | Four premises; no dedicated situation | Premise answers do not show how conflicting sources of knowledge would be weighed. |
+| Care and ecological dependence | Two premises; no dedicated situation | One item about each topic cannot identify a care system, environmental policy, or position on nature's moral standing. |
+
+The report displays exact recorded agreement labels, role actions, selected reasons, and optional preferences. It does not infer an unstated reason, treat an absent preference as agreement, or diagnose consistency between linked answers. Neutral agreement responses count as definite responses for coverage; uncertainty, skips, and unrepresented choices remain distinct. Coverage is not confidence, accuracy, or reliability. The generic reflection prompts collect no additional answers.
+
+The original four provisional profiles remain available in a collapsed optional view with their unchanged rubric and denominators. Moving transparency into a separate reading section does not resolve the original civil-profile confound or silently rescore its statements. The housing contrast remains descriptive. The final debrief retains the delayed country reveal; incomplete sessions cannot generate the new reflection report.
+
+Participants can download a plain-text reflection report or use the browser's print / save-as-PDF dialog. These views include recorded answers and the revealed setting, without new scores. The original JSON response export remains available with its unchanged version `2` format and summaries. Presentation release `0.4.2` retains instrument `0.4.0`, all question wording, response semantics, and compatible saved sessions. Report comprehension still requires independent human review and interviews.
+
 ## Candidate construct map
 
 | Domain | Left endpoint | Right endpoint | Important limitation |
@@ -153,7 +173,7 @@ See [PILOT-GUIDE.md](PILOT-GUIDE.md) for the draft interview sequence and decisi
 
 The application is local-only: no advertising, analytics, research submission endpoint, or automatic transmission of political responses. Default progress uses the current tab's session storage; optional device saving uses local storage. Erasure removes this tab's data and the saved device copy. Other open tabs may retain separate copies.
 
-The v0.4 response export is a voluntary download containing sensitive political answers, including separate foundation responses, optional personal preferences, reasons, assigned world, instrument version, and summaries. Participants control whether to download or share it. Erasing browser storage cannot erase files already downloaded or shared. Do not place responses or identifiable study IDs in shareable URLs.
+The v0.4 response export is a voluntary download containing sensitive political answers, including separate foundation responses, optional personal preferences, reasons, assigned world, instrument version, and summaries. The `0.4.2` readable text and printed/PDF reflection reports also contain recorded political responses and the setting revealed after completion. They are generated locally without a submission endpoint. Participants control whether to download, print, or share them. Erasing browser storage cannot erase files already downloaded or shared. Do not place responses or identifiable study IDs in shareable URLs.
 
 The review-packet download is different: it contains authored instrument and review metadata, without a participant's responses or local reviewer notes. Reviewer worksheets have their own optional device save, download, and clear controls; the assessment erase control does not clear that separate draft. It supports content review and should not be represented as a research response submission.
 
@@ -169,6 +189,8 @@ Formal collection requires a separate consented workflow with a named operator, 
 | `0.4.0` | Adds 16 descriptive foundation statements and an overlapping political-tradition review map; delays explicit country correspondences until debrief | A broader premise framework under development; no ideological-identity inference, validated ontology scale, or secure experimental blinding is claimed. |
 
 The `0.4.1` package release changes reviewer tooling and source-proposal support only; it retains participant instrument `0.4.0` and does not force a saved-response migration. Reviewer-note and source-map formats carry their own schema versions.
+
+The `0.4.2` package release changes the participant debrief presentation and adds readable text and print exports. Instrument `0.4.0`, the original scores, compatible saves, and JSON export format `2` remain unchanged. The separate descriptive reflection format starts at `1.0.0`; changing a theme link is not evidence for a new measured construct.
 
 Statement, world, scenario, option, and reason IDs remain stable where meaning is retained. Version changes are intentional when wording, context, route coverage, or scoring meaning changes. Saves from earlier versions, including `0.3.0`, are rejected by `0.4.0`; there is no silent migration or reinterpretation. The previous-save download preserves incompatible data explicitly rather than applying the new meaning or export schema to it. Existing export files need their original instrument version for analysis. Preserve an old export if it is already available; starting a new assessment can replace old browser saves.
 

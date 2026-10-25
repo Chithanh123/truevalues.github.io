@@ -1,0 +1,83 @@
+﻿item_id,language,notes
+housing-urgent,en,"immediate: Meet immediate public needs
+ownership: Keep long-term public control
+capacity: Stay within financial capacity
+resident: Give residents ownership and control"
+housing-urgent,vi,"immediate: Đáp ứng các nhu cầu công trước mắt
+ownership: Giữ sự kiểm soát của chính quyền về lâu dài
+capacity: Không vượt quá khả năng tài chính
+resident: Trao quyền sở hữu và kiểm soát cho cư dân"
+public-assembly,en,"expression: Protect visible public expression
+residents: Protect residents from disruption
+proportion: Keep restrictions proportionate
+predictability: Make rules predictable and enforceable"
+public-assembly,vi,"expression: Bảo vệ khả năng bày tỏ trước công chúng ở nơi dễ được nhìn thấy
+residents: Bảo vệ cư dân khỏi sự xáo trộn
+proportion: Giữ các hạn chế ở mức tương xứng
+predictability: Làm cho các quy định rõ ràng, có thể dự liệu và thực thi được"
+water-partnership,en,"mandate: Prioritize the community I represent
+obligations: Recognize obligations across borders
+learning: Build useful long-term cooperation
+distribution: Distribute limited resources fairly"
+water-partnership,vi,"mandate: Ưu tiên cộng đồng mà tôi đại diện
+obligations: Thừa nhận các nghĩa vụ xuyên biên giới
+learning: Xây dựng sự hợp tác hữu ích về lâu dài
+distribution: Phân bổ công bằng nguồn lực có hạn"
+community-festival,en,"heritage: Preserve shared heritage
+representation: Represent the community as it is now
+continuity: Manage change without losing continuity
+opportunity: Give proposals an equal opportunity"
+community-festival,vi,"heritage: Gìn giữ di sản chung
+representation: Phản ánh cộng đồng như hiện nay
+continuity: Điều chỉnh thay đổi mà không mất sự tiếp nối
+opportunity: Cho các đề xuất cơ hội ngang nhau"
+service-contract,en,"control: Retain direct public control
+expertise: Use available operating expertise
+continuity: Maintain dependable service
+oversight: Choose manageable oversight responsibilities"
+service-contract,vi,"control: Giữ quyền kiểm soát trực tiếp của khu vực công
+expertise: Sử dụng chuyên môn vận hành sẵn có
+continuity: Duy trì dịch vụ đáng tin cậy
+oversight: Chọn trách nhiệm giám sát có thể đảm đương được"
+community-history,en,"mission: Continue the association's established work
+absence: Include accounts missing from earlier exhibitions
+membership: Represent the present membership
+depth: Use limited exhibition space well"
+community-history,vi,"mission: Tiếp tục công việc vốn có của hiệp hội
+absence: Đưa vào những câu chuyện còn thiếu trong các triển lãm trước
+membership: Phản ánh thành phần hội viên hiện tại
+depth: Sử dụng tốt không gian triển lãm có hạn"
+public-records,en,"scrutiny: Make official decisions easier to scrutinize
+capacity: Preserve capacity for other office work
+usability: Make information practical to use
+proportion: Match publication work to likely public use"
+public-records,vi,"scrutiny: Giúp việc xem xét kỹ lưỡng các quyết định của cơ quan dễ dàng hơn
+capacity: Giữ năng lực nhân sự cho công việc khác của cơ quan
+usability: Làm cho thông tin có thể sử dụng thuận tiện trong thực tế
+proportion: Cân đối công việc công bố với khả năng thông tin được công chúng sử dụng"
+regional-cooperation,en,"domestic-duty: Prioritize residents within my national mandate
+shared-risk: Address a risk that crosses borders
+cooperation: Build durable cooperation with the neighbor
+delivery: Favor the package I expect to deliver useful results"
+regional-cooperation,vi,"domestic-duty: Ưu tiên cư dân trong phạm vi trách nhiệm quốc gia của tôi
+shared-risk: Giải quyết một rủi ro vượt qua biên giới
+cooperation: Xây dựng sự hợp tác bền vững với nước láng giềng
+delivery: Ưu tiên gói phương án mà tôi kỳ vọng sẽ đem lại kết quả hữu ích"
+housing-planned,en,"immediate: Meet immediate public needs
+ownership: Keep long-term public control
+capacity: Stay within financial capacity
+resident: Give residents ownership and control"
+housing-planned,vi,"immediate: Đáp ứng các nhu cầu công trước mắt
+ownership: Giữ sự kiểm soát của chính quyền về lâu dài
+capacity: Không vượt quá khả năng tài chính
+resident: Trao quyền sở hữu và kiểm soát cho cư dân"
+CR-S01,en,"Candidate reason labels for later review: ability to leave an unwanted relationship / `khả năng rời một quan hệ mình không muốn`; shared authority over common rules / `quyền cùng quyết định quy tắc chung`; protection when an individual loses a majority vote / `bảo vệ cá nhân khi họ thuộc phía thiểu số trong biểu quyết`; quickest useful help / `hỗ trợ có ích nhanh nhất`; confidence that the mechanism will work / `tin rằng cơ chế sẽ hoạt động`; other reason / `lý do khác`.
+
+Do not enforce option/reason pairing. A respondent might choose A because ten households have urgent needs, because competing housing providers discipline managers, or because they distrust representation. B might express republican contestation, collective self-government, conservative stewardship of a shared place, or simple expectations of better rules. C might protect minorities, limit all officeholders, or minimize meeting burdens. None uniquely identifies a tradition."
+CR-S02,en,"Candidate reason labels: greatest unmet recipient need / `nhu cầu chưa được đáp ứng cao nhất của người được chăm sóc`; sustaining an unpaid caring relationship / `duy trì quan hệ chăm sóc không hưởng lương`; carers' claims to rest as persons in their own right / `quyền được nghỉ của người chăm sóc với tư cách một cá nhân`; equal shares of additional public support / `phần hỗ trợ công bổ sung bằng nhau`; reducing reliance on contested priority rankings / `giảm sự phụ thuộc vào cách xếp ưu tiên còn gây tranh luận`; responsibility for a voluntarily accepted role / `trách nhiệm đối với vai trò đã tự nguyện nhận`; other reason / `lý do khác`.
+
+A could express recipient-centered capability, triage, or a narrow interpretation of the officer's duty. B could express care ethics, distributive concern for carers, or a consequentialist prediction that exhausted carers will stop providing care. C could express equal standing, skepticism about measurement, or an implementable rule. A respondent could favor B while holding a strongly family-centered worldview. A respondent could favor A while supporting extensive public care overall."
+CR-S03,en,"follow the agreed research purpose; test overlooked experiences; avoid assuming active residents represent everyone; produce evidence useful for a later challenge; preserve public trust in the association; use the strongest method for a specified question. A, B, and C each permit more than one motive. B is not evidence that a respondent rejects science; A is not evidence that they dismiss residents; C is not automatically the scientifically best compromise."
+CR-S04,en,"equal present membership; continuity of a local community; recognition of contribution; expectations attached to earlier public payments; encouraging future cooperation; avoiding penalties for unequal opportunities to contribute; administrative acceptability. B could express reliance interests rather than ethnic nationalism. C could express reciprocity rather than a belief that low contributors have less human worth. A could express equal civic standing, simple administration, or distrust of both classifications."
+CR-S05,en,"employment and household independence; duties to nonhuman life; preventing irreversible loss; caution under uncertain estimates; obligations to future people; a national leader's responsibility to livelihoods; confidence in enforceable conditions. A need not express indifference to nature: it may reflect a high value on local employment and a different view of acceptable risk. C may reflect nonhuman moral standing, anticipated future human benefits, or pessimism about contract enforcement. The last explanation should be recorded even though the case stipulates enforceability; it signals a possible credibility problem in the draft."
+CR-S06,en,"equal procedure now; an institution's responsibility for its own wrongs; current material disadvantage; acknowledging a group without assuming all members are alike; preventing renewed hierarchy; concern about institutional power to classify people; a view that course admission is or is not the appropriate remedy. A might accompany strong support for a different form of compensation. B might express reparative responsibility or a practical effort to rebuild institutional trust. C might express sufficientarian need, class analysis, or concern about who benefits within each community. Do not equate a selection with a complete view of caste, race, colonialism, merit, or equality."

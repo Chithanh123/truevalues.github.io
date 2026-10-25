@@ -248,8 +248,8 @@ export function validateSession(instrument, candidate) {
   if (priorSteps.some((step) => !own(candidate.answers, step.id))) {
     return invalid("The save advances past an unanswered item.");
   }
-  if (candidate.completed && steps[candidate.stepIndex].type !== "results") {
-    return invalid("A completed save must be on the results step.");
+  if (candidate.completed !== (steps[candidate.stepIndex].type === "results")) {
+    return invalid("The saved completion status does not match its assessment position.");
   }
   return { valid: true };
 }

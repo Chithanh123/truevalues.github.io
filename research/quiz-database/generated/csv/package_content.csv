@@ -1,0 +1,776 @@
+﻿package_id,presentation_order,usage,item_id,kind,bank,status,cluster_id,scoring_mode,role_id,locality,english_text,vietnamese_draft,source_path,source_section
+PILOT-0.4.0,1,primary_task,economic-ownership,value_statement,current,implemented_unvalidated,,directional_statement,,,"Public authorities should retain ownership of essential community assets, even when selling them could meet immediate needs.","Cơ quan công quyền nên giữ quyền sở hữu những tài sản thiết yếu của cộng đồng, ngay cả khi bán chúng có thể đáp ứng các nhu cầu trước mắt.",js/content.js,economic-ownership
+PILOT-0.4.0,2,primary_task,civil-dissent,value_statement,current,implemented_unvalidated,,directional_statement,,,Peaceful public dissent deserves protection even when it causes inconvenience to other residents.,"Việc công khai bày tỏ ý kiến bất đồng một cách ôn hòa cần được bảo vệ, ngay cả khi gây bất tiện cho những cư dân khác.",js/content.js,civil-dissent
+PILOT-0.4.0,3,primary_task,societal-tradition,value_statement,current,implemented_unvalidated,,directional_statement,,,Public institutions should give established community traditions a special place in civic life.,"Các cơ quan, tổ chức công nên dành một vị trí đặc biệt trong đời sống công dân cho những truyền thống cộng đồng đã được duy trì từ lâu.",js/content.js,societal-tradition
+PILOT-0.4.0,4,primary_task,diplomatic-obligation,value_statement,current,implemented_unvalidated,,directional_statement,,,"Communities have obligations to people beyond their national borders, even when some local needs remain unmet.","Các cộng đồng có nghĩa vụ với những người ở bên ngoài biên giới quốc gia của mình, ngay cả khi một số nhu cầu tại địa phương vẫn chưa được đáp ứng.",js/content.js,diplomatic-obligation
+PILOT-0.4.0,5,primary_task,economic-market,value_statement,current,implemented_unvalidated,,directional_statement,,,"Where either approach is feasible, competition between private providers is preferable to direct public provision.","Khi cả hai cách đều khả thi, sự cạnh tranh giữa các nhà cung cấp tư nhân là lựa chọn đáng ưu tiên hơn việc cung ứng trực tiếp bởi khu vực công.",js/content.js,economic-market
+PILOT-0.4.0,6,primary_task,civil-discretion,value_statement,current,implemented_unvalidated,,directional_statement,,,"Public officials should have broad discretion to prevent disruption, even when this limits peaceful activities.","Người có thẩm quyền trong cơ quan công nên có phạm vi tự quyết rộng để ngăn ngừa sự gián đoạn, ngay cả khi điều đó hạn chế các hoạt động ôn hòa.",js/content.js,civil-discretion
+PILOT-0.4.0,7,primary_task,societal-revision,value_statement,current,implemented_unvalidated,,directional_statement,,,Public traditions should be revised as the people who make up a community change.,Các truyền thống trong đời sống công cộng nên được điều chỉnh khi thành phần những người tạo nên cộng đồng thay đổi.,js/content.js,societal-revision
+PILOT-0.4.0,8,primary_task,diplomatic-domestic,value_statement,current,implemented_unvalidated,,directional_statement,,,Public resources should address domestic needs before supporting communities in other countries.,Nguồn lực công nên được dùng để đáp ứng nhu cầu trong nước trước khi hỗ trợ các cộng đồng ở những quốc gia khác.,js/content.js,diplomatic-domestic
+PILOT-0.4.0,9,primary_task,economic-services,value_statement,current,implemented_unvalidated,,directional_statement,,,"Meeting essential needs is a shared public responsibility, even when it requires higher taxes.","Đáp ứng các nhu cầu thiết yếu là trách nhiệm công chung, ngay cả khi việc đó đòi hỏi mức thuế cao hơn.",js/content.js,economic-services
+PILOT-0.4.0,10,primary_task,civil-review,value_statement,current,implemented_unvalidated,,directional_statement,,,"Restrictions on civil freedoms should face independent review, even when review slows official action.","Các hạn chế đối với quyền tự do dân sự nên được xem xét độc lập, ngay cả khi việc xem xét làm chậm hành động của cơ quan công quyền.",js/content.js,civil-review
+PILOT-0.4.0,11,primary_task,societal-continuity,value_statement,current,implemented_unvalidated,,directional_statement,,,Continuity in shared customs is worth preserving even when newer alternatives attract more interest.,"Sự tiếp nối của các phong tục chung là điều đáng gìn giữ, ngay cả khi những lựa chọn mới thu hút nhiều sự quan tâm hơn.",js/content.js,societal-continuity
+PILOT-0.4.0,12,primary_task,diplomatic-coordination,value_statement,current,implemented_unvalidated,,directional_statement,,,Accepting some limits on national discretion is worthwhile when countries can solve a shared problem together.,Chấp nhận một số giới hạn đối với quyền tự quyết của quốc gia là điều đáng làm khi các nước có thể cùng giải quyết một vấn đề chung.,js/content.js,diplomatic-coordination
+PILOT-0.4.0,13,primary_task,economic-user-charges,value_statement,current,implemented_unvalidated,,directional_statement,,,Local amenities should generally be funded by charges on their users rather than by general taxation.,"Nhìn chung, các tiện ích địa phương nên được tài trợ bằng phí do người sử dụng trả thay vì bằng nguồn thu từ thuế chung.",js/content.js,economic-user-charges
+PILOT-0.4.0,14,primary_task,civil-management,value_statement,current,implemented_unvalidated,,directional_statement,,,Temporary restrictions on peaceful activities can be justified when they make shared public spaces easier to manage.,Có thể có lý do chính đáng để tạm thời hạn chế các hoạt động ôn hòa khi điều đó giúp quản lý những không gian công cộng dùng chung dễ dàng hơn.,js/content.js,civil-management
+PILOT-0.4.0,15,primary_task,societal-emerging,value_statement,current,implemented_unvalidated,,directional_statement,,,Community organizations should give emerging practices an opportunity to replace established ones.,Các tổ chức cộng đồng nên tạo cơ hội để những cách làm mới xuất hiện có thể thay thế những cách đã được duy trì từ lâu.,js/content.js,societal-emerging
+PILOT-0.4.0,16,primary_task,diplomatic-discretion,value_statement,current,implemented_unvalidated,,directional_statement,,,National authorities should retain the final say over public resources even when joint international rules would make cooperation easier.,"Cơ quan có thẩm quyền cấp quốc gia nên giữ quyền quyết định cuối cùng đối với nguồn lực công, ngay cả khi các quy tắc quốc tế chung giúp việc hợp tác dễ dàng hơn.",js/content.js,diplomatic-discretion
+PILOT-0.4.0,17,primary_task,economic-access,value_statement,current,implemented_unvalidated,,directional_statement,,,Essential services should be publicly supported so that access depends as little as possible on a person's ability to pay.,Các dịch vụ thiết yếu nên được hỗ trợ bằng nguồn lực công để khả năng tiếp cận phụ thuộc ít nhất có thể vào khả năng chi trả của mỗi người.,js/content.js,economic-access
+PILOT-0.4.0,18,primary_task,civil-records,value_statement,current,implemented_unvalidated,,directional_statement,,,Public agencies should make non-sensitive decision records accessible even when doing so adds administrative work.,"Các cơ quan công nên tạo điều kiện tiếp cận những hồ sơ quyết định không nhạy cảm, ngay cả khi điều đó làm tăng khối lượng công việc hành chính.",js/content.js,civil-records
+PILOT-0.4.0,19,primary_task,societal-inherited,value_statement,current,implemented_unvalidated,,directional_statement,,,Public cultural programs should preserve a core of inherited customs even when current demand favors different activities.,"Các chương trình văn hóa công nên gìn giữ một phần cốt lõi của những phong tục được truyền lại, ngay cả khi nhu cầu hiện tại nghiêng về những hoạt động khác.",js/content.js,societal-inherited
+PILOT-0.4.0,20,primary_task,diplomatic-shared-rules,value_statement,current,implemented_unvalidated,,directional_statement,,,Shared international rules are worthwhile when they help communities manage a problem that crosses borders.,Các quy tắc quốc tế chung là điều đáng có khi chúng giúp các cộng đồng xử lý một vấn đề vượt qua biên giới.,js/content.js,diplomatic-shared-rules
+PILOT-0.4.0,21,primary_task,economic-choice,value_statement,current,implemented_unvalidated,,directional_statement,,,Public authorities should favor arrangements that let people choose between competing service providers over a single public provider.,Cơ quan công quyền nên ưu tiên những cơ chế cho phép người dân lựa chọn giữa các nhà cung cấp dịch vụ cạnh tranh với nhau thay vì một nhà cung cấp công duy nhất.,js/content.js,economic-choice
+PILOT-0.4.0,22,primary_task,civil-withholding,value_statement,current,implemented_unvalidated,,directional_statement,,,Officials should be able to withhold non-sensitive details of decisions when publication would make routine work substantially harder.,Người có thẩm quyền trong cơ quan công nên được phép không công bố các chi tiết không nhạy cảm của quyết định khi việc công bố sẽ khiến công việc thường ngày khó khăn hơn đáng kể.,js/content.js,civil-withholding
+PILOT-0.4.0,23,primary_task,societal-new-voices,value_statement,current,implemented_unvalidated,,directional_statement,,,A community's shared public culture should change to include groups that were previously absent from it.,Nền văn hóa chung trong đời sống công cộng của một cộng đồng nên thay đổi để bao gồm cả những nhóm trước đây chưa hiện diện trong đó.,js/content.js,societal-new-voices
+PILOT-0.4.0,24,primary_task,diplomatic-responsibility,value_statement,current,implemented_unvalidated,,directional_statement,,,A national government's responsibility to its own residents should normally take priority over comparable needs abroad.,Trách nhiệm của chính phủ quốc gia đối với cư dân của mình thông thường nên được ưu tiên hơn những nhu cầu tương đương ở nước ngoài.,js/content.js,diplomatic-responsibility
+PILOT-0.4.0,25,primary_task,premise-personal-agency,foundation_statement,current,implemented_unvalidated,,descriptive,,,An individual can form political commitments that are independent of the social groups they belong to.,Một cá nhân có thể hình thành những cam kết chính trị độc lập với các nhóm xã hội mà họ thuộc về.,js/foundations.js,premise-personal-agency
+PILOT-0.4.0,26,primary_task,premise-social-relations,foundation_statement,current,implemented_unvalidated,,descriptive,,,A person’s political interests are formed through their relationships with other people.,Lợi ích chính trị của một người được hình thành thông qua các mối quan hệ của họ với người khác.,js/foundations.js,premise-social-relations
+PILOT-0.4.0,27,primary_task,premise-economic-power,foundation_statement,current,implemented_unvalidated,,descriptive,,,Control over productive resources is a central source of lasting political power.,Quyền kiểm soát nguồn lực sản xuất là một nguồn quan trọng tạo nên quyền lực chính trị lâu bền.,js/foundations.js,premise-economic-power
+PILOT-0.4.0,28,primary_task,premise-ecological-dependence,foundation_statement,current,implemented_unvalidated,,descriptive,,,Human societies cannot be understood separately from the ecological systems that sustain them.,Không thể hiểu xã hội loài người tách rời khỏi các hệ sinh thái duy trì sự tồn tại của xã hội đó.,js/foundations.js,premise-ecological-dependence
+PILOT-0.4.0,29,primary_task,premise-own-good,foundation_statement,current,implemented_unvalidated,,descriptive,,,"Each person should be free to pursue their own idea of a good life, provided they respect the same freedom for others.","Mỗi người nên được tự do theo đuổi quan niệm riêng về một cuộc sống tốt đẹp, với điều kiện họ tôn trọng quyền tự do tương tự của người khác.",js/foundations.js,premise-own-good
+PILOT-0.4.0,30,primary_task,premise-nondomination,foundation_statement,current,implemented_unvalidated,,descriptive,,,Freedom requires protection from another person’s power to interfere in one’s life at will.,Tự do đòi hỏi sự bảo vệ trước quyền lực cho phép người khác tùy ý can thiệp vào cuộc sống của mình.,js/foundations.js,premise-nondomination
+PILOT-0.4.0,31,primary_task,premise-care-obligations,foundation_statement,current,implemented_unvalidated,,descriptive,,,Dependence on care creates obligations that political institutions should recognize.,Sự phụ thuộc vào chăm sóc tạo ra những nghĩa vụ mà các thiết chế chính trị nên thừa nhận.,js/foundations.js,premise-care-obligations
+PILOT-0.4.0,32,primary_task,premise-inherited-obligations,foundation_statement,current,implemented_unvalidated,,descriptive,,,Membership in a community can create obligations that a person did not choose.,Việc thuộc về một cộng đồng có thể tạo ra những nghĩa vụ mà một người không tự lựa chọn.,js/foundations.js,premise-inherited-obligations
+PILOT-0.4.0,33,primary_task,premise-dispersed-knowledge,foundation_statement,current,implemented_unvalidated,,descriptive,,,Knowledge needed to coordinate a society is too dispersed for any central authority to fully possess it.,Tri thức cần để phối hợp một xã hội phân tán đến mức không một cơ quan quyền lực trung ương nào có thể nắm giữ đầy đủ.,js/foundations.js,premise-dispersed-knowledge
+PILOT-0.4.0,34,primary_task,premise-inherited-knowledge,foundation_statement,current,implemented_unvalidated,,descriptive,,,Long-established practices can contain useful knowledge that their participants cannot fully explain.,Các thực hành đã tồn tại lâu đời có thể chứa tri thức hữu ích mà những người tham gia không giải thích được đầy đủ.,js/foundations.js,premise-inherited-knowledge
+PILOT-0.4.0,35,primary_task,premise-situated-knowledge,foundation_statement,current,implemented_unvalidated,,descriptive,,,People who experience a form of exclusion have knowledge of it that outside observers may miss.,Những người trải qua một hình thức loại trừ có tri thức về nó mà người quan sát bên ngoài có thể bỏ sót.,js/foundations.js,premise-situated-knowledge
+PILOT-0.4.0,36,primary_task,premise-testable-explanations,foundation_statement,current,implemented_unvalidated,,descriptive,,,A political explanation should be open to revision when publicly examinable evidence contradicts it.,Một cách giải thích chính trị cần sẵn sàng được sửa đổi khi bằng chứng có thể được xem xét công khai mâu thuẫn với nó.,js/foundations.js,premise-testable-explanations
+PILOT-0.4.0,37,primary_task,premise-property-independence,foundation_statement,current,implemented_unvalidated,,descriptive,,,Widely distributed private property is an important safeguard against dependence on government.,Sở hữu tư nhân được phân bố rộng là một biện pháp quan trọng để bảo vệ trước sự lệ thuộc vào chính quyền.,js/foundations.js,premise-property-independence
+PILOT-0.4.0,38,primary_task,premise-workplace-control,foundation_statement,current,implemented_unvalidated,,descriptive,,,People who work in an enterprise should share control over its major decisions.,Những người làm việc trong một doanh nghiệp nên cùng nắm quyền kiểm soát các quyết định lớn của doanh nghiệp đó.,js/foundations.js,premise-workplace-control
+PILOT-0.4.0,39,primary_task,premise-contestable-power,foundation_statement,current,implemented_unvalidated,,descriptive,,,People subject to an institution’s power should have an effective way to contest its decisions.,Những người chịu quyền lực của một thiết chế cần có cách hữu hiệu để phản đối và yêu cầu xem xét lại các quyết định của thiết chế đó.,js/foundations.js,premise-contestable-power
+PILOT-0.4.0,40,primary_task,premise-gradual-reform,foundation_statement,current,implemented_unvalidated,,descriptive,,,Reform should usually change established institutions gradually enough to preserve the functions on which people rely.,Cải cách thường nên thay đổi các thiết chế đã hình thành một cách đủ từ từ để duy trì những chức năng mà con người đang dựa vào.,js/foundations.js,premise-gradual-reform
+PILOT-0.4.0,41,primary_task,housing-urgent,scenario,current,implemented_unvalidated,,provisional_scenario,local_leader,urban,"# One site. Several public needs.
+
+A growing regional city
+
+Your city owns a former depot suitable for housing. Rents have risen, and schools need repairs. Engineers say repairs must begin this year to avoid classroom closures. You must recommend one feasible package to the council.
+
+You can propose a land-use and financing package. The council decides. You cannot change national housing law or exceed the agreed borrowing limit.
+
+**Available resource:** One city-owned depot; all three proposals are independently assessed as feasible.
+
+**Housing:** Rents and the waiting list have risen. No plan meets all housing needs.
+
+**Finance:** The borrowing limit and national housing rules are fixed. All figures are fictional assumptions.
+
+**Repair urgency:** Repairs must begin this year; delay will close some classrooms.
+
+Which package would you recommend within your responsibilities?
+
+**Sell the site with conditions**
+
+Require 240 market-rent homes within three years. Use the sale proceeds for school repairs and short-term rent assistance.
+
+Immediate public revenue; the city gives up ownership and long-term control of rents.
+
+**Build municipal rental housing**
+
+Retain the land and borrow within the approved limit to build 160 below-market homes over four years.
+
+Lasting public control; some school repairs must wait for the next budget cycle.
+
+**Lease to a housing cooperative**
+
+Retain the land and agree an affordability covenant for 120 cooperative homes over three years.
+
+Lower public borrowing; fewer homes and less immediate repair funding than a sale.","# Một khu đất. Nhiều nhu cầu công.
+
+Một thành phố trong vùng đang phát triển
+
+Thành phố của bạn sở hữu một khu kho bãi cũ phù hợp để phát triển nhà ở. Giá thuê đã tăng, và các trường học cần được sửa chữa. Các kỹ sư cho biết phải bắt đầu sửa chữa trong năm nay để tránh việc một số phòng học phải đóng cửa. Bạn phải đề xuất một gói phương án khả thi để hội đồng xem xét.
+
+Bạn có thể đề xuất một gói phương án sử dụng đất và tài chính. Hội đồng là cơ quan quyết định. Bạn không thể thay đổi luật nhà ở cấp quốc gia hoặc vượt quá hạn mức vay đã thống nhất.
+
+**Nguồn lực sẵn có:** Một khu kho bãi thuộc sở hữu thành phố; cả ba đề xuất đều đã được đánh giá độc lập là khả thi.
+
+**Nhà ở:** Giá thuê và số người trong danh sách chờ đều tăng. Không phương án nào đáp ứng được toàn bộ nhu cầu nhà ở.
+
+**Tài chính:** Hạn mức vay và các quy định về nhà ở cấp quốc gia được giữ cố định. Tất cả số liệu đều là giả định hư cấu.
+
+**Mức độ cấp bách của việc sửa chữa:** Phải bắt đầu sửa chữa trong năm nay; nếu chậm trễ, một số phòng học sẽ phải đóng cửa.
+
+Trong phạm vi trách nhiệm của mình, bạn sẽ đề xuất gói phương án nào?
+
+**Bán khu đất kèm theo điều kiện**
+
+Yêu cầu xây 240 căn nhà cho thuê theo giá thị trường trong vòng ba năm. Dùng tiền bán đất để sửa chữa trường học và hỗ trợ tiền thuê nhà trong ngắn hạn.
+
+Có nguồn thu công ngay; thành phố từ bỏ quyền sở hữu và khả năng kiểm soát giá thuê về lâu dài.
+
+**Xây nhà cho thuê do thành phố sở hữu**
+
+Giữ quyền sở hữu đất và vay trong hạn mức được phê duyệt để xây 160 căn nhà có giá thuê thấp hơn thị trường trong bốn năm.
+
+Duy trì sự kiểm soát của chính quyền về lâu dài; một phần công việc sửa chữa trường học phải chờ kỳ ngân sách tiếp theo.
+
+**Cho một hợp tác xã nhà ở thuê đất**
+
+Giữ quyền sở hữu đất và thỏa thuận một cam kết ràng buộc về mức giá phù hợp khả năng chi trả cho 120 căn nhà ở hợp tác xã trong ba năm.
+
+Chính quyền cần vay ít hơn; có ít nhà ở hơn và ít kinh phí sửa chữa ngay hơn so với phương án bán đất.",js/content.js,housing-urgent
+PILOT-0.4.0,42,primary_task,public-assembly,scenario,current,implemented_unvalidated,,provisional_scenario,constituent,urban,"# A square with competing uses.
+
+A city neighborhood beside a public square
+
+A peaceful campaign holds weekly evening gatherings in the square. Nearby residents report disrupted sleep; organizers say the location makes their message visible. There has been no violence. The council is consulting on rules for the next three months.
+
+You can submit a consultation response or organize support. You cannot issue restrictions. The council must preserve emergency access and provide an appeal route under every proposal.
+
+**Current position:** Existing noise rules apply, but enforcement has been inconsistent.
+
+**Available locations:** A quieter site is available nearby, with much less public visibility.
+
+**Decision:** All proposals are lawful in this fictional setting and will be reviewed after three months.
+
+Which response would you submit to the consultation?
+
+**Require gatherings to use the quieter site**
+
+Support a temporary relocation rule for organized evening gatherings.
+
+More predictable quiet for residents; less visibility for peaceful public expression.
+
+**Keep the square with clear conditions**
+
+Support a closing time and a consistently enforced amplified-sound limit.
+
+Preserves a visible meeting place; restricts how and when organizers can use it.
+
+**Keep existing freedoms and enforce existing rules**
+
+Oppose new location or closing-time rules. Request consistent enforcement of the current noise standard.
+
+Limits additional restrictions; residents may still experience lawful evening disruption.","# Một quảng trường với những nhu cầu sử dụng khác nhau.
+
+Một khu dân cư trong thành phố nằm cạnh quảng trường công cộng
+
+Một nhóm đang vận động cho một vấn đề tổ chức các buổi tập hợp ôn hòa tại quảng trường vào mỗi tuần, trong buổi tối. Cư dân gần đó phản ánh rằng giấc ngủ bị ảnh hưởng; những người tổ chức nói rằng địa điểm này giúp thông điệp của họ được công chúng nhìn thấy. Chưa xảy ra bạo lực. Hội đồng đang lấy ý kiến về các quy định cho ba tháng tới.
+
+Bạn có thể gửi ý kiến tham vấn hoặc tổ chức sự ủng hộ. Bạn không thể ban hành các hạn chế. Trong mọi đề xuất, hội đồng đều phải duy trì lối tiếp cận cho hoạt động ứng phó khẩn cấp và cung cấp một cơ chế khiếu nại.
+
+**Tình hình hiện tại:** Các quy định về tiếng ồn hiện có vẫn được áp dụng, nhưng việc thực thi chưa nhất quán.
+
+**Địa điểm có thể sử dụng:** Có một địa điểm yên tĩnh hơn ở gần đó, nhưng mức độ được công chúng nhìn thấy thấp hơn nhiều.
+
+**Quyết định:** Mọi đề xuất đều hợp pháp trong bối cảnh hư cấu này và sẽ được xem xét lại sau ba tháng.
+
+Bạn sẽ gửi ý kiến nào cho đợt tham vấn?
+
+**Yêu cầu các buổi tập hợp chuyển sang địa điểm yên tĩnh hơn**
+
+Ủng hộ một quy định tạm thời chuyển địa điểm đối với các buổi tập hợp có tổ chức vào buổi tối.
+
+Sự yên tĩnh của cư dân dễ được bảo đảm ổn định hơn; việc bày tỏ ôn hòa trước công chúng ít được nhìn thấy hơn.
+
+**Tiếp tục sử dụng quảng trường với các điều kiện rõ ràng**
+
+Ủng hộ một giờ kết thúc hoạt động và một giới hạn đối với âm thanh khuếch đại được thực thi nhất quán.
+
+Giữ được một địa điểm tập hợp dễ được công chúng nhìn thấy; hạn chế cách thức và thời gian người tổ chức có thể sử dụng địa điểm.
+
+**Giữ các quyền tự do hiện có và thực thi các quy định hiện hành**
+
+Phản đối việc đặt ra quy định mới về địa điểm hoặc giờ kết thúc. Yêu cầu thực thi nhất quán tiêu chuẩn tiếng ồn hiện tại.
+
+Hạn chế việc bổ sung các biện pháp hạn chế; cư dân vẫn có thể bị ảnh hưởng bởi hoạt động buổi tối nằm trong giới hạn hợp pháp.",js/content.js,public-assembly
+PILOT-0.4.0,43,primary_task,water-partnership,scenario,current,implemented_unvalidated,,provisional_scenario,local_leader,rural,"# A partnership beyond the border.
+
+A rural district with dispersed villages
+
+Your district has a one-time infrastructure grant. Local villages need water-pipe upgrades. A partner district abroad proposes a joint water project and exchange of engineering knowledge. Neither district faces an immediate health emergency.
+
+You can recommend a grant allocation. The council has authorized either local spending or the partnership, and must approve your choice. You cannot redirect other public budgets.
+
+**Budget:** There are 100 grant units. Each package uses the same total budget and has passed the same feasibility check.
+
+**Local need:** Older pipes cause interruptions. Residents already have safe backup water access.
+
+**Partnership:** The partner has comparable needs. Published accounts and a joint audit are required under every international allocation.
+
+Which allocation would you recommend?
+
+**Use all 100 units locally**
+
+Complete the largest possible part of the district's own upgrade program.
+
+More immediate local work; the international project cannot proceed with this grant.
+
+**Use 70 locally and 30 in the partnership**
+
+Complete fewer local upgrades and support a smaller joint project abroad.
+
+Makes progress in both districts; neither receives its full proposed investment.
+
+**Use 40 locally and 60 in the partnership**
+
+Fund the larger joint project and retain a smaller local upgrade program.
+
+Greater cross-border support and collaboration; more local upgrades must wait.","# Một quan hệ hợp tác bên kia biên giới.
+
+Một địa bàn nông thôn có các làng nằm phân tán
+
+Địa phương của bạn có một khoản tài trợ hạ tầng chỉ cấp một lần. Các làng tại đây cần nâng cấp đường ống nước. Một địa phương đối tác ở nước ngoài đề xuất một dự án nước chung và trao đổi kiến thức kỹ thuật. Không địa phương nào đang đối mặt với tình huống y tế khẩn cấp trước mắt.
+
+Bạn có thể đề xuất cách phân bổ khoản tài trợ. Hội đồng đã cho phép sử dụng kinh phí cho địa phương hoặc cho quan hệ hợp tác, và phải phê duyệt lựa chọn của bạn. Bạn không thể điều chuyển các khoản ngân sách công khác.
+
+**Ngân sách:** Có 100 đơn vị tài trợ. Mỗi gói phương án sử dụng cùng một tổng ngân sách và đã vượt qua cùng một đánh giá về tính khả thi.
+
+**Nhu cầu địa phương:** Đường ống cũ gây gián đoạn cấp nước. Cư dân hiện đã có nguồn nước dự phòng an toàn.
+
+**Quan hệ hợp tác:** Đối tác có các nhu cầu tương đương. Mọi khoản phân bổ ra nước ngoài đều phải công bố báo cáo thu chi và chịu kiểm toán chung.
+
+Bạn sẽ đề xuất cách phân bổ nào?
+
+**Dùng toàn bộ 100 đơn vị tại địa phương**
+
+Hoàn thành phần lớn nhất có thể trong chương trình nâng cấp của chính địa phương.
+
+Thực hiện được nhiều công việc tại địa phương hơn ngay lúc này; dự án quốc tế không thể triển khai bằng khoản tài trợ này.
+
+**Dùng 70 đơn vị tại địa phương và 30 cho hợp tác**
+
+Hoàn thành ít hạng mục nâng cấp tại địa phương hơn và hỗ trợ một dự án chung nhỏ hơn ở nước ngoài.
+
+Cả hai địa phương đều có tiến triển; không bên nào nhận được toàn bộ khoản đầu tư mà mình đề xuất.
+
+**Dùng 40 đơn vị tại địa phương và 60 cho hợp tác**
+
+Cấp kinh phí cho dự án chung lớn hơn và giữ lại một chương trình nâng cấp nhỏ hơn tại địa phương.
+
+Tăng hỗ trợ và hợp tác xuyên biên giới; nhiều hạng mục nâng cấp tại địa phương phải chờ hơn.",js/content.js,water-partnership
+PILOT-0.4.0,44,primary_task,community-festival,scenario,current,implemented_unvalidated,,provisional_scenario,constituent,rural,"# Whose traditions fill the calendar?
+
+A rural town with a changing population
+
+The town funds an annual public festival built around long-established local customs. New residents and younger groups want room for different activities. Long-standing organizers worry that the festival will lose the shared traditions that make it distinctive.
+
+You can submit a proposal through the public consultation. The same appointed festival committee reviews every proposal, and the council approves the budget. You do not control either body.
+
+**Funding:** The public budget cannot increase. Every proposed program fits the same budget and venue capacity.
+
+**Access:** All residents can attend and participate. No proposal changes anyone's legal rights.
+
+**Private activity:** Groups remain free to arrange additional events with their own resources.
+
+Which funding approach would you support?
+
+**Reserve the program for established traditions**
+
+Keep public festival funding focused on the customs that historically defined it.
+
+Offers continuity; newer activities must find other resources.
+
+**Reserve half and open half to new activities**
+
+Protect a core of established customs and invite proposals for the remaining program.
+
+Makes space for change; both established and newer groups receive less than they request.
+
+**Open the whole program to current proposals**
+
+Consider established and new activities under the same published selection criteria.
+
+Lets the program evolve; some long-standing customs may lose public funding.","# Truyền thống của ai có mặt trong lịch lễ hội?
+
+Một thị trấn nông thôn có thành phần dân cư đang thay đổi
+
+Thị trấn cấp kinh phí cho một lễ hội công cộng hằng năm dựa trên những phong tục địa phương lâu đời. Cư dân mới và các nhóm trẻ muốn có chỗ cho những hoạt động khác. Những người tổ chức lâu năm lo rằng lễ hội sẽ mất đi các truyền thống chung tạo nên nét riêng của nó.
+
+Bạn có thể gửi đề xuất qua đợt tham vấn công chúng. Cùng một ban tổ chức lễ hội được bổ nhiệm sẽ xem xét mọi đề xuất, và hội đồng phê duyệt ngân sách. Bạn không kiểm soát cơ quan nào trong hai cơ quan này.
+
+**Kinh phí:** Ngân sách công không thể tăng. Mọi chương trình được đề xuất đều phù hợp với cùng một ngân sách và sức chứa của địa điểm.
+
+**Khả năng tham gia:** Mọi cư dân đều có thể đến dự và tham gia. Không đề xuất nào thay đổi các quyền theo pháp luật của bất kỳ ai.
+
+**Hoạt động bằng nguồn lực riêng:** Các nhóm vẫn được tự do tổ chức thêm các sự kiện bằng nguồn lực của mình.
+
+Bạn sẽ ủng hộ cách cấp kinh phí nào?
+
+**Dành chương trình cho các truyền thống lâu đời**
+
+Tiếp tục tập trung kinh phí lễ hội công vào những phong tục đã định hình lễ hội trong lịch sử.
+
+Duy trì sự tiếp nối; các hoạt động mới hơn phải tìm nguồn lực khác.
+
+**Giữ một nửa và mở một nửa cho các hoạt động mới**
+
+Bảo lưu một phần cốt lõi của những phong tục lâu đời và mời gửi đề xuất cho phần chương trình còn lại.
+
+Tạo chỗ cho thay đổi; cả nhóm lâu năm và nhóm mới đều nhận được ít hơn mức họ đề nghị.
+
+**Mở toàn bộ chương trình cho các đề xuất hiện tại**
+
+Xem xét cả hoạt động lâu đời và hoạt động mới theo cùng các tiêu chí tuyển chọn đã công bố.
+
+Cho phép chương trình thay đổi; một số phong tục lâu đời có thể không còn được cấp kinh phí công.",js/content.js,community-festival
+PILOT-0.4.0,45,primary_task,service-contract,scenario,current,implemented_unvalidated,,provisional_scenario,public_servant,rural,"# Who should run the rural service?
+
+A rural district with scattered villages
+
+You administer a scheduled transport service connecting villages to essential services. Its operating arrangement is due for renewal. The authorized budget supports either a public team, an external operator, or a mixed arrangement. A technical review finds that each can meet the same required coverage and safety standards.
+
+You have written delegation to select an operating arrangement from these three approved plans. You must follow procurement rules, protect staff and passenger rights, and stay within the budget. You cannot change fares, service entitlements, or the legal standards.
+
+**Common service:** The same routes, affordable fares, and minimum weekly journeys apply under every option.
+
+**Budget and review:** All plans fit the same two-year budget. Performance is independently reviewed at the same intervals.
+
+**Practical discretion:** The plans differ in operational control and coordination. No option avoids the need for competent oversight.
+
+Which operating arrangement would you select within your delegation?
+
+**Contract an operator through open competition**
+
+Use a published tender to appoint an external operator under the common service standards and review terms.
+
+Can draw on outside operating experience; public oversight relies more on contract monitoring and renewal.
+
+**Combine a public core with contracted capacity**
+
+Keep the core routes with a public team and tender additional scheduled services to external operators.
+
+Shares operational responsibilities; coordinating two delivery arrangements takes administrative attention.
+
+**Use a directly managed public team**
+
+Provide the approved routes through public staff and vehicles, with the same performance obligations.
+
+Retains direct operational control; staffing and maintenance must be managed inside the public organization.","# Ai nên vận hành dịch vụ nông thôn?
+
+Một địa bàn nông thôn có các làng nằm rải rác
+
+Bạn quản lý một dịch vụ vận tải theo lịch trình nối các làng với những dịch vụ thiết yếu. Cơ chế vận hành sắp đến kỳ gia hạn. Ngân sách đã được phê duyệt đủ để sử dụng một đội ngũ công, một đơn vị vận hành bên ngoài, hoặc cơ chế kết hợp. Đánh giá kỹ thuật cho thấy mỗi cách đều có thể đáp ứng cùng các tiêu chuẩn bắt buộc về phạm vi phục vụ và an toàn.
+
+Bạn được giao thẩm quyền bằng văn bản để chọn cơ chế vận hành trong ba kế hoạch đã được phê duyệt này. Bạn phải tuân thủ quy định mua sắm, bảo vệ quyền của người lao động và hành khách, và không vượt ngân sách. Bạn không thể thay đổi giá vé, quyền được sử dụng dịch vụ, hoặc các tiêu chuẩn pháp luật.
+
+**Dịch vụ chung:** Mọi phương án đều phải giữ cùng các tuyến, giá vé ở mức có thể chi trả và số chuyến tối thiểu mỗi tuần.
+
+**Ngân sách và xem xét:** Mọi kế hoạch đều nằm trong cùng một ngân sách hai năm. Kết quả thực hiện được đánh giá độc lập theo cùng các khoảng thời gian.
+
+**Phạm vi tự quyết trong thực tế:** Các kế hoạch khác nhau về quyền kiểm soát vận hành và việc phối hợp. Không phương án nào loại bỏ yêu cầu về năng lực giám sát.
+
+Trong phạm vi thẩm quyền được giao, bạn sẽ chọn cơ chế vận hành nào?
+
+**Ký hợp đồng với đơn vị vận hành qua cạnh tranh công khai**
+
+Dùng một cuộc đấu thầu đã công bố để lựa chọn đơn vị vận hành bên ngoài theo các tiêu chuẩn dịch vụ và điều khoản xem xét chung.
+
+Có thể tận dụng kinh nghiệm vận hành từ bên ngoài; sự giám sát của chính quyền phụ thuộc nhiều hơn vào theo dõi và gia hạn hợp đồng.
+
+**Kết hợp phần cốt lõi do đơn vị công vận hành với năng lực theo hợp đồng**
+
+Giữ các tuyến cốt lõi cho một đội ngũ công và đấu thầu phần dịch vụ theo lịch trình bổ sung cho các đơn vị vận hành bên ngoài.
+
+Chia sẻ trách nhiệm vận hành; phối hợp hai cơ chế cung ứng đòi hỏi sự chú ý trong quản lý hành chính.
+
+**Sử dụng một đội ngũ công được quản lý trực tiếp**
+
+Cung cấp các tuyến đã được phê duyệt bằng nhân sự và phương tiện công, với cùng các nghĩa vụ về kết quả thực hiện.
+
+Giữ quyền kiểm soát vận hành trực tiếp; việc bố trí nhân sự và bảo dưỡng phải được quản lý trong tổ chức công.",js/content.js,service-contract
+PILOT-0.4.0,46,primary_task,community-history,scenario,current,implemented_unvalidated,,provisional_scenario,civil_society,urban,"# Which stories should the group tell?
+
+A city neighborhood with several generations of residents
+
+You lead a voluntary community-history association. Its next exhibition has a fixed member-approved budget. Long-serving members want to continue documenting the customs around which the association began. Other members propose giving more space to newer communities and younger residents whose experiences have rarely appeared.
+
+You can recommend an exhibition program under the association's inclusive local-history mission. Members approve it using the same vote in every option. You control no public curriculum or municipal funds, and cannot require residents to participate.
+
+**Resources:** Every program fits the same exhibition budget, venue capacity, and preparation time.
+
+**Standards:** Every program must use documented sources and clearly distinguish accounts from interpretation.
+
+**Participation:** Membership and exhibition access remain open. Groups can independently record and present additional histories.
+
+Which program would you recommend to the association's members?
+
+**Continue the established exhibition focus**
+
+Use this exhibition to deepen the customs and histories the association has traditionally documented.
+
+Builds continuity and existing expertise; newer accounts receive little space in this exhibition.
+
+**Pair established themes with newer accounts**
+
+Divide the exhibition between familiar themes and histories proposed by underrepresented members.
+
+Shows continuity alongside change; each group receives less space for detailed treatment.
+
+**Give this exhibition to previously absent accounts**
+
+Use this cycle to present newer community experiences, while keeping past exhibitions in the archive.
+
+Broadens the association's public story; continuing work on established themes waits for another cycle.","# Nhóm nên kể những câu chuyện nào?
+
+Một khu dân cư trong thành phố có nhiều thế hệ cư dân
+
+Bạn đứng đầu một hiệp hội lịch sử cộng đồng hoạt động tự nguyện. Triển lãm tiếp theo của hiệp hội có một ngân sách cố định đã được thành viên phê duyệt. Các thành viên lâu năm muốn tiếp tục ghi chép những phong tục đã gắn với sự ra đời của hiệp hội. Các thành viên khác đề xuất dành thêm không gian cho những cộng đồng mới và cư dân trẻ có trải nghiệm hiếm khi được phản ánh.
+
+Bạn có thể đề xuất chương trình triển lãm theo sứ mệnh phản ánh lịch sử địa phương một cách bao quát của hiệp hội. Thành viên phê duyệt bằng cùng một hình thức bỏ phiếu ở mọi phương án. Bạn không kiểm soát chương trình giảng dạy công hoặc kinh phí của thành phố, và không thể yêu cầu cư dân tham gia.
+
+**Nguồn lực:** Mọi chương trình đều phù hợp với cùng một ngân sách triển lãm, sức chứa của địa điểm và thời gian chuẩn bị.
+
+**Tiêu chuẩn:** Mọi chương trình đều phải sử dụng nguồn tư liệu được ghi nhận và phân biệt rõ phần thuật lại với phần diễn giải.
+
+**Sự tham gia:** Việc gia nhập hiệp hội và tiếp cận triển lãm vẫn mở. Các nhóm có thể tự ghi chép và trình bày thêm những lịch sử khác.
+
+Bạn sẽ đề xuất chương trình nào với các thành viên của hiệp hội?
+
+**Tiếp tục trọng tâm triển lãm đã có**
+
+Dùng triển lãm này để đào sâu những phong tục và lịch sử mà hiệp hội vốn ghi chép từ trước.
+
+Tăng sự tiếp nối và tận dụng chuyên môn sẵn có; những câu chuyện mới hơn có ít không gian trong triển lãm này.
+
+**Kết hợp chủ đề lâu đời với các câu chuyện mới hơn**
+
+Chia không gian triển lãm giữa những chủ đề quen thuộc và các lịch sử do những thành viên còn ít được phản ánh đề xuất.
+
+Thể hiện sự tiếp nối cùng với thay đổi; mỗi nhóm có ít không gian hơn để trình bày chi tiết.
+
+**Dành triển lãm này cho những câu chuyện trước đây vắng mặt**
+
+Dùng kỳ triển lãm này để giới thiệu trải nghiệm của các cộng đồng mới hơn, đồng thời giữ các triển lãm trước trong kho lưu trữ.
+
+Mở rộng câu chuyện mà hiệp hội giới thiệu với công chúng; công việc tiếp tục các chủ đề lâu đời phải chờ một kỳ khác.",js/content.js,community-history
+PILOT-0.4.0,47,primary_task,public-records,scenario,current,implemented_unvalidated,,descriptive,public_servant,urban,"# How much should the office publish?
+
+A city office handling routine planning decisions
+
+You manage access to routine planning records. Residents want to understand how decisions are made. The office already meets all legal disclosure duties. You have delegated discretion over additional publication of non-sensitive material, and limited staff time for optional administrative work.
+
+You can choose one of the approved publication plans. Every plan preserves the same legal response deadlines, appeal routes, and mandatory disclosures. Personal data, security information, and protected negotiations must remain confidential under every plan.
+
+**Common legal floor:** All options fully meet the same disclosure law. No choice permits hiding a legally required record.
+
+**Available material:** Only records cleared for release are considered. The same redaction and privacy checks apply.
+
+**Capacity:** All plans fit staffing limits. More proactive publication leaves less time for other optional administrative improvements.
+
+Which discretionary publication plan would you implement?
+
+**Keep additional records available on request**
+
+Continue all required disclosures and release other eligible material through the existing request process.
+
+Preserves staff time for other improvements; residents must know what to request and wait within the lawful deadline.
+
+**Publish regular summaries and an index**
+
+Add accessible decision summaries and a searchable index while providing underlying eligible records on request.
+
+Makes the process easier to navigate; detailed scrutiny still requires requesting some records.
+
+**Publish the cleared decision files proactively**
+
+Publish eligible decision material after the common privacy checks, alongside the required disclosures.
+
+Enables scrutiny without an individual request; uses more staff time than the other plans.","# Cơ quan nên công bố đến mức nào?
+
+Một cơ quan thành phố xử lý các quyết định quy hoạch thường ngày
+
+Bạn quản lý việc tiếp cận các hồ sơ quy hoạch thường ngày. Cư dân muốn hiểu cách ra quyết định. Cơ quan đã đáp ứng đầy đủ mọi nghĩa vụ công khai theo pháp luật. Bạn được giao quyền tự quyết về việc công bố thêm tài liệu không nhạy cảm, và có thời gian nhân sự hạn chế dành cho công việc hành chính không bắt buộc.
+
+Bạn có thể chọn một trong các kế hoạch công bố đã được phê duyệt. Mọi kế hoạch đều giữ nguyên các thời hạn trả lời theo pháp luật, cơ chế khiếu nại và các nội dung bắt buộc phải công khai. Dữ liệu cá nhân, thông tin an ninh và các cuộc đàm phán thuộc diện được bảo mật đều phải được giữ kín trong mọi kế hoạch.
+
+**Mức yêu cầu pháp lý tối thiểu chung:** Mọi phương án đều tuân thủ đầy đủ cùng một luật về công khai thông tin. Không lựa chọn nào cho phép giấu một hồ sơ mà pháp luật bắt buộc phải công khai.
+
+**Tài liệu có thể công bố:** Chỉ xem xét các hồ sơ đã được xác định là có thể công bố. Áp dụng cùng các bước lược bỏ thông tin được bảo vệ và kiểm tra bảo vệ đời tư.
+
+**Năng lực thực hiện:** Mọi kế hoạch đều nằm trong giới hạn nhân sự. Công bố chủ động nhiều hơn đồng nghĩa với ít thời gian hơn cho những cải tiến hành chính không bắt buộc khác.
+
+Bạn sẽ thực hiện kế hoạch công bố bổ sung nào trong phạm vi tự quyết của mình?
+
+**Tiếp tục cung cấp hồ sơ bổ sung theo yêu cầu**
+
+Tiếp tục công khai mọi nội dung bắt buộc và cung cấp tài liệu khác đủ điều kiện thông qua quy trình yêu cầu hiện có.
+
+Giữ thời gian của nhân sự cho các cải tiến khác; cư dân phải biết cần yêu cầu gì và chờ trong thời hạn luật định.
+
+**Công bố bản tóm tắt định kỳ và một mục lục**
+
+Bổ sung những bản tóm tắt quyết định dễ tiếp cận và một mục lục có thể tìm kiếm, đồng thời cung cấp hồ sơ gốc đủ điều kiện khi có yêu cầu.
+
+Giúp mọi người tìm hiểu quy trình dễ hơn; việc xem xét kỹ lưỡng vẫn đòi hỏi phải yêu cầu một số hồ sơ.
+
+**Chủ động công bố các hồ sơ quyết định đã được phép công khai**
+
+Công bố tài liệu quyết định đủ điều kiện sau cùng các bước kiểm tra bảo vệ đời tư, bên cạnh những nội dung bắt buộc phải công khai.
+
+Cho phép xem xét kỹ lưỡng mà không cần yêu cầu riêng; sử dụng nhiều thời gian của nhân sự hơn các kế hoạch khác.",js/content.js,public-records
+PILOT-0.4.0,48,primary_task,regional-cooperation,scenario,current,implemented_unvalidated,,provisional_scenario,national_leader,rural,"# A river shared across borders.
+
+A national decision affecting rural river districts
+
+You lead the national government. Rural districts need stronger flood preparation, and a neighboring government proposes a joint river-monitoring and prevention program. An authorized planning fund can support domestic works, the joint program, or a combination. There is no current evacuation or rescue emergency.
+
+You can propose a package within the authorized fund. It must receive the approvals stated by this fictional country's governing institutions. You cannot bypass those bodies, change residents' rights, or redirect unrelated budgets. Every option must meet the same audit and safety requirements.
+
+**Planning fund:** There are 100 units. All three packages are assessed as feasible and use the same national contribution.
+
+**Shared river:** The joint program includes agreed upstream data access and joint review. Domestic projects remain useful without joining it.
+
+**Tradeoff:** More joint funding means fewer immediate domestic works. More domestic funding means a smaller contribution to shared prevention.
+
+Which package would you put forward for the required approvals?
+
+**Put all 100 units into domestic works**
+
+Prioritize the national rural-district program while continuing existing cross-border communications.
+
+Supports more immediate works at home; this fund does not support the proposed joint prevention program.
+
+**Put 60 units into domestic works and 40 into the joint program**
+
+Proceed with a smaller domestic works package and contribute to shared monitoring and prevention.
+
+Funds both priorities; neither package receives the full amount proposed for it.
+
+**Put 30 units into domestic works and 70 into the joint program**
+
+Prioritize the larger shared prevention package, with published accounts and the same joint oversight rules.
+
+Invests more in shared risks and cooperation; additional domestic works must wait for later funding.","# Một dòng sông chung qua biên giới.
+
+Một quyết định cấp quốc gia ảnh hưởng đến các địa bàn nông thôn ven sông
+
+Bạn đứng đầu chính phủ quốc gia. Các địa bàn nông thôn cần tăng cường chuẩn bị ứng phó lũ, và chính phủ nước láng giềng đề xuất một chương trình chung về theo dõi dòng sông và phòng ngừa lũ. Một nguồn quỹ kế hoạch đã được phê duyệt có thể hỗ trợ các công trình trong nước, chương trình chung, hoặc kết hợp cả hai. Hiện không có tình huống khẩn cấp cần sơ tán hoặc cứu hộ.
+
+Bạn có thể đề xuất một gói phương án trong phạm vi quỹ đã được phê duyệt. Phương án phải được các thiết chế quản trị của quốc gia hư cấu này phê duyệt theo những yêu cầu đã nêu. Bạn không thể bỏ qua các cơ quan đó, thay đổi quyền của cư dân hoặc điều chuyển những khoản ngân sách không liên quan. Mọi phương án đều phải đáp ứng cùng các yêu cầu về kiểm toán và an toàn.
+
+**Quỹ kế hoạch:** Có 100 đơn vị. Cả ba gói phương án đều được đánh giá là khả thi và sử dụng cùng một mức đóng góp của quốc gia.
+
+**Dòng sông chung:** Chương trình chung bao gồm quyền tiếp cận dữ liệu từ thượng nguồn theo thỏa thuận và việc xem xét chung. Các dự án trong nước vẫn hữu ích ngay cả khi không tham gia chương trình đó.
+
+**Sự đánh đổi:** Cấp nhiều kinh phí hơn cho hợp tác chung đồng nghĩa với ít công trình trước mắt trong nước hơn. Cấp nhiều kinh phí hơn trong nước đồng nghĩa với mức đóng góp nhỏ hơn cho hoạt động phòng ngừa chung.
+
+Bạn sẽ trình gói phương án nào để xin các phê duyệt cần thiết?
+
+**Dành toàn bộ 100 đơn vị cho các công trình trong nước**
+
+Ưu tiên chương trình dành cho các địa bàn nông thôn trong nước, đồng thời tiếp tục các kênh trao đổi xuyên biên giới hiện có.
+
+Hỗ trợ nhiều công trình trước mắt trong nước hơn; quỹ này không hỗ trợ chương trình phòng ngừa chung được đề xuất.
+
+**Dành 60 đơn vị cho công trình trong nước và 40 cho chương trình chung**
+
+Thực hiện một gói công trình trong nước nhỏ hơn và đóng góp cho hoạt động theo dõi và phòng ngừa chung.
+
+Cấp kinh phí cho cả hai ưu tiên; không gói phương án nào nhận đủ toàn bộ khoản đã đề xuất.
+
+**Dành 30 đơn vị cho công trình trong nước và 70 cho chương trình chung**
+
+Ưu tiên gói phòng ngừa chung lớn hơn, với báo cáo thu chi được công bố và cùng các quy tắc giám sát chung.
+
+Đầu tư nhiều hơn vào các rủi ro chung và sự hợp tác; những công trình bổ sung trong nước phải chờ nguồn kinh phí sau này.",js/content.js,regional-cooperation
+PILOT-0.4.0,49,primary_task,housing-planned,scenario,current,implemented_unvalidated,,comparison_excluded,local_leader,urban,"# The same site. A different deadline.
+
+The same growing regional city
+
+Return to the depot decision. The housing needs, budget, role, and three packages are unchanged. In this version, engineers say school repairs can safely wait until the next budget cycle without closing classrooms.
+
+You can propose a land-use and financing package. The council decides. You cannot change national housing law or exceed the agreed borrowing limit.
+
+**Available resource:** One city-owned depot; all three proposals are independently assessed as feasible.
+
+**Housing:** Rents and the waiting list have risen. No plan meets all housing needs.
+
+**Finance:** The borrowing limit and national housing rules are fixed. All figures are fictional assumptions.
+
+**Repair urgency:** Repairs can safely wait until the next budget cycle; no classrooms will close.
+
+With this changed deadline, which package would you recommend?
+
+**Sell the site with conditions**
+
+Require 240 market-rent homes within three years. Use the sale proceeds for school repairs and short-term rent assistance.
+
+Immediate public revenue; the city gives up ownership and long-term control of rents.
+
+**Build municipal rental housing**
+
+Retain the land and borrow within the approved limit to build 160 below-market homes over four years.
+
+Lasting public control; some school repairs must wait for the next budget cycle.
+
+**Lease to a housing cooperative**
+
+Retain the land and agree an affordability covenant for 120 cooperative homes over three years.
+
+Lower public borrowing; fewer homes and less immediate repair funding than a sale.","# Cùng khu đất đó. Một thời hạn khác.
+
+Cùng thành phố trong vùng đang phát triển đó
+
+Hãy trở lại quyết định về khu kho bãi. Nhu cầu nhà ở, ngân sách, vai trò và ba gói phương án không thay đổi. Trong phiên bản này, các kỹ sư cho biết việc sửa chữa trường học có thể chờ đến kỳ ngân sách tiếp theo mà vẫn bảo đảm an toàn, không phải đóng cửa phòng học.
+
+Bạn có thể đề xuất một gói phương án sử dụng đất và tài chính. Hội đồng là cơ quan quyết định. Bạn không thể thay đổi luật nhà ở cấp quốc gia hoặc vượt quá hạn mức vay đã thống nhất.
+
+**Nguồn lực sẵn có:** Một khu kho bãi thuộc sở hữu thành phố; cả ba đề xuất đều đã được đánh giá độc lập là khả thi.
+
+**Nhà ở:** Giá thuê và số người trong danh sách chờ đều tăng. Không phương án nào đáp ứng được toàn bộ nhu cầu nhà ở.
+
+**Tài chính:** Hạn mức vay và các quy định về nhà ở cấp quốc gia được giữ cố định. Tất cả số liệu đều là giả định hư cấu.
+
+**Mức độ cấp bách của việc sửa chữa:** Việc sửa chữa có thể chờ đến kỳ ngân sách tiếp theo mà vẫn bảo đảm an toàn; không phòng học nào phải đóng cửa.
+
+Với thời hạn đã thay đổi này, bạn sẽ đề xuất gói phương án nào?
+
+**Bán khu đất kèm theo điều kiện**
+
+Yêu cầu xây 240 căn nhà cho thuê theo giá thị trường trong vòng ba năm. Dùng tiền bán đất để sửa chữa trường học và hỗ trợ tiền thuê nhà trong ngắn hạn.
+
+Có nguồn thu công ngay; thành phố từ bỏ quyền sở hữu và khả năng kiểm soát giá thuê về lâu dài.
+
+**Xây nhà cho thuê do thành phố sở hữu**
+
+Giữ quyền sở hữu đất và vay trong hạn mức được phê duyệt để xây 160 căn nhà có giá thuê thấp hơn thị trường trong bốn năm.
+
+Duy trì sự kiểm soát của chính quyền về lâu dài; một phần công việc sửa chữa trường học phải chờ kỳ ngân sách tiếp theo.
+
+**Cho một hợp tác xã nhà ở thuê đất**
+
+Giữ quyền sở hữu đất và thỏa thuận một cam kết ràng buộc về mức giá phù hợp khả năng chi trả cho 120 căn nhà ở hợp tác xã trong ba năm.
+
+Chính quyền cần vay ít hơn; có ít nhà ở hơn và ít kinh phí sửa chữa ngay hơn so với phương án bán đất.",js/content.js,housing-planned
+REVIEW-A,,primary_task,CR-02A,foundation_statement,candidate,author_draft,CR-02,descriptive,,,"When elections are competitive, control of major businesses still gives owners political power that ordinary voting cannot offset.","Ngay cả khi bầu cử có sự cạnh tranh, quyền kiểm soát các doanh nghiệp lớn vẫn đem lại cho chủ sở hữu quyền lực chính trị mà việc bỏ phiếu thông thường không thể cân bằng được.",docs/content-research/CANDIDATE-BANK.md,CR-02A
+REVIEW-A,,primary_task,CR-02B,foundation_statement,candidate,author_draft,CR-02,descriptive,,,The main direction of public policy usually reflects bargaining among several groups rather than the rule of one economic class.,Định hướng chính của chính sách công thường phản ánh sự thương lượng giữa nhiều nhóm hơn là sự chi phối của một giai cấp kinh tế.,docs/content-research/CANDIDATE-BANK.md,CR-02B
+REVIEW-A,,primary_task,CR-02C,foundation_statement,candidate,author_draft,CR-02,descriptive,,,Government officials can build lasting power that serves their own interests independently of business owners.,Quan chức nhà nước có thể xây dựng quyền lực bền vững phục vụ lợi ích riêng của họ mà không phụ thuộc vào chủ doanh nghiệp.,docs/content-research/CANDIDATE-BANK.md,CR-02C
+REVIEW-A,,primary_task,CR-03A,foundation_statement,candidate,author_draft,CR-03,descriptive,,,"An adult who accepts a job without being threatened has made a free choice, even when no other employer is hiring.","Một người trưởng thành nhận một công việc mà không bị đe dọa đã đưa ra một lựa chọn tự do, ngay cả khi không có nơi nào khác đang tuyển dụng.",docs/content-research/CANDIDATE-BANK.md,CR-03A
+REVIEW-A,,primary_task,CR-03B,foundation_statement,candidate,author_draft,CR-03,descriptive,,,"Having no secure way to meet basic needs makes a person less free, even when no law blocks their choices.","Không có cách ổn định để đáp ứng các nhu cầu cơ bản khiến một người kém tự do hơn, ngay cả khi không có luật nào ngăn cản những lựa chọn của họ.",docs/content-research/CANDIDATE-BANK.md,CR-03B
+REVIEW-A,,primary_task,CR-03C,foundation_statement,candidate,author_draft,CR-03,descriptive,,,"If workers have no effective way to appeal dismissal, their employer's power to dismiss them reduces their freedom even when that power is never used.","Nếu người lao động không có cách khiếu nại hữu hiệu đối với quyết định sa thải, quyền sa thải của người sử dụng lao động làm giảm tự do của họ ngay cả khi quyền đó không bao giờ được sử dụng.",docs/content-research/CANDIDATE-BANK.md,CR-03C
+REVIEW-A,,primary_task,CR-05A,foundation_statement,candidate,author_draft,CR-05,descriptive,,,"In an enterprise owned by people who do not work there, those owners should have final authority over its main decisions, even when workers oppose them.","Trong một doanh nghiệp do những người không làm việc tại đó sở hữu, các chủ sở hữu này nên có quyền quyết định cuối cùng về những vấn đề chủ chốt, ngay cả khi người lao động phản đối.",docs/content-research/CANDIDATE-BANK.md,CR-05A
+REVIEW-A,,primary_task,CR-05B,foundation_statement,candidate,author_draft,CR-05,descriptive,,,Workers should be able to elect a majority of the body that sets their enterprise's main policies.,Người lao động nên có quyền bầu ra đa số thành viên của cơ quan quyết định các chính sách chủ chốt của doanh nghiệp nơi họ làm việc.,docs/content-research/CANDIDATE-BANK.md,CR-05B
+REVIEW-A,,primary_task,CR-05C,foundation_statement,candidate,author_draft,CR-05,descriptive,,,An enterprise providing an essential service should reserve voting seats on its governing body for people who use that service.,Một doanh nghiệp cung cấp dịch vụ thiết yếu nên dành ghế có quyền biểu quyết trong cơ quan quản trị cho những người sử dụng dịch vụ đó.,docs/content-research/CANDIDATE-BANK.md,CR-05C
+REVIEW-A,,primary_task,CR-06A,foundation_statement,candidate,author_draft,CR-06,descriptive,,,"When a statistical study and residents' accounts conflict, the study is usually the more reliable starting point.","Khi một nghiên cứu thống kê mâu thuẫn với lời kể của người dân, nghiên cứu đó thường là điểm xuất phát đáng tin cậy hơn.",docs/content-research/CANDIDATE-BANK.md,CR-06A
+REVIEW-A,,primary_task,CR-06B,foundation_statement,candidate,author_draft,CR-06,descriptive,,,Personal experience of exclusion is a reason to give someone's explanation of that exclusion extra weight.,Việc một người từng trực tiếp trải qua sự loại trừ là một lý do để coi lời giải thích của họ về sự loại trừ đó có sức nặng hơn.,docs/content-research/CANDIDATE-BANK.md,CR-06B
+REVIEW-A,,primary_task,CR-06C,foundation_statement,candidate,author_draft,CR-06,descriptive,,,Information held by buyers and sellers is often too specific to their circumstances for a central planner to collect it in time.,Thông tin mà người mua và người bán nắm giữ thường gắn quá chặt với hoàn cảnh riêng của họ để một cơ quan kế hoạch tập trung có thể thu thập kịp thời.,docs/content-research/CANDIDATE-BANK.md,CR-06C
+REVIEW-A,,primary_task,CR-S01,scenario,candidate,author_draft,,descriptive,constituent,urban,"**Your surroundings.** You live in a municipal housing estate with 120 households in a large city in your assigned fictional country. The estate manager can change rules about courtyard opening hours, visitors, and use of the meeting room after giving 30 days' notice. In the past year the manager has used that power twice. The existing rules are lawful. Residents disagree about whether those rules are reasonable.
+
+**Your role.** You are an ordinary resident answering a consultation. You can recommend a package; you cannot spend the budget, appoint officials, or impose a rule. The municipal council will decide.
+
+**What is fixed.** The council has set aside 90,000 credits for one two-year package. Municipal ownership, rent levels, repair duties, protection from eviction, and existing legal rights remain the same under every package. All packages have approved funding and can operate for the full two years. Ten suitable homes at the same rent are available elsewhere for households that want to move; there is no promise of further vacancies.
+
+**Which package would you recommend?**
+
+| Option | What the package does | What it gives up |
+| --- | --- | --- |
+| A — Make leaving affordable | Fund moving expenses of 9,000 credits for each of ten households that wish to leave. If more than ten apply, allocate the grants by lottery. The manager keeps the present rule-making power. | Households that stay gain no additional control over those rules; only ten households receive moving support. |
+| B — Give residents a collective decision | Fund accessible elections, meeting support, and independent advice for a resident board. A new rule about the three listed subjects needs the board's approval. Urgent safety repairs remain outside its veto. | Seeking agreement can delay ordinary rule changes by up to 60 days, and an individual resident can still lose a board vote. |
+| C — Give each resident a way to challenge a rule | Fund an independent reviewer and free help with submissions. Any resident may challenge a rule as unreasonable. The reviewer can reverse it, with a decision due within 15 working days. Funding covers all eligible complaints. | A rule can operate while a case is heard; residents gain no collective vote over the manager's future proposals. |
+
+You may also answer “uncertain,” “none of these represents my decision,” or “skip.” All three packages remain lawful in this fictional setting.","**Bối cảnh của bạn.** Bạn sống tại một khu nhà ở thuộc sở hữu của thành phố, gồm 120 hộ, trong một đô thị lớn của quốc gia giả định được giao. Sau khi thông báo trước 30 ngày, người quản lý khu nhà có thể thay đổi quy định về giờ mở sân chung, khách đến thăm và việc sử dụng phòng sinh hoạt chung. Trong năm qua, người quản lý đã sử dụng quyền này hai lần. Các quy định hiện hành đều hợp pháp. Cư dân có ý kiến khác nhau về việc các quy định đó có hợp lý hay không.
+
+**Vai trò của bạn.** Bạn là một cư dân bình thường, đang góp ý trong đợt tham vấn. Bạn có thể đề xuất một phương án; bạn không có quyền chi ngân sách, bổ nhiệm người phụ trách hoặc ban hành quy định. Hội đồng thành phố sẽ quyết định.
+
+**Những điều được giữ nguyên.** Hội đồng đã dành 90.000 đơn vị tiền giả định cho một phương án kéo dài hai năm. Trong cả ba phương án, quyền sở hữu của thành phố, mức thuê, nghĩa vụ sửa chữa, quy định bảo vệ người thuê khỏi việc bị buộc rời nhà và các quyền pháp lý hiện có đều không thay đổi. Mọi phương án đã được duyệt kinh phí và có thể hoạt động đủ hai năm. Ở nơi khác có mười căn nhà phù hợp với mức thuê bằng hiện tại, dành cho những hộ muốn chuyển đi; không có cam kết sẽ có thêm nhà trống.
+
+**Bạn sẽ đề xuất phương án nào?**
+
+| Phương án | Nội dung | Điều phải đánh đổi |
+| --- | --- | --- |
+| A — Hỗ trợ để có thể chuyển đi | Chi 9.000 đơn vị tiền hỗ trợ chuyển nhà cho mỗi hộ trong số mười hộ muốn rời khu nhà. Nếu có hơn mười hộ đăng ký, các suất hỗ trợ được phân bổ bằng bốc thăm. Người quản lý giữ quyền đặt quy định như hiện nay. | Các hộ ở lại không có thêm quyền kiểm soát những quy định này; chỉ mười hộ được hỗ trợ chuyển nhà. |
+| B — Để cư dân cùng quyết định | Chi cho việc tổ chức bầu cử mà cư dân có thể tham gia, hỗ trợ họp và tư vấn độc lập cho ban đại diện cư dân. Một quy định mới về ba vấn đề đã nêu phải được ban đại diện đồng ý. Ban không có quyền ngăn việc sửa chữa khẩn cấp để bảo đảm an toàn. | Việc tìm sự đồng thuận có thể làm chậm thay đổi quy định thông thường tối đa 60 ngày; một cư dân vẫn có thể thua trong cuộc biểu quyết của ban. |
+| C — Cho từng cư dân quyền yêu cầu xem xét quy định | Chi cho một người xem xét độc lập và hỗ trợ miễn phí khi nộp yêu cầu. Bất kỳ cư dân nào cũng có thể đề nghị xem xét một quy định mà họ cho là không hợp lý. Người xem xét có quyền hủy quy định đó và phải quyết định trong 15 ngày làm việc. Kinh phí đủ xử lý mọi yêu cầu đủ điều kiện. | Quy định có thể vẫn được áp dụng trong thời gian xem xét; cư dân không có thêm quyền biểu quyết tập thể đối với các đề xuất sau này của người quản lý. |
+
+Bạn cũng có thể chọn “chưa chắc,” “không phương án nào thể hiện quyết định của tôi,” hoặc “bỏ qua.” Trong bối cảnh giả định này, cả ba phương án đều hợp pháp.",docs/content-research/SCENARIO-LAB.md,CR-S01 — Who can change the housing rules?
+REVIEW-A,,comprehension_probe,CR-S03,scenario,candidate,probe_only,,probe_only,civil_society,urban,"You lead a city residents' association. Members worry about air pollution near a freight route. A previous short survey sampled only daytime traffic and does not settle present concerns. Your association can commission and publish a study; it cannot close roads, compel companies to provide records, or declare a legal health standard.
+
+Members have authorized 30,000 credits and eight weeks. A technical team can support any of three sampling plans with the same calibrated equipment, independent quality checks, open methods, and privacy protection. A sample reading is equally reliable under all plans. You know no final pollution result. Residents have useful observations about location and timing, but their reports have not been treated as proof that a threshold has been exceeded. The member resolution sets **estimating average exposure across the neighborhood** as the primary task; detecting short, localized peaks is a secondary task.
+
+| Option | Commission | Cost or limitation |
+| --- | --- | --- |
+| A — Sample the neighborhood systematically | Choose locations and times through a published probability-sampling plan across the neighborhood. | It supports estimation of the neighborhood average but may include too few observations at a rare suspected hotspot. |
+| B — Sample the places residents identify | Let a supported, open resident process nominate locations and times; the technical team checks measurement quality at those sites. | It can investigate reported hotspots but cannot, without additional assumptions, represent average neighborhood exposure. Some residents may be less able to participate. |
+| C — Divide the observations | Use half the observations for the probability sample and half for resident-nominated sites. | It addresses both questions with fewer observations for each; estimates for each purpose are less precise than dedicating the full study to it. |
+
+**Decision:** Which study would you commission under your member mandate?",,docs/content-research/SCENARIO-LAB.md,CR-S03 — What should the new evidence tell us?
+REVIEW-B,,primary_task,CR-01A,foundation_statement,candidate,author_draft,CR-01,descriptive,,,A person's economic position is usually a better guide to their political interests than the goals they say they have.,Vị trí kinh tế của một người thường là căn cứ tốt hơn để hiểu lợi ích chính trị của họ so với những mục tiêu mà chính họ nói mình theo đuổi.,docs/content-research/CANDIDATE-BANK.md,CR-01A
+REVIEW-B,,primary_task,CR-01B,foundation_statement,candidate,author_draft,CR-01,descriptive,,,"Political commitments are best explained by the reasons people give, even when their group memberships suggest a different explanation.","Cách tốt nhất để giải thích những lập trường chính trị mà con người theo đuổi là dựa vào các lý do họ đưa ra, ngay cả khi việc họ thuộc những nhóm xã hội nào gợi ra một cách giải thích khác.",docs/content-research/CANDIDATE-BANK.md,CR-01B
+REVIEW-B,,primary_task,CR-01C,foundation_statement,candidate,author_draft,CR-01,descriptive,,,"Institutions such as schools and workplaces help form people's political goals, rather than simply responding to goals people already have.","Các thiết chế như trường học và nơi làm việc góp phần định hình mục tiêu chính trị của con người, chứ không chỉ đáp ứng những mục tiêu mà con người đã có sẵn.",docs/content-research/CANDIDATE-BANK.md,CR-01C
+REVIEW-B,,primary_task,CR-04A,foundation_statement,candidate,author_draft,CR-04,descriptive,,,"When the same legal rules apply to everyone, people deserve the income they earn even if they start with very different family resources.","Khi mọi người đều chịu cùng những quy tắc pháp luật, họ xứng đáng được hưởng khoản thu nhập mình kiếm được, ngay cả khi xuất phát điểm về nguồn lực gia đình rất khác nhau.",docs/content-research/CANDIDATE-BANK.md,CR-04A
+REVIEW-B,,primary_task,CR-04B,foundation_statement,candidate,author_draft,CR-04,descriptive,,,"People with the same needs should receive the same level of public support, even when their past contributions differ.","Những người có cùng mức nhu cầu nên nhận được cùng mức hỗ trợ công, ngay cả khi những đóng góp trước đây của họ khác nhau.",docs/content-research/CANDIDATE-BANK.md,CR-04B
+REVIEW-B,,primary_task,CR-04C,foundation_statement,candidate,author_draft,CR-04,descriptive,,,A person has stronger duties to people who depend on their care than to equally needy strangers.,Một người có nghĩa vụ lớn hơn đối với những người phụ thuộc vào sự chăm sóc của mình so với những người xa lạ có mức nhu cầu tương đương.,docs/content-research/CANDIDATE-BANK.md,CR-04C
+REVIEW-B,,primary_task,CR-11A,foundation_statement,candidate,author_draft,CR-11,descriptive,,,Protecting a living ecosystem can be a political duty even when doing so brings no benefit to people.,Bảo vệ một hệ sinh thái đang tồn tại có thể là một nghĩa vụ chính trị ngay cả khi việc đó không đem lại lợi ích nào cho con người.,docs/content-research/CANDIDATE-BANK.md,CR-11A
+REVIEW-B,,primary_task,CR-11B,foundation_statement,candidate,author_draft,CR-11,descriptive,,,People living today may have a duty to accept a lower standard of living to protect the basic needs of future generations.,Những người đang sống có thể có nghĩa vụ chấp nhận mức sống thấp hơn để bảo vệ các nhu cầu cơ bản của những thế hệ tương lai.,docs/content-research/CANDIDATE-BANK.md,CR-11B
+REVIEW-B,,primary_task,CR-11C,foundation_statement,candidate,author_draft,CR-11,descriptive,,,There should be ecological limits that even a project with large net public benefits is not allowed to cross.,Cần có những giới hạn sinh thái mà ngay cả một dự án đem lại lợi ích ròng lớn cho công chúng cũng không được phép vượt qua.,docs/content-research/CANDIDATE-BANK.md,CR-11C
+REVIEW-B,,primary_task,CR-12A,foundation_statement,candidate,author_draft,CR-12,descriptive,,,Even competent leaders should have only powers that those subject to them can regularly withdraw.,Ngay cả những người lãnh đạo có năng lực cũng chỉ nên có những quyền hạn mà những người chịu sự chi phối của họ có thể định kỳ thu hồi.,docs/content-research/CANDIDATE-BANK.md,CR-12A
+REVIEW-B,,primary_task,CR-12B,foundation_statement,candidate,author_draft,CR-12,descriptive,,,A government that reliably provides security and basic services can have a right to rule without competitive elections.,Một chính phủ bảo đảm an ninh và các dịch vụ cơ bản một cách đáng tin cậy có thể có quyền chính đáng để cai trị mà không cần bầu cử có cạnh tranh.,docs/content-research/CANDIDATE-BANK.md,CR-12B
+REVIEW-B,,primary_task,CR-12C,foundation_statement,candidate,author_draft,CR-12,descriptive,,,Cooperation on shared problems should normally be organized through voluntary associations rather than a state with the power to compel participation.,Việc hợp tác để giải quyết các vấn đề chung thông thường nên được tổ chức thông qua các hiệp hội tự nguyện hơn là thông qua một nhà nước có quyền buộc người dân tham gia.,docs/content-research/CANDIDATE-BANK.md,CR-12C
+REVIEW-B,,primary_task,CR-S02,scenario,candidate,author_draft,,descriptive,public_servant,rural,"**Your surroundings.** You administer a respite-care service in a rural district of your assigned fictional country. Forty separate households receive the service; in this exercise, each has one adult care recipient and one main unpaid carer. Some carers are relatives and some are friends. Every care recipient already receives the same two hours of weekly respite support. Other funded services meet immediate safety needs under every package below.
+
+**Your role.** You are a non-elected service officer with written authority to select one of the three approved allocation rules for the next twelve weeks. You cannot change the eligibility rules, employ extra workers, or require a relative or friend to provide care.
+
+**What is fixed.** An additional 40 care-worker hours are available each week. Travel time and administration are already funded. Independent assessments identify twenty recipients with the greatest additional personal support needs and twenty unpaid carers with the greatest current exhaustion and loss of rest. Ten households belong to both groups. Assessments of both kinds of need are equally reliable. All carers are currently free to stop without penalty and say they want to continue caring under any of these packages. When the caring arrangements began, the carers freely agreed to them. Every recipient can refuse an offered visit without losing existing support.
+
+**Which allocation rule would you use?**
+
+| Option | Extra weekly hours | What it leaves unmet |
+| --- | --- | --- |
+| A — Prioritize recipients' additional needs | Give two extra hours to each of the twenty recipients with the greatest additional personal support needs. | Ten households with the most exhausted carers receive no extra hours because their recipients are outside this priority group. |
+| B — Prioritize carers' exhaustion | Give two extra hours to each of the twenty households whose unpaid carer has the greatest exhaustion and loss of rest. | Ten recipients with the greatest additional personal support needs receive no extra hours because their carers are outside this priority group. |
+| C — Give everyone an equal increase | Give one extra hour to each of the forty recipients. | Nobody receives a two-hour increase, including those with the greatest recipient needs or carer exhaustion. |
+
+All packages allocate exactly forty extra hours. An allocation is an offer of support, not permission to compel a visit. Existing support, safety services, assessment standards, consent, and appeal rights stay the same. You may also answer “uncertain,” “none of these represents my decision,” or “skip.”","**Bối cảnh của bạn.** Bạn phụ trách một dịch vụ chăm sóc thay thế tạm thời để người chăm sóc thường xuyên có thời gian nghỉ, tại một huyện nông thôn của quốc gia giả định được giao. Bốn mươi hộ riêng biệt sử dụng dịch vụ; trong tình huống này, mỗi hộ có một người trưởng thành cần được chăm sóc và một người chăm sóc chính không hưởng lương. Một số người chăm sóc là người thân; số khác là bạn bè. Mỗi người được chăm sóc hiện có cùng hai giờ hỗ trợ mỗi tuần. Trong mọi phương án dưới đây, các dịch vụ khác đã được cấp kinh phí đáp ứng nhu cầu an toàn trước mắt.
+
+**Vai trò của bạn.** Bạn là viên chức phụ trách dịch vụ, không giữ chức vụ dân cử, và được giao bằng văn bản quyền chọn một trong ba quy tắc phân bổ đã được phê duyệt cho mười hai tuần tới. Bạn không có quyền thay đổi điều kiện được hưởng dịch vụ, thuê thêm nhân viên hoặc bắt buộc người thân hay bạn bè cung cấp việc chăm sóc.
+
+**Những điều được giữ nguyên.** Mỗi tuần có thêm 40 giờ làm việc của nhân viên chăm sóc. Thời gian đi lại và công việc hành chính đã có kinh phí riêng. Đánh giá độc lập xác định hai mươi người được chăm sóc có nhu cầu hỗ trợ cá nhân bổ sung cao nhất, và hai mươi người chăm sóc không hưởng lương đang kiệt sức, thiếu thời gian nghỉ nhiều nhất. Mười hộ thuộc cả hai nhóm. Các đánh giá về hai loại nhu cầu có độ tin cậy như nhau. Hiện nay, mọi người chăm sóc đều có thể dừng việc chăm sóc mà không bị phạt, và đều nói rằng họ muốn tiếp tục trong cả ba phương án. Khi việc chăm sóc bắt đầu, họ đã tự nguyện đồng ý đảm nhận. Mỗi người được chăm sóc có quyền từ chối một buổi hỗ trợ được đề nghị mà không mất phần hỗ trợ đang có.
+
+**Bạn sẽ dùng quy tắc phân bổ nào?**
+
+| Phương án | Số giờ bổ sung mỗi tuần | Nhu cầu chưa được đáp ứng thêm |
+| --- | --- | --- |
+| A — Ưu tiên nhu cầu bổ sung của người được chăm sóc | Cấp thêm hai giờ cho mỗi người trong số hai mươi người có nhu cầu hỗ trợ cá nhân bổ sung cao nhất. | Mười hộ có người chăm sóc thuộc nhóm kiệt sức nhất không được thêm giờ, vì người được chăm sóc trong hộ không thuộc nhóm ưu tiên này. |
+| B — Ưu tiên tình trạng kiệt sức của người chăm sóc | Cấp thêm hai giờ cho mỗi hộ trong số hai mươi hộ có người chăm sóc không hưởng lương đang kiệt sức, thiếu thời gian nghỉ nhiều nhất. | Mười người có nhu cầu hỗ trợ cá nhân bổ sung cao nhất không được thêm giờ, vì người chăm sóc của họ không thuộc nhóm ưu tiên này. |
+| C — Tăng như nhau cho mọi người | Cấp thêm một giờ cho mỗi người trong số bốn mươi người được chăm sóc. | Không ai được tăng hai giờ, kể cả những người có nhu cầu hỗ trợ cao nhất hoặc có người chăm sóc kiệt sức nhất. |
+
+Mọi phương án đều phân bổ đúng 40 giờ bổ sung. Việc phân bổ là đề nghị hỗ trợ, không phải quyền buộc người nhận chấp nhận một buổi hỗ trợ. Phần hỗ trợ hiện có, dịch vụ bảo đảm an toàn, tiêu chuẩn đánh giá, quyền đồng ý hoặc từ chối và quyền yêu cầu xem xét lại đều giữ nguyên. Bạn cũng có thể chọn “chưa chắc,” “không phương án nào thể hiện quyết định của tôi,” hoặc “bỏ qua.”",docs/content-research/SCENARIO-LAB.md,CR-S02 — Who receives the extra respite hours?
+REVIEW-B,,primary_task,CR-S05,scenario,candidate,author_draft,,descriptive,national_leader,rural,"You head the national government of your assigned fictional country. Parliament asks you to recommend one authorized development package for a rural coastal district. The district needs paid work. The site includes a wetland with a breeding colony of a fictional bird species. The species has breeding colonies at several protected sites elsewhere. Loss of the local colony would therefore not mean the species becomes extinct.
+
+Each package uses 20 million public credits over ten years; contracts and independent delivery checks make the stated paid positions feasible for that period. The positions have the same weekly hours, pay, employment protections, and start date under every package. All are available to district residents through the same eligibility rules; funded training enables eligible applicants to perform the different tasks. The district has more than 400 eligible residents seeking this work. Other national budgets cannot be transferred to this decision. Every package keeps the same six-month income bridge for residents changing jobs, safety rules, housing access, and protections against forced displacement. All sites have verified public title; no package overrides an unmentioned land claim. Flood protection, drinking-water supply, and human health are held at the same assessed level through separately funded works.
+
+Independent ecological reviewers provide fictional risk estimates for the next ten years. The uncertainty ranges are part of the exercise: they are not measurements from an actual place. No option guarantees the colony against all background natural risks.
+
+| Option | Recommend | Ecological and employment consequences |
+| --- | --- | --- |
+| A — Full transport terminal | Build the terminal, supporting 400 paid positions for ten years. | Reviewers estimate a 10–30% chance that this project causes the local breeding colony to disappear. |
+| B — Smaller terminal | Reduce the terminal footprint, supporting 200 paid positions for ten years. | Reviewers estimate a 2–8% chance that this project causes the local colony to disappear; fewer jobs are created. |
+| C — Wetland restoration | Fund restoration and monitoring, supporting 80 paid positions for ten years, without building the terminal. | The package adds no identified project-caused risk of colony loss, but provides the fewest paid positions. Background ecological risks remain. |
+
+**Your authority:** recommend a package to parliament and specify the approved monitoring contract. You cannot guarantee jobs beyond ten years, waive ecological conditions, or authorize spending without parliamentary approval.",,docs/content-research/SCENARIO-LAB.md,CR-S05 — Jobs and an ecological community
+REVIEW-C,,primary_task,CR-07A,foundation_statement,candidate,author_draft,CR-07,descriptive,,,An inherited institution deserves to continue unless its critics show that a replacement would work better.,"Một thiết chế được kế thừa từ trước xứng đáng được duy trì, trừ khi những người phê phán chứng minh rằng một thiết chế thay thế sẽ hoạt động tốt hơn.",docs/content-research/CANDIDATE-BANK.md,CR-07A
+REVIEW-C,,primary_task,CR-07B,foundation_statement,candidate,author_draft,CR-07,descriptive,,,"If a political institution denies some adults an equal voice, replacing it may be justified before an alternative has been fully tested.","Nếu một thiết chế chính trị không cho một số người trưởng thành có tiếng nói bình đẳng, việc thay thế nó có thể là chính đáng trước khi một phương án khác được kiểm chứng đầy đủ.",docs/content-research/CANDIDATE-BANK.md,CR-07B
+REVIEW-C,,primary_task,CR-07C,foundation_statement,candidate,author_draft,CR-07,descriptive,,,"Reform should normally proceed through several reversible steps, even when a complete redesign could deliver its benefits sooner.","Cải cách thông thường nên được tiến hành qua nhiều bước có thể đảo ngược, ngay cả khi việc thiết kế lại toàn bộ có thể đem lại lợi ích sớm hơn.",docs/content-research/CANDIDATE-BANK.md,CR-07C
+REVIEW-C,,primary_task,CR-08A,foundation_statement,candidate,author_draft,CR-08,descriptive,,,A government owes stronger duties to its citizens than to non-citizens with equally serious needs.,Một chính phủ có nghĩa vụ lớn hơn đối với công dân của mình so với những người không phải công dân nhưng có nhu cầu nghiêm trọng tương đương.,docs/content-research/CANDIDATE-BANK.md,CR-08A
+REVIEW-C,,primary_task,CR-08B,foundation_statement,candidate,author_draft,CR-08,descriptive,,,People who settle permanently in a country should be able to become full political members without adopting the majority's way of life.,Những người định cư lâu dài ở một quốc gia nên có thể trở thành thành viên chính trị đầy đủ mà không phải tiếp nhận lối sống của đa số.,docs/content-research/CANDIDATE-BANK.md,CR-08B
+REVIEW-C,,primary_task,CR-08C,foundation_statement,candidate,author_draft,CR-08,descriptive,,,A political community ruled by outsiders has a claim to collective self-rule even when equal individual rights are already protected.,Một cộng đồng chính trị do người bên ngoài cai quản có quyền đòi hỏi tự quản tập thể ngay cả khi các quyền cá nhân bình đẳng đã được bảo vệ.,docs/content-research/CANDIDATE-BANK.md,CR-08C
+REVIEW-C,,primary_task,CR-09A,foundation_statement,candidate,author_draft,CR-09,descriptive,,,A law can be justified by religious teaching even when citizens who reject that teaching have no other reason to accept the law.,Một luật có thể được biện minh bằng giáo lý tôn giáo ngay cả khi những công dân không chấp nhận giáo lý đó không có lý do nào khác để chấp nhận luật ấy.,docs/content-research/CANDIDATE-BANK.md,CR-09A
+REVIEW-C,,primary_task,CR-09B,foundation_statement,candidate,author_draft,CR-09,descriptive,,,"Officials should defend binding laws with reasons that people of different religions, or none, can assess without accepting one faith.","Quan chức nên biện minh cho các luật có tính bắt buộc bằng những lý do mà người theo các tôn giáo khác nhau, hoặc không theo tôn giáo nào, có thể xem xét mà không phải chấp nhận một đức tin cụ thể.",docs/content-research/CANDIDATE-BANK.md,CR-09B
+REVIEW-C,,primary_task,CR-09C,foundation_statement,candidate,author_draft,CR-09,descriptive,,,Assume everyone's freedom of religious or non-religious belief is equally protected. Public funds should support worship activities of the country's majority religion.,Giả sử tự do có niềm tin tôn giáo hoặc phi tôn giáo của mọi người đều được bảo vệ bình đẳng. Ngân sách công nên hỗ trợ các hoạt động thờ phụng của tôn giáo mà đa số người dân trong nước theo.,docs/content-research/CANDIDATE-BANK.md,CR-09C
+REVIEW-C,,primary_task,CR-10A,foundation_statement,candidate,author_draft,CR-10,descriptive,,,Imagine a society where birth assigns people to ranked groups that restrict marriage and job opportunities. Public assistance to remedy this discrimination should be based on individual need rather than inherited group membership.,"Hãy hình dung một xã hội nơi con người được xếp vào các nhóm có thứ bậc ngay từ khi sinh ra, với những hạn chế về kết hôn và việc làm theo nhóm. Hỗ trợ công nhằm khắc phục sự phân biệt đối xử này nên dựa trên nhu cầu của từng cá nhân thay vì việc một người thuộc nhóm nào từ khi sinh ra.",docs/content-research/CANDIDATE-BANK.md,CR-10A
+REVIEW-C,,primary_task,CR-10B,foundation_statement,candidate,author_draft,CR-10,descriptive,,,"People today owe repair for advantages they still receive from earlier exclusion, even if they did not cause it.","Con người ngày nay có nghĩa vụ góp phần khắc phục vì những lợi thế họ vẫn được hưởng từ sự loại trừ trong quá khứ, ngay cả khi chính họ không gây ra sự loại trừ đó.",docs/content-research/CANDIDATE-BANK.md,CR-10B
+REVIEW-C,,primary_task,CR-10C,foundation_statement,candidate,author_draft,CR-10,descriptive,,,"People from groups kept out of decision-making should have guaranteed seats in public bodies, even when ordinary elections are open to everyone.","Những người thuộc các nhóm bị gạt khỏi quá trình ra quyết định nên được bảo đảm ghế trong các cơ quan công quyền, ngay cả khi mọi người đều được tham gia các cuộc bầu cử thông thường.",docs/content-research/CANDIDATE-BANK.md,CR-10C
+REVIEW-C,,primary_task,CR-S04,scenario,candidate,author_draft,,descriptive,local_leader,rural,"You are the elected leader of a rural district. A public community-benefit fund can pay 100 home-repair grants of 1,000 credits each. Six hundred households meet the same eligibility threshold and have comparably urgent repairs. Three hundred have lived in the district for at least five years; three hundred arrived more recently. A separately verified list identifies 100 households that contributed substantial unpaid work to local services during the past year, including care work. Fifty of these are longer-term households and fifty are newer households. Time, disability, and caring responsibilities mean that not everyone had the same opportunity to contribute.
+
+You can recommend an allocation rule to the council. You cannot create new funding, change an applicant's residency status, or award grants to yourself. An independent office checks eligibility and runs any lottery. Every proposal is authorized by the fictional fund's statute. There are no earlier promises to particular households. The fund's money came from a district levy collected over the past decade and now legally belongs to the public fund, not to individual contributors.
+
+| Option | Recommend | Who gives up a stronger claim |
+| --- | --- | --- |
+| A — One lottery for all eligible households | Draw all 100 grant recipients from the full pool of 600 eligible households. | Long residence and past contribution receive no additional priority. |
+| B — Reserve a share for longer-term residents | Draw 75 recipients from the 300 longer-term households, then draw the remaining 25 from all households not already selected. | Newer households have fewer chances despite comparable repair needs. |
+| C — Reserve a share for recent contributors | Draw 75 recipients from the 100 verified contributing households, then draw the remaining 25 from all households not already selected. | Residents unable to contribute have fewer chances despite comparable needs; long residence alone receives no priority. |
+
+**Decision:** Which rule would you recommend? No package makes the fund private or alters general civic rights.",,docs/content-research/SCENARIO-LAB.md,CR-S04 — Who has a claim on the community fund?
+REVIEW-C,,primary_task,CR-S06,scenario,candidate,author_draft,,descriptive,civil_society,urban,"You lead a voluntary training association in a city. The association has funds for twenty places in a course whose participants have comparable expected benefit. One hundred and fifty applicants meet the same entry standard. Fifty belong to a named local community that the association excluded from its courses for decades; fifty qualify under a current low-income threshold. Twenty applicants belong to both groups. Applicants have other differences, but no further ranking has been authorized.
+
+The exclusion ended ten years ago. The association acknowledges the policy, and the relevant records are undisputed. It has not provided a remedy for that policy. Current intake procedures are accessible to everyone, and all applicants face the same entry standard. The rule for allocating places in this cohort is still to be selected from the authorized options below. Present low income is not treated as a complete record of past disadvantage.
+
+Your members have authorized you to select one of three lawful rules. You cannot add places, lower the entry standard, identify applicants publicly, or cancel earlier admissions. Every lottery is independently run. The course has no safety-critical or professional licensing function.
+
+| Option | Select | Tradeoff |
+| --- | --- | --- |
+| A — Equal chance for every eligible applicant | Allocate all twenty places by a lottery among all 150 eligible applicants. | Neither the association's exclusion nor current low income receives additional priority. |
+| B — Reserve places as a response to the exclusion | Allocate ten places by lottery among the fifty applicants from the formerly excluded community; allocate ten more among all applicants not already selected. | Some equally qualified applicants outside that community have fewer chances, including some low-income applicants. |
+| C — Reserve places for current low income | Allocate ten places by lottery among the fifty low-income applicants; allocate ten more among all applicants not already selected. | Some members of the formerly excluded community receive no added priority, and the policy does not directly respond to the association's own history. |
+
+**Decision:** Which rule would you use under your member mandate?",,docs/content-research/SCENARIO-LAB.md,CR-S06 — Training places after exclusion

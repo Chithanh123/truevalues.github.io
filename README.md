@@ -2,7 +2,7 @@
 
 A research-first political assessment prototype built from the 8values static-site fork. Participants answer value and foundational-assumption statements, take decisions within fictional political settings, and receive a debrief that separates stated values, assumptions, and choices under constraints.
 
-Current instrument version: **0.4.0**; reviewer-tooling release: **0.4.1**. The tooling update preserves the 49-item participant route and its saved-response format. The assessment is experimental. Its four domains and scoring rubric are candidate measures, not validated ideological scales. It does not assign a definitive ideology, population percentile, or a “hypocrisy” score. See [the research notes](docs/RESEARCH.md) for construct definitions, scoring assumptions, confounds, and the work required before recruiting research participants.
+Current instrument version: **0.4.0**; application release: **0.4.2**. The latest release organizes the completed assessment into seven descriptive themes and adds a readable download and print layout. It preserves the 49-item participant route, scores, saved-response format, and reviewer tools introduced in `0.4.1`. The assessment is experimental. Its four domains and scoring rubric are candidate measures, not validated ideological scales. It does not assign a definitive ideology, population percentile, or a “hypocrisy” score. See [the research notes](docs/RESEARCH.md) for construct definitions, scoring assumptions, confounds, and the work required before recruiting research participants.
 
 ## Run locally
 
@@ -41,15 +41,24 @@ The generated `dist/` folder can also be uploaded to another static HTTPS host. 
 - Eight main scenarios covering urban and rural life: seven provisionally scored and one descriptive public-records exercise. Each route includes ordinary constituents, civil society leaders, non-elected public servants/local officials, local leaders, and national leaders.
 - One matched housing scenario that changes the urgency of school repairs while retaining the other decision assumptions.
 - Role descriptions, institutional limits, optional context, three feasible actions per scenario, and separate unscored reasons.
-- Separate statement and scenario summaries, response evidence, coverage, and a descriptive comparison of the two housing choices.
+- A seven-theme reflection report placing recorded statements, starting assumptions, role actions, selected reasons, and optional personal preferences together, with explicit coverage gaps and a descriptive comparison of the two housing choices.
+- The original four statement/scenario profiles in a collapsed optional detail view; no new scores or political identities are assigned by the seven themes.
+- A readable `.txt` report, a print / save-as-PDF layout, and the existing JSON response export, all created locally after completion.
+- Situation briefings, constraints, and assigned-setting notes retained in the readable/printed report and available within each on-screen decision record.
 
 Uncertain, skipped, and unrepresented answers are excluded from numerical summaries rather than treated as centrist responses. The repeated housing scenario is excluded from the main scenario profile so it does not receive extra weight. The public-records exercise is also excluded from all domain scores and their denominators; its choices and reasons remain visible. It concerns transparency and staff capacity, which have not been established as a civil-rights measure.
 
 The expanded content is an author draft. The shared anchor cases and world-specific notes support review; they do not create a formal balanced experiment or validate cross-setting comparisons. External review, cognitive interviews, a completed literature review, and empirical validation remain outstanding.
 
+The report themes are ownership/provision/control; freedoms and contesting power; transparency/access to records; belonging/obligations/cooperation; continuity/inclusion; knowledge/judgment; and care/ecological dependence. These are author-chosen ways to browse responses, not seven measured dimensions. Transparency is displayed separately while retaining the original scoring rubric for compatibility. Knowledge, care, and ecological premises have no dedicated situations in the current route, and the report identifies those gaps. Generic reflection prompts add no stored answers or scores.
+
 The final debrief reveals the assigned setting's real-world inspiration and provides author-review access. The separate `review.html` workspace and authored review packets contain country correspondences and are marked as spoilers; inspect them after completing a participant route if preserving that experience matters. This is presentation concealment in a public static application, not secure experimental blinding. Source files and reviewer documents remain inspectable. The [cognitive pilot guide](docs/PILOT-GUIDE.md) provides neutral interview prompts, reviewer criteria, decision gates, and an [empty review-log template](docs/review-log-template.csv). No independent human content reviews, interviews, or participant findings are claimed. AI-assisted technical review and automated checks are development work, rather than evidence of human review.
 
 ## Broader foundations and research aims
+
+The [content-research preparation pack](docs/content-research/README.md) audits the current bank and proposes 36 bilingual statements, six scenario families, and smaller comprehension-review packets. These are content drafts for review before implementation; they do not change the assessment or its scores. External source retrieval remains blocked, so the pack distinguishes editorial analysis from proposed readings that still need verification.
+
+The [quiz-package database](research/quiz-database/README.md) organizes that material into five package records, 91 content items, and 31 intended assessment outcomes. A portable SQLite file and CSV exports link each package to its questions, interpretation limits, translation availability, and review status. It is an author research catalog, separate from the participant application.
 
 The expanded aim is to compare the premises behind political judgments, including disagreements within leftist, liberal, conservative, and other traditions. Social ontology concerns what people understand society and its actors to be; it is distinct from what they value, what they accept as knowledge, or which institutions they favor. The draft map keeps these questions separate and allows traditions to overlap. A participant's answer is not treated as proof of a political identity.
 
@@ -77,7 +86,7 @@ Answers are processed in the browser. The application has no analytics, advertis
 
 Progress is kept for the current browser session. Persistent on-device saving is optional and uses local storage; it is not an account or cloud backup. A shared browser profile can expose a saved session to other users. The application provides controls to erase this tab's answers and the saved device copy. Other open tabs may retain separate copies.
 
-An exported response record is a voluntary local download containing sensitive political responses, reasons, assigned setting, and the instrument version. The participant controls whether to share that file. The review-packet download contains authored content and metadata instead of responses or reviewer notes. Reviewer-note downloads are separate files and contain the observations a reviewer entered. Clear reviewer notes in the review workspace; the assessment’s erase control does not remove that separate draft. Erasing browser data cannot erase copies already downloaded or shared.
+An exported response record is a voluntary local download containing sensitive political responses, reasons, assigned setting, and the instrument version. The readable text report and printed/PDF report also contain recorded responses and the revealed setting. Printing uses the browser's print dialog; PDF saving depends on the browser and device. The participant controls whether to share these files. The review-packet download contains authored content and metadata instead of responses or reviewer notes. Reviewer-note downloads are separate files and contain the observations a reviewer entered. Clear reviewer notes in the review workspace; the assessment’s erase control does not remove that separate draft. Erasing browser data cannot erase copies already downloaded or shared.
 
 Static hosting can maintain ordinary access logs independently of this application. Formal research collection would require a separate consented workflow and a review of hosting, access controls, retention, and deletion practices. There is no research data collection service in this prototype.
 
@@ -101,9 +110,10 @@ With the local server running in a separate terminal:
 ```sh
 python3 tests/browser_smoke.py
 python3 tests/browser_review.py
+python3 tests/browser_debrief.py
 ```
 
-The browser checks exercise the participant journey, results, saved progress, responsive presentation, and reviewer-note import/export, storage isolation, and stale-content handling. Consult the test script for its server and browser configuration when running on another machine.
+The browser checks exercise the participant journey, saved progress, theme coverage, readable download and print behavior, responsive presentation, and reviewer-note import/export, storage isolation, and stale-content handling. Consult the test scripts for their server and browser configuration when running on another machine.
 
 ## Code layout
 
@@ -120,16 +130,17 @@ The browser checks exercise the participant journey, results, saved progress, re
 | `scripts/validate-evidence.js` | Source-map structure and reference checks; not independent scholarly review |
 | `js/worlds.js` | Eight fictional setting briefs and scenario-specific institutional notes |
 | `js/engine.js` | Assignment, assessment steps, immutable response updates, validation, and separate summaries |
+| `js/debrief-content.js`, `js/debrief.js`, and `js/debrief-view.js` | Author-chosen theme links, completed-response records, readable text export, and descriptive report rendering |
 | `scripts/validate-content.js` | Authored-content structure and coverage report |
 | `tests/engine.test.js` | Node tests for content and assessment logic |
-| `tests/browser_smoke.py` and `tests/browser_review.py` | Participant and reviewer browser checks using Python Playwright and Chromium |
+| `tests/browser_smoke.py`, `tests/browser_review.py`, and `tests/browser_debrief.py` | Participant, reviewer, and reflection-report browser checks using Python Playwright and Chromium |
 | `docs/RESEARCH.md` | Research questions, candidate outcomes, rubric, confounds, privacy, and version history |
 | `docs/FOUNDATIONS.md` | Broader ideological-premise aims, draft lens map, and foundation-item limitations |
 | `docs/PILOT-GUIDE.md` | Cognitive interview plan, content-review rubric, prerequisites, and decision gates |
 | `docs/review-log-template.csv` | Header-only issue log; no invented observations or participant records |
 | `LICENSE` | MIT license and original 8values attribution |
 
-Reviewer tooling and note formats are versioned separately from participant content. The 0.4.1 tooling release preserves instrument `0.4.0` and compatible participant saves. Use stable content IDs and update the instrument version when changing wording, assumptions, or scoring. Saves from earlier instrument versions are deliberately rejected by `0.4.0`; there is no silent migration. Starting a new assessment can replace the older browser save, while existing exported files retain their original version for interpretation. New scenarios should document the player's actual authority, viable alternatives, relevant facts, and which conclusions the choice cannot support.
+Application, reviewer-note, and reflection-report formats are versioned separately from participant content. Releases `0.4.1` and `0.4.2` preserve instrument `0.4.0` and compatible participant saves; the JSON response export remains format version `2`, and the new reflection format is `1.0.0`. Use stable content IDs and update the instrument version when changing wording, assumptions, or scoring. Saves from earlier instrument versions are deliberately rejected by `0.4.0`; there is no silent migration. Starting a new assessment can replace the older browser save, while existing exported files retain their original version for interpretation. New scenarios should document the player's actual authority, viable alternatives, relevant facts, and which conclusions the choice cannot support.
 
 ## Attribution
 

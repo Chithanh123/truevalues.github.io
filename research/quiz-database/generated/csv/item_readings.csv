@@ -1,0 +1,29 @@
+﻿item_id,reading_id,relationship,note
+premise-personal-agency,LEGACY:sep-liberalism,background,"Investigate how different liberal accounts connect agency with social conditions. This is an author-proposed reading route, not a claim that the entry supports the item wording."
+premise-personal-agency,LEGACY:sep-communitarianism,contrast,Look for challenges to strongly independent accounts of political agency while distinguishing social formation from an inability to dissent.
+premise-social-relations,LEGACY:sep-communitarianism,background,"Check which accounts concern the formation of interests, rather than assuming all accounts of community make the same ontological claim."
+premise-social-relations,LEGACY:sep-liberalism,contrast,Compare liberal approaches that recognize social formation with approaches that give agency a different justificatory role; this need not be an opposing pair.
+premise-economic-power,LEGACY:sep-marx,background,"Investigate accounts linking control of production to durable political power, including disagreements about causal priority and historical scope."
+premise-economic-power,LEGACY:sep-property,contrast,Compare the power created by concentrated ownership with arguments that distributed ownership protects independence. The claims may both hold under different distributions.
+premise-ecological-dependence,LEGACY:sep-environmental-ethics,background,Investigate human-centered and non-human-centered approaches without treating ecological dependence alone as endorsement of a complete environmental ethic.
+premise-own-good,LEGACY:sep-liberalism,background,Check the variety of arguments for equal freedom and the conditions under which choice is considered meaningful.
+premise-own-good,LEGACY:sep-communitarianism,contrast,"Investigate criticism of abstract choice and possible shared commitments, without assuming communitarian approaches reject equal freedom."
+premise-nondomination,LEGACY:sep-republicanism,background,Check distinctions between actual interference and an uncontrolled capacity to interfere before finalizing the item’s explanatory gloss.
+premise-nondomination,LEGACY:sep-liberalism,contrast,Compare the roles of non-interference and non-domination without assigning a single definition to all liberal approaches.
+premise-care-obligations,LEGACY:iep-care-ethics,background,"Investigate whether care-based arguments ground recognition, public provision, relational duties, or different combinations; no single institutional conclusion is assumed."
+premise-inherited-obligations,LEGACY:sep-communitarianism,background,Look for distinctions between obligations from membership and approval of any existing community authority.
+premise-inherited-obligations,LEGACY:sep-liberalism,contrast,Compare arguments about consent and special obligations. The map does not assume that liberal approaches deny every unchosen duty.
+premise-dispersed-knowledge,LEGACY:hayek-knowledge,background,Verify the proposed article and the scope of its knowledge argument before attributing it to any item wording or institutional conclusion.
+premise-dispersed-knowledge,LEGACY:sep-socialism,contrast,Investigate socialist responses and decentralized alternatives rather than assuming every socialist model requires a single center to possess all knowledge.
+premise-inherited-knowledge,LEGACY:sep-conservatism,background,Check accounts of practical or tacit knowledge while keeping knowledge claims distinct from the legitimacy of inherited hierarchy.
+premise-inherited-knowledge,LEGACY:hayek-knowledge,background,Investigate a related but distinct knowledge argument; dispersed information and knowledge embedded in longstanding practice must not be treated as identical.
+premise-situated-knowledge,LEGACY:sep-feminist-epistemology,background,"Investigate distinctions among a social standpoint, particular experiences, and claims of epistemic advantage. Do not infer infallibility or uniform group knowledge."
+premise-testable-explanations,LEGACY:sep-popper,background,Investigate the reach and limitations of revisability arguments before extending them to political explanations; moral commitments are not automatically empirical hypotheses.
+premise-testable-explanations,LEGACY:sep-feminist-epistemology,contrast,Ask who can produce recognized evidence and whose experiences are considered examinable. This comparison does not assert rejection of evidence or revisability.
+premise-property-independence,LEGACY:sep-property,background,"Investigate the form and distribution of property involved, rather than treating any private ownership as an equivalent safeguard."
+premise-property-independence,LEGACY:sep-socialism,contrast,Compare dependence on government with dependence on private actors and potential shared-ownership alternatives. The item itself does not resolve those comparisons.
+premise-workplace-control,LEGACY:sep-socialism,background,"Check distinctions between consultation, co-determination, cooperative ownership, and worker self-management before selecting more precise variants."
+premise-workplace-control,LEGACY:sep-property,contrast,"Investigate alternative claims about ownership, consent, and authority inside an enterprise, without assuming a single property theory."
+premise-contestable-power,LEGACY:sep-republicanism,background,Investigate how effective contestation relates to non-domination and how the argument applies across public and private institutions.
+premise-gradual-reform,LEGACY:sep-conservatism,background,Investigate arguments about preserving useful functions separately from moral approval of the status quo.
+premise-gradual-reform,LEGACY:sep-socialism,contrast,Look for disagreement within socialist approaches about paths of change; do not treat socialism as uniformly opposed to gradual reform.

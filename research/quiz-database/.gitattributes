@@ -1,0 +1,2 @@
+# Preserve CSV record endings and quoted multiline text exactly as exported.
+generated/csv/*.csv -text whitespace=cr-at-eol
