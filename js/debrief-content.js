@@ -5,7 +5,7 @@
  * to political traditions. A comparison item remains a recorded comparison.
  * Empty scenario arrays mark a real coverage gap rather than implied evidence.
  */
-export const debriefVersion = '1.0.0';
+export const debriefVersion = '1.1.0';
 
 export const debriefThemes = [
   {

@@ -101,6 +101,8 @@ with sync_playwright() as pw:
     themes = page.locator(".response-report .report-theme")
     expect(themes).to_have_count(7)
     assert themes.evaluate_all("els=>els.every(el=>!el.open)")
+    expect(page.locator(".theme-evidence")).to_have_count(7)
+    assert page.locator(".theme-evidence").evaluate_all("els=>els.every(el=>!el.open)")
     assert page.locator("#experimental-profiles").evaluate("el=>el.open") is False
     assert page.locator("#raw-foundations").evaluate("el=>el.open") is False
     assert page.locator("#raw-decisions").evaluate("el=>el.open") is False
@@ -178,17 +180,18 @@ with sync_playwright() as pw:
 
     # Check print expansion and restoration, including native beforeprint hooks.
     themes.nth(1).locator(":scope > summary").click()
+    themes.nth(1).locator(".theme-evidence > summary").click()
     themes.nth(1).locator(".decision-circumstances > summary").click()
-    print_details = page.locator(".report-theme, .decision-circumstances")
-    expect(print_details).to_have_count(16)
+    print_details = page.locator(".report-theme, .theme-evidence, .decision-circumstances")
+    expect(print_details).to_have_count(23)
     before_print = print_details.evaluate_all("els=>els.map(el=>el.open)")
     page.evaluate("""() => { window.print=()=>{
         window.dispatchEvent(new Event('beforeprint'));
-        window.__printState={open:[...document.querySelectorAll('.report-theme,.decision-circumstances')].map(el=>el.open),
+        window.__printState={open:[...document.querySelectorAll('.report-theme,.theme-evidence,.decision-circumstances')].map(el=>el.open),
             printing:document.body.classList.contains('printing-debrief')};
     }; }""")
     action(page, "print-report")
-    assert page.evaluate("window.__printState") == {"open": [True]*16, "printing": True}
+    assert page.evaluate("window.__printState") == {"open": [True]*23, "printing": True}
     page.emulate_media(media="print")
     expect(page.locator(".results-actions")).to_be_hidden()
     expect(page.locator("#experimental-profiles")).to_be_hidden()
@@ -205,11 +208,11 @@ with sync_playwright() as pw:
     no_overflow(page, "desktop expanded report")
     SCREENSHOTS.mkdir(parents=True, exist_ok=True)
     page.locator("#response-report-title").evaluate("el=>el.scrollIntoView({block:'start'})")
-    page.screenshot(path=str(SCREENSHOTS / "debrief-0.4.2-desktop.png"))
+    page.screenshot(path=str(SCREENSHOTS / "debrief-0.4.3-desktop.png"))
     page.set_viewport_size({"width": 375, "height": 812})
     no_overflow(page, "mobile expanded report")
     page.locator('.report-theme[data-theme-id="ownership-provision-control"] > summary').evaluate("el=>el.scrollIntoView({block:'start'})")
-    page.screenshot(path=str(SCREENSHOTS / "debrief-0.4.2-mobile.png"))
+    page.screenshot(path=str(SCREENSHOTS / "debrief-0.4.3-mobile.png"))
     for card in themes.all():
         card.scroll_into_view_if_needed()
         no_overflow(page, "mobile theme")

@@ -2,9 +2,11 @@
 
 A research-first political assessment prototype built from the 8values static-site fork. Participants answer value and foundational-assumption statements, take decisions within fictional political settings, and receive a debrief that separates stated values, assumptions, and choices under constraints.
 
-Current instrument version: **0.4.0**; application release: **0.4.2**. The latest release organizes the completed assessment into seven descriptive themes and adds a readable download and print layout. It preserves the 49-item participant route, scores, saved-response format, and reviewer tools introduced in `0.4.1`. The assessment is experimental. Its four domains and scoring rubric are candidate measures, not validated ideological scales. It does not assign a definitive ideology, population percentile, or a “hypocrisy” score. See [the research notes](docs/RESEARCH.md) for construct definitions, scoring assumptions, confounds, and the work required before recruiting research participants.
+Current instrument version: **0.4.0**; application release: **0.4.3**. The latest release explains what combinations of answers suggest, with links to the responses supporting each reading. Seven themes give a headline, an explanation, and the practical implications of chosen packages before the optional full answer records. It preserves the 49-item participant route, scores, saved-response format, and existing reviewer tools. The assessment is experimental. Its four domains and scoring rubric are candidate measures, not validated ideological scales. It does not assign a definitive ideology, population percentile, or a “hypocrisy” score. See [the research notes](docs/RESEARCH.md) for interpretation rules, scoring assumptions, confounds, and the work required before recruiting research participants.
 
 ## Run locally
+
+See the [result-screen preview with synthetic answers](docs/previews/README.md) for the new desktop and mobile interpretation views.
 
 The application uses static HTML, CSS, and JavaScript modules. There are no application dependencies to install and no build step. Use a current browser and Python 3 to serve the repository over HTTP:
 
@@ -41,7 +43,9 @@ The generated `dist/` folder can also be uploaded to another static HTTPS host. 
 - Eight main scenarios covering urban and rural life: seven provisionally scored and one descriptive public-records exercise. Each route includes ordinary constituents, civil society leaders, non-elected public servants/local officials, local leaders, and national leaders.
 - One matched housing scenario that changes the urgency of school repairs while retaining the other decision assumptions.
 - Role descriptions, institutional limits, optional context, three feasible actions per scenario, and separate unscored reasons.
-- A seven-theme reflection report placing recorded statements, starting assumptions, role actions, selected reasons, and optional personal preferences together, with explicit coverage gaps and a descriptive comparison of the two housing choices.
+- A reflection report beginning with up to four readings supported by combinations of answers. Examples include public guarantees alongside private independence, social influence alongside personal agency, inclusion with gradual reform, and freedom with safeguards against uncontrolled power. Each reading links to its supporting responses; its appearance depends on the answers recorded.
+- Seven theme summaries explaining value patterns, endorsed or rejected premises, and what selected action packages put into practice. Selected reasons remain explicit, and full answer records are collapsed beneath the interpretations.
+- Separate comparisons of role actions with optional personal preferences and of the two housing choices, with explicit limits on what any difference means.
 - The original four statement/scenario profiles in a collapsed optional detail view; no new scores or political identities are assigned by the seven themes.
 - A readable `.txt` report, a print / save-as-PDF layout, and the existing JSON response export, all created locally after completion.
 - Situation briefings, constraints, and assigned-setting notes retained in the readable/printed report and available within each on-screen decision record.
@@ -50,7 +54,7 @@ Uncertain, skipped, and unrepresented answers are excluded from numerical summar
 
 The expanded content is an author draft. The shared anchor cases and world-specific notes support review; they do not create a formal balanced experiment or validate cross-setting comparisons. External review, cognitive interviews, a completed literature review, and empirical validation remain outstanding.
 
-The report themes are ownership/provision/control; freedoms and contesting power; transparency/access to records; belonging/obligations/cooperation; continuity/inclusion; knowledge/judgment; and care/ecological dependence. These are author-chosen ways to browse responses, not seven measured dimensions. Transparency is displayed separately while retaining the original scoring rubric for compatibility. Knowledge, care, and ecological premises have no dedicated situations in the current route, and the report identifies those gaps. Generic reflection prompts add no stored answers or scores.
+The report themes are ownership/provision/control; freedoms and contesting power; transparency/access to records; belonging/obligations/cooperation; continuity/inclusion; knowledge/judgment; and care/ecological dependence. They organize authored interpretations of recorded answers without creating seven measured dimensions. A value pattern needs at least two answers pointing in one direction and none in the other; opposing directions produce a mixed reading, and a lone directional answer produces a limited reading. Neutral, uncertain, and skipped answers remain separate rather than becoming a centrist identity. Knowledge, care, and ecological premises are interpreted independently, with no dedicated situations or exclusive scale in the current route. Transparency is displayed separately while retaining the original scoring rubric for compatibility. Generic reflection prompts add no stored answers or scores.
 
 The final debrief reveals the assigned setting's real-world inspiration and provides author-review access. The separate `review.html` workspace and authored review packets contain country correspondences and are marked as spoilers; inspect them after completing a participant route if preserving that experience matters. This is presentation concealment in a public static application, not secure experimental blinding. Source files and reviewer documents remain inspectable. The [cognitive pilot guide](docs/PILOT-GUIDE.md) provides neutral interview prompts, reviewer criteria, decision gates, and an [empty review-log template](docs/review-log-template.csv). No independent human content reviews, interviews, or participant findings are claimed. AI-assisted technical review and automated checks are development work, rather than evidence of human review.
 
@@ -111,9 +115,10 @@ With the local server running in a separate terminal:
 python3 tests/browser_smoke.py
 python3 tests/browser_review.py
 python3 tests/browser_debrief.py
+python3 tests/browser_interpretation.py
 ```
 
-The browser checks exercise the participant journey, saved progress, theme coverage, readable download and print behavior, responsive presentation, and reviewer-note import/export, storage isolation, and stale-content handling. Consult the test scripts for their server and browser configuration when running on another machine.
+The browser checks exercise the participant journey, saved progress, theme coverage, interpretation and evidence links, readable download and print behavior, responsive presentation, and reviewer-note import/export, storage isolation, and stale-content handling. Consult the test scripts for their server and browser configuration when running on another machine.
 
 ## Code layout
 
@@ -131,16 +136,17 @@ The browser checks exercise the participant journey, saved progress, theme cover
 | `js/worlds.js` | Eight fictional setting briefs and scenario-specific institutional notes |
 | `js/engine.js` | Assignment, assessment steps, immutable response updates, validation, and separate summaries |
 | `js/debrief-content.js`, `js/debrief.js`, and `js/debrief-view.js` | Author-chosen theme links, completed-response records, readable text export, and descriptive report rendering |
+| `js/interpretation-content.js` and `js/interpretation.js` | Authored meanings, explicit pattern rules, and links between interpretations and supporting answers |
 | `scripts/validate-content.js` | Authored-content structure and coverage report |
 | `tests/engine.test.js` | Node tests for content and assessment logic |
-| `tests/browser_smoke.py`, `tests/browser_review.py`, and `tests/browser_debrief.py` | Participant, reviewer, and reflection-report browser checks using Python Playwright and Chromium |
+| `tests/browser_smoke.py`, `tests/browser_review.py`, `tests/browser_debrief.py`, and `tests/browser_interpretation.py` | Participant, reviewer, reflection-report, and interpretation browser checks using Python Playwright and Chromium |
 | `docs/RESEARCH.md` | Research questions, candidate outcomes, rubric, confounds, privacy, and version history |
 | `docs/FOUNDATIONS.md` | Broader ideological-premise aims, draft lens map, and foundation-item limitations |
 | `docs/PILOT-GUIDE.md` | Cognitive interview plan, content-review rubric, prerequisites, and decision gates |
 | `docs/review-log-template.csv` | Header-only issue log; no invented observations or participant records |
 | `LICENSE` | MIT license and original 8values attribution |
 
-Application, reviewer-note, and reflection-report formats are versioned separately from participant content. Releases `0.4.1` and `0.4.2` preserve instrument `0.4.0` and compatible participant saves; the JSON response export remains format version `2`, and the new reflection format is `1.0.0`. Use stable content IDs and update the instrument version when changing wording, assumptions, or scoring. Saves from earlier instrument versions are deliberately rejected by `0.4.0`; there is no silent migration. Starting a new assessment can replace the older browser save, while existing exported files retain their original version for interpretation. New scenarios should document the player's actual authority, viable alternatives, relevant facts, and which conclusions the choice cannot support.
+Application, reviewer-note, reflection-report, and interpretation-rule formats are versioned separately from participant content. Releases `0.4.1` through `0.4.3` preserve instrument `0.4.0` and compatible participant saves; the JSON response export remains format version `2`. The current reflection format is `1.1.0`, and the interpretation rules are `1.0.0`. Use stable content IDs and update the instrument version when changing wording, assumptions, or scoring. Saves from earlier instrument versions are deliberately rejected by `0.4.0`; there is no silent migration. Starting a new assessment can replace the older browser save, while existing exported files retain their original version for interpretation. New scenarios should document the player's actual authority, viable alternatives, relevant facts, and which conclusions the choice cannot support.
 
 ## Attribution
 
