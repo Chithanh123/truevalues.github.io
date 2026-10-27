@@ -1,0 +1,634 @@
+{
+  "version": "draft-2026-10-27",
+  "clusters": [
+    {
+      "id": "CR-13",
+      "title": "Disability, independence, and effective access",
+      "research_question": "Does independence mean acting without help, directing needed help, or having effective opportunities; and when do equal rules fail to provide access?",
+      "contrast_and_probe": "Separate control over support, the quantity of support, access to an activity, and compliance with a standard. Ask for an example of an independent person who uses help. For each spending claim, ask whose opportunity changes and what cost limit the reader imagined. These propositions need not be opposed.",
+      "risks": "Disability is heterogeneous. Do not infer incapacity from a diagnosis, dependence, or communication needs, and do not score a person's moral worth from these answers. Independent disability-led review is missing. CR-13B leaves a cost threshold unspecified and CR-13C requires distinguishing existing obligations from new discretionary spending. WCAG documents limits of web conformance only; it does not settle the normative content of CR-13D or obligations in every public service. Vietnamese translations are author drafts.",
+      "tradition_tensions": [
+        {
+          "lens": "Disability rights and relational autonomy",
+          "argument": "Directing assistance can preserve agency; unequal expenditure may be needed for usable opportunities.",
+          "internal_disagreement": "Disability-led approaches differ over individual budgets, collective provision, professional expertise, and the adequacy of rights language. No single item represents the movement."
+        },
+        {
+          "lens": "Capability approaches and public-service equality",
+          "argument": "Evaluate what people can actually do, not only identical inputs or formal rules.",
+          "internal_disagreement": "Capability accounts differ over priority setting, personal responsibility, the relevant capabilities, and limits on public resources."
+        },
+        {
+          "lens": "Procedural equality and administrative predictability",
+          "argument": "Published standards can constrain arbitrary discretion and make obligations feasible to administer.",
+          "internal_disagreement": "A rule-based approach may still require exceptions and accommodation; it need not deny the reality of unmet needs."
+        }
+      ],
+      "reading_ids": [
+        "EX-R01",
+        "EX-R06",
+        "EX-R12"
+      ],
+      "statements": [
+        {
+          "id": "CR-13A",
+          "claim_type": "Conceptual / ontological",
+          "en": "Being able to direct help from other people is a form of independence, even when a person cannot carry out everyday tasks alone.",
+          "vi": "Có thể tự quyết định cách người khác hỗ trợ mình là một dạng độc lập, ngay cả khi một người không thể tự làm các công việc hằng ngày.",
+          "distinction": "Independence as authority within supportive relationships, rather than physical self-sufficiency. Adds the meaning of independence to CR-04's allocation of care.",
+          "rival_reading": "Agreement may concern practical convenience rather than relational autonomy; disagreement may reserve the word independence for doing tasks alone while supporting equal decision rights.",
+          "probe": "Could someone need daily assistance and still decide how to live? Does your answer change their authority or only the word you use?",
+          "reading_ids": [
+            "EX-R01",
+            "EX-R12"
+          ]
+        },
+        {
+          "id": "CR-13B",
+          "claim_type": "Normative / institutional",
+          "en": "Public disability services should pay for a person's chosen support arrangement even when an equally safe arrangement would cost less.",
+          "vi": "Dịch vụ hỗ trợ người khuyết tật bằng ngân sách công nên chi trả cho cách hỗ trợ mà người đó lựa chọn, ngay cả khi có cách khác cũng an toàn như vậy nhưng ít tốn kém hơn.",
+          "distinction": "Weight placed on the user's choice when safety is held equal and resources conflict. No particular price difference or unlimited entitlement is implied.",
+          "rival_reading": "Agreement may assume the extra cost is small; disagreement may reflect opportunity costs to other users rather than distrust of disabled people's choices.",
+          "probe": "How much extra cost did you imagine? What if the cheaper arrangement provided fewer opportunities despite being equally safe?",
+          "reading_ids": [
+            "EX-R01",
+            "EX-R12"
+          ]
+        },
+        {
+          "id": "CR-13C",
+          "claim_type": "Normative / distributive",
+          "en": "When equal spending can either improve a public service for many people or enable a few people currently excluded to use it, enabling access for the excluded few should take priority.",
+          "vi": "Khi cùng một khoản chi có thể cải thiện dịch vụ công cho nhiều người hoặc giúp một số ít người đang bị loại trừ sử dụng được dịch vụ, việc giúp số ít người đó tiếp cận dịch vụ nên được ưu tiên.",
+          "distinction": "Priority for crossing a participation threshold versus aggregate improvement, distinct from equal quantities of support.",
+          "rival_reading": "Agreement may depend on an imagined legal obligation; disagreement may depend on an imagined life-saving improvement for the larger group. The stem does not establish those facts.",
+          "probe": "What kind of service and improvement did you imagine? Would your answer differ if everyone already had access to the service?",
+          "reading_ids": [
+            "EX-R01",
+            "EX-R12"
+          ]
+        },
+        {
+          "id": "CR-13D",
+          "claim_type": "Normative / institutional",
+          "en": "A public service has met its access obligations if it follows published accessibility standards, even when some disabled people still cannot use it.",
+          "vi": "Một dịch vụ công đã hoàn thành nghĩa vụ bảo đảm khả năng tiếp cận nếu tuân thủ các tiêu chuẩn tiếp cận được công bố, ngay cả khi một số người khuyết tật vẫn không thể sử dụng dịch vụ đó.",
+          "distinction": "Compliance with a specified standard versus effective access for particular users. WCAG supplies an example that formal conformance can leave needs unmet, not an answer to this normative claim.",
+          "rival_reading": "Disagreement can reflect doubts about the standard's adequacy; agreement can concern legal certainty or limits on what a service can reasonably provide, rather than approval of exclusion.",
+          "probe": "Is meeting a rule the same as meeting an obligation? What would justify an exception, and who should decide?",
+          "reading_ids": [
+            "EX-R06",
+            "EX-R01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-14",
+      "title": "Household authority, unpaid care, and gendered roles",
+      "research_question": "What makes household divisions fair, what claims arise from unpaid care, and can observed gender roles identify natural preferences?",
+      "contrast_and_probe": "Separate a freely chosen division of tasks from authority over common resources, a care-based claim from charity, and an explanation of gender differences from endorsement of them. Ask whether the reader assumed marriage, two genders, one culture, or a legally dependent spouse; none is a general eligibility rule for this bank.",
+      "risks": "These four stems do not cover gender or sexuality comprehensively. Money, free agreement, care, and a secure exit need concrete paraphrase tests. A formally available exit can still be costly; unequal earnings do not prove coercion. CR-14D intentionally raises a contested inference and does not assert that biology or social institutions alone explain gender. Independent feminist, queer, disability, and affected-reader review remains necessary. Mill's historical arguments are not a proxy for contemporary feminism; Pateman remains a reading proposal.",
+      "tradition_tensions": [
+        {
+          "lens": "Liberal autonomy and voluntary household specialization",
+          "argument": "Adults may choose unequal tasks without an outsider dictating an equal division.",
+          "internal_disagreement": "Liberal accounts disagree about which material conditions make choice sufficiently free and what obligations survive a formally voluntary agreement."
+        },
+        {
+          "lens": "Feminist political economy and care-based entitlement",
+          "argument": "Unpaid care helps make paid earnings possible and can ground claims to income and authority.",
+          "internal_disagreement": "Feminist approaches disagree over wages for care, shared property, public services, labor-market participation, and whether an observed preference is adaptive."
+        },
+        {
+          "lens": "Family stewardship and contribution-based authority",
+          "argument": "Responsibility for earning and sustaining a household may be offered as a reason for differentiated decision roles.",
+          "internal_disagreement": "Communitarian and conservative arguments need not give the higher earner final authority; some defend mutual duties or care-based authority instead. Do not assign this lens to every endorsement."
+        }
+      ],
+      "reading_ids": [
+        "EX-R02",
+        "EX-R11",
+        "EX-R12"
+      ],
+      "statements": [
+        {
+          "id": "CR-14A",
+          "claim_type": "Normative",
+          "en": "When adults have secure ways to live separately, a division of paid work and unpaid care that they freely agree is fair, even if one person does nearly all the care.",
+          "vi": "Khi những người trưởng thành có điều kiện bảo đảm để sống riêng, sự phân chia việc có thu nhập và việc chăm sóc không hưởng lương mà họ tự nguyện thỏa thuận là công bằng, ngay cả khi một người làm gần như toàn bộ việc chăm sóc.",
+          "distinction": "Voluntary agreement and a secure exit as sufficient grounds of fairness despite unequal tasks. This adds conditions of household consent to CR-04's duties to dependents.",
+          "rival_reading": "Agreement may mean outsiders should not interfere rather than that the arrangement is fair. Disagreement may concern lost opportunities despite the stipulated secure exit.",
+          "probe": "Could an arrangement be freely chosen but unfair? What did secure living separately include?",
+          "reading_ids": [
+            "EX-R02",
+            "EX-R11",
+            "EX-R12"
+          ]
+        },
+        {
+          "id": "CR-14B",
+          "claim_type": "Normative / economic",
+          "en": "An adult who gives up earnings to care for family members is entitled to a share of the income another adult earns during that period.",
+          "vi": "Một người trưởng thành từ bỏ thu nhập để chăm sóc người trong gia đình có quyền được hưởng một phần thu nhập mà người trưởng thành khác kiếm được trong thời gian đó.",
+          "distinction": "Care as a basis of entitlement to another household member's earnings, rather than help granted at the earner's discretion. The share and legal mechanism remain unspecified.",
+          "rival_reading": "Agreement may presuppose a prior promise or a spouse's legal rights; disagreement may still support an independent public care income.",
+          "probe": "Would the claim remain without a prior promise? Does it depend on marriage, and who did you imagine earning the income?",
+          "reading_ids": [
+            "EX-R11",
+            "EX-R02"
+          ]
+        },
+        {
+          "id": "CR-14C",
+          "claim_type": "Normative / institutional",
+          "en": "The adult who contributes most of a household's money should have the final say in major household spending decisions.",
+          "vi": "Người trưởng thành đóng góp phần lớn tiền của hộ gia đình nên có quyền quyết định cuối cùng về các khoản chi tiêu lớn của hộ.",
+          "distinction": "Cash contribution as a basis of final authority, distinct from expertise, consultation, equal voting, or ownership of entirely personal spending money.",
+          "rival_reading": "Agreement may be conditional on responsibility for debts; disagreement may allow separate personal accounts while rejecting authority over common resources.",
+          "probe": "Does earning more mean knowing more about the household's needs? What decision did you consider major?",
+          "reading_ids": [
+            "EX-R02",
+            "EX-R11"
+          ]
+        },
+        {
+          "id": "CR-14D",
+          "claim_type": "Explanatory / ontological",
+          "en": "A long-standing difference between women's and men's family roles is evidence of different natural inclinations, even when those roles have carried unequal rewards.",
+          "vi": "Sự khác biệt lâu đời giữa vai trò của phụ nữ và nam giới trong gia đình là bằng chứng cho những thiên hướng tự nhiên khác nhau, ngay cả khi các vai trò ấy được hưởng lợi ích không ngang nhau.",
+          "distinction": "Inference from a persistent social pattern to natural inclinations under unequal incentives. It extends CR-01 beyond how political goals are formed to what observed social arrangements can reveal about human nature.",
+          "rival_reading": "Agreement may treat the pattern as weak evidence rather than proof. Disagreement need not deny all biological differences or individual choices. Neither answer implies approval of any role assignment.",
+          "probe": "How strong is the evidence? What observation could distinguish natural inclination from adaptation to rewards or restrictions?",
+          "reading_ids": [
+            "EX-R02",
+            "EX-R11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-21",
+      "title": "Social entities, collective agency, and relations",
+      "research_question": "What kinds of things exist in social explanation: continuing institutions, individual actors, organized collective goals, and relations that constitute positions?",
+      "contrast_and_probe": "Use concrete examples before abstract labels. Ask what persists when officeholders change, whether a collective goal requires a shared personal desire, whether a group must recognize itself, and whether changing relations can change a social position without changing beliefs. Unlike CR-01, these items concern the units and relations of social reality rather than the origins of political goals.",
+      "risks": "These are difficult philosophical distinctions, not a left–right scale. A legal convention, a useful explanatory model, a causal power, and a literally existing collective mind are different claims. Recognition may mean self-identification, outsiders' recognition, or enforceable rules. Material relations do not imply economic determinism. Interviews must separate ontology from moral permission and methodological convenience. Marx, Weber, and Gramsci links remain proposed readings until their exact passages are checked.",
+      "tradition_tensions": [
+        {
+          "lens": "Methodological individualism and interpretive sociology",
+          "argument": "Accounts of institutions should remain connected to people's actions and the meanings actors attach to them.",
+          "internal_disagreement": "Explaining through individuals does not require denying institutions, social relationships, or the causal effects of rules; Weber is a reading proposal, not an endorsement label."
+        },
+        {
+          "lens": "Relational and historical-materialist approaches",
+          "argument": "Ownership, labor, and dependence can constitute positions even when people do not identify with those positions.",
+          "internal_disagreement": "These approaches disagree about causal primacy, the autonomy of politics and culture, and how collective organization emerges from a shared position."
+        },
+        {
+          "lens": "Institutional and emergent accounts of collective agency",
+          "argument": "Rules and relations can sustain commitments and patterns that outlive particular officeholders or differ from members' personal wishes.",
+          "internal_disagreement": "Accepting collective action does not settle whether organizations literally have minds, who may represent them, or whether their actions are legitimate."
+        }
+      ],
+      "reading_ids": [
+        "EX-R08",
+        "EX-R10",
+        "EX-R16",
+        "EX-R17",
+        "EX-R18"
+      ],
+      "statements": [
+        {
+          "id": "CR-21A",
+          "claim_type": "Ontological / institutional",
+          "en": "An institution can remain the same institution, with the same commitments, even after every person working in it has been replaced.",
+          "vi": "Một thiết chế có thể vẫn là chính thiết chế đó, với những cam kết như cũ, ngay cả sau khi toàn bộ người làm việc trong đó đã được thay thế.",
+          "distinction": "Institutional continuity beyond continuity of individual personnel. It asks what persists, not whether successors ought to honor every promise.",
+          "rival_reading": "Agreement may refer only to legal naming conventions; disagreement may concern a change of institutional purpose rather than personnel turnover itself.",
+          "probe": "What must stay the same for the institution to continue? Would a name alone be enough?",
+          "reading_ids": [
+            "EX-R17",
+            "EX-R08"
+          ]
+        },
+        {
+          "id": "CR-21B",
+          "claim_type": "Ontological / collective agency",
+          "en": "An organization can pursue a goal that none of its members personally wants.",
+          "vi": "Một tổ chức có thể theo đuổi một mục tiêu mà không thành viên nào thực sự muốn đạt được.",
+          "distinction": "Collective patterns or commitments that need not reproduce any member's personal preference. Coordination rules, strategic interaction, and inherited commitments can be competing explanations.",
+          "rival_reading": "Agreement may describe unintended outcomes rather than pursuit of a goal; disagreement may reserve goal for a conscious individual intention.",
+          "probe": "Give an example. Is the outcome merely happening, or is the organization taking steps to achieve it? Who could change those steps?",
+          "reading_ids": [
+            "EX-R17",
+            "EX-R18"
+          ]
+        },
+        {
+          "id": "CR-21C",
+          "claim_type": "Ontological / relational",
+          "en": "People can move into a different social class because their relationships of ownership and work change, even if their personal beliefs do not change.",
+          "vi": "Con người có thể chuyển sang một giai cấp xã hội khác vì quan hệ sở hữu và lao động của họ thay đổi, ngay cả khi niềm tin cá nhân không thay đổi.",
+          "distinction": "Social position constituted through material relations rather than self-description alone. This does not claim that class explains every political action.",
+          "rival_reading": "Agreement may use class as an income band; disagreement may use it as inherited status or cultural identity. Those definitions must be recorded rather than treated as mistakes.",
+          "probe": "If self-employed people become employees while their income and beliefs stay the same, has their social position changed? Which meaning of class are you using?",
+          "reading_ids": [
+            "EX-R16",
+            "EX-R17"
+          ]
+        },
+        {
+          "id": "CR-21D",
+          "claim_type": "Ontological / recognition",
+          "en": "A social group exists only if the people assigned to it recognize that they belong to it.",
+          "vi": "Một nhóm xã hội chỉ tồn tại nếu những người được xếp vào nhóm đó nhận biết rằng họ thuộc về nhóm ấy.",
+          "distinction": "Self-recognition as a necessary condition of a social group, contrasted with externally imposed classification or shared relations that people do not recognize.",
+          "rival_reading": "Agreement may concern an organized community rather than every analytical category; disagreement may describe a classifier's convenience without granting the group independent agency.",
+          "probe": "Can people be treated as a group by institutions without seeing themselves as one? Does a shared position make them capable of acting together?",
+          "reading_ids": [
+            "EX-R16",
+            "EX-R17",
+            "EX-R18"
+          ]
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "CR-S07",
+      "title": "Who directs the additional participation support?",
+      "cluster_id": "CR-13",
+      "role_id": "public_servant",
+      "locality": "urban",
+      "briefing": {
+        "en": "**Surroundings.** You administer a disability-support program in a large city of your assigned fictional country. Twenty adults use additional assistance to attend community activities. Their existing assistance, access protections, and immediate safety needs are funded separately and stay unchanged. Each adult can express their choices, with communication support where needed.\n\n**Your role and powers.** You are a non-elected service officer authorized to choose one of three approved delivery arrangements for a voluntary twelve-week extension. You cannot reduce existing support, override anyone's decisions, or compel participation. The twenty adults have agreed to enter this pilot under whichever arrangement is selected; any can decline a visit without losing existing assistance.\n\n**What is fixed.** The extension has 120 fictional funding units each week. Quotes include travel, communication support, accessible meetings, and administration except the separately stated peer-board cost. All workers meet the same competence and safety requirements. Three qualified individual providers have appointments available. No arrangement has established superior outcomes in this city. Unspent support for someone who declines is held for that person during the pilot, not diverted to another participant.\n\n**Decision.** Which approved arrangement would you implement? Each costs exactly 120 units per week. You may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "**Bối cảnh.** Bạn quản lý một chương trình hỗ trợ người khuyết tật tại một thành phố lớn của quốc gia giả định được giao. Hai mươi người trưởng thành sử dụng hỗ trợ bổ sung để tham gia hoạt động cộng đồng. Phần hỗ trợ hiện có, các bảo đảm tiếp cận và nhu cầu an toàn trước mắt của họ có kinh phí riêng và không thay đổi. Mỗi người đều có thể thể hiện lựa chọn của mình, với hỗ trợ giao tiếp khi cần.\n\n**Vai trò và thẩm quyền.** Bạn là viên chức phụ trách dịch vụ, không giữ chức vụ dân cử, được quyền chọn một trong ba cách cung cấp đã được phê duyệt cho chương trình bổ sung tự nguyện kéo dài mười hai tuần. Bạn không được giảm hỗ trợ hiện có, quyết định thay người nhận hoặc buộc họ tham gia. Hai mươi người đã đồng ý tham gia thử nghiệm theo phương án được chọn; bất kỳ ai cũng có thể từ chối một buổi hỗ trợ mà không mất phần hỗ trợ hiện có.\n\n**Những điều giữ nguyên.** Chương trình có 120 đơn vị kinh phí giả định mỗi tuần. Báo giá bao gồm đi lại, hỗ trợ giao tiếp, các cuộc họp dễ tiếp cận và quản lý, trừ khoản chi riêng cho ban đại diện được nêu dưới đây. Mọi nhân viên đáp ứng cùng yêu cầu năng lực và an toàn. Có ba đơn vị cung cấp riêng lẻ đủ điều kiện và còn lịch trống. Chưa phương án nào được chứng minh cho kết quả tốt hơn tại thành phố này. Phần hỗ trợ chưa dùng khi một người từ chối được giữ lại cho người đó trong thời gian thử nghiệm, không chuyển cho người khác.\n\n**Quyết định.** Bạn sẽ triển khai cách cung cấp đã được phê duyệt nào? Mỗi cách tốn đúng 120 đơn vị mỗi tuần. Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Individual choice of provider and time",
+            "vi": "Từng người chọn đơn vị cung cấp và thời gian"
+          },
+          "description": {
+            "en": "Give each adult a six-unit weekly allowance usable only for this support. At three units per hour, each receives two hours and chooses the provider, available appointment, and activity.",
+            "vi": "Cấp cho mỗi người khoản sáu đơn vị mỗi tuần chỉ dùng cho hỗ trợ này. Với giá ba đơn vị mỗi giờ, mỗi người nhận hai giờ và tự chọn đơn vị cung cấp, lịch còn trống và hoạt động."
+          },
+          "tradeoff": {
+            "en": "People control their own arrangements but receive fewer support hours than under the pooled packages.",
+            "vi": "Mỗi người tự quyết định cách hỗ trợ nhưng nhận ít giờ hơn so với các phương án gộp nguồn lực."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Pooled service with individual preferences recorded",
+            "vi": "Dịch vụ chung có ghi nhận sở thích của từng người"
+          },
+          "description": {
+            "en": "Contract one team at two units per hour. Each adult receives three hours. The team fixes a weekly timetable after consulting everyone; within their slot, each person chooses the activity and may refuse it.",
+            "vi": "Ký hợp đồng với một nhóm nhân viên giá hai đơn vị mỗi giờ. Mỗi người nhận ba giờ. Nhóm ấn định lịch hằng tuần sau khi hỏi ý kiến mọi người; trong khung giờ của mình, mỗi người chọn hoạt động và có thể từ chối."
+          },
+          "tradeoff": {
+            "en": "Everyone receives the most hours, but individuals cannot change the team's fixed appointment times or choose a different provider.",
+            "vi": "Mọi người nhận số giờ nhiều nhất, nhưng không thể đổi khung giờ cố định của nhóm hoặc chọn đơn vị cung cấp khác."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "A user-governed pooled service",
+            "vi": "Dịch vụ chung do người sử dụng cùng quản lý"
+          },
+          "description": {
+            "en": "Spend twenty units on accessible peer-board administration and one hundred on support at two units per hour: two and a half hours per adult. All twenty adults have an equal vote over the timetable and provider, with an independent route to challenge exclusion. Individuals choose their activity and can refuse visits.",
+            "vi": "Dùng hai mươi đơn vị cho hoạt động dễ tiếp cận của ban đại diện người sử dụng và một trăm đơn vị mua hỗ trợ với giá hai đơn vị mỗi giờ: mỗi người hai giờ rưỡi. Cả hai mươi người có quyền biểu quyết ngang nhau về lịch và đơn vị cung cấp, cùng một kênh độc lập để yêu cầu xem xét việc bị loại trừ. Từng người chọn hoạt động và có thể từ chối các buổi hỗ trợ."
+          },
+          "tradeoff": {
+            "en": "Users share control but each gets half an hour less than in the staff-run pool, and a person can lose a vote about the timetable.",
+            "vi": "Người sử dụng cùng quyết định nhưng mỗi người nhận ít hơn nửa giờ so với dịch vụ chung do nhân viên điều hành, và một người có thể thuộc phía thiểu số khi biểu quyết lịch."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Individual control over support",
+          "More support time within the same budget",
+          "Shared control over the service",
+          "Confidence in a provider or decision process",
+          "Protection when an individual disagrees with others",
+          "Other reason"
+        ],
+        "vi": [
+          "Quyền tự quyết cách hỗ trợ",
+          "Có nhiều giờ hỗ trợ hơn trong cùng ngân sách",
+          "Cùng quyết định về dịch vụ",
+          "Tin tưởng đơn vị cung cấp hoặc quy trình quyết định",
+          "Bảo vệ người không đồng ý với những người khác",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Putting aside your responsibility as the service officer, which package do you personally prefer under the same budget, consent rules, and support needs? This is optional and may be the same choice.",
+        "vi": "Tạm gác trách nhiệm viên chức, cá nhân bạn thích phương án nào trong cùng điều kiện ngân sách, đồng ý tham gia và nhu cầu hỗ trợ? Câu này không bắt buộc; bạn có thể chọn giống câu trước."
+      },
+      "variant": {
+        "id": "CR-S07-V1",
+        "description": "Replace the fact that three qualified individual providers have appointments available with one qualified individual provider having the same appointment availability.",
+        "invariants": "Hold appointment availability, prices, hours, competence, safety, existing support, consent, the pooled team, and peer-board rules fixed.",
+        "interpretation_limit": "An editorial contrast in provider choice, not a causal estimate of autonomy. A changed answer could reflect inferred competition or reliability; ask about those assumptions.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "No option establishes respect or disrespect for disabled people, a judgment about capacity, or a preferred welfare regime. Quantity, individual scheduling, collective voice, and expected reliability can explain the same choice. National authorization and disability-led feasibility review remain pending; the stated prices are invented scenario facts, not estimates of real services.",
+      "comprehension_probes": [
+        "Who decides the activity under B?",
+        "How many hours does each adult receive under each arrangement?",
+        "Can anyone lose existing assistance by refusing the extension?",
+        "Does a vote in C guarantee that every person gets their preferred time?"
+      ],
+      "reading_ids": [
+        "EX-R01",
+        "EX-R12"
+      ]
+    },
+    {
+      "id": "CR-S08",
+      "title": "Who controls the additional household grant?",
+      "cluster_id": "CR-14",
+      "role_id": "constituent",
+      "locality": "rural",
+      "briefing": {
+        "en": "**Surroundings.** In a rural district of your assigned fictional country, a voluntary mutual-aid association is distributing an additional grant to twelve two-adult households caring for a dependent relative. The same adult does most unpaid care in each household; ten of these primary carers are women and two are men. These facts describe this group only. The other adult does some care and contributes more cash income. Existing income, essential care, and public entitlements are unchanged.\n\n**Your role and powers.** You are an ordinary resident and association member. Your household is not eligible for this grant. You have one vote on the grant rule and cannot order anyone to change their family arrangements. A majority selects one of three approved rules. Every recipient adult has agreed to the voting procedure, understands all three rules, and may decline the new grant without losing other support.\n\n**What is fixed.** The fund contains 120 fictional money units: ten per household under every rule. Fees and administration are paid separately. Every adult can use an individual account; the joint account requires both adults to authorize withdrawals. The grant is additional unrestricted money, not wages owed or reimbursement for an earlier expense. All arrangements are lawful in this fictional exercise. No reliable evidence shows which rule produces greater household well-being.\n\n**Decision.** Which rule would you vote for? The vote allocates control of this grant only; it does not settle ownership of other income or change anyone's care duties. You may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "**Bối cảnh.** Tại một huyện nông thôn của quốc gia giả định được giao, một hội tương trợ tự nguyện cấp khoản hỗ trợ bổ sung cho mười hai hộ, mỗi hộ có hai người trưởng thành chăm sóc một người thân cần hỗ trợ. Trong mỗi hộ, cùng một người đảm nhận phần lớn việc chăm sóc không hưởng lương; mười người chăm sóc chính là phụ nữ và hai người là nam giới. Đây chỉ là đặc điểm của nhóm này. Người trưởng thành còn lại có làm một phần việc chăm sóc và đóng góp nhiều thu nhập bằng tiền hơn. Thu nhập hiện có, việc chăm sóc thiết yếu và các quyền lợi công không thay đổi.\n\n**Vai trò và thẩm quyền.** Bạn là cư dân bình thường và thành viên của hội. Hộ của bạn không thuộc diện nhận khoản này. Bạn có một phiếu chọn quy tắc cấp tiền và không có quyền buộc ai thay đổi việc gia đình. Đa số chọn một trong ba quy tắc đã được chấp thuận. Mỗi người trưởng thành nhận hỗ trợ đã đồng ý với thủ tục biểu quyết, hiểu cả ba quy tắc và có thể từ chối khoản mới mà không mất hỗ trợ khác.\n\n**Những điều giữ nguyên.** Quỹ có 120 đơn vị tiền giả định: mỗi hộ nhận mười đơn vị theo bất kỳ quy tắc nào. Phí và chi phí quản lý có kinh phí riêng. Mọi người trưởng thành đều có thể sử dụng tài khoản cá nhân; tài khoản chung cần cả hai người cho phép rút tiền. Đây là tiền bổ sung không bị giới hạn mục đích sử dụng, không phải tiền lương còn nợ hay hoàn trả chi phí trước đó. Mọi cách đều hợp pháp trong tình huống giả định này. Chưa có bằng chứng đáng tin cậy cho biết quy tắc nào đem lại lợi ích lớn hơn cho hộ gia đình.\n\n**Quyết định.** Bạn sẽ bỏ phiếu cho quy tắc nào? Phiếu chỉ quyết định quyền sử dụng khoản này; không quyết định quyền sở hữu thu nhập khác hoặc thay đổi nghĩa vụ chăm sóc của ai. Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Give control to the main unpaid carer",
+            "vi": "Trao quyền sử dụng cho người chăm sóc chính không hưởng lương"
+          },
+          "description": {
+            "en": "Pay all ten units into the primary carer's individual account. That person decides whether to spend, save, or share the grant.",
+            "vi": "Chuyển cả mười đơn vị vào tài khoản riêng của người chăm sóc chính. Người đó quyết định chi tiêu, tiết kiệm hay chia sẻ khoản tiền."
+          },
+          "tradeoff": {
+            "en": "This recognizes the larger care contribution and provides independent resources, but the other adult has no guaranteed control over any part of the grant.",
+            "vi": "Cách này ghi nhận phần chăm sóc lớn hơn và tạo nguồn lực độc lập, nhưng người trưởng thành còn lại không được bảo đảm quyền sử dụng phần nào của khoản tiền."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Give each adult an equal personal share",
+            "vi": "Chia đều cho mỗi người một phần riêng"
+          },
+          "description": {
+            "en": "Pay five units into each adult's individual account. Each independently controls their share.",
+            "vi": "Chuyển năm đơn vị vào tài khoản riêng của mỗi người. Mỗi người tự quyết định phần của mình."
+          },
+          "tradeoff": {
+            "en": "Both adults gain independent resources, but the rule gives the larger unpaid-care contribution no extra recognition.",
+            "vi": "Cả hai đều có nguồn lực độc lập, nhưng quy tắc không ghi nhận thêm phần chăm sóc không hưởng lương lớn hơn."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Require a shared decision on the whole grant",
+            "vi": "Yêu cầu cùng quyết định toàn bộ khoản tiền"
+          },
+          "description": {
+            "en": "Pay ten units into the joint account. Both adults must agree to any withdrawal.",
+            "vi": "Chuyển mười đơn vị vào tài khoản chung. Mọi lần rút tiền đều cần cả hai người đồng ý."
+          },
+          "tradeoff": {
+            "en": "Neither adult can spend the grant unilaterally, but disagreement can leave the whole grant unused and neither gains an independently controlled share.",
+            "vi": "Không ai được tự chi khoản tiền, nhưng bất đồng có thể khiến toàn bộ tiền chưa dùng được và không ai có phần do mình tự quyết định."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Recognition of unpaid care",
+          "Equal individual access to resources",
+          "Household decisions made together",
+          "Protection from dependence on another adult's permission",
+          "Expected practical benefit to the household",
+          "Other reason"
+        ],
+        "vi": [
+          "Ghi nhận việc chăm sóc không hưởng lương",
+          "Mỗi cá nhân tiếp cận nguồn lực ngang nhau",
+          "Cùng quyết định việc của hộ",
+          "Tránh phải phụ thuộc vào sự cho phép của người trưởng thành khác",
+          "Lợi ích thực tế dự kiến cho hộ",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Apart from your responsibility as an association voter, which rule do you personally prefer with the same twelve households, amount, and consent conditions? This optional answer may match your vote.",
+        "vi": "Ngoài trách nhiệm của người bỏ phiếu trong hội, cá nhân bạn thích quy tắc nào với cùng mười hai hộ, số tiền và điều kiện đồng ý tham gia? Câu trả lời không bắt buộc này có thể giống phiếu của bạn."
+      },
+      "variant": {
+        "id": "CR-S08-V1",
+        "description": "Reverse only the stated gender composition of the primary carers: two women and ten men, instead of ten women and two men.",
+        "invariants": "Keep the number of households, relative care and income contributions, grant amounts, account controls, role, consent, and all option text unchanged.",
+        "interpretation_limit": "A changed answer may involve inferred historical disadvantage, credibility, or gender norms. It is not by itself evidence of sexism, a stable gender attitude, or a causal effect in an unallocated fixed-order comparison.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "A vote expresses a grant-control preference under stated conditions, not a diagnosis of the reader's own family, gender identity, or support for a complete family-law regime. None of the three packages measures generosity: totals are equal. A majority vote is not unilateral authority. One may favor independent resources because of past disadvantage or practical convenience; ask the reason rather than assigning a political tradition. The paired preference adds little role contrast for an ordinary constituent and must not be interpreted as a separate authenticity measure. National legal and bilingual feasibility review remain pending.",
+      "comprehension_probes": [
+        "Does the primary carer always have to be a woman?",
+        "Does any rule force a change in care tasks?",
+        "Can either adult spend from C without the other's permission?",
+        "Is this a wage already owed to the carer?",
+        "Can your single vote guarantee that the rule is selected?"
+      ],
+      "reading_ids": [
+        "EX-R02",
+        "EX-R11"
+      ]
+    },
+    {
+      "id": "CR-S15",
+      "title": "Who carries the continuing water-system commitment?",
+      "cluster_id": "CR-21",
+      "role_id": "public_servant",
+      "locality": "rural",
+      "briefing": {
+        "en": "**Surroundings.** In a rural district of your assigned fictional country, twenty-four farms use one small irrigation system. Half are operated by their owners and half by tenants. All current operators belong to an existing water cooperative. Its legal identity continues when members change. A publicly funded upgrade will serve the same farms under each proposal. Current water access and minimum safety repairs are protected separately.\n\n**Your role and powers.** You are a non-elected district officer authorized to choose one of three approved forms for a twelve-month maintenance agreement. You cannot change land ownership, rents, water shares, or membership of the cooperative. The upgrade costs 120 fictional units; twenty-four more units fund monitoring and administration under each package. All affected owners and operators have accepted all three legal forms.\n\n**What is fixed.** Every package uses the same engineers, schedule, repair standard, total resources, and access protections. Maintenance duties here mean reporting faults and arranging access for the funded repair workers; no additional fees or unpaid repair labor are required. Each provides binding commitments and an appeal route. There is no reliable evidence that one form will perform better here. At least some farm operators may change during the year, but the timing and number are unknown. The three approved forms differ in what carries responsibility through those changes.\n\n**Decision.** Which form would you select? You are choosing a responsible unit for this agreement, not deciding whether any group deserves more water. You may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "**Bối cảnh.** Tại một huyện nông thôn của quốc gia giả định được giao, hai mươi bốn cơ sở canh tác dùng chung một hệ thống tưới nhỏ. Một nửa do chủ đất trực tiếp canh tác và một nửa do người thuê đất canh tác. Mọi người đang canh tác đều là thành viên của một hợp tác xã dùng nước hiện có. Tư cách pháp lý của hợp tác xã tiếp tục tồn tại khi thành viên thay đổi. Việc nâng cấp bằng ngân sách công phục vụ cùng các cơ sở trong mọi đề xuất. Quyền tiếp cận nước hiện có và sửa chữa an toàn tối thiểu được bảo đảm riêng.\n\n**Vai trò và thẩm quyền.** Bạn là viên chức cấp huyện không giữ chức vụ dân cử, được chọn một trong ba hình thức đã được phê duyệt cho thỏa thuận bảo trì mười hai tháng. Bạn không được thay đổi quyền sở hữu đất, tiền thuê, phần nước được hưởng hoặc tư cách thành viên hợp tác xã. Nâng cấp tốn 120 đơn vị giả định; thêm hai mươi bốn đơn vị dành cho giám sát và quản lý trong mỗi phương án. Mọi chủ đất và người canh tác liên quan đã chấp nhận cả ba hình thức pháp lý.\n\n**Những điều giữ nguyên.** Mỗi phương án dùng cùng kỹ sư, tiến độ, tiêu chuẩn sửa chữa, tổng nguồn lực và bảo đảm tiếp cận. Nghĩa vụ bảo trì ở đây là báo hỏng và sắp xếp cho nhân viên sửa chữa đã có kinh phí vào làm việc; không yêu cầu trả thêm phí hay sửa chữa không hưởng công. Mỗi cách đều có cam kết ràng buộc và quyền yêu cầu xem xét lại. Chưa có bằng chứng đáng tin cậy cho biết hình thức nào sẽ hoạt động tốt hơn ở đây. Một số người canh tác có thể thay đổi trong năm, nhưng chưa biết thời điểm và số lượng. Ba hình thức được phê duyệt khác nhau ở điều gì tiếp tục mang trách nhiệm khi có thay đổi đó.\n\n**Quyết định.** Bạn sẽ chọn hình thức nào? Bạn chọn đơn vị chịu trách nhiệm trong thỏa thuận này, không quyết định nhóm nào xứng đáng có nhiều nước hơn. Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Separate commitments by named operators",
+            "vi": "Cam kết riêng của từng người canh tác được nêu tên"
+          },
+          "description": {
+            "en": "Each current operator signs a separate commitment for their share of maintenance. A replacement operator signs a new commitment; the outgoing person remains responsible for obligations incurred during their own period.",
+            "vi": "Mỗi người đang canh tác ký cam kết riêng cho phần bảo trì của mình. Người thay thế ký cam kết mới; người rời đi vẫn chịu trách nhiệm về nghĩa vụ phát sinh trong thời gian của mình."
+          },
+          "tradeoff": {
+            "en": "Personal responsibility is explicit, but every replacement needs a new agreement and nobody represents the system as a single continuing actor. The funded administration covers these renewals.",
+            "vi": "Trách nhiệm cá nhân rõ ràng, nhưng mỗi lần thay người cần thỏa thuận mới và không ai đại diện cho cả hệ thống như một chủ thể liên tục. Kinh phí quản lý đã bao gồm các lần gia hạn này."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "One continuing commitment by the cooperative",
+            "vi": "Một cam kết liên tục của hợp tác xã"
+          },
+          "description": {
+            "en": "The cooperative signs for the whole system. Its commitment continues when members or officers change. Current members elect and can replace its officers under its existing rules.",
+            "vi": "Hợp tác xã ký cho toàn bộ hệ thống. Cam kết tiếp tục khi thành viên hoặc người điều hành thay đổi. Thành viên hiện tại bầu và có thể thay người điều hành theo quy tắc hiện có."
+          },
+          "tradeoff": {
+            "en": "There is one continuing organization to hold accountable, but individual operators depend on its internal decision process to determine their contribution.",
+            "vi": "Có một tổ chức liên tục để yêu cầu chịu trách nhiệm, nhưng từng người canh tác phải dựa vào quy trình quyết định nội bộ để xác định phần đóng góp của mình."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Commitments attached to the relation of using water",
+            "vi": "Cam kết gắn với việc sử dụng nước"
+          },
+          "description": {
+            "en": "The agreement assigns each farm's share of maintenance to whoever is currently using its irrigation allocation. A new operator accepts the disclosed terms when choosing to use that allocation; an accessible district register records the change. No cooperative officer can alter these shares.",
+            "vi": "Thỏa thuận giao phần bảo trì của mỗi cơ sở cho người hiện đang sử dụng phần nước tưới của cơ sở đó. Người canh tác mới chấp nhận điều kiện đã công bố khi chọn sử dụng phần nước; sổ đăng ký cấp huyện dễ tiếp cận ghi nhận thay đổi. Người điều hành hợp tác xã không được đổi các phần này."
+          },
+          "tradeoff": {
+            "en": "Responsibility follows an ongoing use relationship rather than a named person or cooperative membership, but disputes about who is actually using an allocation require the district register and appeal process.",
+            "vi": "Trách nhiệm đi theo quan hệ sử dụng liên tục thay vì một người được nêu tên hoặc tư cách thành viên hợp tác xã, nhưng tranh chấp về người thực sự dùng phần nước cần dựa vào sổ đăng ký và quy trình yêu cầu xem xét."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Identifiable individual responsibility",
+          "Continuity beyond changes in personnel",
+          "Responsibilities arising from a continuing relationship",
+          "Confidence in the decision or appeal process",
+          "Expected practical reliability",
+          "Other reason"
+        ],
+        "vi": [
+          "Trách nhiệm cá nhân xác định rõ",
+          "Tính liên tục khi người tham gia thay đổi",
+          "Trách nhiệm phát sinh từ quan hệ liên tục",
+          "Tin tưởng quy trình quyết định hoặc xem xét lại",
+          "Độ tin cậy thực tế dự kiến",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Putting aside your administrative responsibility, which form do you personally prefer while keeping the same resources, rights, and obligations? You may choose the same form or leave this optional answer blank.",
+        "vi": "Tạm gác trách nhiệm hành chính, cá nhân bạn thích hình thức nào khi nguồn lực, quyền và nghĩa vụ giữ nguyên? Bạn có thể chọn giống trước hoặc không trả lời câu không bắt buộc này."
+      },
+      "variant": {
+        "id": "CR-S15-V1",
+        "description": "Replace the possibility of changes in farm operators with the fact that all twenty-four current operators will remain for the full twelve months.",
+        "invariants": "Keep cooperative continuity, owner/tenant composition, legal commitments, prices, engineering work, water shares, appeal rights, and every package's allocation rule fixed.",
+        "interpretation_limit": "This editorial contrast examines whether expected turnover mattered to the reading. A changed choice can reflect administrative expectations, not endorsement of an ontology; it is not a causal estimate without a reviewed allocation and analysis design.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "This is an author draft for probing how readers describe individuals, organizations, and relations in a concrete decision. Legal eligibility is stipulated, not inferred from a real country. Choosing B does not prove belief in a collective mind, choosing A does not deny institutions, and choosing C does not establish Marxism. Answers may be entirely pragmatic. A pilot must record the reader's account of what continues and who can act; if choices reflect only perceived paperwork or legal expertise, hold the scenario as a comprehension probe rather than an ontology indicator. Country-specific authorization, institutional realism, and translation review remain pending.",
+      "comprehension_probes": [
+        "What remains the same when cooperative officers change?",
+        "Does C change who owns land or how much water anyone receives?",
+        "Who signs a new agreement under A?",
+        "Does accepting a legal organization mean it has a mind like a person?",
+        "Which choice would change if nobody left during the year?"
+      ],
+      "reading_ids": [
+        "EX-R08",
+        "EX-R17",
+        "EX-R16"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "DEBATE-13",
+      "title": "Independence, choice, and usable access",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Record separate meanings of independence, priority for access, and the relation between standards and actual participation.",
+      "evidence_required": "Item-level responses to CR-13A/B/C/D, paraphrases, imagined cost and service assumptions, and disability-led wording review.",
+      "unsupported_inferences": "No disability-attitude score, legal-capacity judgment, empathy rating, institutional ideology, or validated capability measure follows from these answers.",
+      "item_ids": [
+        "CR-13A",
+        "CR-13B",
+        "CR-13C",
+        "CR-13D"
+      ]
+    },
+    {
+      "id": "DEBATE-14",
+      "title": "Household consent, care entitlement, and resource authority",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Distinguish judgments about freely agreed task divisions, claims from unpaid care, cash-based authority, and inferences about natural inclinations.",
+      "evidence_required": "Each statement response plus the reader's definition of household, free agreement, entitlement, and evidence. Preserve explanatory and normative answers separately.",
+      "unsupported_inferences": "No gender identity, family diagnosis, feminist/conservative classification, or approval of unequal legal status can be inferred from the cluster as a whole.",
+      "item_ids": [
+        "CR-14A",
+        "CR-14B",
+        "CR-14C",
+        "CR-14D"
+      ]
+    },
+    {
+      "id": "DEBATE-21",
+      "title": "Units and relations of social reality",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe whether and how the reader distinguishes institutional continuity, collective goals, relational class positions, and group self-recognition.",
+      "evidence_required": "Separate responses, concrete examples, and paraphrases distinguishing literal existence from legal convention, explanatory convenience, and moral legitimacy.",
+      "unsupported_inferences": "No ontology total, methodological competence score, Marxist/liberal identity, or inference that disagreement denies human agency. No claim that ontology alone determines political choice.",
+      "item_ids": [
+        "CR-21A",
+        "CR-21B",
+        "CR-21C",
+        "CR-21D"
+      ]
+    },
+    {
+      "id": "SCENARIO-07",
+      "title": "Control, support quantity, and shared governance",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Explore the reason for choosing individual provider control, pooled support hours, or collective service governance under equal cost and protected consent.",
+      "evidence_required": "Chosen package, optional personal preference, selected or volunteered reason, hour-budget comprehension, and understanding that existing support is unchanged.",
+      "unsupported_inferences": "No judgment of respect for disabled people, decisional capacity, personal welfare, or causal role effect; no superiority of the authored packages is established.",
+      "item_ids": [
+        "CR-S07"
+      ]
+    },
+    {
+      "id": "SCENARIO-08",
+      "title": "Who controls additional household resources",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the balance among care-based entitlement, equal personal shares, and jointly authorized spending for a fixed grant.",
+      "evidence_required": "Vote, reason, knowledge of account controls and equal totals, and clarification of assumptions about coercion, gender, marriage, and care.",
+      "unsupported_inferences": "No inference about the reader's own household, gender prejudice, complete family-law preference, generosity, or authentic-versus-role beliefs.",
+      "item_ids": [
+        "CR-S08"
+      ]
+    },
+    {
+      "id": "SCENARIO-15",
+      "title": "Responsibility carried by people, an organization, or a relationship",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Probe how a reader understands the continuity of commitments across personnel changes and why one responsible unit is preferred.",
+      "evidence_required": "Choice, reason, paraphrase of all three responsible units, understanding of unchanged water rights, and explicit distinction between legal practicality and a claim about social existence.",
+      "unsupported_inferences": "No direct ontology classification, claim of a collective mind, ideology label, causal turnover effect, or conclusion that one legal form is generally more effective. Hold as comprehension-only if the intended distinction is not understood.",
+      "item_ids": [
+        "CR-S15"
+      ]
+    }
+  ]
+}

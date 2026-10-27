@@ -1,0 +1,626 @@
+{
+  "version": "draft-2026-10-27",
+  "clusters": [
+    {
+      "id": "CR-15",
+      "title": "Emergency authority, renewal, and local discretion",
+      "research_question": "What can authorize exceptional action, who must justify its continuation, and where should decision power sit when danger and knowledge are uneven?",
+      "contrast_and_probe": "Separate a claim about authority outside ordinary law from a choice among powers already authorized by law. Ask whether protection, prior authorization, an expiry rule, or local knowledge supplies the decisive reason. CR-15A and CR-15B deliberately expose a possible conflict; do not reverse-score them into a single trait. Ask which emergency, power, and severity the reader imagined before interpreting an answer.",
+      "risks": "Emergency wording can invite the reader to imagine war, disease, crime, or disaster with very different stakes. Temporary can imply an effective expiry or an unenforceable promise. Legal can be confused with morally justified. An answer may concern predicted harm or trust in specific leaders rather than a general account of authority. None of these responses establishes support for repression, a preferred regime, or willingness to relinquish non-derogable rights. The proposed lawful road-closure scenario does not directly test willingness to act outside law.",
+      "tradition_tensions": [
+        {
+          "lens": "Liberal constitutional arguments",
+          "argument": "Prior authorization, enforceable limits, and contestable decisions can protect people against emergency powers that become ordinary practice.",
+          "internal_disagreement": "Liberal arguments also differ on executive prerogative when law cannot anticipate urgent needs; Locke's account prevents treating all discretionary action as uniquely anti-liberal. A contemporary sunset or judicial-review mechanism is an author proposal, not a quotation from Locke."
+        },
+        {
+          "lens": "Protection-centered accounts of political authority",
+          "argument": "Concentrated command can be defended as a means to provide protection and prevent conflicting decisions during danger.",
+          "internal_disagreement": "Hobbes's relation between protection and obedience does not establish endorsement of every leader or every restriction. His theory of sovereignty is not a theory of modern temporary emergency legislation."
+        },
+        {
+          "lens": "Decentralist and dispersed-knowledge arguments",
+          "argument": "People close to changing conditions may act on useful information before a central authority can verify it.",
+          "internal_disagreement": "Local discretion can also create cross-boundary costs or reproduce local domination; recognizing dispersed knowledge does not decide who should have final authority."
+        }
+      ],
+      "reading_ids": [
+        "EX-R03",
+        "EX-R04",
+        "EX-R13",
+        "EX-R15"
+      ],
+      "statements": [
+        {
+          "id": "CR-15A",
+          "claim_type": "Normative / political authority",
+          "en": "When a serious threat may spread before elected representatives can meet, a government leader can be justified in taking temporary powers that ordinary law does not grant.",
+          "vi": "Khi một mối đe dọa nghiêm trọng có thể lan rộng trước khi các đại biểu dân cử kịp họp, việc người đứng đầu chính quyền tạm thời sử dụng những quyền hạn mà pháp luật thông thường không trao có thể là chính đáng.",
+          "distinction": "Possible justification for exceptional executive discretion outside ordinary authorization, rather than approval of the exercise of existing emergency powers. Adds a timing and authorization problem beyond CR-12B's general performance-based legitimacy claim.",
+          "rival_reading": "Agreement may assume a power narrowly necessary to protect life, enforceable later accountability, or a harmless administrative shortcut; it does not establish approval of arbitrary detention or suspension of all limits. Disagreement may doubt that a temporary power can be made temporary.",
+          "probe": "What exact power did you imagine? Does justified mean morally defensible, legally permitted, or excused after the event? Would the answer change if representatives could authorize it in time?",
+          "reading_ids": [
+            "EX-R15",
+            "EX-R04"
+          ]
+        },
+        {
+          "id": "CR-15B",
+          "claim_type": "Normative / political authority",
+          "en": "A public emergency does not by itself give a leader authority to suspend legal limits, even when waiting for authorization is likely to cause preventable harm.",
+          "vi": "Bản thân tình trạng khẩn cấp không trao cho người lãnh đạo quyền đình chỉ các giới hạn pháp luật, ngay cả khi việc chờ được cho phép có khả năng gây ra thiệt hại có thể tránh được.",
+          "distinction": "An authorization constraint despite an acknowledged cost of delay. The item asks whether the emergency itself supplies authority, not whether law should contain advance emergency procedures.",
+          "rival_reading": "Agreement can coexist with strong advance emergency powers or a willingness to act and accept legal consequences. Disagreement may concern a narrow rescue exception rather than unchecked executive power. The ICCPR is a proposed legal comparison, not an empirical scale or a complete theory of legitimacy.",
+          "probe": "Could advance authorization solve your objection? Is a leader entitled to act, merely excused for acting, or still answerable for breaking a rule? Which legal limit did you assume?",
+          "reading_ids": [
+            "EX-R04",
+            "EX-R15"
+          ]
+        },
+        {
+          "id": "CR-15C",
+          "claim_type": "Normative / institutional design",
+          "en": "Emergency restrictions should expire unless officials justify renewing them, even if renewal delays leave a temporary gap in protection.",
+          "vi": "Các hạn chế áp dụng trong tình trạng khẩn cấp nên hết hiệu lực nếu quan chức không đưa ra được căn cứ để gia hạn, ngay cả khi việc chậm gia hạn tạo ra một khoảng trống bảo vệ tạm thời.",
+          "distinction": "The burden and default rule for continuing a restriction, with a stated continuity cost. This differs from approval of the initial restriction or general support for oversight.",
+          "rival_reading": "Agreement may reflect distrust of officials or confidence that renewal can be organized efficiently. Disagreement may support strong review while rejecting automatic expiry during a continuing threat. Neither answer identifies the appropriate renewal period or acceptable risk.",
+          "probe": "Who should justify renewal, to whom, and with what evidence? Would you keep the same rule if the gap were known to last one hour rather than one week?",
+          "reading_ids": [
+            "EX-R04",
+            "EX-R15"
+          ]
+        },
+        {
+          "id": "CR-15D",
+          "claim_type": "Normative / allocation of authority",
+          "en": "During a national emergency, local officials should be allowed to depart from the common response plan using information the national government cannot verify in time.",
+          "vi": "Trong tình trạng khẩn cấp toàn quốc, quan chức địa phương nên được phép làm khác kế hoạch ứng phó chung dựa trên thông tin mà chính quyền trung ương không kịp kiểm chứng.",
+          "distinction": "Permission to act on local knowledge under time pressure. Unlike CR-06C, this asks how authority should be allocated rather than whether information is dispersed.",
+          "rival_reading": "Agreement may assume competent local officers and limited effects on neighboring areas; disagreement may concern coordination failures rather than disbelief in local knowledge. Neither response establishes a preference for federalism across all policy areas.",
+          "probe": "Would your answer change if a local decision could block an escape route used by a neighboring district? What information and review should still be required?",
+          "reading_ids": [
+            "EX-R13",
+            "EX-R03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-16",
+      "title": "Data consent, collective effects, and decision authority",
+      "research_question": "When data about some people changes decisions affecting others, what roles should individual permission, affected communities, independent oversight, and human reconsideration have?",
+      "contrast_and_probe": "Separate consent to collect a record, authority over later use, effects on non-contributors, and the right to challenge a particular decision. Ask whether the answer would change if an analysis were accurate but shifted power or burdens. An individual can favor useful data analysis while rejecting a particular governance arrangement; these are not privacy-versus-progress endpoints.",
+      "risks": "Data may evoke surveillance, a harmless count, commercial profiling, or medical research. Accuracy does not establish fairness, legitimate purpose, or an effective remedy. Human review may be imagined as careful reconsideration or a rubber stamp. The propositions do not test technical literacy or infer support for censorship. W3C Privacy Principles describe normative web-governance concerns; they neither validate these items nor establish the efficacy of any offered institution.",
+      "tradition_tensions": [
+        {
+          "lens": "Individual-rights and contractual arguments",
+          "argument": "Informed permission and meaningful control over one's own records can protect personal independence and voluntary exchange.",
+          "internal_disagreement": "Individual-rights arguments differ over whether a person's permission can authorize effects on others, whether consent under unequal bargaining power is meaningful, and whether some uses should be prohibited regardless of consent."
+        },
+        {
+          "lens": "Democratic and republican arguments",
+          "argument": "People affected by classifications or group-level inferences can claim a say over rules even if they supplied no records themselves.",
+          "internal_disagreement": "Collective governance can constrain organizations while empowering majorities over dissenters; a vote, an individual remedy, and a right of exit are different protections."
+        },
+        {
+          "lens": "Public-benefit and expertise-based arguments",
+          "argument": "Purpose-bound analysis and accountable expertise can support useful coordination while reducing some burdens of repeated permission requests.",
+          "internal_disagreement": "Claims of public benefit do not by themselves settle who defines the purpose, which harms count, or how an affected person can obtain a remedy. High average accuracy can coexist with concentrated errors."
+        }
+      ],
+      "reading_ids": [
+        "EX-R05",
+        "EX-R06"
+      ],
+      "statements": [
+        {
+          "id": "CR-16A",
+          "claim_type": "Normative / authorization",
+          "en": "An adult's informed permission is enough to authorize use of their data, even when patterns inferred from it influence decisions about people who did not share data.",
+          "vi": "Sự đồng ý của một người trưởng thành sau khi được cung cấp đầy đủ thông tin là đủ để cho phép sử dụng dữ liệu của họ, ngay cả khi các quy luật suy ra từ dữ liệu đó ảnh hưởng đến quyết định về những người không chia sẻ dữ liệu.",
+          "distinction": "Whether permission from the data contributor is sufficient when inference reaches non-contributors. This concerns the reach of authorization, not whether consent is unnecessary or whether every inference is harmful.",
+          "rival_reading": "Agreement may assume only beneficial or harmless group effects, additional background protections, or that the statement concerns collection alone. Disagreement may favor collective oversight, limits on permissible purposes, or compensation; it does not establish opposition to data analysis.",
+          "probe": "Who has given permission, and who may be affected? Does your answer concern collecting the original record or making a later decision about someone else?",
+          "reading_ids": [
+            "EX-R05"
+          ]
+        },
+        {
+          "id": "CR-16B",
+          "claim_type": "Normative / allocation of authority",
+          "en": "People affected by a system that ranks applications for essential services should share authority over its rules, even when independent experts judge the rankings accurate.",
+          "vi": "Những người chịu tác động của hệ thống xếp thứ tự các đơn xin sử dụng dịch vụ thiết yếu nên có quyền cùng quyết định quy tắc của hệ thống, ngay cả khi chuyên gia độc lập đánh giá thứ hạng là chính xác.",
+          "distinction": "Affected-public authority beyond technical accuracy. It adds classification and eligibility-rule governance to CR-05C's wider user-representation question without making expertise and participation opposites.",
+          "rival_reading": "Agreement may mean consultation rather than binding decision rights. Disagreement may favor elected representatives, enforceable individual appeals, or a concern that current applicants cannot represent future users. Accuracy may be read as morally correct allocation rather than correct prediction.",
+          "probe": "Does share authority mean being consulted, holding a vote, or having a veto? What is accurate here: predicting a fact or deciding who deserves a service?",
+          "reading_ids": [
+            "EX-R05"
+          ]
+        },
+        {
+          "id": "CR-16C",
+          "claim_type": "Normative / procedural protection",
+          "en": "A person affected by an automated public-service decision should be able to require human reconsideration under the same eligibility rules, even if the automated system makes fewer mistakes overall.",
+          "vi": "Người chịu tác động của một quyết định tự động về dịch vụ công nên có quyền yêu cầu con người xem xét lại theo cùng quy tắc đủ điều kiện, ngay cả khi hệ thống tự động nhìn chung mắc ít sai sót hơn.",
+          "distinction": "An individual procedural claim relative to aggregate error performance. Keeping the eligibility rules fixed separates reconsideration from a demand to change the substantive allocation policy.",
+          "rival_reading": "Agreement may concern explanations, unusual circumstances, or correcting errors concentrated in a group. Disagreement may favor an equally effective automated appeal or doubt that a human reviewer has real power. An answer does not establish that human review is more accurate or more accessible.",
+          "probe": "What must a reviewer be able to change for reconsideration to count? Would an equally accessible automated correction process satisfy your concern?",
+          "reading_ids": [
+            "EX-R05",
+            "EX-R06"
+          ]
+        },
+        {
+          "id": "CR-16D",
+          "claim_type": "Normative / public purpose",
+          "en": "A public-interest use of personal data can be justified without each affected person's permission when independent oversight can enforce a clearly limited purpose.",
+          "vi": "Việc sử dụng dữ liệu cá nhân vì lợi ích công có thể là chính đáng mà không cần sự đồng ý của từng người chịu tác động, khi một cơ chế giám sát độc lập có thể buộc việc sử dụng tuân thủ một mục đích được giới hạn rõ ràng.",
+          "distinction": "Whether enforceable purpose and oversight can supply a ground of justification beyond universal individual permission. This is a normative possibility claim, not a claim that an existing program meets those conditions.",
+          "rival_reading": "Agreement may be limited to particular low-risk public functions; disagreement may concern the definition of public interest, ineffective independence, or a non-waivable personal claim. An affected person and a data contributor need not be the same person.",
+          "probe": "Who defines the public interest, and what could oversight stop? Is your objection to using data without permission or to the claimed safeguards not being credible?",
+          "reading_ids": [
+            "EX-R05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-22",
+      "title": "What warrants political knowledge under uncertainty?",
+      "research_question": "What makes an expectation or explanation credible, how should informed disagreement change confidence, and where do empirical findings stop short of choosing political ends?",
+      "contrast_and_probe": "Keep predictive reliability, causal explanation, disagreement among informed peers, and evaluative judgment separate. Ask what would count against a claim and whether the respondent is discussing knowledge, practical action, or moral approval. Unlike CR-06, this cluster does not rank statistics against testimony or ask where useful information is held. Do not grade agreement as scientific literacy or combine the four claims into an epistemology score.",
+      "risks": "Words such as reliable, explanation, knowledge, and important may carry different thresholds across readers. Broad propositions may draw general assent without revealing a specific standard; interview probes must test that possibility. A reader may reasonably accept several standards for different tasks. Skepticism about one causal claim is not science denial; recognition of a value judgment is not denial of facts. The causal-inference, peer-disagreement, and Weber references remain unverified reading proposals. A political choice under uncertainty cannot by itself identify the epistemic rule that produced it. Vietnamese uses xu hướng lặp lại rather than quy luật for pattern to avoid implying an exceptionless law; independent readers should still check whether it is heard as a time trend rather than a repeated relationship.",
+      "tradition_tensions": [
+        {
+          "lens": "Predictive and causal approaches to social knowledge",
+          "argument": "Stable patterns can guide expectations, while causal claims ask what would change under a different intervention or condition.",
+          "internal_disagreement": "Predictive usefulness need not establish an intervention effect; a well-supported causal claim may still leave its mechanism uncertain. Requiring a full mechanism for every practical decision can also demand more than the available evidence permits."
+        },
+        {
+          "lens": "Conciliatory and steadfast responses to informed disagreement",
+          "argument": "Disagreement by a comparably informed researcher can be evidence about the limits of one’s own judgment.",
+          "internal_disagreement": "Researchers disagree on how much confidence to reduce and when apparently equal expertise conceals relevant differences. Treating peers seriously does not require averaging every political opinion or giving uninformed denial equal weight."
+        },
+        {
+          "lens": "Interpretive and value-conscious social inquiry",
+          "argument": "An account can clarify meanings, relations, or patterned exclusion without predicting every individual outcome; choices about which consequences matter also require evaluative commitments.",
+          "internal_disagreement": "Interpretation still needs evidence and exposure to rival accounts. Acknowledging values does not make all factual claims equally credible, and empirical findings can reveal consequences that cause people to reconsider their values."
+        }
+      ],
+      "reading_ids": [
+        "EX-R17",
+        "EX-R19",
+        "EX-R20"
+      ],
+      "statements": [
+        {
+          "id": "CR-22A",
+          "claim_type": "Epistemic / grounds for expectation",
+          "en": "A reliable pattern in social data is enough to justify expecting that pattern to continue, even when its cause is not understood.",
+          "vi": "Một xu hướng lặp lại đáng tin cậy trong dữ liệu xã hội là đủ căn cứ để kỳ vọng xu hướng đó tiếp tục, ngay cả khi chưa hiểu nguyên nhân của nó.",
+          "distinction": "Predictive warrant without an understood causal process. This is not a claim that changing a variable used by a predictive model will change the outcome, or that prediction should determine political priorities.",
+          "rival_reading": "Agreement may assume stable conditions, while disagreement may anticipate changes in institutions or behavior. Readers may use reliable to mean already causally established, making the proposition circular. Neither answer demonstrates statistical competence.",
+          "probe": "What makes the pattern reliable? Would your answer change if officials acted on it and thereby changed the conditions that produced it? Does expecting an outcome tell us how to cause a different one?",
+          "reading_ids": [
+            "EX-R19"
+          ]
+        },
+        {
+          "id": "CR-22B",
+          "claim_type": "Epistemic / disagreement",
+          "en": "When equally well-informed researchers reach opposite conclusions from the same evidence, each should lower their confidence even if neither finds an error in their own reasoning.",
+          "vi": "Khi các nhà nghiên cứu có mức độ nắm thông tin ngang nhau đi đến kết luận trái ngược từ cùng bằng chứng, mỗi người nên giảm mức độ chắc chắn của mình, ngay cả khi không ai tìm thấy lỗi trong lập luận của bản thân.",
+          "distinction": "The evidential significance of disagreement under an explicit peer condition. This differs from choosing an expert over a layperson or assigning equal weight to every public claim.",
+          "rival_reading": "Agreement may call only for a small confidence adjustment; disagreement may concern hidden differences in assumptions or the possibility that one conclusion is much better supported. Readers may refuse the stipulated equality of information rather than endorse steadfastness.",
+          "probe": "How much would confidence change, and why? Are you assuming one researcher has information or a relevant skill that the other lacks? Would lowering confidence require abandoning the conclusion?",
+          "reading_ids": [
+            "EX-R20"
+          ]
+        },
+        {
+          "id": "CR-22C",
+          "claim_type": "Epistemic / explanation and prediction",
+          "en": "An explanation of a pattern of social exclusion can count as knowledge even if it cannot predict precisely which individual will be excluded next.",
+          "vi": "Một cách giải thích xu hướng loại trừ lặp lại trong xã hội có thể được xem là tri thức, ngay cả khi không dự đoán chính xác cá nhân nào sẽ bị loại trừ tiếp theo.",
+          "distinction": "Knowledge of patterned relations relative to exact individual prediction. The item leaves open what evidence supports the explanation and does not exempt it from possible criticism or revision.",
+          "rival_reading": "Agreement may accept probabilistic causal knowledge or interpretive understanding; those are distinct reasons. Disagreement may interpret cannot predict as inability to support any observable implication rather than inability to forecast an exact person.",
+          "probe": "What evidence would support or undermine the explanation? Is failure to name the next affected person the same as failure to predict any observable pattern? Could two explanations fit the same pattern?",
+          "reading_ids": [
+            "EX-R19"
+          ]
+        },
+        {
+          "id": "CR-22D",
+          "claim_type": "Epistemic / facts and evaluation",
+          "en": "Evidence about a policy’s consequences cannot by itself settle which of those consequences should matter most.",
+          "vi": "Chỉ riêng bằng chứng về hệ quả của một chính sách không thể quyết định hệ quả nào nên được coi trọng nhất.",
+          "distinction": "Distinguishing empirical consequences from the evaluative priority assigned to them. This does not claim that facts are irrelevant to values or that policy judgments need no evidence.",
+          "rival_reading": "Agreement may concern genuinely conflicting ends, while disagreement may assume a shared prior objective that makes the ranking straightforward. Some readers may mean that all values are arbitrary; that stronger position is not established here.",
+          "probe": "If everyone agreed that a policy raised income but reduced time available for care, what further judgment would be needed? Could new evidence still lead you to revise your priorities?",
+          "reading_ids": [
+            "EX-R17"
+          ]
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "CR-S09",
+      "title": "Who can close a route before the flood arrives?",
+      "cluster_id": "CR-15",
+      "role_id": "national_leader",
+      "locality": "urban",
+      "briefing": {
+        "en": "**Your surroundings.** Three neighboring urban districts in your assigned fictional country share river crossings. A flood forecast estimates a one-in-three chance that ordinary roads beside the river will become unsafe within six hours. The same forecast and road sensors are available under every plan. A mistaken closure can delay paid work and deliveries; a late closure can put road users in danger. No plan's total harm is known in advance.\n\n**Your role and authority.** You are the national leader responsible for choosing one of three coordination arrangements already authorized by the legislature. A temporary law permits closures of the specified ordinary roads for the next 48 hours. You cannot extend that period, order detention, compel evacuation, or change ordinary rights outside these road powers. Emergency vehicles have protected routes under all plans.\n\n**What is fixed.** Each arrangement uses the same 30 trained staff and the same approved budget of 200 fictional credits. Sensors, public warnings, transport assistance, compensation rules, written reasons for closures, and access to a binding review within 24 hours are identical. All staff can communicate with district teams. The differences below concern who may authorize a closure and when an additional review occurs. Closing a road is not a judgment that every person in the district must leave.\n\n**Which arrangement would you authorize for the 48-hour period?** Choose A, B, or C; you may instead answer uncertain, none of these represents my decision, or skip. The forecasts and costs are exercise facts, not claims about any real country.",
+        "vi": "**Bối cảnh của bạn.** Ba quận đô thị liền kề trong quốc gia giả định được giao cùng sử dụng các điểm vượt sông. Dự báo lũ ước tính xác suất một phần ba rằng các đường giao thông thông thường ven sông sẽ trở nên không an toàn trong vòng sáu giờ. Mọi phương án đều có cùng dự báo và cảm biến theo dõi đường. Đóng đường không cần thiết có thể làm chậm công việc có trả lương và việc giao hàng; đóng quá muộn có thể gây nguy hiểm cho người đi đường. Chưa biết trước tổng thiệt hại của từng phương án.\n\n**Vai trò và thẩm quyền của bạn.** Bạn là người lãnh đạo quốc gia, có trách nhiệm chọn một trong ba cách phối hợp đã được cơ quan lập pháp cho phép. Một đạo luật tạm thời cho phép đóng các đường thông thường đã được chỉ định trong 48 giờ tới. Bạn không có quyền kéo dài thời hạn này, ra lệnh giam giữ, buộc sơ tán hoặc thay đổi các quyền thông thường ngoài phạm vi quyền đóng đường. Xe cấp cứu và phương tiện ứng cứu có tuyến đi được bảo đảm trong mọi phương án.\n\n**Những điều giữ nguyên.** Mỗi cách phối hợp sử dụng cùng 30 nhân sự đã được đào tạo và cùng ngân sách được duyệt là 200 đơn vị tiền giả định. Cảm biến, cảnh báo công khai, hỗ trợ đi lại, quy tắc bồi thường, việc nêu lý do đóng đường bằng văn bản và quyền yêu cầu xem xét có hiệu lực ràng buộc trong vòng 24 giờ đều như nhau. Mọi nhân sự đều có thể liên lạc với các đội ở quận. Khác biệt bên dưới là ai được phép quyết định đóng đường và khi nào diễn ra một đợt xem xét bổ sung. Đóng đường không đồng nghĩa với quyết định buộc mọi người trong quận phải rời đi.\n\n**Bạn sẽ cho phép áp dụng cách phối hợp nào trong 48 giờ?** Chọn A, B hoặc C; bạn cũng có thể trả lời chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua. Dự báo và chi phí là dữ kiện của bài tập, không phải nhận định về một quốc gia thực."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "One command, followed by review",
+            "vi": "Một đầu mối quyết định, xem xét sau"
+          },
+          "description": {
+            "en": "A national coordinator can immediately close a specified road after receiving sensor data and district reports. An independent panel reviews each closure within six hours and can end it. District teams implement the coordinator's decisions.",
+            "vi": "Một người điều phối cấp quốc gia có thể đóng ngay đường đã được chỉ định sau khi nhận dữ liệu cảm biến và báo cáo của quận. Một hội đồng độc lập xem xét mỗi quyết định đóng đường trong vòng sáu giờ và có quyền chấm dứt việc đóng. Các đội ở quận thực hiện quyết định của người điều phối."
+          },
+          "tradeoff": {
+            "en": "Decisions can be coordinated across boundaries without waiting for prior panel approval. A mistaken closure can operate for up to six hours before that panel reviews it, and district teams cannot independently depart from the decision.",
+            "vi": "Có thể phối hợp quyết định giữa các quận mà không phải chờ hội đồng phê duyệt trước. Một quyết định đóng đường sai có thể được áp dụng đến sáu giờ trước khi hội đồng xem xét, và các đội ở quận không được tự làm khác quyết định đó."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "District decisions with a boundary referee",
+            "vi": "Quận quyết định, có người phân xử vấn đề liên quận"
+          },
+          "description": {
+            "en": "Each district's designated officer can immediately close specified roads inside that district for up to two hours at a time, using local reports as well as sensors. A national referee resolves conflicting cross-boundary instructions within 45 minutes and can reverse a closure.",
+            "vi": "Viên chức được chỉ định của mỗi quận có thể đóng ngay các đường đã được chỉ định trong quận, mỗi lần tối đa hai giờ, dựa trên cả báo cáo tại chỗ và cảm biến. Một người phân xử cấp quốc gia giải quyết chỉ dẫn mâu thuẫn giữa các quận trong vòng 45 phút và có quyền hủy quyết định đóng đường."
+          },
+          "tradeoff": {
+            "en": "Local officers can act on details that the center has not verified. Conflicting directions at a shared crossing can remain in force for up to 45 minutes; neighboring users may receive incompatible advice during that interval.",
+            "vi": "Viên chức địa phương có thể hành động dựa trên chi tiết mà trung ương chưa kiểm chứng. Chỉ dẫn mâu thuẫn ở điểm vượt sông dùng chung có thể còn hiệu lực đến 45 phút; trong thời gian đó, người đi đường từ các quận có thể nhận lời hướng dẫn không thống nhất."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Independent approval before a closure",
+            "vi": "Phê duyệt độc lập trước khi đóng đường"
+          },
+          "description": {
+            "en": "The national coordinator proposes closures using the same reports and sensors. A standing independent panel can approve, narrow, or reject each proposal before it takes effect; each review takes 30 minutes. The coordinator then issues one instruction across the affected districts.",
+            "vi": "Người điều phối cấp quốc gia đề xuất đóng đường dựa trên cùng báo cáo và cảm biến. Một hội đồng độc lập thường trực có thể chấp thuận, thu hẹp hoặc bác từng đề xuất trước khi áp dụng; mỗi lần xem xét mất 30 phút. Sau đó người điều phối ban hành một chỉ dẫn thống nhất cho các quận liên quan."
+          },
+          "tradeoff": {
+            "en": "An independent body checks the scope before people are restricted. The same 30-minute wait applies to a well-founded urgent proposal, during which the proposed closure cannot begin.",
+            "vi": "Một cơ quan độc lập kiểm tra phạm vi trước khi hạn chế việc đi lại. Cả một đề xuất khẩn cấp có căn cứ vững chắc cũng phải chờ 30 phút; trong thời gian đó chưa được bắt đầu đóng đường theo đề xuất."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Fast and consistent action across districts",
+          "Use of knowledge available to local officers",
+          "An independent check before a restriction starts",
+          "A workable way to correct a mistaken closure",
+          "The likely balance between road danger and disruption",
+          "Other reason"
+        ],
+        "vi": [
+          "Hành động nhanh và thống nhất giữa các quận",
+          "Sử dụng hiểu biết mà viên chức địa phương có được",
+          "Kiểm tra độc lập trước khi bắt đầu hạn chế",
+          "Cách khả thi để sửa một quyết định đóng đường sai",
+          "Cân bằng dự kiến giữa nguy hiểm trên đường và gián đoạn sinh hoạt",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Optional: setting aside your assigned responsibility as national leader, which of these same arrangements would you personally prefer under the same forecast, powers, resources, and consequences? You may be uncertain, find none representative, or skip. This does not change your role decision.",
+        "vi": "Không bắt buộc: tạm gác trách nhiệm được giao của người lãnh đạo quốc gia, cá nhân bạn muốn chọn cách phối hợp nào trong chính các phương án này, với cùng dự báo, thẩm quyền, nguồn lực và hệ quả? Bạn có thể chưa chắc, thấy không phương án nào phù hợp, hoặc bỏ qua. Câu trả lời này không thay đổi quyết định theo vai trò."
+      },
+      "variant": {
+        "id": "CR-S09-V1",
+        "description": "In an editorial alternate, replace only the one-in-three probability of roads becoming unsafe within six hours with a two-in-three probability. Write and independently review both language versions before any use.",
+        "invariants": "Keep the six-hour horizon, affected roads, powers, 48-hour legal expiry, staff, budget, warning/support/compensation provisions, reports, all option wording, review delays, and response choices fixed.",
+        "interpretation_limit": "This explores sensitivity to stated danger probability, not an individual's authoritarianism or a causal effect of occupying national office. Numeric comprehension, imagined severity, trust in forecasts, presentation order, and learning can also change a response. No implemented or validated alternate form is supplied.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "A choice describes a preferred coordination and review arrangement among three lawful, bounded packages. It cannot establish willingness to take extra-legal powers, support for emergency repression, or a national political identity. Same budget does not make mechanisms equivalent: review timing, local discretion, and cross-boundary coordination differ. Reasons must remain optional and must not be tied to particular options. Different reasons may lead to the same package. Country-specific authorization wrappers, transport feasibility, and both language drafts need independent review before allocation to a study form.",
+      "comprehension_probes": [
+        "Can the leader extend the 48-hour power or order detention? Identify the stated limits.",
+        "Which review happens before a closure, which follows it, and what review right is common to all packages?",
+        "Explain one-in-three in your own words without converting it to certainty about which road will flood.",
+        "Would choosing another package mean that you value safety less, or could you expect a different mechanism to protect people better?",
+        "In Vietnamese, check whether người phân xử is understood to have binding reversal power and whether hội đồng độc lập is being imagined as an infallible court."
+      ],
+      "reading_ids": [
+        "EX-R03",
+        "EX-R04",
+        "EX-R13",
+        "EX-R15"
+      ]
+    },
+    {
+      "id": "CR-S10",
+      "title": "Who decides what the travel records may reveal?",
+      "cluster_id": "CR-16",
+      "role_id": "civil_society",
+      "locality": "urban",
+      "briefing": {
+        "en": "**Your surroundings.** A civil society coalition in a large city of your assigned fictional country holds travel diaries volunteered by 1,200 adults from six neighborhoods. The city will use aggregate analyses to plan the locations and times of a fixed number of evening bus services. Decisions can benefit or inconvenience residents who supplied no diary. The records describe past trips; they do not reveal everyone's future needs.\n\n**Your role and authority.** You lead the coalition. Its members have authorized you to choose one of three governance packages for the next twelve weeks. A written agreement makes your chosen package binding on the coalition's analysts and the city's use of the supplied analysis. You cannot add bus funding, compel anyone to provide records, change city law, or publish identifiable trips.\n\n**What is fixed.** Each package costs the full 240-credit administration grant. The same trained analysts, secure storage, accessible paper and telephone participation routes, and technical checks apply. Existing permission covers the stated transport-planning use; in every package, contributors may withdraw their records from future analyses without penalty. No employer, police body, or commercial advertiser may obtain the records. Records are deleted after twelve weeks. The bus budget, legal protections, and prohibition on individual eligibility decisions are identical. The additional governance choices below do not remove these baseline protections.\n\n**Which package would you choose?** Choose A, B, or C; you may instead answer uncertain, none of these represents my decision, or skip. A package's predicted effect on data quality and trust is uncertain. The exercise does not ask you to endorse data collection generally.",
+        "vi": "**Bối cảnh của bạn.** Một liên minh các nhóm xã hội dân sự ở thành phố lớn trong quốc gia giả định được giao đang giữ nhật ký đi lại do 1.200 người trưởng thành ở sáu khu phố tự nguyện cung cấp. Thành phố sẽ dùng phân tích tổng hợp để chọn địa điểm và giờ chạy cho một số lượng chuyến xe buýt buổi tối đã cố định. Quyết định có thể mang lại lợi ích hoặc gây bất tiện cho cư dân không cung cấp nhật ký. Dữ liệu mô tả các chuyến đi trước đây, không cho biết nhu cầu tương lai của tất cả mọi người.\n\n**Vai trò và thẩm quyền của bạn.** Bạn lãnh đạo liên minh. Các thành viên đã giao bạn quyền chọn một trong ba cách quản lý dữ liệu cho mười hai tuần tới. Thỏa thuận bằng văn bản buộc các nhà phân tích của liên minh và việc thành phố sử dụng phân tích được cung cấp phải tuân thủ phương án bạn chọn. Bạn không có quyền tăng kinh phí xe buýt, ép ai cung cấp dữ liệu, thay đổi luật của thành phố hoặc công bố hành trình có thể nhận diện cá nhân.\n\n**Những điều giữ nguyên.** Mỗi phương án dùng hết khoản tài trợ quản lý 240 đơn vị tiền giả định. Mọi phương án có cùng các nhà phân tích đã được đào tạo, nơi lưu trữ an toàn, cách tham gia thuận tiện qua giấy và điện thoại, cùng các bước kiểm tra kỹ thuật. Sự đồng ý đã có bao gồm mục đích quy hoạch giao thông nêu trên; ở mọi phương án, người cung cấp có thể rút dữ liệu của mình khỏi các phân tích trong tương lai mà không bị phạt. Người sử dụng lao động, cơ quan công an và bên quảng cáo thương mại không được nhận dữ liệu. Dữ liệu được xóa sau mười hai tuần. Ngân sách xe buýt, các bảo vệ pháp luật và quy định cấm dùng dữ liệu để xét điều kiện được hưởng dịch vụ của từng cá nhân đều giống nhau. Các lựa chọn quản lý bổ sung bên dưới không xóa bỏ những bảo vệ cơ bản này.\n\n**Bạn sẽ chọn phương án nào?** Chọn A, B hoặc C; bạn cũng có thể trả lời chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua. Chưa biết chắc mỗi phương án sẽ ảnh hưởng ra sao đến chất lượng dữ liệu và lòng tin. Bài tập không yêu cầu bạn tán thành việc thu thập dữ liệu nói chung."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Ask contributors before each analysis",
+            "vi": "Hỏi lại người cung cấp trước mỗi phân tích"
+          },
+          "description": {
+            "en": "Send an accessible description of each proposed transport analysis to every contributor. Use only records whose contributors give fresh permission for that analysis. The grant funds explanations and follow-up through online, paper, and telephone routes.",
+            "vi": "Gửi mô tả dễ tiếp cận về từng phân tích giao thông dự kiến cho mọi người cung cấp. Chỉ dùng dữ liệu của những người đồng ý lại cho phân tích đó. Khoản tài trợ chi cho việc giải thích và liên hệ bổ sung qua mạng, giấy và điện thoại."
+          },
+          "tradeoff": {
+            "en": "Contributors gain control over each use of their records. Non-contributors receive no additional say over analyses that may affect their neighborhood, and low response to a request can leave some travel patterns poorly represented.",
+            "vi": "Người cung cấp có thêm quyền kiểm soát từng lần sử dụng dữ liệu của mình. Người không cung cấp không có thêm quyền tham gia quyết định về phân tích có thể ảnh hưởng đến khu phố của họ; ít người trả lời yêu cầu có thể khiến một số kiểu đi lại được phản ánh chưa đầy đủ."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Let a neighborhood panel authorize analyses",
+            "vi": "Để hội đồng khu phố cho phép các phân tích"
+          },
+          "description": {
+            "en": "Fund a 12-person panel selected by a public lottery from willing adult residents, with two seats per neighborhood and participation support. Contributors and non-contributors are both eligible. By majority vote, the panel may approve, narrow, or refuse an analysis within the agreed transport purpose; it cannot override an individual's withdrawal or baseline protections.",
+            "vi": "Cấp kinh phí cho hội đồng 12 người được chọn bằng bốc thăm công khai trong số cư dân trưởng thành tự nguyện, mỗi khu phố hai người, có hỗ trợ tham gia. Cả người có và không cung cấp dữ liệu đều được tham gia lựa chọn. Hội đồng biểu quyết theo đa số để chấp thuận, thu hẹp hoặc từ chối một phân tích trong mục đích giao thông đã thỏa thuận; hội đồng không được bác việc cá nhân rút dữ liệu hoặc xóa bỏ các bảo vệ cơ bản."
+          },
+          "tradeoff": {
+            "en": "People affected without supplying records gain a possible route into decisions. A resident may not be selected or may lose a vote, and the panel can block an analysis that other residents or analysts consider useful.",
+            "vi": "Người chịu tác động dù không cung cấp dữ liệu có thêm cơ hội tham gia quyết định. Một cư dân có thể không được chọn hoặc thuộc phía thiểu số khi biểu quyết; hội đồng có thể ngăn một phân tích mà cư dân khác hoặc nhà phân tích cho là hữu ích."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Use an independent steward with binding review",
+            "vi": "Dùng bên giám sát độc lập có quyền xem xét ràng buộc"
+          },
+          "description": {
+            "en": "Fund an independent data steward to check every proposed analysis against the agreed purpose, disclosure risk, and equal-treatment rules. Any resident can ask for a review without charge. The steward can require changes or stop an analysis, must explain decisions publicly without revealing personal data, and has no financial interest in a chosen bus route.",
+            "vi": "Cấp kinh phí cho một bên giám sát dữ liệu độc lập kiểm tra từng phân tích dự kiến theo mục đích đã thỏa thuận, nguy cơ lộ thông tin và quy tắc đối xử bình đẳng. Mọi cư dân có thể yêu cầu xem xét miễn phí. Bên giám sát có quyền yêu cầu sửa hoặc dừng phân tích, phải công khai lý do mà không tiết lộ dữ liệu cá nhân và không có lợi ích tài chính gắn với tuyến xe buýt được chọn."
+          },
+          "tradeoff": {
+            "en": "Contributors need not answer every new request, and all residents can challenge a proposed analysis. The steward applies the existing rules; residents gain neither a fresh individual approval of every use nor a collective vote to reject an otherwise permitted analysis.",
+            "vi": "Người cung cấp không phải trả lời từng yêu cầu mới, và mọi cư dân có thể đề nghị xem xét một phân tích dự kiến. Bên giám sát áp dụng quy tắc hiện có; cư dân không có thêm quyền cá nhân chấp thuận lại từng lần sử dụng hoặc quyền biểu quyết tập thể để bác một phân tích vốn được phép."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Control by the people whose records are used",
+          "A voice for residents affected without supplying records",
+          "Enforceable limits applied by an independent reviewer",
+          "Useful analysis with manageable participation demands",
+          "Protection for a person who disagrees with a group decision",
+          "Other reason"
+        ],
+        "vi": [
+          "Quyền kiểm soát của người có dữ liệu được sử dụng",
+          "Tiếng nói của cư dân chịu tác động nhưng không cung cấp dữ liệu",
+          "Giới hạn có thể cưỡng chế thực hiện do bên độc lập xem xét",
+          "Phân tích hữu ích với yêu cầu tham gia vừa sức",
+          "Bảo vệ người không đồng ý với quyết định của nhóm",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Optional: setting aside your responsibility as the coalition's leader, which of these same packages would you personally prefer under the same data permissions, budget, bus plans, protections, and consequences? You may be uncertain, find none representative, or skip. Your role decision remains separately recorded.",
+        "vi": "Không bắt buộc: tạm gác trách nhiệm lãnh đạo liên minh, cá nhân bạn muốn chọn phương án nào trong chính các phương án này, với cùng sự cho phép sử dụng dữ liệu, ngân sách, kế hoạch xe buýt, bảo vệ và hệ quả? Bạn có thể chưa chắc, thấy không phương án nào phù hợp, hoặc bỏ qua. Quyết định theo vai trò vẫn được ghi riêng."
+      },
+      "variant": {
+        "id": "CR-S10-V1",
+        "description": "In an editorial alternate, replace only the panel's authority to approve, narrow, or refuse analyses in option B with an advisory recommendation that the coalition's analysts may decline with a published explanation. This is an option-authority contrast, not a second complete scenario; both language versions still need drafting.",
+        "invariants": "Keep the data, users, collective effects, budget, panel selection and support, baseline consent/withdrawal protections, options A and C, transport-only purpose, bus resources, and all other facts fixed.",
+        "interpretation_limit": "The contrast explores whether respondents distinguish consultation from binding authority. A changed answer can also reflect trust, expected outcomes, or how the weakened package compares with the others; it cannot isolate a stable democracy score or establish causal effects without a separately designed study.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "The packages contrast added individual permission, collective authorization, and independent enforcement of shared baseline rules. They do not equate privacy with isolation, a vote with full representation, or expertise with neutrality. None permits unauthorized purposes or identifiable disclosure. This scenario does not test the human-reconsideration claim in CR-16C because it prohibits individual eligibility decisions; that question needs a separately reviewed scenario. Baseline group representation, the accessibility of participation routes, steward independence, and country-specific contractual enforceability remain review requirements. No political identity or technical competence follows from a package choice.",
+      "comprehension_probes": [
+        "Can people who supplied no diary still be affected by the bus plan? Which packages give them an additional route to influence or challenge the analysis?",
+        "Can the panel override an individual withdrawal, reveal identifiable trips, or permit advertising uses?",
+        "How does giving advice differ from being able to stop an analysis?",
+        "Could you choose the same package for a different reason from another reader? Which fact would change your choice?",
+        "In Vietnamese, distinguish bên giám sát dữ liệu from the analyst who runs a model; check whether có quyền xem xét ràng buộc clearly means the power to require changes or stop the use."
+      ],
+      "reading_ids": [
+        "EX-R05",
+        "EX-R06"
+      ]
+    },
+    {
+      "id": "CR-S16",
+      "title": "What would you act on when the evidence leaves two explanations?",
+      "cluster_id": "CR-22",
+      "role_id": "public_servant",
+      "locality": "urban",
+      "briefing": {
+        "en": "**Your surroundings.** You administer appointments for an existing public-support service in a large city of your assigned fictional country. Some residents miss appointments and must wait for a later date. Across six neighborhoods, records show higher attendance among residents who received a reminder call. Calls were not assigned by lottery: staff first called people who were easiest to reach. The records do not establish what would have happened to the same residents without a call.\n\nTwo researchers with equal access to the records and comparable relevant expertise disagree. One thinks reminders account for much of the difference; the other thinks reliable phone access and predictable working hours account for much of it. Neither has found a decisive error in the other’s analysis. Residents describe several barriers, including forgetting a date, work schedules, and difficulty arranging travel. These accounts identify possible mechanisms but do not establish how common each is.\n\n**Your role and authority.** You are a non-elected service officer authorized to choose one approved support package for the next two weeks. You are not being asked to certify which explanation is true. You cannot change eligibility, add money, make participation compulsory, or penalize someone for declining help. The choice must be made before stronger evidence can be collected.\n\n**What is fixed.** Each package uses exactly 40 additional staff-hours. Existing appointment hours, ordinary reminders, accessible booking, assistance, eligibility, and appeal rules continue under every package. The additional offers below go to residents with appointments due during the two weeks; nobody loses existing support. Within each package, a public lottery allocates offers if demand exceeds the stated capacity. The number of missed appointments prevented by each package is unknown. More offers do not guarantee more completed appointments.\n\n**Which package would you authorize now?** Choose A, B, or C; you may instead answer uncertain, none of these represents my decision, or skip. Keep your reason for acting separate from your confidence about what caused the earlier attendance difference.",
+        "vi": "**Bối cảnh của bạn.** Bạn phụ trách lịch hẹn cho một dịch vụ hỗ trợ công hiện có tại thành phố lớn trong quốc gia giả định được giao. Một số cư dân lỡ hẹn và phải chờ ngày khác. Dữ liệu ở sáu khu phố cho thấy người nhận cuộc gọi nhắc lịch có tỷ lệ đến hẹn cao hơn. Cuộc gọi không được phân bổ bằng bốc thăm: nhân viên gọi trước cho người dễ liên lạc nhất. Dữ liệu không xác định được điều gì sẽ xảy ra với chính những cư dân đó nếu họ không nhận cuộc gọi.\n\nHai nhà nghiên cứu có cùng quyền tiếp cận dữ liệu và chuyên môn liên quan tương đương không đồng ý với nhau. Một người cho rằng lời nhắc giải thích phần lớn khác biệt; người kia cho rằng khả năng liên lạc điện thoại ổn định và giờ làm việc có thể dự liệu giải thích phần lớn khác biệt. Chưa ai tìm thấy lỗi mang tính quyết định trong phân tích của người kia. Cư dân mô tả nhiều trở ngại, gồm quên ngày hẹn, lịch làm việc và khó sắp xếp đi lại. Các lời kể chỉ ra cơ chế có thể xảy ra nhưng chưa xác định được mức độ phổ biến của từng cơ chế.\n\n**Vai trò và thẩm quyền của bạn.** Bạn là viên chức phụ trách dịch vụ, không giữ chức vụ dân cử, được phép chọn một gói hỗ trợ đã phê duyệt cho hai tuần tới. Bạn không được yêu cầu xác nhận cách giải thích nào là đúng. Bạn không có quyền thay đổi điều kiện hưởng dịch vụ, tăng kinh phí, buộc tham gia hoặc phạt người từ chối giúp đỡ. Cần đưa ra lựa chọn trước khi có thể thu thập bằng chứng vững chắc hơn.\n\n**Những điều giữ nguyên.** Mỗi phương án dùng đúng 40 giờ nhân sự bổ sung. Giờ hẹn hiện có, lời nhắc thông thường, cách đặt lịch dễ tiếp cận, hỗ trợ, điều kiện hưởng và quy tắc yêu cầu xem xét lại đều tiếp tục trong mọi phương án. Hỗ trợ bổ sung bên dưới được đề nghị cho cư dân có lịch hẹn trong hai tuần; không ai mất hỗ trợ đang có. Nếu nhu cầu vượt số chỗ nêu trong phương án, các đề nghị được phân bổ bằng bốc thăm công khai. Chưa biết mỗi phương án sẽ ngăn được bao nhiêu trường hợp lỡ hẹn. Có nhiều đề nghị hơn không bảo đảm có nhiều người hoàn thành cuộc hẹn hơn.\n\n**Bạn sẽ cho phép triển khai phương án nào lúc này?** Chọn A, B hoặc C; bạn cũng có thể trả lời chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua. Hãy phân biệt lý do bạn hành động với mức độ chắc chắn về nguyên nhân của khác biệt tỷ lệ đến hẹn trước đây."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Offer additional reminder calls",
+            "vi": "Đề nghị thêm cuộc gọi nhắc lịch"
+          },
+          "description": {
+            "en": "Offer 80 residents an additional 30-minute staff contact, including attempts to reach them and an accessible explanation of the appointment. Staff can confirm or rearrange the booking within existing service hours.",
+            "vi": "Đề nghị 80 cư dân một lần liên hệ bổ sung dài 30 phút của nhân viên, bao gồm cố gắng liên lạc và giải thích dễ tiếp cận về lịch hẹn. Nhân viên có thể xác nhận hoặc đổi lịch trong giờ phục vụ hiện có."
+          },
+          "tradeoff": {
+            "en": "The package reaches the largest number of residents and acts on the observed association. It adds no evening appointments or individual travel planning, and the earlier association may partly reflect who was easy to contact.",
+            "vi": "Phương án tiếp cận số cư dân lớn nhất và hành động dựa trên mối liên hệ đã quan sát. Nó không thêm giờ hẹn buổi tối hoặc hỗ trợ lập kế hoạch đi lại riêng; mối liên hệ trước đây có thể phần nào phản ánh ai là người dễ liên lạc."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Offer evening appointments",
+            "vi": "Đề nghị lịch hẹn buổi tối"
+          },
+          "description": {
+            "en": "Offer 40 additional one-hour evening appointments. The same service and eligibility rules apply. Existing daytime appointments remain available; accepting an evening slot is optional.",
+            "vi": "Đề nghị thêm 40 cuộc hẹn buổi tối, mỗi cuộc một giờ. Dịch vụ và quy tắc đủ điều kiện không đổi. Lịch hẹn ban ngày vẫn có; nhận chỗ buổi tối là tự nguyện."
+          },
+          "tradeoff": {
+            "en": "The package directly changes a working-hours barrier reported by some residents. It reaches fewer people than extra calls and offers no additional help with travel or remembering the date.",
+            "vi": "Phương án trực tiếp thay đổi trở ngại về giờ làm việc mà một số cư dân nêu. Nó tiếp cận ít người hơn so với cuộc gọi bổ sung và không thêm hỗ trợ đi lại hoặc nhớ ngày hẹn."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Offer individual appointment planning",
+            "vi": "Đề nghị hỗ trợ lập kế hoạch đi hẹn cho từng người"
+          },
+          "description": {
+            "en": "Offer 20 residents two staff-hours each to identify their barriers and make a practical plan using existing booking and support services. Contact, accessible communication, and any staff travel must fit within those two hours; no new travel subsidy is available.",
+            "vi": "Đề nghị 20 cư dân, mỗi người hai giờ hỗ trợ của nhân viên để xác định trở ngại và lập kế hoạch thực tế bằng các dịch vụ đặt lịch và hỗ trợ hiện có. Liên hệ, giao tiếp dễ tiếp cận và mọi thời gian nhân viên di chuyển phải nằm trong hai giờ đó; không có khoản trợ cấp đi lại mới."
+          },
+          "tradeoff": {
+            "en": "The package can respond to different explanations rather than choosing one common remedy. It reaches the fewest residents, and identifying a barrier does not guarantee the existing services can remove it.",
+            "vi": "Phương án có thể đáp ứng nhiều cách giải thích khác nhau thay vì chọn một biện pháp chung. Nó tiếp cận ít cư dân nhất, và xác định được trở ngại không bảo đảm dịch vụ hiện có giải quyết được trở ngại đó."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "The observed pattern seems useful for predicting benefit",
+          "A proposed mechanism fits the barriers residents describe",
+          "A flexible response is preferable while informed researchers disagree",
+          "Reaching more residents with the available hours",
+          "Providing more help per person despite reaching fewer people",
+          "Other reason"
+        ],
+        "vi": [
+          "Mối liên hệ quan sát được có vẻ hữu ích để dự đoán lợi ích",
+          "Một cơ chế được đề xuất phù hợp với trở ngại cư dân mô tả",
+          "Nên ứng phó linh hoạt khi các nhà nghiên cứu nắm thông tin vẫn bất đồng",
+          "Tiếp cận nhiều cư dân hơn với số giờ hiện có",
+          "Giúp nhiều hơn cho mỗi người dù tiếp cận ít người hơn",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Optional: setting aside your assigned responsibility as service officer, which of these same packages would you personally prefer under the same evidence, hours, service rules, and consequences? You may be uncertain, find none representative, or skip. This is separate from both your role action and your view of the causal explanation.",
+        "vi": "Không bắt buộc: tạm gác trách nhiệm được giao của viên chức phụ trách dịch vụ, cá nhân bạn muốn chọn phương án nào trong chính các phương án này, với cùng bằng chứng, số giờ, quy tắc dịch vụ và hệ quả? Bạn có thể chưa chắc, thấy không phương án nào phù hợp, hoặc bỏ qua. Câu trả lời này tách biệt với cả hành động theo vai trò lẫn nhận định về cách giải thích nguyên nhân."
+      },
+      "variant": {
+        "id": "CR-S16-V1",
+        "description": "In an editorial alternate, replace only the historical call-allocation procedure with a correctly implemented lottery among all residents due for an appointment. The observed direction of the attendance difference remains the same. Fully author the revised evidence account and both language versions before use; do not silently imply that random allocation removes sampling uncertainty or proves the size of an effect.",
+        "invariants": "Keep the observed direction, six neighborhoods, available records, present two-week decision, current service rules, 40 staff-hours, the three packages and capacities, and all response options fixed. The historical allocation mechanism is the changed feature; its implications for the researchers’ disagreement must be explicitly reviewed rather than copied as a contradictory fact.",
+        "interpretation_limit": "This is an incomplete editorial contrast for reviewing causal warrant, not a ready-to-run controlled form. The explanatory passage would need reconciliation after the allocation change. A response difference could reflect perceived credibility, numerical uncertainty, or expected usefulness, and cannot identify a stable epistemic trait or a causal role effect.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "The decision mixes evidential warrant, expected service benefit, breadth of coverage, and intensity of help. No package is a pure measure of epistemology or a uniquely correct inference. Record the participant’s causal explanation and confidence separately through a neutral interview probe; agreement with an analyst is not an observed action. The existing observational comparison does not establish the call effect, and choosing calls can still be a defensible action under uncertainty. The proposed variant is explicitly incomplete until its evidence narrative is reconciled. Country-specific authority, access, and translation review remain pending.",
+      "comprehension_probes": [
+        "What does the attendance association show, and what does it leave unresolved? Does it show that reminders never help?",
+        "What explanation do you currently find most credible, and how certain are you? Record this separately from the chosen support package without treating confidence as a new score.",
+        "Could you choose the same package while being uncertain about the cause? Which value or practical consideration might justify that?",
+        "Which factual finding would change your causal judgment, and which would change your action even if that causal judgment stayed the same?",
+        "What do equally informed researchers and reliable evidence mean to you? In Vietnamese, check whether nguyên nhân is distinguished from mối liên hệ rather than treating both as an observed correlation."
+      ],
+      "reading_ids": [
+        "EX-R17",
+        "EX-R19",
+        "EX-R20"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "DEBATE-15",
+      "title": "Grounds and limits of emergency authority",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe separate judgments about extra-legal executive discretion, prior authorization despite delay, expiry and renewal burdens, and permission to use unverified local knowledge. Record the imagined threat and power rather than treating the cluster as a single emergency-authority scale.",
+      "evidence_required": "Item-level CR-15A/B/C/D responses, uncertainty and skips, plus paraphrases identifying what counts as authority, temporary power, legal limitation, and local deviation. Use the scenario only for its narrower lawful coordination contrast; independently review source links and both language drafts.",
+      "unsupported_inferences": "No authoritarianism diagnosis, regime preference, approval of arbitrary repression, country identification, willingness to violate non-derogable rights, or causal role effect follows. Claims about legal permission and moral justification are not interchangeable; the statement set is not a scored continuum.",
+      "item_ids": [
+        "CR-15A",
+        "CR-15B",
+        "CR-15C",
+        "CR-15D"
+      ]
+    },
+    {
+      "id": "SCENARIO-09",
+      "title": "Coordination and review under a bounded emergency power",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the selected lawful road-closure arrangement and stated reason, preserving its particular combination of central coordination, local discretion, and timing of independent review. Record any optional personal preference separately.",
+      "evidence_required": "CR-S09 action, optional reason and personal preference, comprehension of the 48-hour expiry and shared protections, forecast interpretation, and explicit recognition of each package's tradeoff. Author the proposed variant fully and review it before use; a variant instruction is not observed evidence.",
+      "unsupported_inferences": "The selected package does not reveal a uniquely liberal, authoritarian, federalist, or statist identity. It does not test extra-legal action, estimate a stable willingness to sacrifice rights, or identify the cause of a role/preference difference. No forecast accuracy or harm outcome is measured.",
+      "item_ids": [
+        "CR-S09"
+      ]
+    },
+    {
+      "id": "DEBATE-16",
+      "title": "Consent, collective effects, and governance of data-based decisions",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe separately the reach assigned to individual permission, affected-public decision rights, human reconsideration under fixed eligibility rules, and purpose-bound public-interest use without universal permission. Preserve which source of authorization or remedy is being endorsed.",
+      "evidence_required": "Individual CR-16A/B/C/D responses and probes distinguishing a contributor from an affected person, prediction from legitimate allocation, consultation from binding authority, and review from a guarantee of favorable treatment. Independent content and bilingual comprehension review remain required.",
+      "unsupported_inferences": "No privacy-versus-progress score, technology competence estimate, view about every use of AI, political ideology, or endorsement of a real data program follows. The normative source principles are not validation evidence, and technical accuracy does not demonstrate fairness or consent.",
+      "item_ids": [
+        "CR-16A",
+        "CR-16B",
+        "CR-16C",
+        "CR-16D"
+      ]
+    },
+    {
+      "id": "SCENARIO-10",
+      "title": "Authority over shared data with effects on non-contributors",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe which additional governance package the respondent chooses within the coalition's limited authority, with reasons about contributor control, affected residents, independent enforcement, participation burden, or minority protection kept distinct.",
+      "evidence_required": "CR-S10 package, optional reason and personal preference, comprehension of common consent/withdrawal rules and collective effects, and explanation of the difference between a binding panel and an advisory panel. The latter is only a proposed editorial variant until fully authored and reviewed.",
+      "unsupported_inferences": "No action uniquely identifies a tradition or establishes that a person understands data science. The choice does not establish approval of unlawful surveillance, rejection of all data sharing, or a causal effect of civil-society leadership. It provides no observation of human-review preferences for individual eligibility decisions.",
+      "item_ids": [
+        "CR-S10"
+      ]
+    },
+    {
+      "id": "DEBATE-22",
+      "title": "Standards of warrant, disagreement, and evaluative judgment",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe separate standards the respondent accepts for expecting a pattern to continue, adjusting confidence under informed disagreement, recognizing explanatory knowledge without exact individual prediction, and separating consequences from their evaluative ranking.",
+      "evidence_required": "CR-22A/B/C/D responses and neutral paraphrases clarifying reliability, peerhood, explanation, individual prediction, and importance. Identify contextual qualifications and evidence that would change the answer. The proposed readings and both language versions still require independent review.",
+      "unsupported_inferences": "No scientific-literacy grade, relativism diagnosis, pro-science or anti-science identity, political ideology, or one-dimensional epistemology score follows. Several claims can be accepted together. Agreement with the author is not comprehension, and awareness of uncertainty does not require political inaction.",
+      "item_ids": [
+        "CR-22A",
+        "CR-22B",
+        "CR-22C",
+        "CR-22D"
+      ]
+    },
+    {
+      "id": "SCENARIO-16",
+      "title": "Acting while causal explanation and policy priorities remain distinct",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the support package selected under unresolved observational evidence and the stated practical or epistemic reason, keeping the respondent’s causal judgment, confidence, and optional personal preference separate.",
+      "evidence_required": "CR-S16 action, reason if offered, neutral paraphrases of the association and competing explanations, and a separately recorded statement of causal confidence. Check whether the reader recognizes that different values can support the same action and that practical action need not certify a cause.",
+      "unsupported_inferences": "No package establishes methodological competence, science denial, epistemic virtue, or a stable causal-reasoning trait. The task does not estimate the effects of reminders or compare actual program effectiveness. An unreconciled editorial variant supplies no observation and cannot be allocated as a completed alternate form.",
+      "item_ids": [
+        "CR-S16"
+      ]
+    }
+  ]
+}

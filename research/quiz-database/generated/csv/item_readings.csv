@@ -27,3 +27,132 @@ premise-workplace-control,LEGACY:sep-property,contrast,"Investigate alternative 
 premise-contestable-power,LEGACY:sep-republicanism,background,Investigate how effective contestation relates to non-domination and how the argument applies across public and private institutions.
 premise-gradual-reform,LEGACY:sep-conservatism,background,Investigate arguments about preserving useful functions separately from moral approval of the status quo.
 premise-gradual-reform,LEGACY:sep-socialism,contrast,Look for disagreement within socialist approaches about paths of change; do not treat socialism as uniformly opposed to gradual reform.
+CR-13A,EX-R01,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13A,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13B,EX-R01,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13B,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13C,EX-R01,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13C,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13D,EX-R06,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-13D,EX-R01,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14A,EX-R02,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14A,EX-R11,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14A,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14B,EX-R11,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14B,EX-R02,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14C,EX-R02,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14C,EX-R11,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14D,EX-R02,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-14D,EX-R11,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21A,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21A,EX-R08,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21B,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21B,EX-R18,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21C,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21C,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21D,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21D,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-21D,EX-R18,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-S07,EX-R01,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S07,EX-R12,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S08,EX-R02,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S08,EX-R11,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S15,EX-R08,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S15,EX-R17,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S15,EX-R16,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-15A,EX-R15,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15A,EX-R04,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15B,EX-R04,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15B,EX-R15,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15C,EX-R04,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15C,EX-R15,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15D,EX-R13,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-15D,EX-R03,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-16A,EX-R05,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-16B,EX-R05,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-16C,EX-R05,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-16C,EX-R06,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-16D,EX-R05,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-22A,EX-R19,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-22B,EX-R20,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-22C,EX-R19,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-22D,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-S09,EX-R03,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S09,EX-R04,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S09,EX-R13,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S09,EX-R15,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S10,EX-R05,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S10,EX-R06,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S16,EX-R17,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S16,EX-R19,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S16,EX-R20,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-17A,EX-R07,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17A,EX-R08,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17A,EX-R13,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17B,EX-R08,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17B,EX-R14,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17C,EX-R08,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17C,EX-R13,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17D,EX-R07,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-17D,EX-R08,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18A,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18A,EX-R13,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18B,EX-R09,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18B,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18C,EX-R09,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18C,EX-R10,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18D,EX-R10,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-18D,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-23A,EX-R21,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-23B,EX-R22,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-23C,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-23D,EX-R23,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-S11,EX-R07,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S11,EX-R08,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S11,EX-R13,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S11,EX-R14,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S12,EX-R09,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S12,EX-R10,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S12,EX-R12,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S12,EX-R13,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S17,EX-R21,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S17,EX-R22,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S17,EX-R17,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S17,EX-R23,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-19A,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19A,EX-R13,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19B,EX-R13,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19B,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19C,EX-R08,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19C,EX-R10,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19C,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19D,EX-R12,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-19D,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20A,EX-R14,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20A,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20B,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20B,EX-R18,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20C,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20C,EX-R18,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20D,EX-R16,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20D,EX-R17,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-20D,EX-R18,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-S13,EX-R08,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S13,EX-R10,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S13,EX-R13,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S13,EX-R16,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S14,EX-R14,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S14,EX-R16,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S14,EX-R17,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S14,EX-R18,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-24A,EX-R25,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24A,EX-R27,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24B,EX-R24,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24B,EX-R25,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24C,EX-R25,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24C,EX-R26,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24D,EX-R24,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-24D,EX-R27,conceptual_background,Author-proposed connection; inspect source status and limits separately. This is not source endorsement or item validation.
+CR-S18,EX-R25,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S18,EX-R26,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.
+CR-S18,EX-R27,conceptual_background,Author-proposed conceptual connection. The fictional permissions and quantities are not historical or legal claims from this source.

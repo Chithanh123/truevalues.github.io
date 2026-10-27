@@ -1,6 +1,6 @@
 -- Author-facing content catalog. No participant answers or inferred identities.
 PRAGMA foreign_keys = ON;
-PRAGMA user_version = 1;
+PRAGMA user_version = 2;
 
 CREATE TABLE metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL) STRICT;
 CREATE TABLE source_files (
@@ -126,8 +126,42 @@ CREATE TABLE package_outcomes (
 ) STRICT;
 CREATE TABLE readings (
   id TEXT PRIMARY KEY, bibliographic_proposal TEXT NOT NULL, review_question TEXT NOT NULL,
-  verification TEXT NOT NULL CHECK(verification='unverified'),
+  verification TEXT NOT NULL CHECK(verification IN ('unverified','passage_inspected')),
   source_path TEXT NOT NULL REFERENCES source_files(path)
+) STRICT;
+-- Inspection records only what was read; it does not validate a proposed item.
+CREATE TABLE reading_evidence (
+  reading_id TEXT PRIMARY KEY REFERENCES readings(id), url TEXT NOT NULL,
+  source_kind TEXT NOT NULL CHECK(source_kind IN ('normative','theoretical','empirical','methodological')),
+  relevance TEXT NOT NULL, limits TEXT NOT NULL,
+  retrieval_status TEXT NOT NULL CHECK(retrieval_status IN ('blocked','not_attempted','retrieved')),
+  access_date TEXT, retrieval_note TEXT NOT NULL
+) STRICT;
+CREATE TABLE reading_passages (
+  reading_id TEXT NOT NULL REFERENCES reading_evidence(reading_id),
+  passage_number INTEGER NOT NULL CHECK(passage_number>0),
+  locator TEXT NOT NULL, excerpt TEXT NOT NULL, url TEXT NOT NULL,
+  sha256 TEXT NOT NULL CHECK(length(sha256)=64),
+  PRIMARY KEY(reading_id,passage_number)
+) STRICT;
+CREATE TABLE cluster_tensions (
+  cluster_id TEXT NOT NULL REFERENCES clusters(id),
+  display_order INTEGER NOT NULL CHECK(display_order>0),
+  lens TEXT NOT NULL, argument TEXT NOT NULL, internal_disagreement TEXT NOT NULL,
+  PRIMARY KEY(cluster_id,display_order)
+) STRICT;
+CREATE TABLE statement_review (
+  item_id TEXT PRIMARY KEY REFERENCES items(id), rival_reading TEXT NOT NULL,
+  comprehension_probe TEXT NOT NULL
+) STRICT;
+CREATE TABLE scenario_preference_prompts (
+  item_id TEXT NOT NULL REFERENCES items(id), language TEXT NOT NULL CHECK(language IN ('en','vi')),
+  prompt TEXT NOT NULL, PRIMARY KEY(item_id,language)
+) STRICT;
+CREATE TABLE scenario_probes (
+  item_id TEXT NOT NULL REFERENCES items(id),
+  display_order INTEGER NOT NULL CHECK(display_order>0), probe TEXT NOT NULL,
+  PRIMARY KEY(item_id,display_order)
 ) STRICT;
 CREATE TABLE cluster_readings (
   cluster_id TEXT NOT NULL REFERENCES clusters(id), reading_id TEXT NOT NULL REFERENCES readings(id),

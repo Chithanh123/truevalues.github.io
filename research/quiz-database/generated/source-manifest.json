@@ -14,8 +14,15 @@
   "js/translations/vi-items.js": "bcba9b78eb553383baa70f0f91928944fad3512d4a7b54ccfe34b4ecadc9666f",
   "js/translations/vi-worlds.js": "5cab8a14582ebc5222ea0c1585873eb64976f4d0c722933b7405e5b5d216e74e",
   "js/worlds.js": "1aec6e2f7d55c388e4fbbfd050f8de24199be83cbbe2cea036bbba93aad7cd0f",
-  "research/quiz-database/build.py": "54fa4a61134e393b848aa8ad626baa726f75f5da05a9a040199237b514ebcdc0",
+  "research/quiz-database/build.py": "8a968cc6db93a1e07543e33e83471e56422fd692ebdaeb14f86f859aa479ff5d",
   "research/quiz-database/draft-scenarios.json": "9d54fab5518f1f215f3f01fd8bd4de81c1f0ca77dc7ffcbc4c205403e8605bf7",
+  "research/quiz-database/expansion.py": "f58b4bee7ad4cb1cc8f8ad431c8a1ac5af01d3937d8a96c55aa3091c5eb1dba8",
+  "research/quiz-database/expansion/authority-digital.json": "ef4c82ba3a76cf497d55b135354a501887e12d6f802f35e978e5096079137f8b",
+  "research/quiz-database/expansion/base-superstructure.json": "00d882472b6a6f0dc57dc9a34d894b0b166b5f3169b0df23c93119ee4308ee67",
+  "research/quiz-database/expansion/care-family.json": "679b662e924f2580b1876e35677678ed5f4b8711735ce700a3b55dc0ed54c691",
+  "research/quiz-database/expansion/commons-work.json": "ef8a8ad3b970d19632dd484abc6a60de9e9166c9a32a54170a58e271856203c4",
+  "research/quiz-database/expansion/international-relations.json": "d10183efa8ce9854f0e79ffc0819b6305020e4fce6c742a0d4d11b32a8ecdf0c",
+  "research/quiz-database/expansion/sources.json": "e72f4281aa7be81f3774090120bbc16bc5b1bdb1ff4a15d48579cab5d91cb304",
   "research/quiz-database/outcomes.json": "6da43831a16e57626d94096263638f815e4300dc61d7c56e33de1885a2e53e72",
-  "research/quiz-database/schema.sql": "1ef4049ef267b3ca276b8a09afae22f9d65d7f8385763a6d69ba1dbf0a4cdfab"
+  "research/quiz-database/schema.sql": "094df873cc8a6233b4c5a1d5dc811b6ccc13e2a0e1f89e7f5989e312b66dea36"
 }
