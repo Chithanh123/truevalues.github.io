@@ -1,6 +1,7 @@
 import { instrument } from './content.js';
 import { createSession, makeSteps, setAnswer, summarize, validateSession, validateInstrument } from './engine.js';
 import { buildDebrief, createTextReport } from './debrief.js';
+import { interpretDebrief } from './interpretation.js';
 import { renderResponseReport } from './debrief-view.js';
 
 const app = document.querySelector('#app');
@@ -121,7 +122,7 @@ function renderHome() {
     <section class="stats-strip" aria-label="Assessment at a glance"><div class="stat"><strong>${instrument.statements.length + instrument.foundations.items.length}</strong><span>VALUES &amp;<br>ASSUMPTIONS</span></div><div class="stat"><strong>${String(instrument.scenarios.length).padStart(2, '0')}</strong><span>CONTEXTUAL<br>DECISIONS</span></div><div class="stat"><strong>${String(instrument.worlds.length).padStart(2, '0')}</strong><span>FICTIONAL<br>WORLDS</span></div><div class="stat"><strong>01</strong><span>PERSONAL<br>DEBRIEF</span></div></section>
     <section class="worlds-preview" aria-labelledby="worlds-title"><div><span class="eyebrow orange">Different institutions. Shared dilemmas.</span><h2 id="worlds-title">Eight worlds.<br> Five viewpoints.</h2><p>One setting stays with you for the whole assessment. Its real-world inspiration is revealed in your final debrief. Your responsibilities change as you encounter different parts of public life.</p><button class="text-button" data-action="worlds">Explore the fictional settings →</button></div><div class="world-chips">${instrument.worlds.map(world => `<div class="world-chip"><span class="world-code" aria-hidden="true">${e(world.code)}</span><span><strong>${e(world.name)}</strong><small>Institutional setting · fictional</small></span></div>`).join('')}</div></section>
     <section class="intro-section"><div><span class="eyebrow">How it unfolds</span><h2>From principle<br>to perspective.</h2></div><div class="process-grid"><div><span class="process-number">01</span><h3>Start with your values</h3><p>Consider values about rights, resources, and change, then assumptions about people, society, authority, and knowledge.</p></div><div><span class="process-number">02</span><h3>Step into a situation</h3><p>Take a role in a fictional society. Weigh real constraints and competing needs.</p></div><div><span class="process-number">03</span><h3>Reflect on your choices</h3><p>See your stated values and decisions side by side, with the reasons behind them.</p></div></div></section>
-    <aside class="research-note"><span class="eyebrow">A work in progress</span><p><strong>A research prototype, with room for nuance.</strong> This edition includes ${instrument.worlds.length} settings and ${instrument.roles.length} roles. Its country briefs and decision rubrics are author drafts awaiting independent review. Its summaries are experimental, not a validated measure of ideology. Every choice comes with context. <button class="text-button" data-action="method">Read the method →</button></p></aside><section class="review-banner"><div><span class="eyebrow">Help shape the next edition</span><h2>Before we measure, we listen.</h2><p>The next research step is to check whether people understand the situations as intended. A review packet and interview guide make that work inspectable.</p></div><button class="button secondary" data-action="review">For reviewers <span aria-hidden="true">→</span></button></section>`;
+    <aside class="research-note"><span class="eyebrow">A work in progress</span><p><strong>A research prototype, with room for nuance.</strong> This edition includes ${instrument.worlds.length} settings and ${instrument.roles.length} roles. Its country briefs and decision rubrics are author drafts awaiting independent review. Its summaries are experimental, not a validated measure of ideology. Every choice comes with context. <button class="text-button" data-action="method">Read the method →</button></p></aside><section class="review-banner"><div><span class="eyebrow">Help shape the next edition</span><h2>Before we measure, we listen.</h2><p>The next research step is to check whether people understand the situations as intended. Browse the <a href="question-bank.html">question bank</a>, including draft questions and their intended outcomes.</p></div><button class="button secondary" data-action="review">For reviewers <span aria-hidden="true">→</span></button></section>`;
 }
 
 function topProgress(step) {
@@ -202,13 +203,14 @@ function foundationDebrief() {
 function resultsView() {
   const summary = summarize(instrument, session);
   const report = buildDebrief(instrument, session);
+  const interpretation = interpretDebrief(instrument, report);
   const world = instrument.worlds.find(w => w.id === session.worldId);
   const count = Object.keys(session.answers).length;
   const pair = summary.comparisons[0];
   const original = instrument.scenarios.find(s => s.id === pair.originalId);
   const comparison = instrument.scenarios.find(s => s.id === pair.scenarioId);
-  return `<section class="debrief-heading"><span class="eyebrow orange">Your field notes · Assessment complete</span><h1 id="step-title" tabindex="-1">The choices.<br>The circumstances.</h1><p>Your values are a starting point. Your decisions add context. Here’s what you expressed in this short assessment, with room for uncertainty and interpretation.</p><div class="result-meta"><span>${e(world.name)}</span><span>${count} recorded responses</span><span>Experimental · v${e(instrument.version)}</span></div></section>
-  ${renderResponseReport(report)}
+  return `<section class="debrief-heading"><span class="eyebrow orange">Your field notes · Assessment complete</span><h1 id="step-title" tabindex="-1">Your priorities.<br>In context.</h1><p>Here’s what your answers suggest about public responsibilities, personal freedom, belonging, and change. Explore the connections and the evidence behind them.</p><div class="result-meta"><span>${e(world.name)}</span><span>${count} recorded responses</span><span>Experimental · v${e(instrument.version)}</span></div></section>
+  ${renderResponseReport(report, interpretation)}
   <details class="experimental-summary" id="experimental-profiles"><summary>Explore the four provisional profiles <span>Optional · original scoring rubric</span></summary><div class="results-layout"><section class="result-panel"><span class="eyebrow">Two perspectives</span><h2>Principles &amp; decisions</h2><p>Illustrative positions under the published rubric. Each domain has six statements and one or two scored situations. The assumption statements and records exercise stay outside the markers. This short, unvalidated sample does not establish a reliable ideological classification.</p><div class="profile-legend"><span><i class="legend-dot"></i>Stated values</span><span><i class="legend-dot context"></i>Contextual decisions</span></div>${summary.dimensions.map(result => { const dim = instrument.dimensions.find(d => d.id === result.id); return `<div class="dimension-row"><h3>${e(dim.label)}</h3><div class="scale-labels"><span>${e(dim.left)}</span><span>${e(dim.right)}</span></div><div class="scale-line" aria-hidden="true">${result.statements.mean === null ? '' : `<span class="marker" style="left:${(result.statements.mean + 2) / 4 * 100}%"></span>`}${result.scenarios.mean === null ? '' : `<span class="marker context" style="left:${(result.scenarios.mean + 2) / 4 * 100}%"></span>`}</div><div class="coverage"><span>Values: ${result.statements.count}/${result.statements.total} included</span><span>Situations: ${result.scenarios.count}/${result.scenarios.total} included</span></div><p class="profile-text">Values: ${e(profilePosition(result.statements.mean, dim))}.<br>Situations: ${e(profilePosition(result.scenarios.mean, dim))}.</p></div>`; }).join('')}</section>
   <aside class="results-aside"><section class="result-panel"><span class="eyebrow">Interpret with care</span><h2>A reflection,<br>not a verdict.</h2><p>Different choices can reflect responsibilities, uncertainty, or competing needs. A difference between the two markers is not a measure of hypocrisy.</p><p>These categories are provisional. Their positions are not validated equivalent measurements, and they are not population percentiles.</p><button class="text-button" data-action="method">How the summaries work →</button></section><section class="result-panel"><span class="eyebrow">What stays separate</span><p>Uncertainty, skipped items, and “none of these” are excluded from the directional summaries. Your reasons and optional personal preferences remain visible in your report. Personal preferences are recorded separately from role actions and do not alter any score.</p><p>The repeated housing situation is shown separately, so it does not count twice. The public-records exercise is also excluded from the markers: its transparency and staffing tradeoff needs its own construct review.</p></section></aside></div></details>
   <details class="raw-response-record" id="raw-foundations"><summary>Review all starting assumptions and research traditions</summary>${foundationDebrief()}</details>
@@ -313,7 +315,7 @@ function exportReadableReport() {
 let printDetailState = null;
 function prepareReportPrint() {
   if (!session?.completed || screen !== 'assessment' || printDetailState) return;
-  printDetailState = [...app.querySelectorAll('.report-theme, .decision-circumstances')].map(detail => [detail, detail.open]);
+  printDetailState = [...app.querySelectorAll('.report-theme, .theme-evidence, .decision-circumstances')].map(detail => [detail, detail.open]);
   printDetailState.forEach(([detail]) => { detail.open = true; });
   document.body.classList.add('printing-debrief');
 }
@@ -365,6 +367,15 @@ document.addEventListener('click', event => {
   if (action === 'confirm-erase') { clearSaved(); dialog.close(); renderHome(); focusContent(); return; }
   if (action === 'confirm-restart') { clearSaved(); startAssessment(false); return; }
   if (!session) return;
+  if (action === 'show-evidence' && session.completed && screen === 'assessment') {
+    const record = document.getElementById(`evidence-${button.dataset.evidenceTarget}`);
+    if (!record || !app.contains(record)) return;
+    for (let details = record.parentElement.closest('details'); details; details = details.parentElement?.closest('details')) details.open = true;
+    record.focus({ preventScroll: true });
+    record.scrollIntoView({ block: 'center' });
+    announce('The supporting response is expanded and focused.');
+    return;
+  }
   if (action === 'next') advance();
   if (action === 'skip') advance(true);
   if (action === 'back' && session.stepIndex > 0) {

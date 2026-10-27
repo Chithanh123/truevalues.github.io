@@ -1,0 +1,96 @@
+{
+  "generator": "research/results-pilot/build.py",
+  "kit_version": "1.0.0",
+  "application_version": "0.4.5",
+  "instrument_version": "0.4.0",
+  "fixture_version": "1.0.0",
+  "reflection_version": "1.1.0",
+  "interpretation_version": "1.0.0",
+  "synthetic_only": true,
+  "human_observations": 0,
+  "cases": [
+    {
+      "id": "RP01",
+      "answer_count": 49,
+      "task_ids": [
+        "T01",
+        "T02",
+        "T03",
+        "T07",
+        "T08"
+      ]
+    },
+    {
+      "id": "RP02",
+      "answer_count": 49,
+      "task_ids": [
+        "T04"
+      ]
+    },
+    {
+      "id": "RP03",
+      "answer_count": 49,
+      "task_ids": [
+        "T04"
+      ]
+    },
+    {
+      "id": "RP04",
+      "answer_count": 49,
+      "task_ids": [
+        "T05"
+      ]
+    },
+    {
+      "id": "RP05",
+      "answer_count": 49,
+      "task_ids": [
+        "T05"
+      ]
+    },
+    {
+      "id": "RP06",
+      "answer_count": 49,
+      "task_ids": [
+        "T06"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "package.json": "4735b4d706e59ff152989c083227605b5ff767378e899110c84b1b1244201b7b",
+    "js/content.js": "743b72d40451aeb0c1d849fdaec122d1cb5846c43df64d6e710ef74d16737150",
+    "js/worlds.js": "1aec6e2f7d55c388e4fbbfd050f8de24199be83cbbe2cea036bbba93aad7cd0f",
+    "js/foundations.js": "c1fca23f5d702d7ea3de56161eef0d2a24f892ff2316dbafffa7a26566c7185d",
+    "js/engine.js": "6647e89705f3e18438791ba3f66d23a1ab538affca69c07ad1fcc4e21a53cf4f",
+    "js/debrief-content.js": "9b1cdf37d256442fd212b7c716f8a2505446f03acba42807c8aec4f29603def8",
+    "js/debrief.js": "85cdfffc9f0a2e5059fe9e6d6956acbb40cecbbd656bd7977a412ce6970c5c21",
+    "js/interpretation-content.js": "9c8eae3d06d7a423cdfeb7274e1cc39004b6d0ee4ec726777356be18f6f9ae17",
+    "js/interpretation.js": "48dee6c0fd369ccb7ce2e05cd36ae81b278e3c3f1ec2095fdbab01eed5ce70bc",
+    "js/debrief-view.js": "9686d82da4dabad954f307174227f98b46cede71d86dd0ba2e01a1c8cf7ffbd7",
+    "js/pilot-fixtures.js": "48498cb53f5549d4b9271b419cf5cf103a70dc8b1940e888329ffe4462d8ca4c",
+    "js/pilot.js": "e2ce25304e0ed4aa5636d67924e199934ca3b15b8cfbc46df835643f1ead865b",
+    "results-pilot.html": "1b560e0a2fdf5ada258a72befddfdfe303499cc1cc7d57a9c7500f3edbef8d3e",
+    "style.css": "ca3ddd9f41a4266b5e7a77504087cb2bd2272960c9b7bd5923e94e0a8a755f9c",
+    "pilot.css": "169082e7175a685034435db9b85f1a8c581db8c33610637beb7c86583e712fdc",
+    "research/results-pilot/build.py": "e8d652e55869c5a09d2094c408bd895c2eff1d0134c9dfb1a8fd9701a212b2c7",
+    "docs/results-pilot/README.md": "c7caa34e11c252fcf07be2f865c2f0409d6c3d250fa0eed2a5dff70b32485dc8",
+    "docs/results-pilot/PROTOCOL.md": "236bb64e6f63b1088ebafc6d5ed470a25b2fddf58d11443808e5134534dd45c6",
+    "docs/results-pilot/SESSION-SCRIPT.md": "d3cde4ef40626276848582aa5a1d7c8f78b1096bb5c310c3fb71249e8f76df5e",
+    "docs/results-pilot/OBSERVATION-GUIDE.md": "a99c927a607d82fa81300d25066fc77415ba0179af5ef5e845ecb4a164dd18d7",
+    "docs/results-pilot/observation-log-template.csv": "0b291791e92a3cb388bb3818aa745fddef0fbc3adc29478edd446fd637adb9d8"
+  },
+  "bundle_file_sha256": {
+    "README.md": "c7caa34e11c252fcf07be2f865c2f0409d6c3d250fa0eed2a5dff70b32485dc8",
+    "PROTOCOL.md": "236bb64e6f63b1088ebafc6d5ed470a25b2fddf58d11443808e5134534dd45c6",
+    "SESSION-SCRIPT.md": "d3cde4ef40626276848582aa5a1d7c8f78b1096bb5c310c3fb71249e8f76df5e",
+    "OBSERVATION-GUIDE.md": "a99c927a607d82fa81300d25066fc77415ba0179af5ef5e845ecb4a164dd18d7",
+    "observation-log-template.csv": "0b291791e92a3cb388bb3818aa745fddef0fbc3adc29478edd446fd637adb9d8",
+    "EXAMPLES.md": "165b2487c5f697083e845571ebb504a47e6f84cc6911411b9fdde276c8b761aa",
+    "reports/SYNTHETIC-RP01.txt": "75ba54933824e65b8b772a212f1db6bc1267cc14a29b9eeb01b9ade72f3fb1d3",
+    "reports/SYNTHETIC-RP02.txt": "48d46217550b7378e2c0f9d901b792f668ca2c67becfd588d7f8c43dff1d7b22",
+    "reports/SYNTHETIC-RP03.txt": "a96ad82a9ff0cf066aed87e3134824bf3dd9edfadb26dfbde5865916048bf912",
+    "reports/SYNTHETIC-RP04.txt": "f5072986a13c1b7e348c337e05336500842ebfd3887e0f79e20fbaebba0fbb5c",
+    "reports/SYNTHETIC-RP05.txt": "f086cae2fef7e2ac81668ccb1421355b75aef9c69c214b2339c5fa8c57ae2463",
+    "reports/SYNTHETIC-RP06.txt": "f2814fef32e6653ba961212d31bf974bb5ef87cadcab744a052fadab213e7d69"
+  }
+}

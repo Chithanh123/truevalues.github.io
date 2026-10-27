@@ -1,0 +1,214 @@
+{
+  "version": "draft-2026-10-27",
+  "clusters": [
+    {
+      "id": "CR-24",
+      "title": "International security, institutions and shared expectations",
+      "research_question": "How do material capabilities, repeated interaction, unequal bargaining and shared interpretations shape relations among states?",
+      "contrast_and_probe": "Ask which mechanism matters under what conditions, and whether more than one can operate together; do not infer a tradition from a single answer.",
+      "risks": "Avoid treating all states as unitary actors, presenting rivalry as inevitable, or assuming institutions create equal bargaining power. Vietnamese translations await independent review. These possibility claims may be widely endorsed and require testing; they do not reliably distinguish theoretical schools.",
+      "tradition_tensions": [
+        {
+          "lens": "Realist approaches",
+          "argument": "Security concerns and unequal capabilities can limit cooperation.",
+          "internal_disagreement": "Realists disagree about whether security or power maximization is primary and about domestic politics."
+        },
+        {
+          "lens": "Liberal institutionalist approaches",
+          "argument": "Repeated interaction and institutions can support cooperation even without a world government.",
+          "internal_disagreement": "Institutionalists differ on which institutions work, whose interests they serve and how domestic preferences matter."
+        },
+        {
+          "lens": "Constructivist approaches",
+          "argument": "Shared expectations and identities can shape the meaning of material power.",
+          "internal_disagreement": "Constructivists disagree about mechanisms, agency and how to study change; none need deny material constraints."
+        }
+      ],
+      "reading_ids": [
+        "EX-R24",
+        "EX-R25",
+        "EX-R26",
+        "EX-R27"
+      ],
+      "statements": [
+        {
+          "id": "CR-24A",
+          "claim_type": "Descriptive / institutional",
+          "en": "Even without a world government, states can make agreements that influence their behavior because they expect to deal with one another again.",
+          "vi": "Ngay cả khi không có chính quyền thế giới, các quốc gia vẫn có thể lập thỏa thuận ảnh hưởng đến hành vi của mình vì họ dự tính sẽ tiếp tục quan hệ với nhau.",
+          "distinction": "Repeated relations and institutions can affect cooperation without a central enforcer.",
+          "rival_reading": "States may comply chiefly because their interests already coincide or because powerful states can impose costs.",
+          "probe": "What would make an agreement credible when a state wants to leave?",
+          "reading_ids": [
+            "EX-R25",
+            "EX-R27"
+          ]
+        },
+        {
+          "id": "CR-24B",
+          "claim_type": "Descriptive / causal",
+          "en": "When one state strengthens its defenses, other states may feel less secure even if the first state intends only to protect itself.",
+          "vi": "Khi một quốc gia tăng cường phòng vệ, các quốc gia khác có thể cảm thấy kém an toàn hơn ngay cả khi quốc gia đầu tiên chỉ có ý định tự bảo vệ.",
+          "distinction": "Distinguishes intentions from how others interpret capabilities.",
+          "rival_reading": "Other governments may understand the purpose correctly, or public leaders may use a perceived threat for domestic politics.",
+          "probe": "Does this depend on what information or reassurances the other state receives?",
+          "reading_ids": [
+            "EX-R24",
+            "EX-R25"
+          ]
+        },
+        {
+          "id": "CR-24C",
+          "claim_type": "Social ontology / explanatory",
+          "en": "The same military capability can be understood as protective or threatening depending on the history and shared expectations between two states.",
+          "vi": "Cùng một năng lực quân sự có thể được hiểu là nhằm bảo vệ hoặc là mối đe dọa tùy vào lịch sử và kỳ vọng chung giữa hai quốc gia.",
+          "distinction": "Material capabilities and shared meanings are distinct but can interact.",
+          "rival_reading": "A person may judge capabilities dangerous regardless of the states’ relationship, or distrust expressed intentions.",
+          "probe": "What facts about capabilities and the relationship would change your interpretation?",
+          "reading_ids": [
+            "EX-R25",
+            "EX-R26"
+          ]
+        },
+        {
+          "id": "CR-24D",
+          "claim_type": "Descriptive / institutional",
+          "en": "Countries with unequal resources can both benefit from an international agreement even when the stronger country has more influence over its terms.",
+          "vi": "Những quốc gia có nguồn lực không ngang nhau vẫn có thể cùng hưởng lợi từ một thỏa thuận quốc tế, dù quốc gia mạnh hơn có ảnh hưởng lớn hơn đối với các điều khoản.",
+          "distinction": "Mutual benefit and unequal bargaining power can coexist.",
+          "rival_reading": "The weaker state may have better alternatives or the division of gains may make an apparently mutual benefit unacceptable.",
+          "probe": "Would benefit alone make the agreement fair, and compared with what alternative?",
+          "reading_ids": [
+            "EX-R24",
+            "EX-R27"
+          ]
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "CR-S18",
+      "title": "Cooperating over a shared river",
+      "cluster_id": "CR-24",
+      "role_id": "national_leader",
+      "locality": "rural",
+      "briefing": {
+        "en": "You are a national leader of your assigned fictional country. Your country and two neighboring states share a river; rural communities in all three face seasonal floods. An existing agreement asks each state to notify the others of major water releases and share incident records. Whether they have complied is unknown. Your legislature has approved one year of cooperation using exactly 120 budget units and has authorized all three packages below. Existing disaster relief, border rules, military obligations and data-protection law remain the same. You cannot compel another state to participate. Both neighbors have offered to participate in any one package, and all plans are technically feasible. Forecasts are uncertain and no plan guarantees fewer losses. Choose one package; you may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bạn là lãnh đạo quốc gia của quốc gia giả định được giao. Quốc gia của bạn và hai quốc gia láng giềng cùng dùng một con sông; cộng đồng nông thôn ở cả ba đều đối mặt với lũ theo mùa. Một thỏa thuận hiện có yêu cầu mỗi quốc gia báo cho các bên khác về những đợt xả nước lớn và chia sẻ hồ sơ sự cố. Chưa biết họ đã tuân thủ hay chưa. Cơ quan lập pháp đã thông qua một năm hợp tác dùng đúng 120 đơn vị ngân sách và cho phép cả ba phương án dưới đây. Cứu trợ thiên tai hiện có, quy định biên giới, nghĩa vụ quân sự và luật bảo vệ dữ liệu đều giữ nguyên. Bạn không thể buộc quốc gia khác tham gia. Cả hai láng giềng đã đề nghị tham gia bất kỳ một phương án nào, và mọi phương án đều khả thi về kỹ thuật. Dự báo chưa chắc chắn và không phương án nào bảo đảm giảm thiệt hại. Chọn một phương án; bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Share flood forecasts",
+            "vi": "Chia sẻ dự báo lũ"
+          },
+          "description": {
+            "en": "Spend all 120 units on a joint warning system and technical staff. Each state keeps its own response decisions.",
+            "vi": "Dùng toàn bộ 120 đơn vị cho hệ thống cảnh báo chung và nhân viên kỹ thuật. Mỗi quốc gia giữ quyền quyết định ứng phó riêng."
+          },
+          "tradeoff": {
+            "en": "There is no common inspection or joint allocation of emergency supplies.",
+            "vi": "Không có cơ chế kiểm tra chung hay phân bổ vật tư khẩn cấp chung."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Fund shared supplies",
+            "vi": "Cấp kinh phí vật tư chung"
+          },
+          "description": {
+            "en": "Spend all 120 units on a shared emergency stockpile; independent technical staff verify flood severity and a joint committee makes binding allocations by an agreed rule.",
+            "vi": "Dùng toàn bộ 120 đơn vị cho kho vật tư khẩn cấp chung; nhân viên kỹ thuật độc lập xác minh mức độ lũ và một ủy ban chung đưa ra quyết định phân bổ có hiệu lực theo quy tắc đã thỏa thuận."
+          },
+          "tradeoff": {
+            "en": "Your country cannot reserve all supplies for itself and gains no new warning system.",
+            "vi": "Quốc gia của bạn không thể giữ toàn bộ vật tư cho riêng mình và không có thêm hệ thống cảnh báo."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Create a review mechanism",
+            "vi": "Lập cơ chế xem xét"
+          },
+          "description": {
+            "en": "Spend all 120 units on independent inspections, public reports and a complaint process for the existing flood agreement. Each state retains its response decisions.",
+            "vi": "Dùng toàn bộ 120 đơn vị cho kiểm tra độc lập, báo cáo công khai và cơ chế khiếu nại đối với thỏa thuận lũ hiện có. Mỗi quốc gia giữ quyền quyết định ứng phó riêng."
+          },
+          "tradeoff": {
+            "en": "The mechanism adds no emergency supplies or new warning system, and reports cannot compel compliance.",
+            "vi": "Cơ chế này không bổ sung vật tư khẩn cấp hoặc hệ thống cảnh báo mới, và báo cáo không thể cưỡng chế việc tuân thủ."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Earlier warnings",
+          "Shared material protection",
+          "Confidence through independent review",
+          "Preserving national discretion",
+          "Other reason"
+        ],
+        "vi": [
+          "Cảnh báo sớm hơn",
+          "Bảo vệ vật chất chung",
+          "Tin tưởng nhờ xem xét độc lập",
+          "Giữ quyền quyết định quốc gia",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Putting your assigned responsibility aside, which package would you personally prefer under the same budget and constraints? You may skip.",
+        "vi": "Tạm gác trách nhiệm được giao, cá nhân bạn thích phương án nào với cùng ngân sách và các ràng buộc? Bạn có thể bỏ qua."
+      },
+      "variant": {
+        "id": "CR-S18-V1",
+        "description": "Change only the reported reliability of the existing flood agreement from unknown to independently verified compliance during the previous year.",
+        "invariants": "Keep all 120-unit packages, offered participation, legal powers, relief, and forecasts unchanged.",
+        "interpretation_limit": "A change may reflect trust, priorities or a perceived need for oversight, not a causal estimate of ideology. The alternate wording requires review.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "A choice combines expected effectiveness, sovereignty, trust and distribution. It does not identify an international-relations school, establish the respondent’s nationality, or show why a government chose an action. The flood scenario does not itself test military security, change in identities, or unequal bargaining.",
+      "comprehension_probes": [
+        "Can any neighbor be compelled to participate?",
+        "Who allocates supplies and who keeps response authority?",
+        "What does the review mechanism have power to enforce?"
+      ],
+      "reading_ids": [
+        "EX-R25",
+        "EX-R26",
+        "EX-R27"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "DEBATE-24",
+      "title": "International-system explanations",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe separate judgments about repeated interaction, security uncertainty, shared meanings and unequal bargaining.",
+      "evidence_required": "Individual responses and probes about intentions, capabilities, agreements, alternative explanations and the assumed time period.",
+      "unsupported_inferences": "Responses cannot identify realism, liberalism, constructivism, nationality, international-law expertise or a single IR scale.",
+      "item_ids": [
+        "CR-24A",
+        "CR-24B",
+        "CR-24C",
+        "CR-24D"
+      ]
+    },
+    {
+      "id": "SCENARIO-18",
+      "title": "Flood cooperation under bounded authority",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the selected cooperation package and stated reason under fixed costs and available participation.",
+      "evidence_required": "The chosen package, separate reason, optional personal preference, understood constraints and any uncertainty or skip.",
+      "unsupported_inferences": "A single choice cannot identify a theoretical school, prove cooperation is effective, or establish a causal role effect.",
+      "item_ids": [
+        "CR-S18"
+      ]
+    }
+  ]
+}

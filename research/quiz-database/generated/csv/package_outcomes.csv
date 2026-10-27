@@ -33,3 +33,34 @@ REVIEW-C,DEBATE-10,Review the interpretation of all three propositions in this d
 REVIEW-C,SCENARIO-04,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
 REVIEW-C,SCENARIO-06,"Review the decision, competing reasons, role authority and fixed facts of one assigned version of this scenario family.",linked_items
 REVIEW-C,REVIEW-COMPREHENSION,"Identify wording, bilingual meaning, authority and response-fit problems in a 14-task content-interview packet; record observations rather than a political score.",whole_package
+REVIEW-D,DEBATE-13,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-D,DEBATE-14,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-D,SCENARIO-07,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-D,SCENARIO-08,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-D,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package
+REVIEW-E,DEBATE-15,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-E,DEBATE-16,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-E,SCENARIO-09,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-E,SCENARIO-10,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-E,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package
+REVIEW-F,DEBATE-17,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-F,DEBATE-18,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-F,SCENARIO-11,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-F,SCENARIO-12,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-F,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package
+REVIEW-G,DEBATE-19,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-G,DEBATE-20,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-G,SCENARIO-13,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-G,SCENARIO-14,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-G,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package
+REVIEW-H,DEBATE-21,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-H,DEBATE-22,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-H,SCENARIO-15,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-H,SCENARIO-16,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-H,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package
+REVIEW-I,DEBATE-23,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-I,SCENARIO-17,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-I,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package
+REVIEW-J,DEBATE-24,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-J,SCENARIO-18,Explore the linked draft content without constructing a new score.,linked_items
+REVIEW-J,REVIEW-COMPREHENSION,"Observe interpretation, factual understanding, and competing readings throughout this draft packet.",whole_package

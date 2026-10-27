@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#243f38">
+  <meta name="description" content="Browse the Political Context research question bank and intended outcomes.">
+  <title>Question bank — Political Context</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="question-bank.css">
+  <script type="module" src="js/question-bank.js"></script>
+</head>
+<body class="catalog-page">
+  <a class="skip-link" href="#catalog-main">Skip to question bank / Đến ngân hàng câu hỏi</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="./" aria-label="Political Context home"><svg class="brand-mark" width="44" height="44" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v40M4 24h40M10 10l28 28M10 38l28-28" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg><span>political<span class="wordmark-second">context</span></span></a>
+    <nav aria-label="Question bank navigation"><a class="nav-link" href="./">Assessment</a><a class="nav-link" href="review.html">Author review</a></nav>
+  </header>
+  <main id="catalog-main" class="shell" tabindex="-1">
+    <section class="catalog-intro" aria-labelledby="catalog-title">
+      <span class="eyebrow orange">RESEARCH QUESTION BANK · NGÂN HÀNG CÂU HỎI NGHIÊN CỨU</span>
+      <h1 id="catalog-title">Explore the questions.<br><em>Examine the ideas.</em></h1>
+      <div class="catalog-intro-grid"><p>Browse current questions and proposed statements and situations, with their intended outcomes and limitations. The proposed questions are research drafts and are not part of the current assessment.</p><p lang="vi">Xem các câu hỏi hiện có cùng những nhận định và tình huống được đề xuất, mục tiêu dự kiến và giới hạn diễn giải. Các đề xuất là bản nháp nghiên cứu, chưa nằm trong bài đánh giá hiện tại.</p></div>
+      <aside class="catalog-note"><p><strong>Research and translation drafts.</strong> The assessment and proposed questions are not validated. Vietnamese wording awaits independent review. An intended outcome is a question to investigate, not a political diagnosis.</p><p lang="vi"><strong>Bản nháp nghiên cứu và bản dịch.</strong> Bài đánh giá và các câu hỏi đề xuất chưa được xác nhận. Cách diễn đạt tiếng Việt đang chờ rà soát độc lập. Mục tiêu dự kiến là điều cần tìm hiểu, không phải kết luận về tư tưởng chính trị.</p></aside>
+    </section>
+    <section class="catalog-controls" aria-label="Question bank filters / Bộ lọc ngân hàng câu hỏi">
+      <div class="catalog-search-field"><label for="catalog-search">Search wording or ID / Tìm nội dung hoặc mã</label><input id="catalog-search" type="search" autocomplete="off" placeholder="e.g. cooperation / hợp tác"></div>
+      <div><label for="catalog-package">Package / Bộ câu hỏi</label><select id="catalog-package"><option value="all">All packages / Tất cả các bộ</option></select></div>
+      <div><label for="catalog-kind">Question type / Loại câu hỏi</label><select id="catalog-kind"><option value="all">All types / Tất cả</option><option value="value_statement">Value statements / Nhận định giá trị</option><option value="foundation_statement">Underlying assumptions / Tiền đề nền tảng</option><option value="scenario">Situations / Tình huống</option></select></div>
+      <div><label for="catalog-topic">Topic / Chủ đề</label><select id="catalog-topic"><option value="all">All topics / Tất cả chủ đề</option></select></div>
+      <div><label for="catalog-status">Status / Trạng thái</label><select id="catalog-status"><option value="all">All statuses / Tất cả</option><option value="current">Current assessment / Bài hiện tại</option><option value="draft">Research draft / Bản nháp nghiên cứu</option><option value="probe">Comprehension probe / Câu hỏi kiểm tra cách hiểu</option></select></div>
+      <div><label for="catalog-language">View / Chế độ xem</label><select id="catalog-language"><option value="both">English + Tiếng Việt</option><option value="en">English only</option><option value="vi">Chỉ tiếng Việt</option></select></div>
+    </section>
+    <div class="catalog-toolbar"><p id="catalog-summary" role="status" aria-live="polite">Loading the question bank / Đang tải ngân hàng câu hỏi…</p><button type="button" id="catalog-reset" class="text-button">Clear filters / Xóa bộ lọc</button></div>
+    <div id="catalog-package-note" class="catalog-package-note" hidden></div>
+    <section id="catalog-results" aria-label="Question bank results / Kết quả ngân hàng câu hỏi"></section>
+    <nav class="catalog-pagination" aria-label="Question pages / Trang câu hỏi"><button type="button" id="catalog-prev" class="button secondary small" disabled>← Previous / Trước</button><span id="catalog-page-number"></span><button type="button" id="catalog-next" class="button secondary small" disabled>Next / Tiếp →</button></nav>
+    <noscript><p>The interactive question bank needs JavaScript. / Ngân hàng câu hỏi tương tác cần JavaScript.</p></noscript>
+  </main>
+  <footer class="site-footer shell"><div><span class="footer-name">Political Context</span><span>Research drafts · Bản nháp nghiên cứu</span></div><a class="nav-link" href="./">Return to assessment / Về bài đánh giá →</a></footer>
+</body>
+</html>

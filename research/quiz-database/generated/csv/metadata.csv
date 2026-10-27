@@ -1,10 +1,10 @@
 ﻿key,value
-catalog_version,1.0.0
-content_snapshot_date,2026-10-25
-base_commit,56b93b12f0b3ed283c66854e26990bdbd5d00603
+catalog_version,1.1.0
+content_snapshot_date,2026-10-27
+base_commit,ec634ee9ca7e56d4591bf4fcece39c4d62b10408
 instrument_version,0.4.0
 scope,author_content_only_no_participant_answers
 validation_status,unvalidated_author_drafts
 country_reveal_policy,after_completion
-source_verification,All bibliographic proposals remain unverified.
+source_verification,Legacy readings remain unverified. Expansion readings distinguish selected inspected passages from unverified proposals; no item validation is implied.
 working_tree_note,"Hashes identify the actual inputs, including uncommitted content drafts; base_commit alone does not identify this snapshot."

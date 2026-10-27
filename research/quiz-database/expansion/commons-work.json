@@ -1,0 +1,652 @@
+{
+  "version": "draft-2026-10-27",
+  "clusters": [
+    {
+      "id": "CR-17",
+      "title": "Authority over shared resources and membership within self-government",
+      "research_question": "Who should have standing to govern a shared resource when established users, newer users, affected non-users and a wider public have different claims? This extends CR-08C beyond recognition of collective self-rule to its internal decision rules; it does not define who constitutes a people.",
+      "contrast_and_probe": "Separate a claim to self-government from an expectation that local managers know more. Ask whether current use, past maintenance, residence or exposure to effects gives the decisive claim, and whether a group representative can be challenged by the people they claim to represent. Probe each proposition independently; acceptance of more than one is possible under different institutional arrangements.",
+      "risks": "A generic water commons is not an Indigenous sovereignty measure or a proxy for any particular people. Resource ownership, customary authority, historical dispossession and citizenship are different claims. Readers may imagine absolute control, different legal rights, downstream emergencies or unequal competence that the text does not state. Vietnamese terms for established users and a binding say require paraphrase review. Source proposals and affected-community review remain incomplete.",
+      "tradition_tensions": [
+        {
+          "lens": "Decentralized and polycentric governance proposals",
+          "argument": "People who use and maintain a resource can possess relevant knowledge and sustain shared rules without a single distant manager.",
+          "internal_disagreement": "Decentralization alone does not settle who may join, whose rules bind outsiders, or how failures are corrected; a local board can concentrate power."
+        },
+        {
+          "lens": "Liberal and republican concerns about equal standing",
+          "argument": "New users need ways to contest inherited authority, while everyone subject to a binding rule can claim a voice in it.",
+          "internal_disagreement": "Equal individual voting, representative review and a wider public mandate are different remedies; none automatically settles a collective self-government claim."
+        },
+        {
+          "lens": "Communitarian and stewardship arguments",
+          "argument": "Past maintenance can create responsibilities and claims to continuity that are not exhausted by present consumption.",
+          "internal_disagreement": "Preserving stewardship need not confer permanent authority on descendants or exclude newcomers; communities dispute which practices deserve continuity."
+        },
+        {
+          "lens": "Indigenous and anti-colonial self-determination questions requiring specific sources",
+          "argument": "Collective authority can rest on political status, histories and relationships to land that differ from membership in a voluntary resource association.",
+          "internal_disagreement": "No common statement can stand for all peoples or internal positions; the present generic commons exercise deliberately does not claim that representation."
+        }
+      ],
+      "reading_ids": [
+        "EX-R07",
+        "EX-R08",
+        "EX-R13",
+        "EX-R14"
+      ],
+      "statements": [
+        {
+          "id": "CR-17A",
+          "claim_type": "Normative / institutional",
+          "en": "A community that has maintained a shared water system should have final authority over its routine use, within agreed protections for people downstream.",
+          "vi": "Một cộng đồng đã duy trì một hệ thống nước dùng chung nên có quyền quyết định cuối cùng về việc sử dụng thường xuyên hệ thống đó, trong phạm vi các biện pháp bảo vệ người dân ở hạ lưu đã được thỏa thuận.",
+          "distinction": "A claim grounded in maintaining a shared institution, rather than a prediction that local decisions maximize output. Routine use and agreed downstream protections bound the proposed authority.",
+          "rival_reading": "Agreement may reflect assumed expertise, ownership or distrust of officials rather than a claim to collective authority. The statement does not specify the community membership rule.",
+          "probe": "Would the claim remain if outside managers knew as much and could supply slightly more water? Who may authorize the community representative?",
+          "reading_ids": [
+            "EX-R07",
+            "EX-R08",
+            "EX-R13"
+          ]
+        },
+        {
+          "id": "CR-17B",
+          "claim_type": "Normative / institutional",
+          "en": "New adult users of a shared water system should have the same vote on its rules as long-standing users who paid for its construction.",
+          "vi": "Những người trưởng thành mới sử dụng một hệ thống nước dùng chung nên có quyền biểu quyết về các quy tắc của hệ thống ngang với những người đã sử dụng lâu năm và đã góp tiền xây dựng hệ thống.",
+          "distinction": "Equal current-user standing despite unequal past contribution; distinct from whether the original contributors should receive financial repayment.",
+          "rival_reading": "A reader may assume new users paid an entry charge or that the original contribution already purchased a permanent control right. Neither arrangement is specified.",
+          "probe": "Could equal votes coexist with repayment to original contributors? Would you answer differently if all users had contributed equally?",
+          "reading_ids": [
+            "EX-R08",
+            "EX-R14"
+          ]
+        },
+        {
+          "id": "CR-17C",
+          "claim_type": "Normative / institutional",
+          "en": "A regional government should be able to require one water-allocation rule across its districts, even when each district could meet the same minimum protections under its own rule.",
+          "vi": "Chính quyền vùng nên có quyền yêu cầu các địa phương trong vùng áp dụng một quy tắc phân bổ nước chung, ngay cả khi mỗi địa phương có thể đáp ứng cùng các biện pháp bảo vệ tối thiểu bằng quy tắc riêng của mình.",
+          "distinction": "Authority to impose uniform rules beyond compliance with a common minimum; a possible claim of equal public standing rather than technical necessity.",
+          "rival_reading": "Agreement may express expected administrative savings or fear that minimum protections are inadequate. Disagreement may depend on constitutional jurisdiction rather than general localism.",
+          "probe": "What further benefit or rightful claim would justify a common rule once the same minimum is met? Would local consent change your answer?",
+          "reading_ids": [
+            "EX-R08",
+            "EX-R13"
+          ]
+        },
+        {
+          "id": "CR-17D",
+          "claim_type": "Normative / institutional",
+          "en": "People downstream who are materially affected by a shared water system should have a binding say in its rules, even if they do not help maintain it.",
+          "vi": "Những người ở hạ lưu chịu ảnh hưởng đáng kể đến điều kiện sinh sống do một hệ thống nước dùng chung nên có tiếng nói có tính ràng buộc trong các quy tắc của hệ thống, ngay cả khi họ không góp phần duy trì hệ thống đó.",
+          "distinction": "Standing through exposure to effects, distinguished from consultation and contribution-based membership. A binding say is intentionally a term to clarify, not a defined veto.",
+          "rival_reading": "Readers may imagine severe harm, a vote, an individual veto, an appeal right or representation; those imply materially different institutions.",
+          "probe": "What power would count as a binding say: voting representation, a veto over harmful changes, or enforceable appeal? How serious must the effect be?",
+          "reading_ids": [
+            "EX-R07",
+            "EX-R08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-18",
+      "title": "Insecure work, shared risk and collective bargaining",
+      "research_question": "How should demand risk, control over work and collective obligations be divided when people can choose hours but another organization sets payment terms? This extends CR-05 beyond enterprise decision rights to risk-bearing, bargaining exit and the costs of solidarity.",
+      "contrast_and_probe": "Ask separately about choosing working hours, choosing a price, refusing an assignment and having a viable alternative livelihood. For collective claims, distinguish the right to organize from a duty to join or accept its agreement. Compare reasons for immediate support, shared bargaining and alternative customers without treating any as an ideological midpoint.",
+      "risks": "Platform work differs by service, legal status, bargaining system and local conditions. The items do not decide whether someone is legally an employee, independent contractor or cooperative member. Risk and income loss require concrete magnitudes in interviews. Do not infer selfishness, class consciousness, union membership or a stable ideology. Kropotkin supplies a historical argument about costly association, not modern platform evidence; convention and other proposed readings require source checks.",
+      "tradition_tensions": [
+        {
+          "lens": "Contractual freedom and entrepreneurial responsibility arguments",
+          "argument": "Freedom to choose assignments and negotiate individually can support claims to keep rewards and bear corresponding risks.",
+          "internal_disagreement": "Formal contractual choice may coexist with unequal control over price and weak alternatives; market-oriented accounts differ over insurance, competition rules and collective organization."
+        },
+        {
+          "lens": "Social-democratic and labour-protection arguments",
+          "argument": "Organizations controlling payment conditions can be asked to share demand risk, while collective bargaining can offset dependence.",
+          "internal_disagreement": "Regulation, social insurance and bargaining are different institutions; protecting worker autonomy can conflict with making a collective agreement universal."
+        },
+        {
+          "lens": "Socialist and mutual-aid arguments",
+          "argument": "Workers can build shared capacity and support others even when action brings an immediate personal cost.",
+          "internal_disagreement": "Solidarity need not require compulsory membership, identical priorities or control by one representative body; relief and bargaining can complement each other."
+        },
+        {
+          "lens": "Capability and effective-choice questions",
+          "argument": "Practical alternatives affect the meaning of consent and exit even when no one is formally compelled to work.",
+          "internal_disagreement": "A concern for effective choice does not select one labour classification, ownership form or intervention, and outcomes depend on circumstances."
+        }
+      ],
+      "reading_ids": [
+        "EX-R09",
+        "EX-R10",
+        "EX-R12",
+        "EX-R13"
+      ],
+      "statements": [
+        {
+          "id": "CR-18A",
+          "claim_type": "Normative / institutional",
+          "en": "Workers who can choose their own hours should bear the income loss when customers place fewer orders, even if the platform sets the payment for each job.",
+          "vi": "Những người lao động có thể tự chọn giờ làm nên tự chịu phần thu nhập bị mất khi khách đặt ít đơn hơn, ngay cả khi nền tảng quyết định mức trả cho từng việc.",
+          "distinction": "Whether control over availability is sufficient to justify bearing demand risk despite limited price-setting authority.",
+          "rival_reading": "Agreement may reflect presumed higher pay, savings, genuine alternatives or a different understanding of employment; disagreement may reflect hardship alone rather than a rule about control.",
+          "probe": "Which fact matters more: choosing hours, choosing price, or being able to find other customers? What level of income loss did you imagine?",
+          "reading_ids": [
+            "EX-R12",
+            "EX-R13"
+          ]
+        },
+        {
+          "id": "CR-18B",
+          "claim_type": "Normative / institutional",
+          "en": "A business that sets payment rates should share the cost of periods with too little work, even when workers choose when to make themselves available.",
+          "vi": "Một doanh nghiệp quyết định mức trả công nên cùng chịu chi phí của những giai đoạn không đủ việc, ngay cả khi người lao động tự chọn lúc sẵn sàng làm việc.",
+          "distinction": "A responsibility associated with control over payment terms, without specifying full guaranteed income or legal employee status.",
+          "rival_reading": "A reader may infer that the business caused the fall in demand, can always absorb the cost, or must pay for every hour someone claims availability. These are not stated.",
+          "probe": "What would sharing the cost mean, and what conditions would limit that duty? Would the judgment change if workers set the payment rate?",
+          "reading_ids": [
+            "EX-R09",
+            "EX-R12"
+          ]
+        },
+        {
+          "id": "CR-18C",
+          "claim_type": "Normative / institutional",
+          "en": "Workers should be free to reject a collective pay agreement and negotiate separately, even when doing so weakens the bargaining position of other workers.",
+          "vi": "Người lao động nên được tự do không chấp nhận một thỏa thuận tiền công tập thể và thương lượng riêng, ngay cả khi việc đó làm suy yếu vị thế thương lượng của những người lao động khác.",
+          "distinction": "Individual bargaining exit when there is an acknowledged collective cost; distinct from the right to form or join an association.",
+          "rival_reading": "Agreement may depend on whether the agreement was authorized, membership was voluntary, minorities were heard or dissent leads to punishment. Disagreement need not imply compulsory membership.",
+          "probe": "Would you distinguish a worker who never joined the organization from a member who voted against the agreement? What protection should the dissenting worker keep?",
+          "reading_ids": [
+            "EX-R09",
+            "EX-R10"
+          ]
+        },
+        {
+          "id": "CR-18D",
+          "claim_type": "Normative / institutional",
+          "en": "Workers should accept a temporary loss of income to support a shared pay claim that would benefit lower-paid colleagues, even when they expect no gain in their own pay or job security.",
+          "vi": "Người lao động nên chấp nhận mất một phần thu nhập trong thời gian ngắn để ủng hộ một yêu cầu chung về tiền công có lợi cho những đồng nghiệp được trả thấp hơn, ngay cả khi họ không kỳ vọng tiền công hay mức độ bảo đảm việc làm của mình tăng lên.",
+          "distinction": "An obligation of solidarity beyond expected personal income or security gains; not a prediction that organizing succeeds or a demand for any amount of sacrifice.",
+          "rival_reading": "Agreement may rest on friendship, fairness, future reciprocity or strategic long-term benefits despite the stated absence of expected personal gain. Disagreement may concern inability to afford the loss.",
+          "probe": "What duration or loss would change your answer? Is support owed, admirable but optional, or justified only with a reasonable chance of success?",
+          "reading_ids": [
+            "EX-R10",
+            "EX-R12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR-23",
+      "title": "How to investigate public problems: comparison, meaning, history and participation",
+      "research_question": "Which kinds of inquiry should guide public judgment, what should they explain, and who should help shape the questions? This distinguishes a preferred research approach from beliefs about what exists (ontology), what can be known (epistemology), technical research competence and a favoured political conclusion.",
+      "contrast_and_probe": "Ask what question each proposed approach answers, what it leaves open and what other evidence could change the respondent’s view. Distinguish studying a programme’s contribution from deciding which consequences matter; distinguish interpreting people’s accounts from accepting every explanation as fact. The approaches can be combined. A sequence or conditional preference is a useful answer, not inconsistency.",
+      "risks": "A methods question can become a school test if one plan alone meets a specified mandate. Here the purpose is deliberately broader than causal estimation. Comparison, interpretation, historical tracing and participatory inquiry are internally diverse and often combined. None automatically supplies valid causal inference, authentic lived meaning, a complete structural explanation or equal participant power. CR-23C uses a strong completeness claim to expose views about historical explanation; it is not a claim that every study needs an unlimited history. Sources are unverified reading proposals, and Vietnamese wording needs independent methods and comprehension review.",
+      "tradition_tensions": [
+        {
+          "lens": "Comparative and causal-inference approaches",
+          "argument": "Differences over time or between otherwise comparable settings can help assess whether an intervention contributed to an outcome, beyond simple reports of improvement.",
+          "internal_disagreement": "Design assumptions, outcomes, mechanisms and applicability remain disputed. Quantitative comparison is not synonymous with randomized experimentation and can be combined with qualitative inquiry."
+        },
+        {
+          "lens": "Interpretive approaches",
+          "argument": "Understanding what actions and institutions mean to the people involved can reveal consequences and social relationships missed by externally defined indicators.",
+          "internal_disagreement": "Interpretation does not make all accounts equally accurate or erase conflict within a group; researchers disagree about how to justify and challenge an interpretation."
+        },
+        {
+          "lens": "Historical and structural explanation",
+          "argument": "Tracing the formation of institutions can explain why present options, interests and inequalities take their current form.",
+          "internal_disagreement": "History does not establish one economic cause or determine the future; arguments differ over contingency, ideas, institutions, conflict and the scale of explanation."
+        },
+        {
+          "lens": "Participatory and action-oriented inquiry",
+          "argument": "Affected people can contribute knowledge and challenge the authority to define a problem, its evidence and useful action.",
+          "internal_disagreement": "Participation can reproduce unequal voice, and shared authority does not guarantee consensus, accurate findings or a particular emancipatory outcome. Transparent comparison and technical expertise can still be part of the inquiry."
+        }
+      ],
+      "reading_ids": [
+        "EX-R21",
+        "EX-R22",
+        "EX-R17",
+        "EX-R23"
+      ],
+      "statements": [
+        {
+          "id": "CR-23A",
+          "claim_type": "Methodological / normative",
+          "en": "To judge whether a public programme caused an improvement, a comparison with similar places without the programme should normally carry more weight than participants’ accounts that it helped them.",
+          "vi": "Để đánh giá liệu một chương trình công có tạo ra sự cải thiện hay không, việc so sánh với những nơi tương tự không có chương trình thông thường nên có sức nặng hơn lời kể của người tham gia rằng chương trình đã giúp họ.",
+          "distinction": "A default preference for comparative evidence when making a causal claim, not a claim that comparison alone proves causation or that accounts are useless.",
+          "rival_reading": "Respondents may infer random assignment, identical starting conditions or unreliable testimony. Those assumptions are not supplied; an uncertain or conditional answer is substantively informative.",
+          "probe": "What would make the places sufficiently similar? Could accounts reveal a mechanism or an omitted harm even if they cannot establish the overall effect alone?",
+          "reading_ids": [
+            "EX-R21"
+          ]
+        },
+        {
+          "id": "CR-23B",
+          "claim_type": "Methodological / normative",
+          "en": "Research on a public programme should give priority to understanding what it means to the people involved, even if that makes numerical comparisons across places harder.",
+          "vi": "Nghiên cứu về một chương trình công nên ưu tiên tìm hiểu chương trình có ý nghĩa gì đối với những người liên quan, ngay cả khi điều đó khiến việc so sánh bằng số giữa các nơi khó hơn.",
+          "distinction": "Priority for situated meaning when a research budget or design creates a tradeoff with standardized comparison; not a rejection of numbers.",
+          "rival_reading": "Agreement may express courtesy toward participants or a belief that qualitative evidence is always more truthful. Disagreement may reflect the specific decision being studied rather than opposition to interpretation.",
+          "probe": "What does understanding the programme’s meaning add beyond knowing whether people approve of it? When would comparison deserve priority instead?",
+          "reading_ids": [
+            "EX-R22"
+          ]
+        },
+        {
+          "id": "CR-23C",
+          "claim_type": "Methodological / normative",
+          "en": "An explanation of present inequality is incomplete unless it traces how earlier decisions about property and work shaped the institutions people face today.",
+          "vi": "Một lời giải thích về bất bình đẳng hiện nay là chưa đầy đủ nếu không lần theo cách những quyết định trước đây về tài sản và lao động đã định hình các thiết chế mà con người đối diện ngày nay.",
+          "distinction": "A claim that historical formation is necessary to a sufficient explanation, beyond measuring present differences or preferences. This does not assert that economic arrangements are the only cause.",
+          "rival_reading": "A respondent may imagine a demand to blame ancestors, to document every event or to deny individual agency. Agreement may also mean merely that some history is useful, weaker than the stated necessity.",
+          "probe": "Could a study explain a current difference well without tracing its history? Which earlier decisions would be relevant, and what evidence could show that your proposed history is mistaken?",
+          "reading_ids": [
+            "EX-R17"
+          ]
+        },
+        {
+          "id": "CR-23D",
+          "claim_type": "Methodological / normative",
+          "en": "People affected by a study should be able to change its research questions, even if this reduces the researchers’ control over a fixed plan.",
+          "vi": "Những người chịu ảnh hưởng của một nghiên cứu nên có quyền thay đổi các câu hỏi nghiên cứu, ngay cả khi điều đó làm giảm khả năng kiểm soát của người nghiên cứu đối với một kế hoạch đã ấn định.",
+          "distinction": "Authority to shape inquiry beyond being interviewed or asked to approve findings; a procedural commitment with a design tradeoff.",
+          "rival_reading": "Agreement may refer only to a right to withdraw or correct factual errors. Disagreement may concern retrospective outcome switching, sponsor accountability or domination by vocal participants rather than rejecting all participation.",
+          "probe": "At what stage should questions be changeable, who can speak for affected people, and how should changes be documented? Can shared authority coexist with a clearly declared analysis plan?",
+          "reading_ids": [
+            "EX-R23"
+          ]
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "CR-S11",
+      "title": "Who sets the shared reservoir rules?",
+      "cluster_id": "CR-17",
+      "role_id": "local_leader",
+      "locality": "rural",
+      "briefing": {
+        "en": "Your surroundings. In a rural district of your assigned fictional country, 120 adults use a reservoir for small agricultural plots. Ninety are established users and thirty joined within the last two years. The reservoir was built through contributions from an association of established users; it is now held in a public trust. The newer users have the same lawful access to water. All users can attend accessible meetings, and no user can be excluded because of identity, income or disagreement.\n\nYour role. You are the local leader. A one-year pilot authorization permits you to select one of three governance arrangements below. You cannot sell the reservoir, remove water-access rights, change drinking-water or ecological protections, or extend the pilot. Existing independent appeals can reverse a decision violating those protections under every arrangement.\n\nWhat is fixed. A technical team has prepared the same feasible range of irrigation schedules for all three arrangements. All schedules preserve the same downstream minimum flows, but they differ in which plots receive their preferred watering times. Users disagree about those times. Downstream residents can submit comments under every arrangement but gain no binding vote in this pilot. The annual administrative budget is 24 staff-days; election and meeting-access costs are included. Each arrangement costs exactly 24 staff-days. None is known to produce a larger total supply of water.\n\nWhich arrangement would you select for the one-year pilot? You may also answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bối cảnh của bạn. Tại một huyện nông thôn của quốc gia giả định được giao, 120 người trưởng thành sử dụng một hồ chứa để tưới các mảnh đất nông nghiệp nhỏ. Chín mươi người đã sử dụng từ lâu; ba mươi người bắt đầu sử dụng trong hai năm gần đây. Hồ chứa được xây dựng bằng đóng góp của một hội những người sử dụng lâu năm; nay hồ do một quỹ công quản lý. Những người sử dụng mới có cùng quyền tiếp cận nước hợp pháp. Mọi người sử dụng đều có thể tham dự các cuộc họp được tổ chức để họ có thể tiếp cận; không ai bị loại vì bản sắc, thu nhập hoặc ý kiến bất đồng.\n\nVai trò của bạn. Bạn là người đứng đầu địa phương. Một quyết định cho phép thí điểm trong một năm giao cho bạn quyền chọn một trong ba mô hình quản trị dưới đây. Bạn không có quyền bán hồ, tước quyền tiếp cận nước, thay đổi các biện pháp bảo vệ nước uống hoặc sinh thái, hay kéo dài thời gian thí điểm. Trong mọi mô hình, cơ chế xem xét khiếu nại độc lập hiện có có thể hủy một quyết định vi phạm các biện pháp bảo vệ đó.\n\nNhững điều được giữ nguyên. Nhóm kỹ thuật đã chuẩn bị cùng một tập hợp lịch tưới khả thi cho cả ba mô hình. Mọi lịch đều giữ nguyên lưu lượng tối thiểu ở hạ lưu, nhưng khác nhau về việc mảnh đất nào được tưới vào thời điểm người sử dụng mong muốn. Người sử dụng bất đồng về các thời điểm đó. Cư dân hạ lưu có thể gửi ý kiến trong mọi mô hình nhưng không có quyền biểu quyết có tính ràng buộc trong đợt thí điểm này. Ngân sách quản trị hằng năm tương đương 24 ngày công của nhân viên; chi phí bầu cử và hỗ trợ tiếp cận cuộc họp đã được tính vào đó. Mỗi mô hình dùng đúng 24 ngày công. Chưa có bằng chứng mô hình nào tạo ra tổng lượng nước lớn hơn.\n\nBạn sẽ chọn mô hình nào cho đợt thí điểm một năm? Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Elect the whole board through equal user votes",
+            "vi": "Bầu toàn bộ ban bằng phiếu ngang nhau của người sử dụng"
+          },
+          "description": {
+            "en": "All 120 current users vote on equal terms for all six board seats. The board selects the irrigation schedule. Eighteen staff-days support elections and meetings and six support recordkeeping.",
+            "vi": "Cả 120 người đang sử dụng đều có quyền biểu quyết ngang nhau để bầu đủ sáu ghế trong ban. Ban chọn lịch tưới. Mười tám ngày công hỗ trợ bầu cử và họp; sáu ngày công hỗ trợ lưu giữ hồ sơ."
+          },
+          "tradeoff": {
+            "en": "The original contributors have no reserved seats or veto; a majority may select times that a minority repeatedly dislikes, within the protected access rights.",
+            "vi": "Những người đóng góp ban đầu không có ghế dành riêng hay quyền phủ quyết; đa số có thể chọn những thời điểm mà một nhóm thiểu số liên tục không mong muốn, trong phạm vi quyền tiếp cận đã được bảo vệ."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Share the board with the founding association",
+            "vi": "Chia sẻ các ghế trong ban với hội sáng lập"
+          },
+          "description": {
+            "en": "The founding association chooses three board members through an internal election; all 120 users elect the other three. Four votes are required to select a schedule. Eighteen staff-days support selection and meetings and six support recordkeeping. All established users can contest the association election.",
+            "vi": "Hội sáng lập bầu nội bộ ba thành viên ban; cả 120 người sử dụng bầu ba thành viên còn lại. Cần bốn phiếu để chọn một lịch tưới. Mười tám ngày công hỗ trợ lựa chọn thành viên và họp; sáu ngày công hỗ trợ lưu giữ hồ sơ. Mọi người sử dụng lâu năm đều có thể ứng cử trong cuộc bầu cử của hội."
+          },
+          "tradeoff": {
+            "en": "Newer users cannot vote for the reserved seats. A tied board must use last year’s lawful schedule for up to 30 days while seeking agreement, even if that schedule is not users’ current preference.",
+            "vi": "Những người sử dụng mới không được bầu các ghế dành riêng. Nếu ban hòa phiếu, phải dùng lịch hợp pháp của năm trước trong tối đa 30 ngày để tìm đồng thuận, dù lịch đó không phải lựa chọn hiện tại của người sử dụng."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Delegate the schedule to a regional service officer",
+            "vi": "Giao việc chọn lịch cho cán bộ dịch vụ cấp vùng"
+          },
+          "description": {
+            "en": "A regional service officer uses a published rotation rule that gives each plot its preferred time in turn across seasons. Twenty-four staff-days cover administration and published decisions. Users can comment before the schedule is set and use the same independent rights appeal.",
+            "vi": "Một cán bộ dịch vụ cấp vùng dùng quy tắc luân phiên công khai, theo đó từng mảnh đất lần lượt được hưởng thời điểm tưới mong muốn qua các mùa. Hai mươi bốn ngày công dành cho quản trị và công bố quyết định. Người sử dụng có thể góp ý trước khi chốt lịch và dùng cùng cơ chế khiếu nại độc lập về quyền."
+          },
+          "tradeoff": {
+            "en": "Users do not elect or remove the officer during the pilot. The officer cannot alter the rotation to reflect informal local compromises, even when many users prefer them.",
+            "vi": "Trong đợt thí điểm, người sử dụng không bầu hay bãi nhiệm cán bộ. Cán bộ không được thay đổi lịch luân phiên theo các thỏa thuận không chính thức tại địa phương, ngay cả khi nhiều người sử dụng muốn vậy."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Equal authority among people using the resource now",
+          "Recognition of past contributions and continuing stewardship",
+          "A predictable rule that does not depend on a local majority",
+          "Confidence that this arrangement can manage disagreement",
+          "Other reason"
+        ],
+        "vi": [
+          "Quyền quyết định ngang nhau giữa những người hiện đang dùng nguồn nước",
+          "Ghi nhận đóng góp trước đây và trách nhiệm gìn giữ tiếp diễn",
+          "Một quy tắc dễ dự đoán, không phụ thuộc vào đa số tại địa phương",
+          "Tin rằng mô hình này có thể xử lý bất đồng",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Putting aside your responsibility as local leader, which of the same arrangements would you personally prefer under the same water rights, budget and one-year limit? This response is optional.",
+        "vi": "Nếu tạm gác trách nhiệm người đứng đầu địa phương, cá nhân bạn thích mô hình nào trong các mô hình đó, với cùng quyền về nước, ngân sách và giới hạn một năm? Câu trả lời này là tùy chọn."
+      },
+      "variant": {
+        "id": "CR-S11-V1",
+        "description": "Replace “Ninety are established users and thirty joined within the last two years” with “Sixty are established users and sixty joined within the last two years.”",
+        "invariants": "Keep 120 adult users, total water supply, public-trust ownership, historical founding contribution, equal legal access, board sizes, reserved seats, voting rules, technical options, administrative costs, independent appeals and the one-year limit unchanged.",
+        "interpretation_limit": "This changes the current composition of users and the representational weight of reserved seats. A changed response may reflect fairness, expected electoral outcomes or concern about continuity; it cannot identify a causal effect of newcomer status or an attitude toward a real ethnic group. No paired allocation has been approved.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "Describe governance standing, recognition of past contributions and uniform administration separately. Every option also embodies different control and deadlock rules, so this is not an isolated test of a single authority theory. The supplied minimum water protections do not settle all distributional disputes. A preference for reserved seats does not imply hereditary hierarchy or Indigenous sovereignty; a regional officer preference does not establish authoritarianism. Downstream binding participation in CR-17D is absent from every package: none-of-these or a probe may expose that omission, but no offered action directly tests it. Country-specific feasibility and community review are pending.",
+      "comprehension_probes": [
+        "Who can choose each of the six seats under each arrangement, and who can remove a decision that breaches water rights?",
+        "Does owning or having built the reservoir establish the same claim as using it now?",
+        "What happens if the shared board divides three to three?",
+        "Which affected people cannot vote in any of the packages? Would you need an additional package?",
+        "In Vietnamese, do quỹ công and quyền biểu quyết communicate the stated institution and decision power without implying a real-country legal form?"
+      ],
+      "reading_ids": [
+        "EX-R07",
+        "EX-R08",
+        "EX-R13",
+        "EX-R14"
+      ]
+    },
+    {
+      "id": "CR-S12",
+      "title": "Relief, bargaining or alternative customers?",
+      "cluster_id": "CR-18",
+      "role_id": "civil_society",
+      "locality": "urban",
+      "briefing": {
+        "en": "Your surroundings. In a large city of your assigned fictional country, fifty delivery workers belong to a voluntary support association. They choose their working hours, but their main app sets payment rates and decides which jobs it offers. The app recently lowered payment rates. Twenty members have little savings and face the largest immediate income shortfall; the other thirty can cover current essentials but also want better terms. Independent eligibility review is available for any support grant.\n\nYour role. You lead the association. Members have approved using a one-time fund of 120 credits for one of the three twelve-week programs below and delegated the choice to you. You cannot set the app’s rates, require anyone to stop work, compel membership or disclose a member’s information without permission. Voluntary organizing, alternative customers and all three programs are permitted in this fictional setting; none has a guarantee of improving pay.\n\nWhat is fixed. Each quoted program costs exactly 120 credits, includes its administrative costs and ends after twelve weeks. There is no additional funding. Members keep the same existing public services and can refuse any activity without losing association membership. No program changes their legal employment status. The app has agreed to attend two meetings if the bargaining program is selected, but has promised no change in rates or job access. Members can also decline to act collectively or look for customers on their own without this fund.\n\nWhich program would you fund? You may also answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bối cảnh của bạn. Tại một thành phố lớn của quốc gia giả định được giao, năm mươi người giao hàng tham gia một hội hỗ trợ tự nguyện. Họ tự chọn giờ làm, nhưng ứng dụng chính mà họ dùng quyết định mức trả công và những việc được đề nghị cho họ. Ứng dụng vừa giảm mức trả công. Hai mươi thành viên có ít tiền tiết kiệm và thiếu hụt thu nhập trước mắt nhiều nhất; ba mươi người còn lại có thể trang trải nhu cầu thiết yếu hiện tại nhưng cũng muốn điều kiện tốt hơn. Mọi khoản hỗ trợ đều có cơ chế xem xét điều kiện hưởng độc lập.\n\nVai trò của bạn. Bạn lãnh đạo hội. Các thành viên đã đồng ý dùng một khoản quỹ duy nhất 120 đơn vị tín dụng cho một trong ba chương trình mười hai tuần dưới đây và giao quyền lựa chọn cho bạn. Bạn không có quyền ấn định mức trả của ứng dụng, yêu cầu ai ngừng làm việc, bắt buộc tham gia hội hoặc tiết lộ thông tin của thành viên khi chưa được phép. Trong bối cảnh hư cấu này, việc tổ chức tự nguyện, tìm khách hàng khác và cả ba chương trình đều được cho phép; không chương trình nào được bảo đảm sẽ tăng tiền công.\n\nNhững điều được giữ nguyên. Mỗi chương trình được báo giá đúng 120 đơn vị tín dụng, đã gồm chi phí quản trị, và kết thúc sau mười hai tuần. Không có kinh phí bổ sung. Thành viên giữ nguyên các dịch vụ công hiện có và có thể từ chối bất kỳ hoạt động nào mà không mất tư cách hội viên. Không chương trình nào thay đổi địa vị việc làm theo pháp luật của họ. Ứng dụng đã đồng ý dự hai cuộc họp nếu chọn chương trình thương lượng, nhưng chưa hứa thay đổi mức trả hoặc khả năng nhận việc. Thành viên cũng có thể không tham gia hành động chung hoặc tự tìm khách hàng mà không dùng quỹ này.\n\nBạn sẽ cấp kinh phí cho chương trình nào? Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Provide immediate income support",
+            "vi": "Hỗ trợ thu nhập trước mắt"
+          },
+          "description": {
+            "en": "Use one hundred credits for grants of five credits each to the twenty members with the greatest current shortfall, and twenty credits for administration. Recipients may use the support without joining any other activity.",
+            "vi": "Dùng một trăm đơn vị tín dụng để cấp năm đơn vị cho mỗi người trong số hai mươi thành viên thiếu hụt thu nhập nhiều nhất hiện nay, và hai mươi đơn vị cho quản trị. Người nhận được dùng khoản hỗ trợ mà không phải tham gia hoạt động khác."
+          },
+          "tradeoff": {
+            "en": "The support reduces current hardship but does not change payment rules or build a new customer route. The other thirty members receive no grant.",
+            "vi": "Khoản hỗ trợ giảm khó khăn hiện tại nhưng không đổi quy tắc trả công hay tạo một nguồn khách hàng mới. Ba mươi thành viên còn lại không nhận trợ cấp."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Organize a shared negotiation",
+            "vi": "Tổ chức thương lượng chung"
+          },
+          "description": {
+            "en": "Use eighty credits for a coordinator to gather proposals and prepare the two agreed meetings, and forty credits to compensate members for participation time. Members freely choose representatives and approve any common proposal; accepting a resulting agreement remains voluntary.",
+            "vi": "Dùng tám mươi đơn vị cho người điều phối thu thập đề xuất và chuẩn bị hai cuộc họp đã được chấp thuận; bốn mươi đơn vị bù thời gian tham gia của thành viên. Thành viên tự nguyện chọn đại diện và thông qua đề xuất chung; việc chấp nhận thỏa thuận đạt được vẫn là tự nguyện."
+          },
+          "tradeoff": {
+            "en": "The app may reject the proposals. Compensation covers participation time rather than members’ wider income losses, and there is no immediate relief payment to the twenty members in greatest need.",
+            "vi": "Ứng dụng có thể từ chối các đề xuất. Khoản bù chỉ dành cho thời gian tham gia, không bù phần thu nhập bị mất nói chung; hai mươi thành viên khó khăn nhất không nhận khoản cứu trợ trước mắt."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Build a route to independent customers",
+            "vi": "Tạo một cách tiếp cận khách hàng độc lập"
+          },
+          "description": {
+            "en": "Use ninety credits for a shared booking and customer-outreach service and thirty for training. All fifty members may use it without leaving the main app; each worker sets the price for jobs they accept through this service. Participation and sharing contact details are voluntary.",
+            "vi": "Dùng chín mươi đơn vị cho dịch vụ nhận đặt việc chung và tìm khách hàng; ba mươi đơn vị cho đào tạo. Cả năm mươi thành viên đều có thể sử dụng mà không phải rời ứng dụng chính; mỗi người tự đặt giá cho công việc mình nhận qua dịch vụ này. Việc tham gia và chia sẻ thông tin liên lạc đều tự nguyện."
+          },
+          "tradeoff": {
+            "en": "There may be too few customers to replace lost income. Workers spend time finding and managing clients, and the fund provides neither immediate support grants nor negotiations with the main app.",
+            "vi": "Có thể có quá ít khách để bù thu nhập đã mất. Người lao động phải dành thời gian tìm và làm việc với khách; quỹ không cấp hỗ trợ trước mắt và cũng không dùng để thương lượng với ứng dụng chính."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Meet urgent needs before investing in uncertain future improvements",
+          "Build shared bargaining power over payment terms",
+          "Increase workers’ ability to set their own prices and find alternatives",
+          "Support fellow members even if my own situation would not improve",
+          "Choose the program most likely to work in the stated conditions",
+          "Other reason"
+        ],
+        "vi": [
+          "Đáp ứng nhu cầu cấp bách trước khi đầu tư vào cải thiện tương lai chưa chắc chắn",
+          "Tạo sức thương lượng chung về điều kiện trả công",
+          "Tăng khả năng tự đặt giá và tìm phương án thay thế của người lao động",
+          "Hỗ trợ các thành viên khác dù hoàn cảnh của bản thân không được cải thiện",
+          "Chọn chương trình có khả năng hiệu quả nhất trong các điều kiện đã nêu",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Putting aside your responsibility as association leader, which of these same programs would you personally prefer with the same members, budget, permissions and uncertainties? This response is optional.",
+        "vi": "Nếu tạm gác trách nhiệm lãnh đạo hội, cá nhân bạn thích chương trình nào trong các chương trình đó, với cùng thành viên, ngân sách, quyền hạn và những điều chưa chắc chắn? Câu trả lời này là tùy chọn."
+      },
+      "variant": {
+        "id": "CR-S12-V1",
+        "description": "Replace the fact that the app has agreed to attend two meetings with the fact that it has not yet agreed to attend either meeting. In option B, replace “the two agreed meetings” with “the two requested meetings”; retain the same quoted preparation cost even if attendance is declined.",
+        "invariants": "Keep fifty members, the twenty-member hardship group, all payment conditions, legal permissions, 120-credit budget, twelve-week period, compensation allocation, voluntary participation, no promise of changed pay, and options A/C unchanged. Only willingness to attend meetings changes; the option wording follows that single factual change.",
+        "interpretation_limit": "This examines sensitivity to an organization’s willingness to engage, not a pure measure of support for unions or solidarity. Expectations about strategic effectiveness can explain a switch. The variant is not a randomized study or a causal estimate.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "Describe a choice among immediate relief, shared bargaining and building alternatives, retaining the chosen reason and optional personal preference. Multiple motives can support any action. Do not score relief as apolitical, negotiation as intrinsically socialist or alternative customers as libertarian; each can express autonomy, solidarity or pragmatic expectations. All options differ in timing, beneficiaries and uncertainty, so this is not an isolated test of bargaining rights. The case does not prove a legal worker classification or test willingness to take action where organizing is prohibited. Country-specific feasibility and worker review remain pending.",
+      "comprehension_probes": [
+        "Which payment decisions can you actually change as association leader?",
+        "What is guaranteed by attending a meeting, and what remains uncertain?",
+        "Which members receive an immediate payment under each program?",
+        "Does helping members find customers require them to leave the main app or become a legally different kind of worker?",
+        "Can someone decline the program and remain a member?",
+        "In Vietnamese, distinguish bù thời gian tham gia from compensation for all income lost; check whether đơn vị tín dụng is read as a currency unit rather than a loan."
+      ],
+      "reading_ids": [
+        "EX-R09",
+        "EX-R10",
+        "EX-R12",
+        "EX-R13"
+      ]
+    },
+    {
+      "id": "CR-S17",
+      "title": "What should a rural transport inquiry investigate?",
+      "cluster_id": "CR-23",
+      "role_id": "civil_society",
+      "locality": "rural",
+      "briefing": {
+        "en": "Your surroundings. In a rural district of your assigned fictional country, a new public minibus service has operated in four villages for one year. Four nearby villages still use the previous service. The new service reaches more stops, but people disagree about its usefulness: some report easier access to work, while others describe unsuitable times or the loss of informal help with travel. The district is considering changes and has invited evidence on what matters, what has changed and what might explain it. It has not required one type of study or promised a policy change.\n\nYour role. You lead a voluntary civil society group. Its members have delegated to you the choice of one inquiry plan from the three below. You cannot alter transport routes, assign villages to a service, require anyone to be interviewed or promise that the district will adopt your findings.\n\nWhat is fixed. You have 120 research-budget units and six weeks. Each plan costs exactly 120 units, including access support, participant compensation where used, staff time and preparation of a public report. The same privacy, voluntary-participation and independent complaint arrangements apply. Reported results must include disagreements and limitations. No plan has begun. At least two residents in each village have volunteered to be considered for the resident inquiry group. Comparable anonymous travel records exist for all eight villages for the year before and the year after the change; they do not explain why those four villages received the new service. Local archives also contain fifteen years of transport decisions, land-use changes and residents’ petitions. Historical records are incomplete accounts of events, even where documents survive.\n\nWhich inquiry would you commission with this budget? You may also answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bối cảnh của bạn. Tại một huyện nông thôn của quốc gia giả định được giao, một dịch vụ xe buýt nhỏ công cộng mới đã hoạt động ở bốn làng trong một năm. Bốn làng gần đó vẫn dùng dịch vụ cũ. Dịch vụ mới đến nhiều điểm dừng hơn, nhưng người dân bất đồng về mức độ hữu ích: một số nói rằng đi làm dễ hơn; những người khác cho biết giờ xe không phù hợp hoặc họ mất sự giúp đỡ đi lại không chính thức. Huyện đang cân nhắc thay đổi và mời cung cấp bằng chứng về điều gì quan trọng, điều gì đã thay đổi và những gì có thể giải thích sự thay đổi. Huyện không yêu cầu một loại nghiên cứu cụ thể và chưa hứa thay đổi chính sách.\n\nVai trò của bạn. Bạn lãnh đạo một nhóm xã hội dân sự tự nguyện. Các thành viên đã giao cho bạn quyền chọn một kế hoạch tìm hiểu trong ba kế hoạch dưới đây. Bạn không có quyền đổi tuyến xe, quyết định làng nào được dùng dịch vụ nào, bắt buộc ai trả lời phỏng vấn hoặc hứa rằng huyện sẽ áp dụng kết quả của nhóm.\n\nNhững điều được giữ nguyên. Bạn có 120 đơn vị ngân sách nghiên cứu và sáu tuần. Mỗi kế hoạch dùng đúng 120 đơn vị, đã gồm hỗ trợ tiếp cận, khoản bù cho người tham gia khi có, thời gian nhân sự và việc chuẩn bị báo cáo công khai. Cùng các quy định về bảo mật, tham gia tự nguyện và cơ chế khiếu nại độc lập được áp dụng. Báo cáo phải nêu cả bất đồng lẫn hạn chế. Chưa kế hoạch nào bắt đầu. Ít nhất hai cư dân ở mỗi làng đã tình nguyện để được xem xét tham gia nhóm cư dân tìm hiểu. Có hồ sơ đi lại ẩn danh có thể so sánh cho cả tám làng, trong một năm trước và một năm sau thay đổi; hồ sơ không giải thích vì sao bốn làng đó nhận dịch vụ mới. Kho lưu trữ địa phương cũng có mười lăm năm quyết định về giao thông, thay đổi sử dụng đất và kiến nghị của người dân. Hồ sơ lịch sử không phản ánh đầy đủ mọi sự kiện, ngay cả khi tài liệu còn được lưu giữ.\n\nBạn sẽ đặt thực hiện kế hoạch tìm hiểu nào với ngân sách này? Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Compare changes in recorded journeys",
+            "vi": "So sánh thay đổi trong số liệu chuyến đi"
+          },
+          "description": {
+            "en": "Use eighty budget units to prepare and compare the before-and-after records in the two sets of villages, and forty to examine alternative explanations and publish results. The report will estimate differences in recorded travel and clearly state that service assignment was not random.",
+            "vi": "Dùng tám mươi đơn vị ngân sách để chuẩn bị và so sánh hồ sơ trước và sau thay đổi ở hai nhóm làng; bốn mươi đơn vị để xem xét các cách giải thích khác và công bố kết quả. Báo cáo sẽ ước tính chênh lệch về việc đi lại được ghi nhận và nêu rõ rằng dịch vụ không được phân bổ ngẫu nhiên."
+          },
+          "tradeoff": {
+            "en": "The records omit some informal journeys and how travel is experienced. Differences in why villages received the service can remain an alternative explanation; the comparison cannot by itself settle the service’s causal effect.",
+            "vi": "Hồ sơ bỏ sót một số chuyến đi không chính thức và cách người dân trải nghiệm việc đi lại. Những khác biệt về lý do làng được nhận dịch vụ có thể vẫn là cách giải thích khác; chỉ phép so sánh này không xác định được tác động nhân quả của dịch vụ."
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Investigate everyday experiences of the service",
+            "vi": "Tìm hiểu trải nghiệm hằng ngày về dịch vụ"
+          },
+          "description": {
+            "en": "Use eighty budget units for twenty-four voluntary interviews and guided journey accounts chosen to include different ages, access needs and service experiences, and forty to compare interpretations and publish a report. Participants can correct factual descriptions; different accounts remain visible.",
+            "vi": "Dùng tám mươi đơn vị ngân sách cho hai mươi bốn cuộc phỏng vấn tự nguyện và lời kể có hướng dẫn về hành trình, được chọn để có các độ tuổi, nhu cầu tiếp cận và trải nghiệm dịch vụ khác nhau; bốn mươi đơn vị để đối chiếu cách hiểu và công bố báo cáo. Người tham gia có thể sửa mô tả sai về sự việc; các lời kể khác nhau vẫn được trình bày."
+          },
+          "tradeoff": {
+            "en": "These accounts can illuminate meanings and mechanisms but cannot establish how common each experience is among all residents or isolate how much change the service caused. The group, rather than participants, retains final authority over the research questions.",
+            "vi": "Các lời kể có thể làm rõ ý nghĩa và cách sự việc diễn ra, nhưng không xác định được mỗi trải nghiệm phổ biến đến đâu trong toàn bộ cư dân hoặc tách riêng mức thay đổi do dịch vụ gây ra. Nhóm nghiên cứu, chứ không phải người tham gia, vẫn có quyền quyết định cuối cùng về câu hỏi nghiên cứu."
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Trace decisions with a resident inquiry group",
+            "vi": "Cùng nhóm cư dân lần theo các quyết định"
+          },
+          "description": {
+            "en": "Use forty budget units for an access-supported group of twelve residents selected by a volunteer lottery covering all eight villages, forty to trace transport decisions and petitions with them, and forty to develop questions and publish a joint report. Residents may revise the inquiry questions before analysis; changes and dissent are documented.",
+            "vi": "Dùng bốn mươi đơn vị ngân sách cho một nhóm mười hai cư dân được hỗ trợ tiếp cận, chọn bằng bốc thăm trong những người tình nguyện và có người từ cả tám làng; bốn mươi đơn vị để cùng họ lần theo quyết định giao thông và kiến nghị; bốn mươi đơn vị để xây dựng câu hỏi và công bố báo cáo chung. Cư dân có thể sửa câu hỏi tìm hiểu trước khi phân tích; mọi thay đổi và ý kiến bất đồng đều được ghi lại."
+          },
+          "tradeoff": {
+            "en": "Volunteer selection can leave some people unheard, and surviving documents may omit important events. The budget cannot also produce the systematic journey comparison or the range of individual interviews in the other plans. Joint decisions may reduce agreement on a single question.",
+            "vi": "Việc chọn trong những người tình nguyện có thể khiến một số người chưa được lắng nghe; tài liệu còn lại có thể thiếu sự kiện quan trọng. Ngân sách không đủ để đồng thời làm phép so sánh hành trình có hệ thống hoặc loạt phỏng vấn cá nhân như các kế hoạch khác. Quyết định chung có thể làm giảm khả năng thống nhất một câu hỏi duy nhất."
+          }
+        }
+      ],
+      "reasons": {
+        "en": [
+          "Assess how much of a recorded change the service might explain",
+          "Understand experiences and consequences that existing measures miss",
+          "Trace how earlier decisions created the present options",
+          "Give affected people authority to shape the inquiry",
+          "Choose evidence most useful for the next practical decision",
+          "Other reason"
+        ],
+        "vi": [
+          "Đánh giá dịch vụ có thể giải thích bao nhiêu phần thay đổi đã được ghi nhận",
+          "Hiểu trải nghiệm và hệ quả mà cách đo hiện có bỏ sót",
+          "Lần theo cách các quyết định trước đây tạo ra những lựa chọn hiện tại",
+          "Cho người chịu ảnh hưởng quyền định hình việc tìm hiểu",
+          "Chọn bằng chứng hữu ích nhất cho quyết định thực tế tiếp theo",
+          "Lý do khác"
+        ]
+      },
+      "personal_preference_prompt": {
+        "en": "Putting aside your responsibility as group leader, which of the same plans would you personally prefer under the same budget, records, deadline and decision purpose? This response is optional.",
+        "vi": "Nếu tạm gác trách nhiệm lãnh đạo nhóm, cá nhân bạn thích kế hoạch nào trong các kế hoạch đó, với cùng ngân sách, hồ sơ, thời hạn và mục đích ra quyết định? Câu trả lời này là tùy chọn."
+      },
+      "variant": {
+        "id": "CR-S17-V1",
+        "description": "Replace the availability of fifteen years of local archival records with the availability of only three years because older records were lost. No other evidence source or plan changes.",
+        "invariants": "Retain the same transport service, four intervention and four comparison villages, before-and-after journey records, resident experiences, six-week deadline, 120-unit budgets, participant selection, research authority, purpose, all option wording and privacy provisions.",
+        "interpretation_limit": "This changes the feasible depth of documented historical tracing, not the truth of a historical account. A changed choice may reflect the quality of available evidence rather than rejection of historical or participatory inquiry. Option C bundles two approaches, so the comparison cannot separate preferences for history from preferences for shared research authority.",
+        "translation_status": "not_drafted"
+      },
+      "interpretation_limits": "The task asks which useful but limited inquiry to prioritize under one budget; there is no supplied mandate that makes one plan the required answer. Option A is not a randomized experiment and may retain confounding; option B is not a population survey; option C combines historical tracing with participatory question-setting and cannot separately measure either preference. All methods can be combined in a better-resourced inquiry. Do not infer method competence, political ideology, trust in all experts or a general rejection of evidence from one choice. These author-designed plans are not findings from an actual transport study or an approved research protocol. Feasibility, terminology and independent research-methods review remain pending.",
+      "comprehension_probes": [
+        "What does the district want to learn, and has it required a causal estimate or a particular research method?",
+        "What can each plan establish, and what would still be unknown?",
+        "Were the villages randomly assigned to services? Why might this matter without making their comparison useless?",
+        "Does hearing twenty-four accounts show how common an experience is across the district?",
+        "Who can change the research questions in each plan, and can disagreement appear in the report?",
+        "Would you prefer to combine or sequence approaches if more resources were available? Which missing option matters most?",
+        "In Vietnamese, distinguish bằng chứng, lời kể, cách giải thích and tác động nhân quả through the reader’s own paraphrase rather than a technical definition test."
+      ],
+      "reading_ids": [
+        "EX-R21",
+        "EX-R22",
+        "EX-R17",
+        "EX-R23"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "DEBATE-17",
+      "title": "Standing within and beyond shared-resource self-government",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Retain separate judgments about stewardship, equal current-user standing, regional uniformity and affected non-users. Compare the stated basis of authority with the circumstances respondents assume.",
+      "evidence_required": "Responses to CR-17A/B/C/D plus paraphrases of membership, contribution, final authority and a binding say. Ask about the relation between protected individual rights and collective authority; obtain specific community and source review before any broader claim.",
+      "unsupported_inferences": "No self-rule score, sovereignty diagnosis, Indigenous-identity inference, ethnic preference or ranking of local and national political cultures. Agreement with multiple propositions can be coherent.",
+      "item_ids": [
+        "CR-17A",
+        "CR-17B",
+        "CR-17C",
+        "CR-17D"
+      ]
+    },
+    {
+      "id": "SCENARIO-11",
+      "title": "Choosing a shared-resource governance arrangement",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Describe the chosen distribution of decision rights, its acknowledged administrative and representational costs, and the reason selected in the reservoir pilot.",
+      "evidence_required": "Recorded package, selected reason, optional personal preference, paraphrase of authority and equal access, and any objection that downstream residents lack a binding voice. Any variant comparison must preserve its stated conditions and acknowledge order effects.",
+      "unsupported_inferences": "The choice does not identify a tradition or measure Indigenous sovereignty, civic competence or tolerance of domination. Different options bundle different decision and deadlock rules; no causal effect or universal governance preference follows.",
+      "item_ids": [
+        "CR-S11"
+      ]
+    },
+    {
+      "id": "DEBATE-18",
+      "title": "Work-related risk, bargaining exit and costly solidarity",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe views on whether control over hours or payment entails risk, whether collective bargaining constrains individual exit, and whether support is owed without personal gain. Keep these claims separate.",
+      "evidence_required": "Responses to CR-18A/B/C/D with clarification of control, expected income losses, realistic alternatives, collective authorization and the affordability of sacrifice. Review wording with workers under different work arrangements.",
+      "unsupported_inferences": "No legal employment classification, union-membership inference, class-consciousness score, moral ranking, prediction of strike action or identification of an economic ideology. Support for collective action and individual safeguards can coexist.",
+      "item_ids": [
+        "CR-18A",
+        "CR-18B",
+        "CR-18C",
+        "CR-18D"
+      ]
+    },
+    {
+      "id": "SCENARIO-12",
+      "title": "Priorities in a voluntary workers’ support fund",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Record which feasible use of a shared fund the respondent chooses and whether their stated reason concerns immediate need, bargaining power, alternatives, solidarity or expected effectiveness.",
+      "evidence_required": "Chosen program, selected reason, optional personal preference, understanding of the fixed fund and voluntary participation, and explicit recognition that a meeting or customer service does not guarantee improved pay.",
+      "unsupported_inferences": "The choice does not establish selfishness, genuine versus role-constrained politics, union support in every legal context or a causal effect of negotiation access. Package differences in timing and beneficiaries must remain visible.",
+      "item_ids": [
+        "CR-S12"
+      ]
+    },
+    {
+      "id": "DEBATE-23",
+      "title": "Preferred forms of inquiry and authority over research questions",
+      "claim_kind": "descriptive_construct",
+      "intended_interpretation": "Describe the separate weight given to comparative evidence for causal claims, situated meaning, historical formation and affected people’s authority to shape inquiry. Record conditional combinations and methodological purpose explicitly.",
+      "evidence_required": "Responses to CR-23A/B/C/D with paraphrases of what is being investigated, what each approach can and cannot show, and when another approach would be useful. Methods-source review and interviews must distinguish political commitments from technical vocabulary or assumed study quality.",
+      "unsupported_inferences": "No quantitative-versus-qualitative identity, methods-literacy score, ranking of intelligence, general epistemic virtue or political ideology. These approaches are neither exhaustive nor mutually exclusive. Descriptive responses cannot establish the validity of a method or source.",
+      "item_ids": [
+        "CR-23A",
+        "CR-23B",
+        "CR-23C",
+        "CR-23D"
+      ]
+    },
+    {
+      "id": "SCENARIO-17",
+      "title": "Selecting an inquiry under limited research resources",
+      "claim_kind": "scenario_judgment",
+      "intended_interpretation": "Record which research plan the respondent prioritizes for the broad transport question, the reason selected, the recognized limits and any preference for a combination or different sequence.",
+      "evidence_required": "Chosen plan, selected reason, optional personal preference, understanding of available records and authority, and neutral probes distinguishing comparison, interpretation, historical explanation and participatory question-setting. Preserve the broad purpose and all package limitations in any report.",
+      "unsupported_inferences": "The choice is not a correct-answer test, a validated methodology scale, a political identity or evidence that any proposed study would succeed. A preference for option C cannot separately identify historical and participatory commitments. A changed response to missing archives does not show ideological inconsistency.",
+      "item_ids": [
+        "CR-S17"
+      ]
+    }
+  ]
+}

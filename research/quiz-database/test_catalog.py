@@ -42,12 +42,12 @@ class CatalogChecks(unittest.TestCase):
     def test_integrity_and_foreign_keys_reject_dangling_relationship(self):
         self.assertEqual(self.scalar('PRAGMA integrity_check'), 'ok')
         self.assertEqual(self.rows('PRAGMA foreign_key_check'), [])
-        self.assertEqual(self.scalar('PRAGMA user_version'), 1)
+        self.assertEqual(self.scalar('PRAGMA user_version'), 2)
         with self.assertRaises(sqlite3.IntegrityError):
             self.db.execute("INSERT INTO package_items(package_id,item_id,usage) VALUES ('REVIEW-A','not-an-item','primary_task')")
         self.db.rollback()
         self.assertEqual(dict(self.rows('SELECT bank,count(*) FROM items GROUP BY bank')),
-                         {'current': 49, 'candidate': 42})
+                         {'current': 49, 'candidate': 102})
 
     def test_current_statements_preserve_both_languages_and_direction(self):
         instrument = self.authored['instrument']
@@ -91,7 +91,7 @@ class CatalogChecks(unittest.TestCase):
                 self.assertEqual(self.scalar('SELECT text FROM item_texts WHERE item_id=? AND language=?', (item_id, language)), stem)
         missing = self.rows("SELECT item_id FROM review_queue WHERE vietnamese_status='not_drafted' ORDER BY item_id")
         self.assertEqual(missing, [(f'CR-S{i:02}',) for i in range(3, 7)])
-        self.assertEqual(self.scalar("SELECT count(*) FROM item_texts WHERE language='vi'"), 87)
+        self.assertEqual(self.scalar("SELECT count(*) FROM item_texts WHERE language='vi'"), 147)
         self.assertEqual(self.scalar("SELECT count(*) FROM item_texts WHERE language='vi' AND usage!='review_only'"), 0)
         drafts = json.loads((HERE / 'draft-scenarios.json').read_text())['scenarios']
         for scene in drafts:
@@ -120,16 +120,20 @@ class CatalogChecks(unittest.TestCase):
         self.assertEqual(len(all_draft_ids), len(set(all_draft_ids)))
         self.assertEqual(self.rows('SELECT id,assigned_items,planned_primary_tasks,vietnamese_drafts,probe_tasks FROM package_summary ORDER BY id'),
                          [('FUTURE-24', 0, 24, 0, 0), ('PILOT-0.4.0', 49, 49, 49, 0),
-                          ('REVIEW-A', 14, 14, 13, 1), ('REVIEW-B', 14, 14, 13, 0), ('REVIEW-C', 14, 14, 12, 0)])
+                          ('REVIEW-A', 14, 14, 13, 1), ('REVIEW-B', 14, 14, 13, 0), ('REVIEW-C', 14, 14, 12, 0),
+                          ('REVIEW-D', 10, 10, 10, 0), ('REVIEW-E', 10, 10, 10, 0),
+                          ('REVIEW-F', 10, 10, 10, 0), ('REVIEW-G', 10, 10, 10, 0),
+                          ('REVIEW-H', 10, 10, 10, 0), ('REVIEW-I', 5, 5, 5, 0), ('REVIEW-J', 5, 5, 5, 0)])
         self.assertEqual(self.scalar("SELECT count(*) FROM package_outcomes WHERE package_id='FUTURE-24'"), 0)
 
     def test_outcome_links_preserve_probe_only_and_whole_package_meanings(self):
-        self.assertEqual(self.scalar('SELECT count(*) FROM outcomes'), 31)
+        self.assertEqual(self.scalar('SELECT count(*) FROM outcomes'), 55)
         self.assertEqual(self.rows("SELECT i.id FROM items i WHERE NOT EXISTS (SELECT 1 FROM item_outcomes io WHERE io.item_id=i.id AND io.relationship IN ('primary','probe'))"), [])
         self.assertEqual(self.rows("SELECT io.relationship,o.claim_kind FROM item_outcomes io JOIN outcomes o ON o.id=io.outcome_id WHERE io.item_id='CR-S03'"),
                          [('probe', 'comprehension')])
         self.assertEqual(self.rows("SELECT coverage_scope,linked_items,applicable_items FROM package_outcome_matrix WHERE outcome_id='REVIEW-COMPREHENSION' ORDER BY package_id"),
-                         [('whole_package', 0, 49), ('whole_package', 0, 14), ('whole_package', 0, 14), ('whole_package', 0, 14)])
+                         [('whole_package', 0, 49), ('whole_package', 0, 14), ('whole_package', 0, 14), ('whole_package', 0, 14)] +
+                         [('whole_package', 0, 10)] * 5 + [('whole_package', 0, 5)] * 2)
         self.assertEqual(self.scalar("SELECT count(*) FROM outcomes WHERE trim(intended_interpretation)='' OR trim(evidence_required)='' OR trim(unsupported_inferences)=''"), 0)
 
     def test_scoring_exclusions_are_not_reintroduced_by_catalog_links(self):
@@ -143,7 +147,7 @@ class CatalogChecks(unittest.TestCase):
 
     def test_contexts_and_country_correspondences_remain_separate(self):
         self.assertEqual(dict(self.rows('SELECT status,count(*) FROM scenario_contexts GROUP BY status')),
-                         {'authored_unreviewed': 72, 'needs_authorization_review': 48})
+                         {'authored_unreviewed': 72, 'needs_authorization_review': 144})
         self.assertEqual(self.scalar("SELECT count(*) FROM scenario_contexts WHERE status='needs_authorization_review' AND (note_en IS NOT NULL OR note_vi IS NOT NULL)"), 0)
         self.assertEqual(self.rows('SELECT DISTINCT participant_visibility FROM world_reveals'), [('after_completion',)])
         self.assertEqual(self.scalar('SELECT count(*) FROM world_reveals'), 16)
@@ -158,9 +162,9 @@ class CatalogChecks(unittest.TestCase):
         self.assertFalse(any('inspiration' in r[1] for r in self.rows('PRAGMA table_info(world_texts)')))
 
     def test_sources_and_variants_preserve_unverified_and_unwritten_statuses(self):
-        self.assertEqual(self.rows('SELECT verification,count(*) FROM readings GROUP BY verification'), [('unverified', 48)])
+        self.assertEqual(self.rows("SELECT verification,count(*) FROM readings WHERE id NOT LIKE 'EX-%' GROUP BY verification"), [('unverified', 48)])
         self.assertEqual(dict(self.rows('SELECT status,count(*) FROM variants GROUP BY status')),
-                         {'editorial_proposal': 6, 'implemented_comparison': 1})
+                         {'editorial_proposal': 18, 'implemented_comparison': 1})
         self.assertEqual(self.scalar("SELECT count(*) FROM variants WHERE status='editorial_proposal' AND (comparison_item_id IS NOT NULL OR translation_status!='not_drafted')"), 0)
         manifest = json.loads((self.output / 'source-manifest.json').read_text())
         self.assertEqual(dict(self.rows('SELECT path,sha256 FROM source_files')), manifest)
@@ -181,13 +185,143 @@ class CatalogChecks(unittest.TestCase):
         self.assertEqual(builder.csv_value('Tự do, "quyền lực"\nchăm sóc'), 'Tự do, "quyền lực"\nchăm sóc')
         self.assertEqual(builder.csv_value(None), '')
 
-    def test_all_eight_documented_queries_run_without_modifying_data(self):
+    def test_expansion_statements_preserve_rivals_probes_and_internal_disagreements(self):
+        packets, ledger = builder.expansion.load(builder.ROOT)
+        self.assertEqual(len([c for _, packet in packets for c in packet['clusters']]), 12)
+        count = 0
+        for path, packet in packets:
+            for cluster in packet['clusters']:
+                self.assertEqual(self.rows('SELECT lens,argument,internal_disagreement FROM cluster_tensions WHERE cluster_id=? ORDER BY display_order',
+                                           (cluster['id'],)),
+                                 [(t['lens'], t['argument'], t['internal_disagreement']) for t in cluster['tradition_tensions']])
+                for statement in cluster['statements']:
+                    count += 1
+                    for language in ('en', 'vi'):
+                        self.assertEqual(self.rows('SELECT text,usage FROM item_texts WHERE item_id=? AND language=?',
+                                                   (statement['id'], language)), [(statement[language], 'review_only')])
+                    self.assertEqual(self.rows('SELECT rival_reading,comprehension_probe FROM statement_review WHERE item_id=?',
+                                               (statement['id'],)), [(statement['rival_reading'], statement['probe'])])
+                    self.assertEqual(self.rows('SELECT source_path,rationale,scoring_mode,direction FROM items WHERE id=?',
+                                               (statement['id'],)), [(path, statement['distinction'], 'descriptive', None)])
+                    self.assertEqual({r[0] for r in self.rows('SELECT reading_id FROM item_readings WHERE item_id=?', (statement['id'],))},
+                                     set(statement['reading_ids']))
+        self.assertEqual(count, 48)
+
+    def test_expansion_scenarios_preserve_authority_options_reasons_and_preferences(self):
+        packets, _ = builder.expansion.load(builder.ROOT)
+        scenes = [scene for _, packet in packets for scene in packet['scenarios']]
+        self.assertEqual(len(scenes), 12)
+        for scene in scenes:
+            with self.subTest(scene=scene['id']):
+                self.assertEqual(self.rows('SELECT role_id,locality,cluster_id,scoring_mode FROM items WHERE id=?', (scene['id'],)),
+                                 [(scene['role_id'], scene['locality'], scene['cluster_id'], 'descriptive')])
+                self.assertEqual(self.rows('SELECT option_id,current_authored_score FROM options WHERE item_id=? ORDER BY display_order', (scene['id'],)),
+                                 [('A', None), ('B', None), ('C', None)])
+                for language in ('en', 'vi'):
+                    text = self.scalar('SELECT text FROM item_texts WHERE item_id=? AND language=?', (scene['id'], language))
+                    self.assertIn(scene['briefing'][language], text)
+                    self.assertIn(scene['personal_preference_prompt'][language], text)
+                    for option in scene['options']:
+                        self.assertEqual(self.rows('SELECT label,description,tradeoff FROM option_texts WHERE item_id=? AND option_id=? AND language=?',
+                                                   (scene['id'], option['id'], language)),
+                                         [(option['label'][language], option['description'][language], option['tradeoff'][language])])
+                    self.assertEqual(self.scalar('SELECT notes FROM reason_notes WHERE item_id=? AND language=?', (scene['id'], language)),
+                                     '\n'.join(scene['reasons'][language]))
+                    self.assertEqual(self.scalar('SELECT prompt FROM scenario_preference_prompts WHERE item_id=? AND language=?',
+                                                 (scene['id'], language)), scene['personal_preference_prompt'][language])
+                self.assertEqual([r[0] for r in self.rows('SELECT probe FROM scenario_probes WHERE item_id=? ORDER BY display_order', (scene['id'],))],
+                                 scene['comprehension_probes'])
+                self.assertEqual(self.rows('SELECT description,invariants,interpretation_limit,translation_status,comparison_item_id FROM variants WHERE base_item_id=?',
+                                           (scene['id'],)), [(scene['variant']['description'], scene['variant']['invariants'],
+                                                              scene['variant']['interpretation_limit'], 'not_drafted', None)])
+
+    def test_expansion_packages_allocate_all_sixty_items_once_with_exact_outcomes(self):
+        all_items = []
+        for suffix, (clusters, scenes) in builder.expansion.PACKETS.items():
+            expected = {f'CR-{n:02}{letter}' for n in clusters for letter in 'ABCD'} | {f'CR-S{n:02}' for n in scenes}
+            actual = self.rows('SELECT item_id,presentation_order FROM package_items WHERE package_id=?', ('REVIEW-' + suffix,))
+            self.assertEqual({r[0] for r in actual}, expected)
+            self.assertTrue(all(r[1] is None for r in actual))
+            all_items.extend(r[0] for r in actual)
+            expected_outcomes = {f'DEBATE-{n:02}' for n in clusters} | {f'SCENARIO-{n:02}' for n in scenes} | {'REVIEW-COMPREHENSION'}
+            self.assertEqual({r[0] for r in self.rows('SELECT outcome_id FROM package_outcomes WHERE package_id=?', ('REVIEW-' + suffix,))}, expected_outcomes)
+        self.assertEqual(len(all_items), 60)
+        self.assertEqual(len(set(all_items)), 60)
+        packets, _ = builder.expansion.load(builder.ROOT)
+        for path, packet in packets:
+            for outcome in packet['outcomes']:
+                self.assertEqual({r[0] for r in self.rows('SELECT item_id FROM item_outcomes WHERE outcome_id=?', (outcome['id'],))}, set(outcome['item_ids']))
+                self.assertEqual(self.rows('SELECT intended_interpretation,evidence_required,unsupported_inferences,status FROM outcomes WHERE id=?',
+                                           (outcome['id'],)), [(outcome['intended_interpretation'], outcome['evidence_required'],
+                                                               outcome['unsupported_inferences'], 'author_draft')])
+
+    def test_inspected_source_passages_preserve_provenance_without_upgrading_old_proposals(self):
+        _, ledger = builder.expansion.load(builder.ROOT)
+        self.assertEqual(self.scalar('SELECT count(*) FROM reading_evidence'), len(ledger['readings']))
+        for reading in ledger['readings']:
+            self.assertEqual(self.scalar('SELECT verification FROM readings WHERE id=?', (reading['id'],)), reading['verification'])
+            self.assertEqual(self.rows('SELECT source_kind,retrieval_status,access_date,relevance,limits FROM reading_evidence WHERE reading_id=?',
+                                       (reading['id'],)), [(reading['source_kind'], reading['retrieval_status'], reading['access_date'],
+                                                          reading['relevance'], reading['limits'])])
+            self.assertEqual(self.rows('SELECT locator,excerpt,url,sha256 FROM reading_passages WHERE reading_id=? ORDER BY passage_number',
+                                       (reading['id'],)), [(p['locator'], p['excerpt'], p['url'], p['sha256']) for p in reading['passages']])
+        self.assertEqual(self.rows("SELECT verification,count(*) FROM readings WHERE id NOT LIKE 'EX-%' GROUP BY verification"), [('unverified', 48)])
+        self.assertEqual(self.rows("SELECT r.id FROM readings r WHERE r.verification='unverified' AND EXISTS (SELECT 1 FROM reading_passages p WHERE p.reading_id=r.id)"), [])
+
+    def test_readable_expansion_exports_retain_questions_sources_and_limits(self):
+        packets, ledger = builder.expansion.load(builder.ROOT)
+        candidates = (self.output / 'expansion-candidates.md').read_text()
+        sources = (self.output / 'source-evidence.md').read_text()
+        for _, packet in packets:
+            for cluster in packet['clusters']:
+                for statement in cluster['statements']:
+                    for field in ('en', 'vi', 'distinction', 'rival_reading', 'probe'):
+                        self.assertIn(statement[field], candidates)
+            for scene in packet['scenarios']:
+                self.assertIn(scene['briefing']['en'], candidates)
+                self.assertIn(scene['briefing']['vi'], candidates)
+                self.assertIn(scene['interpretation_limits'], candidates)
+            for outcome in packet['outcomes']:
+                self.assertIn(outcome['unsupported_inferences'], candidates)
+        for reading in ledger['readings']:
+            self.assertIn(reading['bibliographic_proposal'], sources)
+            self.assertIn(reading['verification'], sources)
+            self.assertIn(reading['limits'], sources)
+            for passage in reading['passages']:
+                self.assertIn(passage['excerpt'], sources)
+                self.assertIn(passage['sha256'], sources)
+
+    def test_expansion_rejects_unsubstantiated_inspection_and_misassigned_outcomes(self):
+        import shutil
+        with tempfile.TemporaryDirectory(prefix='expansion-invalid-') as directory:
+            root = Path(directory)
+            for path in builder.expansion.PATHS:
+                target = root / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(builder.ROOT / path, target)
+            path = root / builder.expansion.SOURCE_PATH
+            original = path.read_text()
+            ledger = json.loads(original)
+            unverified = next(r for r in ledger['readings'] if r['verification'] == 'unverified')
+            unverified['verification'] = 'passage_inspected'
+            path.write_text(json.dumps(ledger))
+            with self.assertRaisesRegex(ValueError, 'passages and inspection status disagree'):
+                builder.expansion.load(root)
+            path.write_text(original)
+            candidate_path = root / 'research/quiz-database/expansion/care-family.json'
+            candidate = json.loads(candidate_path.read_text())
+            candidate['outcomes'][0]['item_ids'] = ['CR-S07']
+            candidate_path.write_text(json.dumps(candidate))
+            with self.assertRaisesRegex(ValueError, 'incorrect intended-outcome links'):
+                builder.expansion.load(root)
+
+    def test_all_ten_documented_queries_run_without_modifying_data(self):
         sql = (HERE / 'queries.sql').read_text()
         uncommented = re.sub(r'^\s*--.*$', '', sql, flags=re.M)
         statements = [s.strip() for s in uncommented.split(';') if s.strip()]
-        self.assertEqual(len(statements), 8)
+        self.assertEqual(len(statements), 10)
         self.db.execute('PRAGMA query_only=ON')
-        expected_counts = [5, 7, 14, 4, 1, 1, 16, 5]
+        expected_counts = [12, 7, 14, 4, 1, 1, 16, 5, len(json.loads((HERE / 'expansion/sources.json').read_text())['readings']), 10]
         for query, count in zip(statements, expected_counts):
             self.assertTrue(query.upper().startswith('SELECT'))
             self.assertEqual(len(self.rows(query)), count)

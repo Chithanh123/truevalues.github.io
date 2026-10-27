@@ -5,6 +5,7 @@
  */
 import { validateSession } from './engine.js';
 import { debriefThemes, debriefVersion } from './debrief-content.js';
+import { interpretDebrief } from './interpretation.js';
 
 const agreementLabels = {
   2: 'Strongly agree', 1: 'Agree', 0: 'Neither agree nor disagree',
@@ -195,12 +196,19 @@ function coverageLine(label, counts) {
 /** Plain text is suitable for a local download or copy; it contains no markup. */
 export function createTextReport(instrument, session) {
   const report = buildDebrief(instrument, session);
+  const interpretation = interpretDebrief(instrument, report);
   const lines = [
     'Political Context — your personal reflection',
-    `Assessment version: ${report.instrumentVersion}. Reflection format: ${report.version}.`,
+    `Assessment version: ${report.instrumentVersion}. Reflection format: ${report.version}. Interpretation rules: ${interpretation.version}.`,
     '',
-    'This report lists your recorded responses, grouped by authored discussion themes. The groups do not calculate scores, rank traditions, or identify a political ideology.',
+    'This report interprets patterns in your answers and retains the recorded responses behind them. The themes do not calculate scores, rank traditions, or identify a political ideology.',
     'A shared theme does not establish that one answer explains another. Only reasons you selected are recorded as your reasons.',
+    '',
+    'What your answers suggest',
+    interpretation.overview.title,
+    interpretation.overview.summary,
+    ...interpretation.insights.flatMap(insight => ['', insight.title, insight.text,
+      `Supporting response IDs: ${insight.evidenceIds.join(', ') || 'Response coverage only'}.`]),
     '',
     'Your setting, revealed after completion',
     report.world.name,
@@ -215,7 +223,16 @@ export function createTextReport(instrument, session) {
     'Coverage counts describe available responses; they are not confidence levels or measures of accuracy.',
   ];
   for (const theme of report.themes) {
-    lines.push('', '— ' + theme.title + ' —', theme.question, '', theme.readingNote);
+    const meaning = interpretation.themes.find(item => item.id === theme.id);
+    lines.push('', '— ' + theme.title + ' —', theme.question, '',
+      'Interpretation: ' + meaning.headline, meaning.meaning, meaning.evidenceNote);
+    for (const connection of meaning.connections) lines.push('', connection.title, connection.text,
+      `Supporting response IDs: ${connection.evidenceIds.join(', ')}.`);
+    if (meaning.premises.length) lines.push('', 'What your starting assumptions indicate');
+    for (const premise of meaning.premises) lines.push(premise.meaning);
+    if (meaning.decisions.length) lines.push('', 'What your decisions put into practice');
+    for (const decision of meaning.decisions) lines.push(`${decision.title}: ${decision.meaning}`);
+    lines.push('', 'Limits of this interpretation: ' + meaning.limit, '', 'Your supporting responses');
     for (const [heading, rows] of [['Value statements', theme.statements], ['Starting assumptions', theme.foundations]]) {
       if (!rows.length) continue;
       lines.push('', heading);

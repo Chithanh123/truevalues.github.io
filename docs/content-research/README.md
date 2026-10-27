@@ -97,4 +97,6 @@ Structural checks confirm 36 unique candidate IDs with paired English–Vietname
 
 The present deliverable completes a substantive desk audit and a reviewable set of content proposals. Source verification, independent human review, and comprehension findings remain open. No software work is needed to inspect or improve this preparation pack.
 
-The subsequent [quiz-package database](../../research/quiz-database/README.md) makes these content relationships queryable: five packages, 91 items, and 31 intended outcomes, with explicit draft, probe, translation, and source-verification status. It does not adopt the proposals into the participant quiz or turn the outcomes into scored diagnoses.
+The subsequent [quiz-package database](../../research/quiz-database/README.md) makes these content relationships queryable: twelve packages, 151 items, and 55 intended outcomes, with explicit draft, probe, translation, and source-verification status. It does not adopt the proposals into the participant quiz or turn the outcomes into scored diagnoses.
+
+The [27 October expansion](EXPANSION-2026-10-27.md) adds candidate questions on political economy, institutions, ontology, epistemology, methodology, and other identified gaps.

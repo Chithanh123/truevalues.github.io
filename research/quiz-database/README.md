@@ -2,12 +2,13 @@
 
 This is an **author-facing content catalog** for Political Context. It connects quiz packages, their items, and the interpretations each package is intended to explore. An intended outcome describes what a response might tell us; it is not a preferred political answer, an ideological diagnosis, or a validated result.
 
-The catalog contains the current instrument and the content proposals prepared in the [research pack](../../docs/content-research/README.md). It does not change the application, its 49-item route, its scores, or its saved responses. It stores authored content and research metadata, with no participant answers or personal records.
+The catalog contains the current instrument, the [initial research pack](../../docs/content-research/README.md), and the [27 October expansion](../../docs/content-research/EXPANSION-2026-10-27.md). It does not change the application, its 49-item route, its scores, or its saved responses. It stores authored content and research metadata, with no participant answers or personal records.
 
 ## Open the database
 
 - **For mobile or web reading, start with [Packages and intended outcomes](generated/package-overview.md).** GitHub renders this overview as a normal page; no download or database application is needed.
-- For an offline copy, use the [database and CSV download bundle](downloads/quiz-database-2026-10-25.zip?raw=1). SQLite is a database format, so use the readable overview if you only want to browse the contents.
+- Read the [new bilingual questions and contextual situations](generated/expansion-candidates.md) and the [source evidence record](generated/source-evidence.md) in your browser.
+- For an offline copy, use the [database and CSV download bundle](downloads/quiz-database-2026-10-27.zip?raw=1). SQLite is a database format, so use the readable overview if you only want to browse the contents. The bundle includes the generated guides and expansion JSON; some links to documents outside the extracted bundle need the repository.
 - Open [generated/quiz-packages.sqlite3](generated/quiz-packages.sqlite3) in a database browser using SQLite 3.37 or later. The file is portable and needs no database server.
 - Open the files in [generated/csv](generated/csv) in a spreadsheet for a table-by-table review.
 - Start with `package_summary`, `package_content`, and `package_outcome_matrix`; these views connect the main records without requiring manual joins.
@@ -23,19 +24,22 @@ The database is researcher material and includes country-inspiration spoilers. F
 | `REVIEW-A` | CR-02, CR-03, CR-05, and CR-06 triads; CR-S01 and CR-S03; **14 primary tasks** | Draft comprehension packet on power, freedom, enterprise authority, and knowledge. CR-S03 is held as a comprehension probe pending redesign, not an ideological indicator. |
 | `REVIEW-B` | CR-01, CR-04, CR-11, and CR-12 triads; CR-S02 and CR-S05; **14 primary tasks** | Draft comprehension packet on social formation, care, ecological standing, and the grounds of authority. |
 | `REVIEW-C` | CR-07, CR-08, CR-09, and CR-10 triads; CR-S04 and CR-S06; **14 primary tasks** | Draft comprehension packet on continuity, membership, religion, inherited status, and repair. |
+| `REVIEW-D`–`REVIEW-H` | Two new clusters and two scenarios each; **10 primary tasks** per packet | Author-draft comprehension packets covering disability, family, emergency power, digital governance, commons, work, political economy, institutions, ontology and epistemology. |
+| `REVIEW-I` | One new cluster and one scenario; **5 primary tasks** | Author-draft methodology packet; additional probes and discussion add burden. |
+| `REVIEW-J` | One international-relations cluster and one scenario; **5 primary tasks** | Author-draft review of security, cooperation, sovereignty and international institutions. |
 | `FUTURE-24` | Budget of 18 statements and six scenarios; **zero items selected** | Unassigned design outline. Its target of 24 tasks is not a completed form, a recommended validated length, or a source of current assessment outcomes. |
 
-Each review packet has twelve statements and two scenario families. Together they cover the 36 new statements and six scenario families once. Their membership is specified; presentation order and formal study allocation are not fixed. They are not equivalent forms and do not give each reader a complete political profile. Briefings, reasons, interviews, language switching, and debriefing add burden beyond the primary-task count.
+The original REVIEW-A–C packets have twelve statements and two scenario families each. REVIEW-D–J allocate the 48 additional statements and twelve additional scenarios once. Their membership is specified; presentation order and formal study allocation are not fixed. They are not equivalent forms and do not give each reader a complete political profile. Briefings, reasons, interviews, language switching, and debriefing add burden beyond the primary-task count.
 
 The later 24-task form must select from the combined existing and new bank after coverage review. It should not automatically select all six new families and lose existing dissent or international-obligation coverage.
 
 ## Content and language coverage
 
-There are **91 distinct item records**: 49 current items, 36 proposed statements, and six proposed scenario families. Options, reasons, and variant instructions are related records rather than extra primary items. The current repeated housing case is one of the existing nine scenario instances.
+There are **151 distinct item records**: 49 current items, 84 proposed statements, and 18 proposed scenario families. Options, reasons, and variant instructions are related records rather than extra primary items. The current repeated housing case is one of the existing nine scenario instances.
 
-English text is available for all 91 items. Vietnamese author drafts are available for **87**: all 49 current items, all 36 new statements, and CR-S01/CR-S02. CR-S03 through CR-S06 have no Vietnamese participant draft. The review packets therefore contain 13, 13, and 12 Vietnamese drafts respectively. These counts establish availability, not translation equivalence. The current participant application remains English.
+English text is available for all 151 items. Vietnamese author drafts are available for **147**: all 49 current items, all 84 proposed statements, and 14 of the 18 proposed scenarios. CR-S03 through CR-S06 have no Vietnamese participant draft. The review packets therefore contain 13, 13, and 12 Vietnamese drafts respectively. These counts establish availability, not translation equivalence. The current participant application remains English.
 
-All eight fictional worlds are represented. The 72 current scenario–world notes are authored and unreviewed. The 48 new scenario–world combinations are an authorization and feasibility review queue; their participant context notes remain absent. A populated queue does not mean those 48 contexts have been written, independently reviewed, or checked against real-country law.
+All eight fictional worlds are represented. The 72 current scenario–world notes are authored and unreviewed. The 144 proposed scenario–world combinations are an authorization and feasibility review queue; their participant context notes remain absent. A populated queue does not mean those 144 contexts have been written, independently reviewed, or checked against real-country law.
 
 ## Read the intended outcomes correctly
 
@@ -55,7 +59,7 @@ Package outcomes distinguish `linked_items` from `whole_package` coverage. The g
 
 The original score metadata is retained for inspection. Current value statements have a direction; seven current main scenarios retain provisional option scores. The public-records scenario is descriptive, the housing comparison is excluded from aggregation, and foundation responses are descriptive. New candidates and CR-S03 have no option scores. A cooperative or combined arrangement is not established as politically moderate because an older authored rubric gives it zero. Any changes to the actual scoring contract require separate content decisions and application work.
 
-All bibliographic proposals remain **unverified**. The source dossier records blocked retrieval, not successfully read passages. Source links establish a reading queue; they do not prove an item's validity or an author's endorsement of its wording. No completed independent human review or empirical validation is implied by a database row or a passing integrity check.
+The original source dossier records unverified proposals. In the October expansion, selected passages from six sources were inspected; twenty-one further proposed readings remain unverified. Read the [source evidence record](generated/source-evidence.md) for exact scope and access limitations. Source links establish a reading queue; they do not prove an item's validity or an author's endorsement of its wording. No completed independent human review or empirical validation is implied by a database row or a passing integrity check.
 
 ## Main tables and views
 
@@ -66,7 +70,7 @@ All bibliographic proposals remain **unverified**. The source dossier records bl
 | `items`, `item_texts`, `clusters` | Stable IDs, content status, claim type, bilingual wording, conceptual disputes, probes, and risks. |
 | `options`, `option_texts`, `reason_notes`, `variants` | Offered actions, tradeoffs, explanatory notes, and controlled-variant proposals. A variant instruction is not a fully authored alternate form. |
 | `roles`, `worlds`, `world_texts`, `world_reveals`, `scenario_contexts` | Role metadata, fictional briefs, separate debrief correspondences, and setting-specific feasibility status. |
-| `readings`, `cluster_readings`, `item_readings` | Unverified reading proposals and their conceptual links. |
+| `readings`, `cluster_readings`, `item_readings`, `reading_evidence`, `reading_passages` | Reading proposals, conceptual links and the limited passage-inspection record. |
 | `audit_findings`, `review_queue` | Existing-item issues, proposed dispositions, translation gaps, and items held for review. |
 | `metadata`, `source_files` | Catalog provenance, version information, and source-file hashes identifying the imported snapshot. Hashes do not certify accuracy or review. |
 
@@ -79,9 +83,10 @@ From the repository root, use the existing Python 3 and Node.js environment:
 ```sh
 python3 research/quiz-database/build.py
 python3 research/quiz-database/test_catalog.py
+python3 research/quiz-database/build-bundle.py
 ```
 
-The builder reads the current authored JavaScript content, the content-research Markdown, and the structured [outcome metadata](outcomes.json) and [scenario drafts](draft-scenarios.json). It generates the SQLite database and CSV exports locally. It requires no external database service and performs no participant-data collection.
+The builder reads the current authored JavaScript content, the content-research Markdown, and the structured [outcome metadata](outcomes.json), [scenario drafts](draft-scenarios.json), and [expansion sources](expansion/). It generates the SQLite database and CSV exports locally. It requires no external database service and performs no participant-data collection.
 
 Edit the source material and review the intended meanings before rebuilding. Generated database or CSV edits do not flow back into the authored sources and may be replaced by a rebuild. Keep manual review observations separately from generated output. When source wording changes, recheck related translations, mappings, variants, and outcome interpretations; a successful rebuild cannot perform that conceptual review.
 

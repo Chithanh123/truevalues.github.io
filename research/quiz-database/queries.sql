@@ -74,3 +74,21 @@ LEFT JOIN domains d ON d.id = i.domain_id
 WHERE i.bank = 'current'
 GROUP BY d.id, d.title
 ORDER BY domain_id;
+
+-- 9. Distinguish selected inspected passages from unverified expansion readings.
+SELECT r.id, r.bibliographic_proposal, r.verification, e.source_kind,
+       e.retrieval_status, e.access_date, e.relevance, e.limits,
+       count(p.passage_number) AS inspected_passages
+FROM readings r
+JOIN reading_evidence e ON e.reading_id = r.id
+LEFT JOIN reading_passages p ON p.reading_id = r.id
+GROUP BY r.id
+ORDER BY r.id;
+
+-- 10. Review ontology and epistemology wording without converting it to a score.
+SELECT pc.item_id, pc.kind, pc.english_text, pc.vietnamese_draft,
+       sr.rival_reading, sr.comprehension_probe, pc.scoring_mode
+FROM package_content pc
+LEFT JOIN statement_review sr ON sr.item_id = pc.item_id
+WHERE pc.package_id = 'REVIEW-H'
+ORDER BY pc.item_id;

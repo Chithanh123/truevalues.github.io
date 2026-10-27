@@ -4,6 +4,7 @@
 import argparse
 import csv
 import hashlib
+import importlib.util
 import json
 import re
 import sqlite3
@@ -14,8 +15,12 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 DOCS = 'docs/content-research/'
-OWNER = 'Political Context quiz catalog schema 1\n'
-CATALOG_DATE = '2026-10-25'
+OWNER = 'Political Context quiz catalog schema 2\n'
+PREVIOUS_OWNER = 'Political Context quiz catalog schema 1\n'
+CATALOG_DATE = '2026-10-27'
+_expansion_spec = importlib.util.spec_from_file_location('quiz_catalog_expansion', HERE / 'expansion.py')
+expansion = importlib.util.module_from_spec(_expansion_spec)
+_expansion_spec.loader.exec_module(expansion)
 
 
 def read(relative):
@@ -287,9 +292,9 @@ def validate(db):
     require(db.execute('PRAGMA integrity_check').fetchone()[0] == 'ok', 'SQLite integrity failure')
     require(not db.execute('PRAGMA foreign_key_check').fetchall(), 'Broken relational link')
     counts = dict(db.execute('SELECT bank,count(*) FROM items GROUP BY bank'))
-    require(counts == {'current': 49, 'candidate': 42}, 'Unexpected content coverage')
+    require(counts == {'current': 49, 'candidate': 102}, 'Unexpected content coverage')
     require(db.execute('SELECT count(*) FROM audit_findings').fetchone()[0] == 49, 'Incomplete existing-item audit')
-    require(db.execute("SELECT count(*) FROM item_texts WHERE language='vi'").fetchone()[0] == 87, 'Unexpected Vietnamese draft coverage')
+    require(db.execute("SELECT count(*) FROM item_texts WHERE language='vi'").fetchone()[0] == 147, 'Unexpected Vietnamese draft coverage')
     require(not db.execute("SELECT i.id FROM items i LEFT JOIN item_outcomes io ON io.item_id=i.id AND io.relationship IN ('primary','probe') WHERE io.item_id IS NULL").fetchall(), 'An item lacks an intended outcome')
     require(not db.execute("SELECT 1 FROM item_outcomes io JOIN outcomes o ON o.id=io.outcome_id WHERE io.item_id='CR-S03' AND (io.relationship!='probe' OR o.claim_kind!='comprehension')").fetchall(), 'Probe incorrectly assigned an ideological outcome')
     require(not db.execute("SELECT 1 FROM options o JOIN items i ON i.id=o.item_id WHERE i.bank='candidate' AND o.current_authored_score IS NOT NULL").fetchall(), 'Candidate must not carry an authored score')
@@ -300,7 +305,10 @@ def validate(db):
         require(row[1] == (0 if row[0] == 'FUTURE-24' else row[2]), 'Incorrect package membership: ' + row[0])
     require(not db.execute("SELECT 1 FROM package_items pi JOIN packages p ON p.id=pi.package_id WHERE p.order_status!='fixed_current_route' AND pi.presentation_order IS NOT NULL").fetchall(), 'Draft allocation must not invent presentation order')
     require(not db.execute("SELECT 1 FROM package_outcome_matrix WHERE applicable_items=0").fetchall(), 'An assigned package outcome has no applicable content')
-    require(db.execute("SELECT count(*) FROM scenario_contexts WHERE status='needs_authorization_review' AND note_en IS NULL AND note_vi IS NULL").fetchone()[0] == 48, 'Draft world wrappers must remain unapproved and unwritten')
+    require(db.execute("SELECT count(*) FROM scenario_contexts WHERE status='needs_authorization_review' AND note_en IS NULL AND note_vi IS NULL").fetchone()[0] == 144, 'Draft world wrappers must remain unapproved and unwritten')
+    require(db.execute('SELECT count(*) FROM statement_review').fetchone()[0] == 48, 'Expansion statement review metadata missing')
+    require(db.execute('SELECT count(*) FROM scenario_preference_prompts').fetchone()[0] == 24, 'Expansion preference drafts missing')
+    require(not db.execute("SELECT r.id FROM readings r WHERE (r.verification='passage_inspected') != EXISTS (SELECT 1 FROM reading_passages p WHERE p.reading_id=r.id)").fetchall(), 'Inspection status disagrees with passage evidence')
 
 
 def csv_value(value):
@@ -329,10 +337,13 @@ def export(db, directory):
         '',
         'Read this page directly in a web or mobile browser. No SQLite application is needed to read the overview.',
         '',
-        '**Catalog:** five package records, 91 authored items, and 31 intended outcomes. '
+        f'**Catalog:** {db.execute("SELECT count(*) FROM packages").fetchone()[0]} package records, '
+        f'{db.execute("SELECT count(*) FROM items").fetchone()[0]} authored items, and '
+        f'{db.execute("SELECT count(*) FROM outcomes").fetchone()[0]} intended outcomes. '
         'Outcomes describe questions the assessment is intended to explore; they are provisional interpretations, not desired political answers or validated diagnoses.',
         '',
-        '[Full catalog guide](../README.md) · [Package CSV](csv/package_summary.csv) · [Outcome CSV](csv/package_outcome_matrix.csv)',
+        '[Full catalog guide](../README.md) · [Expansion candidates](expansion-candidates.md) · [Source evidence](source-evidence.md) · '
+        '[Package CSV](csv/package_summary.csv) · [Outcome CSV](csv/package_outcome_matrix.csv)',
         '',
         '| Package | Assigned / planned tasks | Current status |',
         '| --- | --- | --- |',
@@ -342,7 +353,8 @@ def export(db, directory):
                   'author_draft': 'Draft content-interview packet',
                   'unassigned_blueprint': 'Design budget; content not selected'}[row['status']]
         overview.append(f'| {row["id"]} | {row["assigned_items"]} / {row["planned_primary_tasks"]} | {status} |')
-    overview += ['', 'The review packets each allocate twelve statements and two scenarios. '
+    overview += ['', 'REVIEW-A/B/C each allocate twelve statements and two scenarios; REVIEW-D/E/F/G/H each allocate eight statements and two scenarios; '
+                 'REVIEW-I/J each allocate four statements and one scenario. '
                  'Reasons, interviews, briefing and debrief add burden beyond these counts. '
                  'CR-S03 is held as a comprehension probe pending redesign. '
                  'The participant application remains English; all Vietnamese text is an author draft.', '']
@@ -368,7 +380,8 @@ def export(db, directory):
     overview += ['## Review gaps', '',
                  '- REVIEW-A lacks a Vietnamese draft for CR-S03; REVIEW-B lacks one for CR-S05; REVIEW-C lacks them for CR-S04 and CR-S06.',
                  '- Independent content review, translation reconciliation and participant comprehension findings remain outstanding.',
-                 '- All bibliographic proposals remain unverified. A source link records a reading proposal, not a completed source check.',
+                 '- Legacy bibliographic proposals remain unverified. The expansion source ledger distinguishes inspected passages from unverified proposals; '
+                 'neither status establishes source endorsement of a question or measurement validity.',
                  '- The author database contains country-inspiration spoilers. The participant flow retains the end-only reveal.',
                  '- The database contains authored material only, with no participant answers or personal records.', '']
     (directory / 'package-overview.md').write_text('\n'.join(overview), encoding='utf-8')
@@ -382,11 +395,12 @@ def build(output=None):
     if output == ROOT or output in ROOT.parents:
         raise ValueError('Output cannot replace the repository or an ancestor')
     if output.exists() and (not output.is_dir() or not (output / 'CATALOG-OWNER').is_file()
-                            or (output / 'CATALOG-OWNER').read_text() != OWNER):
+                            or (output / 'CATALOG-OWNER').read_text() not in (OWNER, PREVIOUS_OWNER)):
         raise ValueError('Refusing to overwrite an output not owned by this catalog builder')
     data = load_current()
     outcomes = json.loads((HERE / 'outcomes.json').read_text())
     scenarios = json.loads((HERE / 'draft-scenarios.json').read_text())
+    expansion_packets, expansion_sources = expansion.load(ROOT)
     paths = {
         'js/content.js', 'js/foundations.js', 'js/worlds.js', 'js/engine.js', 'js/foundation-evidence.js',
         'js/translations/vi-items.js', 'js/translations/vi-foundations.js', 'js/translations/vi-worlds.js',
@@ -396,6 +410,7 @@ def build(output=None):
         *(str((HERE / name).relative_to(ROOT)) for name in ['schema.sql', 'build.py', 'outcomes.json', 'draft-scenarios.json']),
     }
     paths.update(o['source_path'] for o in outcomes['outcomes'])
+    paths.update(expansion.PATHS)
     manifest = {}
     for path in sorted(paths):
         resolved = (ROOT / path).resolve()
@@ -412,10 +427,10 @@ def build(output=None):
                 insert(db, 'source_files', path=path, sha256=sha)
             commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
             for key, value in {
-                'catalog_version': '1.0.0', 'content_snapshot_date': CATALOG_DATE, 'base_commit': commit,
+                'catalog_version': '1.1.0', 'content_snapshot_date': CATALOG_DATE, 'base_commit': commit,
                 'instrument_version': data['instrument']['version'], 'scope': 'author_content_only_no_participant_answers',
                 'validation_status': 'unvalidated_author_drafts', 'country_reveal_policy': 'after_completion',
-                'source_verification': 'All bibliographic proposals remain unverified.',
+                'source_verification': 'Legacy readings remain unverified. Expansion readings distinguish selected inspected passages from unverified proposals; no item validation is implied.',
                 'working_tree_note': 'Hashes identify the actual inputs, including uncommitted content drafts; base_commit alone does not identify this snapshot.',
             }.items():
                 insert(db, 'metadata', key=key, value=value)
@@ -427,9 +442,11 @@ def build(output=None):
             for table in ['outcomes', 'item_outcomes', 'package_outcomes']:
                 for row in outcomes[table]:
                     insert(db, table, **row)
+            expansion.add(db, expansion_packets, expansion_sources, insert, add_text)
             validate(db)
             db.commit()
             export(db, staging)
+            expansion.export(staging, expansion_packets, expansion_sources)
         (staging / 'CATALOG-OWNER').write_text(OWNER)
         (staging / 'source-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
         # All outputs are generated, and ownership was checked before staging.
