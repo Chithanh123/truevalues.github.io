@@ -1,0 +1,52 @@
+/* Only the synthetic result-comprehension workspace uses these styles. */
+.pilot-intro { padding: 42px 0 26px; }
+.pilot-intro h1 { font-size: clamp(42px, 6vw, 64px); margin: 18px 0 25px; }
+.pilot-intro h1 em { color: var(--orange); }
+.pilot-language-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.pilot-language-pair p, .pilot-materials p { color: var(--muted); font-size: 13px; line-height: 1.85; }
+.pilot-spoiler-note { border-left: 3px solid var(--orange); padding: 15px 20px; margin: 20px 0 0; background: #f6e9de; }
+.pilot-spoiler-note p { margin: 0 0 10px; font-size: 12px; line-height: 1.8; color: #705c47; }
+.pilot-spoiler-note p:last-child { margin-bottom: 0; }
+.pilot-controls { display: flex; gap: 20px; align-items: end; border-top: 1px solid var(--line); padding: 24px 0 10px; }
+.pilot-controls > div { flex: 1; max-width: 400px; min-width: 0; }
+.pilot-controls label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+.pilot-controls select { width: 100%; color: var(--ink); background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 14px; font-size: 14px; }
+.pilot-status { font-size: 12px; line-height: 1.8; color: var(--muted); margin: 12px 0 23px; min-height: 24px; }
+.pilot-synthetic-banner { background: #e8eddf; border: 1px solid #aab49b; padding: 17px 20px; border-radius: 4px; margin: 0 0 22px; font-size: 12px; line-height: 1.8; }
+.pilot-synthetic-banner span { display: block; margin-top: 6px; color: var(--muted); }
+.pilot-example-heading { padding: 12px 0 25px; }
+.pilot-example-heading h2 { font-size: 32px; margin: 0 0 13px; }
+.pilot-example-heading > p:not(.pilot-synthetic-banner) { font-size: 12px; line-height: 1.8; color: var(--muted); margin: 8px 0; }
+.pilot-actions { display: flex; flex-wrap: wrap; gap: 13px; margin: 25px 0 30px; }
+.pilot-actions .button { font-size: 12px; }
+.pilot-actions .button:disabled { opacity: .45; cursor: not-allowed; }
+.pilot-facilitator-key { border: 1px solid var(--line); padding: 19px 23px; background: #f1f2e9; border-radius: 4px; margin: 25px 0; }
+.pilot-facilitator-key > summary { cursor: pointer; font-size: 13px; line-height: 1.8; }
+.pilot-facilitator-key h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.35; margin: 22px 0 12px; }
+.pilot-version { font-size: 10px; color: var(--muted); margin: 18px 0 0; }
+.pilot-materials { padding: 26px 0 36px; border-top: 1px solid var(--line); }
+.pilot-materials h2 { font-size: 27px; margin-bottom: 15px; }
+.pilot-materials ul { padding-left: 18px; font-size: 13px; line-height: 1.9; }
+.pilot-materials li { padding-bottom: 8px; }
+.pilot-facilitator-key > summary:focus-visible, #pilot-case:focus-visible, #pilot-example-title:focus { outline: 2px solid var(--orange); outline-offset: 4px; }
+@media (max-width: 720px) {
+  .pilot-intro { padding-top: 30px; }
+  .pilot-language-pair { grid-template-columns: 1fr; gap: 8px; }
+  .pilot-controls { align-items: stretch; flex-direction: column; gap: 14px; }
+  .pilot-controls > div { max-width: none; }
+  .pilot-controls .button { justify-content: space-between; }
+  .pilot-synthetic-banner { padding: 14px; font-size: 11px; }
+  .pilot-actions { flex-direction: column; }
+  .pilot-actions .button { justify-content: center; font-size: 11px; padding: 14px 12px; }
+  .pilot-facilitator-key { padding: 15px; }
+  .pilot-materials h2 { font-size: 24px; }
+  .pilot-page .site-footer { align-items: start; }
+}
+@media print {
+  .pilot-page .pilot-intro, .pilot-page .pilot-controls, .pilot-page .pilot-status,
+  .pilot-page .pilot-actions, .pilot-page .pilot-materials, .pilot-page .pilot-facilitator-key { display: none !important; }
+  .pilot-page .pilot-synthetic-banner { display: block !important; border-color: #333; background: white; break-inside: avoid; }
+  .pilot-page .pilot-synthetic-banner, .pilot-page .pilot-synthetic-banner span { color: #111; }
+  .pilot-page .pilot-example-heading { padding-top: 0; }
+  .pilot-page .pilot-example-heading h2 { font-size: 25px; }
+}

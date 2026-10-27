@@ -1,6 +1,6 @@
 # Political Context: progress ledger
 
-Review date: **26 October 2026**. Current development branch: `research/ideological-foundations`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's `master` was verified at `5d173d1` on 25 October.
+Review date: **27 October 2026**. Current development branch: `research/ideological-foundations`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's `master` was verified at `de4743a` on 27 October.
 
 This ledger distinguishes working software, drafted research materials, completed human work, and publication evidence. It does not assign a completion percentage: the research gates cannot be inferred from the amount of code or content.
 
@@ -21,7 +21,7 @@ All twelve catalog checks passed on 25 October, including original-content fidel
 - The public project address is expected to be `https://chithanh123.github.io/truevalues.github.io/`. Public-site verification from this environment was blocked by an HTTP 403 network response. Neither a successful Pages run nor the live site's current content is claimed here.
 - [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
 - [Pull request #4](https://github.com/Chithanh123/truevalues.github.io/pull/4) merged the research catalog and `0.4.2` debrief into the user's fork. Fetching `master` on 26 October verified merge commit `de4743ae7e6853366f6ffaeb04ee3dffd6859f09`, containing `fdf5825`. The hosted deployment has not been verified here.
-- The Node 24 / Ubuntu 24.04 workflow maintenance and `0.4.3` interpretations continue on `research/ideological-foundations`. Browser-readable package/outcome documentation and a repository download bundle are provided so access does not depend on cloud-workspace links. Publishing this branch does not merge these newer changes into `master` or deploy them.
+- The Node 24 / Ubuntu 24.04 workflow maintenance, `0.4.3` interpretations, and `0.4.4` results-pilot workspace continue on `research/ideological-foundations`. Browser-readable package/outcome documentation and repository download bundles are provided so access does not depend on cloud-workspace links. Publishing this branch does not merge these newer changes into `master` or deploy them.
 
 ## Milestone audit
 
@@ -45,6 +45,14 @@ The complete route now has 49 primary response items: 24 value statements, 16 fo
 Explicit real-country correspondences are withheld in the participant flow until the final debrief. Fictional institutions and powers remain visible. The separate author-review workspace and public source files still disclose mappings, and contextual clues can permit inference. This presentation rule is not secure experimental blinding.
 
 The v0.4 route and schema are versioned separately from v0.3, preserving the previous-save recovery path rather than silently reinterpreting older progress. Human review and participant findings remain pending.
+
+## Results-comprehension preparation 0.4.4
+
+The separate `results-pilot.html` workspace applies the unchanged result renderer and interpretation rules to six authored completed cases. They cover connected beliefs and an explicit role/preference difference, mixed economic answers, neutral answers, uncertainty, limited/unrepresented evidence, and a changed housing choice. The selector uses neutral example labels, requires an explicit open action, and keeps the facilitator key collapsed. Synthetic labels remain in downloads and printouts. The page never reads or writes participant or reviewer storage, and collects no observations.
+
+The [pilot kit](results-pilot/README.md) provides an EN–VI facilitator script for eight tasks, a proposed two-wave 6–8-adult protocol, a header-only observation log, a generated example key, source hashes, and six labeled text reports in a downloadable bundle. The kit generator refuses observation data in the public template. The new Node checks detect stale example sources; Python artifact tests check reproducibility and downloaded-file fidelity. These are synthetic materials and technical checks, with no human interviews or findings claimed.
+
+Application `0.4.4` retains instrument `0.4.0`, interpretation rules `1.0.0`, reflection format `1.1.0`, scores, compatible saves, and JSON export format `2`. The site artifact expands to 45 files. Fetching `master` on 27 October still showed `de4743a` (the `0.4.2` merge); the public-site requests on 26 October returned proxy HTTP 403. Consequently the newer source remains review-branch work and live-site behavior is unverified. Final release checks are recorded below.
 
 ## Result-interpretation increment 0.4.3
 
@@ -127,6 +135,16 @@ The `0.4.3` checks completed on **26 October 2026**:
 - Desktop and 375-pixel mobile views were inspected. Actual PDF output contained all seven theme explanations, overview findings, and all 49 item texts/titles. Printing restored the 23 expandable sections and left stored answers unchanged.
 - **12 catalog tests passed**. The catalog was rebuilt with the updated research-document fingerprint, and all 35 entries of the refreshed download bundle were checked against their source files.
 
+The `0.4.4` technical checks completed on **27 October 2026**:
+
+- **94 Node tests passed**, including the six completed 49-item fixtures, mixed/neutral/uncertain/limited evidence, explicit role/preference and housing comparisons, fresh independent sessions, source-hash freshness, and the header-only public observation template.
+- **Three pilot-artifact tests passed**, checking reproducible generation, the 13-file ZIP against its source files and current report outputs, rejection of collected observation rows, and protection of authored files and output paths. The kit contains six labeled synthetic text reports and no human observations.
+- Content, translation, and source-proposal validators passed. The deployment artifact contains **45 allowlisted files**.
+- The pilot browser suite passed on the source site and at the packaged `/truevalues.github.io/` path; the reviewer suite passed against the packaged site. Pilot checks cover all six examples, 49 evidence records each, neutral entry labels, evidence focus, exact labeled downloads, linked materials, and expansion/restoration of all 23 printable report sections. Instrumented browser storage denied and recorded any access attempt; the pilot made none and left the seeded quiz and reviewer records unchanged. The participant application module was not loaded. No JavaScript errors, failed requests, or external requests were observed.
+- Desktop and 375-pixel mobile layouts were inspected. Synthetic labels remain visible in print; facilitator keys stay closed on opening or switching examples and are excluded from printing even when opened on screen.
+
+These checks prepare the results-comprehension pilot; no human sessions, participant findings, or independent bilingual review are recorded as completed.
+
 These results are development evidence. They do not establish independent human review, translated measurement equivalence, or secure country blinding. Reproduce the checks with:
 
 ```sh
@@ -139,6 +157,8 @@ python3 tests/browser_smoke.py
 python3 tests/browser_review.py
 python3 tests/browser_debrief.py
 python3 tests/browser_interpretation.py
+python3 tests/browser_pilot.py
+python3 -m unittest discover -s research/results-pilot -p 'test_*.py'
 ```
 
 Run the browser suite with its documented local server. The browser suite includes the bilingual-workspace checks for this branch. Do not carry the previous test count forward as the result of a new version, and do not treat any technical check as completed human review.

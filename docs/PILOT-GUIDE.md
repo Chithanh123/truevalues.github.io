@@ -10,6 +10,8 @@ The first audience direction is **bilingual English–Vietnamese adults**. The c
 
 Use the [design matrix](DESIGN-MATRIX.md) to allocate content coverage and inspect rival explanations. Consult [PROGRESS.md](PROGRESS.md) for completed engineering work and open human-research gates.
 
+For the narrower review of the current result explanations, use the [results-comprehension kit](results-pilot/README.md). Application `0.4.4` adds six isolated synthetic examples, eight EN–VI tasks, a blank observation log, and a source-tracked text bundle for a proposed two-wave review with 6–8 adults. It does not recruit participants, record observations in the website, or replace the operator decisions below. Complete a first-use quiz before opening these completed examples if testing the timing of the country reveal.
+
 ## Questions that must be settled before recruitment
 
 | Decision | Current status | Required concrete output |
