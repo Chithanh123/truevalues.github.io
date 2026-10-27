@@ -1,6 +1,6 @@
 # Political Context: progress ledger
 
-Review date: **27 October 2026**. Current development branch: `research/ideological-foundations`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's `master` was verified at `de4743a` on 27 October.
+Review date: **27 October 2026**. Current development branch: `site/question-bank`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's `master` was verified at `de4743a` on 27 October.
 
 This ledger distinguishes working software, drafted research materials, completed human work, and publication evidence. It does not assign a completion percentage: the research gates cannot be inferred from the amount of code or content.
 
@@ -21,7 +21,7 @@ All twelve catalog checks passed on 25 October, including original-content fidel
 - The public project address is expected to be `https://chithanh123.github.io/truevalues.github.io/`. Public-site verification from this environment was blocked by an HTTP 403 network response. Neither a successful Pages run nor the live site's current content is claimed here.
 - [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
 - [Pull request #4](https://github.com/Chithanh123/truevalues.github.io/pull/4) merged the research catalog and `0.4.2` debrief into the user's fork. Fetching `master` on 26 October verified merge commit `de4743ae7e6853366f6ffaeb04ee3dffd6859f09`, containing `fdf5825`. The hosted deployment has not been verified here.
-- The Node 24 / Ubuntu 24.04 workflow maintenance, `0.4.3` interpretations, `0.4.4` results-pilot workspace, and the 27 October content expansion continue on `research/ideological-foundations`. Browser-readable package/outcome documentation and repository download bundles are provided so access does not depend on cloud-workspace links. Publishing this branch does not merge these newer changes into `master` or deploy them.
+- The Node 24 / Ubuntu 24.04 workflow maintenance, `0.4.3` interpretations, `0.4.4` results-pilot workspace, the 27 October content expansion, and the `0.4.5` question-bank page continue on `site/question-bank`. Browser-readable package/outcome documentation and repository download bundles are provided so access does not depend on cloud-workspace links. Publishing this branch does not merge these newer changes into `master` or deploy them.
 
 ## Milestone audit
 
@@ -45,6 +45,10 @@ The complete route now has 49 primary response items: 24 value statements, 16 fo
 Explicit real-country correspondences are withheld in the participant flow until the final debrief. Fictional institutions and powers remain visible. The separate author-review workspace and public source files still disclose mappings, and contextual clues can permit inference. This presentation rule is not secure experimental blinding.
 
 The v0.4 route and schema are versioned separately from v0.3, preserving the previous-save recovery path rather than silently reinterpreting older progress. Human review and participant findings remain pending.
+
+## Website question-bank view 0.4.5
+
+The website now provides a searchable view of the 151-item author catalog, including draft English–Vietnamese statements and situations, intended outcomes and source status. The web snapshot excludes the author database’s country correspondences, scores and participant records. The new content is research material and is not added to the existing 49-item assessment. The web export matches its authored database and source fingerprints; 97 Node tests, 18 catalog checks and the content, translation and evidence validators passed. Browser tests passed against the source and packaged project path, including all 151 items, bilingual text, search and filters, outcome/source notes, mobile layout, storage isolation, and no failed or external requests. The static artifact contains 49 files.
 
 ## Results-comprehension preparation 0.4.4
 

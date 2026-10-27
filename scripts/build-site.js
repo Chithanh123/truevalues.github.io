@@ -18,6 +18,7 @@ export const SITE_FILES = Object.freeze([
   'js/debrief-content.js', 'js/debrief.js', 'js/debrief-view.js',
   'js/interpretation-content.js', 'js/interpretation.js',
   'results-pilot.html', 'pilot.css', 'js/pilot.js', 'js/pilot-fixtures.js',
+  'question-bank.html', 'question-bank.css', 'js/question-bank.js', 'data/question-catalog.json',
   'docs/results-pilot/README.md', 'docs/results-pilot/PROTOCOL.md',
   'docs/results-pilot/SESSION-SCRIPT.md', 'docs/results-pilot/OBSERVATION-GUIDE.md',
   'docs/results-pilot/observation-log-template.csv', 'docs/results-pilot/EXAMPLES.md',

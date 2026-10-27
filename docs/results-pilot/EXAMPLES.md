@@ -5,7 +5,7 @@
 
 Read this key after recording the reader’s first unaided explanation. It describes the authored cases, not a political answer the reader must agree with. The reports use the current English result wording; Vietnamese facilitation notes are unreviewed drafts.
 
-Application `0.4.4` · assessment `0.4.0` · fixture format `1.0.0` · kit `1.0.0`.
+Application `0.4.5` · assessment `0.4.0` · fixture format `1.0.0` · kit `1.0.0`.
 
 Each case contains 49 explicit records and the same fictional setting. The text reports in the downloadable kit preserve the entire synthetic response record and end-only setting reveal. These completed examples cannot test first-use concealment.
 
