@@ -20,6 +20,8 @@ COUNTRIES = re.compile(r"\b(?:United States|United Kingdom|Germany|Japan|Fiji|Vi
 
 def action(page, name):
     page.locator(f'[data-action="{name}"]').click()
+    if name == "resume" and page.locator('#info-dialog [data-action="continue-legacy"]:visible').count():
+        page.locator('#info-dialog [data-action="continue-legacy"]').click()
 
 
 def stored(page):

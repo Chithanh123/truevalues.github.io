@@ -56,6 +56,7 @@ def seed(page, mode):
     }""", [KEY, mode])
     page.reload(wait_until="networkidle")
     page.locator('[data-action="resume"]').click()
+    page.locator('#info-dialog [data-action="continue-legacy"]').click()
     expect(page.locator(".interpretation-overview")).to_be_visible()
     return result
 

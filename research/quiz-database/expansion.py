@@ -263,7 +263,7 @@ def export(directory, packets, ledger):
     all_outcomes = {o['id']: o for _, packet in packets for o in packet['outcomes']}
     lines = [f'# Expansion candidates: {sum(len(c["statements"]) for c in all_clusters.values())} statements and {len(all_scenes)} situations', '',
              f'Prepared 27 October 2026. These English–Vietnamese author drafts add {len(all_clusters)} disputes to the research bank. '
-             'They are not in the live 49-item assessment, have no scores, and have not undergone independent language or participant review.', '',
+             'The 60 additional draft questions are included in the combined 109-item assessment without scores; they have not undergone independent language or participant review.', '',
              'Four statements within a dispute are separate claims, not an ordered ideological axis. Tradition names appear only in author notes. '
              'The scenarios supply fictional powers and resource constraints; eight world-specific wrappers per scenario remain unwritten and require review.', '',
              '[Source evidence](source-evidence.md) · [Packages and outcomes](package-overview.md) · [Catalog guide](../README.md)', '']

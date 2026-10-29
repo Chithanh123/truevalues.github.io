@@ -1,6 +1,6 @@
 # Expansion candidates: 48 statements and 12 situations
 
-Prepared 27 October 2026. These English–Vietnamese author drafts add 12 disputes to the research bank. They are not in the live 49-item assessment, have no scores, and have not undergone independent language or participant review.
+Prepared 27 October 2026. These English–Vietnamese author drafts add 12 disputes to the research bank. The 60 additional draft questions are included in the combined 109-item assessment without scores; they have not undergone independent language or participant review.
 
 Four statements within a dispute are separate claims, not an ordered ideological axis. Tradition names appear only in author notes. The scenarios supply fictional powers and resource constraints; eight world-specific wrappers per scenario remain unwritten and require review.
 

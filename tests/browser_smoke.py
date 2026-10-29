@@ -58,6 +58,9 @@ def action(page, name):
         page.locator('#info-dialog [data-action="packet"]').click()
     else:
         page.locator(f'[data-action="{name}"]').click()
+    # These checks exercise saved 0.4.0 routes, not the new 109-item route.
+    if name == "resume" and page.locator('#info-dialog [data-action="continue-legacy"]:visible').count():
+        page.locator('#info-dialog [data-action="continue-legacy"]').click()
 
 
 def mobile_fit(page, state):
@@ -71,9 +74,13 @@ def mobile_fit(page, state):
 
 def begin(page):
     page.goto(BASE + "/", wait_until="networkidle")
-    action(page, "begin")
-    expect(page.locator("#info-dialog")).to_be_visible()
-    action(page, "start")
+    page.evaluate("""async key => {
+        const {instrument}=await import('./js/content.js');
+        const {createSession}=await import('./js/engine.js');
+        sessionStorage.setItem(key,JSON.stringify(createSession(instrument,'legacy-smoke-fixture')));
+    }""", KEY)
+    page.reload(wait_until="networkidle")
+    action(page, "resume")
     expect(page.locator('input[data-response="value"]')).to_have_count(5)
 
 
@@ -457,7 +464,7 @@ with sync_playwright() as playwright:
     for item in instrument["foundations"]["items"]:
         expect(page.locator(".foundation-debrief")).to_contain_text(item["text"])
     expect(page.locator(".dimension-row")).to_have_count(len(instrument["dimensions"]))
-    expect(page.locator(".comparison-card:not(#country-reveal)")).to_contain_text("You chose a different action")
+    expect(page.locator(".comparison-card").filter(has_text="When the deadline changed.")).to_contain_text("You chose a different action")
     mobile_fit(page, "debrief")
     assert saved(page, "localStorage") is None
     with page.expect_download() as download_info:
@@ -561,17 +568,17 @@ with sync_playwright() as playwright:
     recovery_page.reload(wait_until="networkidle")
     expect(recovery_page.locator("#storage-warning")).to_be_visible()
     expect(recovery_page.locator('[data-action="begin"]')).to_be_visible()
-    action(recovery_page, "begin")
-    action(recovery_page, "start")
-    expect(recovery_page.locator("#step-title")).to_have_text(instrument["statements"][0]["text"])
-    stale = saved(recovery_page)
-    stale["version"] = "0.2.0"
+    stale = recovery_page.evaluate("""async () => {
+        const {instrument}=await import('./js/content.js');
+        const {createSession}=await import('./js/engine.js');
+        return {...createSession(instrument,'stale-legacy-fixture'),version:'0.2.0'};
+    }""")
     assert stale["version"] != instrument["version"]
     recovery_page.evaluate(
         "([key, data]) => sessionStorage.setItem(key, JSON.stringify(data))", [KEY, stale]
     )
     recovery_page.reload(wait_until="networkidle")
-    expect(recovery_page.locator("#storage-warning")).to_contain_text("version changed")
+    expect(recovery_page.locator("#storage-warning")).to_contain_text("incompatible")
     with recovery_page.expect_download() as recovery_download:
         action(recovery_page, "recover-save")
     recovered = json.loads(Path(recovery_download.value.path()).read_text())
@@ -581,6 +588,9 @@ with sync_playwright() as playwright:
     action(recovery_page, "privacy")
     action(recovery_page, "erase")
     action(recovery_page, "confirm-erase")
+    assert saved(recovery_page) == stale  # Generic erasure must preserve a protected save.
+    action(recovery_page, "erase-legacy-recovery")
+    action(recovery_page, "confirm-erase-legacy-recovery")
     assert saved(recovery_page) is None
     for legacy in ["instructions.html", "quiz.html", "results.html"]:
         recovery_page.goto(BASE + "/" + legacy)

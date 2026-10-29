@@ -21,7 +21,7 @@ Read this page directly in a web or mobile browser. No SQLite application is nee
 | REVIEW-I | 5 / 5 | Draft content-interview packet |
 | REVIEW-J | 5 / 5 | Draft content-interview packet |
 
-REVIEW-A/B/C each allocate twelve statements and two scenarios; REVIEW-D/E/F/G/H each allocate eight statements and two scenarios; REVIEW-I/J each allocate four statements and one scenario. Reasons, interviews, briefing and debrief add burden beyond these counts. CR-S03 is held as a comprehension probe pending redesign. The participant application remains English; all Vietnamese text is an author draft.
+REVIEW-A/B/C each allocate twelve statements and two scenarios; REVIEW-D/E/F/G/H each allocate eight statements and two scenarios; REVIEW-I/J each allocate four statements and one scenario. The original 49-item instrument is the first section of the 109-item assessment; the 60 questions from REVIEW-D–J are included as descriptive, unscored drafts. Reasons, interviews, briefing and debrief add burden beyond these counts. CR-S03 is held as a comprehension probe pending redesign. The participant application remains English; all Vietnamese text is an author draft.
 
 ## FUTURE-24
 
@@ -35,7 +35,7 @@ The target is eighteen statements plus six scenarios. No questions or intended o
 
 ## PILOT-0.4.0
 
-Current Political Context prototype
+Original 49-item Political Context instrument
 
 **Content:** 40 statements and 9 scenarios currently assigned. Vietnamese drafts exist for 49 of 49 assigned items.
 

@@ -1,6 +1,6 @@
 # Political Context: progress ledger
 
-Review date: **29 October 2026**. Current development branch: `site/question-bank`; the fork’s `master` was verified at `074a485` on 29 October.
+Review date: **29 October 2026**. Current development branch: `site/question-bank`; the fork’s `master` was verified at `484a613` on 29 October.
 
 This ledger distinguishes working software, drafted research materials, completed human work, and publication evidence. It does not assign a completion percentage: the research gates cannot be inferred from the amount of code or content.
 
@@ -14,14 +14,14 @@ That content-preparation increment changed documentation only, preserving instru
 
 The author-facing [quiz-package database](../research/quiz-database/README.md), expanded 27 October 2026, catalogs twelve package records: the implemented 49-item prototype, ten proposed content-interview packets, and an unassigned 24-task design budget. It includes 151 items, 55 intended outcomes, 147 Vietnamese item drafts, current and proposed variants, and a separate record of country correspondences for debrief. CR-S03 remains a comprehension probe; the future package has no selected items or outcomes. SQLite and CSV exports contain authored content only. This is research organization, not a participant database, deployment, new scoring model, or validation finding.
 
-All twelve catalog checks passed on 25 October, including original-content fidelity, foreign-key integrity, exact package membership, language gaps, excluded scores, source fingerprints, CSV preservation, and the eight example queries. The author database is outside the static-site artifact allowlist; the participant application has no database integration.
+All twelve catalog checks passed on 25 October, including original-content fidelity, foreign-key integrity, exact package membership, language gaps, excluded scores, source fingerprints, CSV preservation, and the eight example queries. The author SQLite database is outside the static-site artifact; a restricted catalog snapshot supplies the additional participant questions without including country-correspondence records.
 
 - [Pull request #1](https://github.com/Chithanh123/truevalues.github.io/pull/1) was merged into **Chithanh123/truevalues.github.io**. The recorded merge commit is `26940bc45c1398f42d8f81d7d9430bdbd3f30508`.
 - The merged work contains the v0.2 prototype, the static artifact builder, and the GitHub Pages workflow. A merge establishes source integration, not successful deployment.
 - The public project address is expected to be `https://chithanh123.github.io/truevalues.github.io/`. Public-site verification from this environment was blocked by an HTTP 403 network response. Neither a successful Pages run nor the live site's current content is claimed here.
 - [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
 - [Pull request #4](https://github.com/Chithanh123/truevalues.github.io/pull/4) merged the research catalog and `0.4.2` debrief into the user's fork. Fetching `master` on 26 October verified merge commit `de4743ae7e6853366f6ffaeb04ee3dffd6859f09`, containing `fdf5825`. The hosted deployment has not been verified here.
-- [Pull request #5](https://github.com/Chithanh123/truevalues.github.io/pull/5) merged the workflow maintenance, result interpretations, pilot workspace, content expansion, and `0.4.5` question-bank page into the user’s fork. Fetching `master` on 29 October verified merge commit `074a48564c32600270ef74f6da0f00a9e2c21e89`. The hosted deployment has not been verified here. The `0.4.6` playable extension remains on `site/question-bank` for a new review.
+- [Pull request #5](https://github.com/Chithanh123/truevalues.github.io/pull/5) merged the workflow maintenance, result interpretations, pilot workspace, content expansion, and `0.4.5` question-bank page into the user’s fork. Fetching `master` on 29 October verified merge commit `074a48564c32600270ef74f6da0f00a9e2c21e89`. The hosted deployment has not been verified here. [Pull request #6](https://github.com/Chithanh123/truevalues.github.io/pull/6) subsequently merged the `0.4.6` playable extension into the user’s fork; fetching `master` verified merge commit `484a6137a2df5341b5ccd2b9ffe55628dd15d28b`. The integrated route remains under development.
 
 ## Milestone audit
 
@@ -45,6 +45,12 @@ The complete route now has 49 primary response items: 24 value statements, 16 fo
 Explicit real-country correspondences are withheld in the participant flow until the final debrief. Fictional institutions and powers remain visible. The separate author-review workspace and public source files still disclose mappings, and contextual clues can permit inference. This presentation rule is not secure experimental blinding.
 
 The v0.4 route and schema are versioned separately from v0.3, preserving the previous-save recovery path rather than silently reinterpreting older progress. Human review and participant findings remain pending.
+
+## Integrated main assessment 0.5.0
+
+The main assessment combines the original 49 questions with 48 new statements and 12 new situations. One fictional setting remains assigned throughout, and its country inspiration is shown in the combined debrief after all 109 questions. The original provisional scores and the unscored descriptive extension remain distinct. The newer settings are generic fictional institutional assumptions awaiting country-specific review. Existing saved responses and previous standalone extension records are preserved; existing original sessions can be continued in their previous format or explicitly copied to the combined route. Saved copies in different browser-storage locations are protected from accidental replacement.
+
+On 29 October, **113 Node tests**, all three content/translation/evidence validators, 18 catalog checks, and three pilot-bundle tests passed. Browser tests completed all 109 questions against source and packaged project paths, covering the original-to-new transition, one setting and final-only reveal, back and reload, combined results and exports, printing, legacy migration, separate-save recovery and mobile layout. Cross-scope recovery also passed on both paths. These are technical checks, not completed human review or evidence that the assessment is validated.
 
 ## Playable question extension 0.4.6
 
