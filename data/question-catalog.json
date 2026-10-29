@@ -7042,6 +7042,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "**Surroundings.** You administer a disability-support program in a large city of your assigned fictional country. Twenty adults use additional assistance to attend community activities. Their existing assistance, access protections, and immediate safety needs are funded separately and stay unchanged. Each adult can express their choices, with communication support where needed.\n\n**Your role and powers.** You are a non-elected service officer authorized to choose one of three approved delivery arrangements for a voluntary twelve-week extension. You cannot reduce existing support, override anyone's decisions, or compel participation. The twenty adults have agreed to enter this pilot under whichever arrangement is selected; any can decline a visit without losing existing assistance.\n\n**What is fixed.** The extension has 120 fictional funding units each week. Quotes include travel, communication support, accessible meetings, and administration except the separately stated peer-board cost. All workers meet the same competence and safety requirements. Three qualified individual providers have appointments available. No arrangement has established superior outcomes in this city. Unspent support for someone who declines is held for that person during the pilot, not diverted to another participant.\n\n**Decision.** Which approved arrangement would you implement? Each costs exactly 120 units per week. You may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "**Bối cảnh.** Bạn quản lý một chương trình hỗ trợ người khuyết tật tại một thành phố lớn của quốc gia giả định được giao. Hai mươi người trưởng thành sử dụng hỗ trợ bổ sung để tham gia hoạt động cộng đồng. Phần hỗ trợ hiện có, các bảo đảm tiếp cận và nhu cầu an toàn trước mắt của họ có kinh phí riêng và không thay đổi. Mỗi người đều có thể thể hiện lựa chọn của mình, với hỗ trợ giao tiếp khi cần.\n\n**Vai trò và thẩm quyền.** Bạn là viên chức phụ trách dịch vụ, không giữ chức vụ dân cử, được quyền chọn một trong ba cách cung cấp đã được phê duyệt cho chương trình bổ sung tự nguyện kéo dài mười hai tuần. Bạn không được giảm hỗ trợ hiện có, quyết định thay người nhận hoặc buộc họ tham gia. Hai mươi người đã đồng ý tham gia thử nghiệm theo phương án được chọn; bất kỳ ai cũng có thể từ chối một buổi hỗ trợ mà không mất phần hỗ trợ hiện có.\n\n**Những điều giữ nguyên.** Chương trình có 120 đơn vị kinh phí giả định mỗi tuần. Báo giá bao gồm đi lại, hỗ trợ giao tiếp, các cuộc họp dễ tiếp cận và quản lý, trừ khoản chi riêng cho ban đại diện được nêu dưới đây. Mọi nhân viên đáp ứng cùng yêu cầu năng lực và an toàn. Có ba đơn vị cung cấp riêng lẻ đủ điều kiện và còn lịch trống. Chưa phương án nào được chứng minh cho kết quả tốt hơn tại thành phố này. Phần hỗ trợ chưa dùng khi một người từ chối được giữ lại cho người đó trong thời gian thử nghiệm, không chuyển cho người khác.\n\n**Quyết định.** Bạn sẽ triển khai cách cung cấp đã được phê duyệt nào? Mỗi cách tốn đúng 120 đơn vị mỗi tuần. Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Individual control over support",
+          "More support time within the same budget",
+          "Shared control over the service",
+          "Confidence in a provider or decision process",
+          "Protection when an individual disagrees with others",
+          "Other reason"
+        ],
+        "vi": [
+          "Quyền tự quyết cách hỗ trợ",
+          "Có nhiều giờ hỗ trợ hơn trong cùng ngân sách",
+          "Cùng quyết định về dịch vụ",
+          "Tin tưởng đơn vị cung cấp hoặc quy trình quyết định",
+          "Bảo vệ người không đồng ý với những người khác",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Putting aside your responsibility as the service officer, which package do you personally prefer under the same budget, consent rules, and support needs? This is optional and may be the same choice.",
+        "vi": "Tạm gác trách nhiệm viên chức, cá nhân bạn thích phương án nào trong cùng điều kiện ngân sách, đồng ý tham gia và nhu cầu hỗ trợ? Câu này không bắt buộc; bạn có thể chọn giống câu trước."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-07",
@@ -7154,6 +7180,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "**Surroundings.** In a rural district of your assigned fictional country, a voluntary mutual-aid association is distributing an additional grant to twelve two-adult households caring for a dependent relative. The same adult does most unpaid care in each household; ten of these primary carers are women and two are men. These facts describe this group only. The other adult does some care and contributes more cash income. Existing income, essential care, and public entitlements are unchanged.\n\n**Your role and powers.** You are an ordinary resident and association member. Your household is not eligible for this grant. You have one vote on the grant rule and cannot order anyone to change their family arrangements. A majority selects one of three approved rules. Every recipient adult has agreed to the voting procedure, understands all three rules, and may decline the new grant without losing other support.\n\n**What is fixed.** The fund contains 120 fictional money units: ten per household under every rule. Fees and administration are paid separately. Every adult can use an individual account; the joint account requires both adults to authorize withdrawals. The grant is additional unrestricted money, not wages owed or reimbursement for an earlier expense. All arrangements are lawful in this fictional exercise. No reliable evidence shows which rule produces greater household well-being.\n\n**Decision.** Which rule would you vote for? The vote allocates control of this grant only; it does not settle ownership of other income or change anyone's care duties. You may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "**Bối cảnh.** Tại một huyện nông thôn của quốc gia giả định được giao, một hội tương trợ tự nguyện cấp khoản hỗ trợ bổ sung cho mười hai hộ, mỗi hộ có hai người trưởng thành chăm sóc một người thân cần hỗ trợ. Trong mỗi hộ, cùng một người đảm nhận phần lớn việc chăm sóc không hưởng lương; mười người chăm sóc chính là phụ nữ và hai người là nam giới. Đây chỉ là đặc điểm của nhóm này. Người trưởng thành còn lại có làm một phần việc chăm sóc và đóng góp nhiều thu nhập bằng tiền hơn. Thu nhập hiện có, việc chăm sóc thiết yếu và các quyền lợi công không thay đổi.\n\n**Vai trò và thẩm quyền.** Bạn là cư dân bình thường và thành viên của hội. Hộ của bạn không thuộc diện nhận khoản này. Bạn có một phiếu chọn quy tắc cấp tiền và không có quyền buộc ai thay đổi việc gia đình. Đa số chọn một trong ba quy tắc đã được chấp thuận. Mỗi người trưởng thành nhận hỗ trợ đã đồng ý với thủ tục biểu quyết, hiểu cả ba quy tắc và có thể từ chối khoản mới mà không mất hỗ trợ khác.\n\n**Những điều giữ nguyên.** Quỹ có 120 đơn vị tiền giả định: mỗi hộ nhận mười đơn vị theo bất kỳ quy tắc nào. Phí và chi phí quản lý có kinh phí riêng. Mọi người trưởng thành đều có thể sử dụng tài khoản cá nhân; tài khoản chung cần cả hai người cho phép rút tiền. Đây là tiền bổ sung không bị giới hạn mục đích sử dụng, không phải tiền lương còn nợ hay hoàn trả chi phí trước đó. Mọi cách đều hợp pháp trong tình huống giả định này. Chưa có bằng chứng đáng tin cậy cho biết quy tắc nào đem lại lợi ích lớn hơn cho hộ gia đình.\n\n**Quyết định.** Bạn sẽ bỏ phiếu cho quy tắc nào? Phiếu chỉ quyết định quyền sử dụng khoản này; không quyết định quyền sở hữu thu nhập khác hoặc thay đổi nghĩa vụ chăm sóc của ai. Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Recognition of unpaid care",
+          "Equal individual access to resources",
+          "Household decisions made together",
+          "Protection from dependence on another adult's permission",
+          "Expected practical benefit to the household",
+          "Other reason"
+        ],
+        "vi": [
+          "Ghi nhận việc chăm sóc không hưởng lương",
+          "Mỗi cá nhân tiếp cận nguồn lực ngang nhau",
+          "Cùng quyết định việc của hộ",
+          "Tránh phải phụ thuộc vào sự cho phép của người trưởng thành khác",
+          "Lợi ích thực tế dự kiến cho hộ",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Apart from your responsibility as an association voter, which rule do you personally prefer with the same twelve households, amount, and consent conditions? This optional answer may match your vote.",
+        "vi": "Ngoài trách nhiệm của người bỏ phiếu trong hội, cá nhân bạn thích quy tắc nào với cùng mười hai hộ, số tiền và điều kiện đồng ý tham gia? Câu trả lời không bắt buộc này có thể giống phiếu của bạn."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-08",
@@ -7266,6 +7318,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "**Your surroundings.** Three neighboring urban districts in your assigned fictional country share river crossings. A flood forecast estimates a one-in-three chance that ordinary roads beside the river will become unsafe within six hours. The same forecast and road sensors are available under every plan. A mistaken closure can delay paid work and deliveries; a late closure can put road users in danger. No plan's total harm is known in advance.\n\n**Your role and authority.** You are the national leader responsible for choosing one of three coordination arrangements already authorized by the legislature. A temporary law permits closures of the specified ordinary roads for the next 48 hours. You cannot extend that period, order detention, compel evacuation, or change ordinary rights outside these road powers. Emergency vehicles have protected routes under all plans.\n\n**What is fixed.** Each arrangement uses the same 30 trained staff and the same approved budget of 200 fictional credits. Sensors, public warnings, transport assistance, compensation rules, written reasons for closures, and access to a binding review within 24 hours are identical. All staff can communicate with district teams. The differences below concern who may authorize a closure and when an additional review occurs. Closing a road is not a judgment that every person in the district must leave.\n\n**Which arrangement would you authorize for the 48-hour period?** Choose A, B, or C; you may instead answer uncertain, none of these represents my decision, or skip. The forecasts and costs are exercise facts, not claims about any real country.",
+        "vi": "**Bối cảnh của bạn.** Ba quận đô thị liền kề trong quốc gia giả định được giao cùng sử dụng các điểm vượt sông. Dự báo lũ ước tính xác suất một phần ba rằng các đường giao thông thông thường ven sông sẽ trở nên không an toàn trong vòng sáu giờ. Mọi phương án đều có cùng dự báo và cảm biến theo dõi đường. Đóng đường không cần thiết có thể làm chậm công việc có trả lương và việc giao hàng; đóng quá muộn có thể gây nguy hiểm cho người đi đường. Chưa biết trước tổng thiệt hại của từng phương án.\n\n**Vai trò và thẩm quyền của bạn.** Bạn là người lãnh đạo quốc gia, có trách nhiệm chọn một trong ba cách phối hợp đã được cơ quan lập pháp cho phép. Một đạo luật tạm thời cho phép đóng các đường thông thường đã được chỉ định trong 48 giờ tới. Bạn không có quyền kéo dài thời hạn này, ra lệnh giam giữ, buộc sơ tán hoặc thay đổi các quyền thông thường ngoài phạm vi quyền đóng đường. Xe cấp cứu và phương tiện ứng cứu có tuyến đi được bảo đảm trong mọi phương án.\n\n**Những điều giữ nguyên.** Mỗi cách phối hợp sử dụng cùng 30 nhân sự đã được đào tạo và cùng ngân sách được duyệt là 200 đơn vị tiền giả định. Cảm biến, cảnh báo công khai, hỗ trợ đi lại, quy tắc bồi thường, việc nêu lý do đóng đường bằng văn bản và quyền yêu cầu xem xét có hiệu lực ràng buộc trong vòng 24 giờ đều như nhau. Mọi nhân sự đều có thể liên lạc với các đội ở quận. Khác biệt bên dưới là ai được phép quyết định đóng đường và khi nào diễn ra một đợt xem xét bổ sung. Đóng đường không đồng nghĩa với quyết định buộc mọi người trong quận phải rời đi.\n\n**Bạn sẽ cho phép áp dụng cách phối hợp nào trong 48 giờ?** Chọn A, B hoặc C; bạn cũng có thể trả lời chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua. Dự báo và chi phí là dữ kiện của bài tập, không phải nhận định về một quốc gia thực."
+      },
+      "reasons": {
+        "en": [
+          "Fast and consistent action across districts",
+          "Use of knowledge available to local officers",
+          "An independent check before a restriction starts",
+          "A workable way to correct a mistaken closure",
+          "The likely balance between road danger and disruption",
+          "Other reason"
+        ],
+        "vi": [
+          "Hành động nhanh và thống nhất giữa các quận",
+          "Sử dụng hiểu biết mà viên chức địa phương có được",
+          "Kiểm tra độc lập trước khi bắt đầu hạn chế",
+          "Cách khả thi để sửa một quyết định đóng đường sai",
+          "Cân bằng dự kiến giữa nguy hiểm trên đường và gián đoạn sinh hoạt",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Optional: setting aside your assigned responsibility as national leader, which of these same arrangements would you personally prefer under the same forecast, powers, resources, and consequences? You may be uncertain, find none representative, or skip. This does not change your role decision.",
+        "vi": "Không bắt buộc: tạm gác trách nhiệm được giao của người lãnh đạo quốc gia, cá nhân bạn muốn chọn cách phối hợp nào trong chính các phương án này, với cùng dự báo, thẩm quyền, nguồn lực và hệ quả? Bạn có thể chưa chắc, thấy không phương án nào phù hợp, hoặc bỏ qua. Câu trả lời này không thay đổi quyết định theo vai trò."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-09",
@@ -7387,6 +7465,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "**Your surroundings.** A civil society coalition in a large city of your assigned fictional country holds travel diaries volunteered by 1,200 adults from six neighborhoods. The city will use aggregate analyses to plan the locations and times of a fixed number of evening bus services. Decisions can benefit or inconvenience residents who supplied no diary. The records describe past trips; they do not reveal everyone's future needs.\n\n**Your role and authority.** You lead the coalition. Its members have authorized you to choose one of three governance packages for the next twelve weeks. A written agreement makes your chosen package binding on the coalition's analysts and the city's use of the supplied analysis. You cannot add bus funding, compel anyone to provide records, change city law, or publish identifiable trips.\n\n**What is fixed.** Each package costs the full 240-credit administration grant. The same trained analysts, secure storage, accessible paper and telephone participation routes, and technical checks apply. Existing permission covers the stated transport-planning use; in every package, contributors may withdraw their records from future analyses without penalty. No employer, police body, or commercial advertiser may obtain the records. Records are deleted after twelve weeks. The bus budget, legal protections, and prohibition on individual eligibility decisions are identical. The additional governance choices below do not remove these baseline protections.\n\n**Which package would you choose?** Choose A, B, or C; you may instead answer uncertain, none of these represents my decision, or skip. A package's predicted effect on data quality and trust is uncertain. The exercise does not ask you to endorse data collection generally.",
+        "vi": "**Bối cảnh của bạn.** Một liên minh các nhóm xã hội dân sự ở thành phố lớn trong quốc gia giả định được giao đang giữ nhật ký đi lại do 1.200 người trưởng thành ở sáu khu phố tự nguyện cung cấp. Thành phố sẽ dùng phân tích tổng hợp để chọn địa điểm và giờ chạy cho một số lượng chuyến xe buýt buổi tối đã cố định. Quyết định có thể mang lại lợi ích hoặc gây bất tiện cho cư dân không cung cấp nhật ký. Dữ liệu mô tả các chuyến đi trước đây, không cho biết nhu cầu tương lai của tất cả mọi người.\n\n**Vai trò và thẩm quyền của bạn.** Bạn lãnh đạo liên minh. Các thành viên đã giao bạn quyền chọn một trong ba cách quản lý dữ liệu cho mười hai tuần tới. Thỏa thuận bằng văn bản buộc các nhà phân tích của liên minh và việc thành phố sử dụng phân tích được cung cấp phải tuân thủ phương án bạn chọn. Bạn không có quyền tăng kinh phí xe buýt, ép ai cung cấp dữ liệu, thay đổi luật của thành phố hoặc công bố hành trình có thể nhận diện cá nhân.\n\n**Những điều giữ nguyên.** Mỗi phương án dùng hết khoản tài trợ quản lý 240 đơn vị tiền giả định. Mọi phương án có cùng các nhà phân tích đã được đào tạo, nơi lưu trữ an toàn, cách tham gia thuận tiện qua giấy và điện thoại, cùng các bước kiểm tra kỹ thuật. Sự đồng ý đã có bao gồm mục đích quy hoạch giao thông nêu trên; ở mọi phương án, người cung cấp có thể rút dữ liệu của mình khỏi các phân tích trong tương lai mà không bị phạt. Người sử dụng lao động, cơ quan công an và bên quảng cáo thương mại không được nhận dữ liệu. Dữ liệu được xóa sau mười hai tuần. Ngân sách xe buýt, các bảo vệ pháp luật và quy định cấm dùng dữ liệu để xét điều kiện được hưởng dịch vụ của từng cá nhân đều giống nhau. Các lựa chọn quản lý bổ sung bên dưới không xóa bỏ những bảo vệ cơ bản này.\n\n**Bạn sẽ chọn phương án nào?** Chọn A, B hoặc C; bạn cũng có thể trả lời chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua. Chưa biết chắc mỗi phương án sẽ ảnh hưởng ra sao đến chất lượng dữ liệu và lòng tin. Bài tập không yêu cầu bạn tán thành việc thu thập dữ liệu nói chung."
+      },
+      "reasons": {
+        "en": [
+          "Control by the people whose records are used",
+          "A voice for residents affected without supplying records",
+          "Enforceable limits applied by an independent reviewer",
+          "Useful analysis with manageable participation demands",
+          "Protection for a person who disagrees with a group decision",
+          "Other reason"
+        ],
+        "vi": [
+          "Quyền kiểm soát của người có dữ liệu được sử dụng",
+          "Tiếng nói của cư dân chịu tác động nhưng không cung cấp dữ liệu",
+          "Giới hạn có thể cưỡng chế thực hiện do bên độc lập xem xét",
+          "Phân tích hữu ích với yêu cầu tham gia vừa sức",
+          "Bảo vệ người không đồng ý với quyết định của nhóm",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Optional: setting aside your responsibility as the coalition's leader, which of these same packages would you personally prefer under the same data permissions, budget, bus plans, protections, and consequences? You may be uncertain, find none representative, or skip. Your role decision remains separately recorded.",
+        "vi": "Không bắt buộc: tạm gác trách nhiệm lãnh đạo liên minh, cá nhân bạn muốn chọn phương án nào trong chính các phương án này, với cùng sự cho phép sử dụng dữ liệu, ngân sách, kế hoạch xe buýt, bảo vệ và hệ quả? Bạn có thể chưa chắc, thấy không phương án nào phù hợp, hoặc bỏ qua. Quyết định theo vai trò vẫn được ghi riêng."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-10",
@@ -7490,6 +7594,30 @@
           }
         }
       ],
+      "briefings": {
+        "en": "Your surroundings. In a rural district of your assigned fictional country, 120 adults use a reservoir for small agricultural plots. Ninety are established users and thirty joined within the last two years. The reservoir was built through contributions from an association of established users; it is now held in a public trust. The newer users have the same lawful access to water. All users can attend accessible meetings, and no user can be excluded because of identity, income or disagreement.\n\nYour role. You are the local leader. A one-year pilot authorization permits you to select one of three governance arrangements below. You cannot sell the reservoir, remove water-access rights, change drinking-water or ecological protections, or extend the pilot. Existing independent appeals can reverse a decision violating those protections under every arrangement.\n\nWhat is fixed. A technical team has prepared the same feasible range of irrigation schedules for all three arrangements. All schedules preserve the same downstream minimum flows, but they differ in which plots receive their preferred watering times. Users disagree about those times. Downstream residents can submit comments under every arrangement but gain no binding vote in this pilot. The annual administrative budget is 24 staff-days; election and meeting-access costs are included. Each arrangement costs exactly 24 staff-days. None is known to produce a larger total supply of water.\n\nWhich arrangement would you select for the one-year pilot? You may also answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bối cảnh của bạn. Tại một huyện nông thôn của quốc gia giả định được giao, 120 người trưởng thành sử dụng một hồ chứa để tưới các mảnh đất nông nghiệp nhỏ. Chín mươi người đã sử dụng từ lâu; ba mươi người bắt đầu sử dụng trong hai năm gần đây. Hồ chứa được xây dựng bằng đóng góp của một hội những người sử dụng lâu năm; nay hồ do một quỹ công quản lý. Những người sử dụng mới có cùng quyền tiếp cận nước hợp pháp. Mọi người sử dụng đều có thể tham dự các cuộc họp được tổ chức để họ có thể tiếp cận; không ai bị loại vì bản sắc, thu nhập hoặc ý kiến bất đồng.\n\nVai trò của bạn. Bạn là người đứng đầu địa phương. Một quyết định cho phép thí điểm trong một năm giao cho bạn quyền chọn một trong ba mô hình quản trị dưới đây. Bạn không có quyền bán hồ, tước quyền tiếp cận nước, thay đổi các biện pháp bảo vệ nước uống hoặc sinh thái, hay kéo dài thời gian thí điểm. Trong mọi mô hình, cơ chế xem xét khiếu nại độc lập hiện có có thể hủy một quyết định vi phạm các biện pháp bảo vệ đó.\n\nNhững điều được giữ nguyên. Nhóm kỹ thuật đã chuẩn bị cùng một tập hợp lịch tưới khả thi cho cả ba mô hình. Mọi lịch đều giữ nguyên lưu lượng tối thiểu ở hạ lưu, nhưng khác nhau về việc mảnh đất nào được tưới vào thời điểm người sử dụng mong muốn. Người sử dụng bất đồng về các thời điểm đó. Cư dân hạ lưu có thể gửi ý kiến trong mọi mô hình nhưng không có quyền biểu quyết có tính ràng buộc trong đợt thí điểm này. Ngân sách quản trị hằng năm tương đương 24 ngày công của nhân viên; chi phí bầu cử và hỗ trợ tiếp cận cuộc họp đã được tính vào đó. Mỗi mô hình dùng đúng 24 ngày công. Chưa có bằng chứng mô hình nào tạo ra tổng lượng nước lớn hơn.\n\nBạn sẽ chọn mô hình nào cho đợt thí điểm một năm? Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Equal authority among people using the resource now",
+          "Recognition of past contributions and continuing stewardship",
+          "A predictable rule that does not depend on a local majority",
+          "Confidence that this arrangement can manage disagreement",
+          "Other reason"
+        ],
+        "vi": [
+          "Quyền quyết định ngang nhau giữa những người hiện đang dùng nguồn nước",
+          "Ghi nhận đóng góp trước đây và trách nhiệm gìn giữ tiếp diễn",
+          "Một quy tắc dễ dự đoán, không phụ thuộc vào đa số tại địa phương",
+          "Tin rằng mô hình này có thể xử lý bất đồng",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Putting aside your responsibility as local leader, which of the same arrangements would you personally prefer under the same water rights, budget and one-year limit? This response is optional.",
+        "vi": "Nếu tạm gác trách nhiệm người đứng đầu địa phương, cá nhân bạn thích mô hình nào trong các mô hình đó, với cùng quyền về nước, ngân sách và giới hạn một năm? Câu trả lời này là tùy chọn."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-11",
@@ -7611,6 +7739,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "Your surroundings. In a large city of your assigned fictional country, fifty delivery workers belong to a voluntary support association. They choose their working hours, but their main app sets payment rates and decides which jobs it offers. The app recently lowered payment rates. Twenty members have little savings and face the largest immediate income shortfall; the other thirty can cover current essentials but also want better terms. Independent eligibility review is available for any support grant.\n\nYour role. You lead the association. Members have approved using a one-time fund of 120 credits for one of the three twelve-week programs below and delegated the choice to you. You cannot set the app’s rates, require anyone to stop work, compel membership or disclose a member’s information without permission. Voluntary organizing, alternative customers and all three programs are permitted in this fictional setting; none has a guarantee of improving pay.\n\nWhat is fixed. Each quoted program costs exactly 120 credits, includes its administrative costs and ends after twelve weeks. There is no additional funding. Members keep the same existing public services and can refuse any activity without losing association membership. No program changes their legal employment status. The app has agreed to attend two meetings if the bargaining program is selected, but has promised no change in rates or job access. Members can also decline to act collectively or look for customers on their own without this fund.\n\nWhich program would you fund? You may also answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bối cảnh của bạn. Tại một thành phố lớn của quốc gia giả định được giao, năm mươi người giao hàng tham gia một hội hỗ trợ tự nguyện. Họ tự chọn giờ làm, nhưng ứng dụng chính mà họ dùng quyết định mức trả công và những việc được đề nghị cho họ. Ứng dụng vừa giảm mức trả công. Hai mươi thành viên có ít tiền tiết kiệm và thiếu hụt thu nhập trước mắt nhiều nhất; ba mươi người còn lại có thể trang trải nhu cầu thiết yếu hiện tại nhưng cũng muốn điều kiện tốt hơn. Mọi khoản hỗ trợ đều có cơ chế xem xét điều kiện hưởng độc lập.\n\nVai trò của bạn. Bạn lãnh đạo hội. Các thành viên đã đồng ý dùng một khoản quỹ duy nhất 120 đơn vị tín dụng cho một trong ba chương trình mười hai tuần dưới đây và giao quyền lựa chọn cho bạn. Bạn không có quyền ấn định mức trả của ứng dụng, yêu cầu ai ngừng làm việc, bắt buộc tham gia hội hoặc tiết lộ thông tin của thành viên khi chưa được phép. Trong bối cảnh hư cấu này, việc tổ chức tự nguyện, tìm khách hàng khác và cả ba chương trình đều được cho phép; không chương trình nào được bảo đảm sẽ tăng tiền công.\n\nNhững điều được giữ nguyên. Mỗi chương trình được báo giá đúng 120 đơn vị tín dụng, đã gồm chi phí quản trị, và kết thúc sau mười hai tuần. Không có kinh phí bổ sung. Thành viên giữ nguyên các dịch vụ công hiện có và có thể từ chối bất kỳ hoạt động nào mà không mất tư cách hội viên. Không chương trình nào thay đổi địa vị việc làm theo pháp luật của họ. Ứng dụng đã đồng ý dự hai cuộc họp nếu chọn chương trình thương lượng, nhưng chưa hứa thay đổi mức trả hoặc khả năng nhận việc. Thành viên cũng có thể không tham gia hành động chung hoặc tự tìm khách hàng mà không dùng quỹ này.\n\nBạn sẽ cấp kinh phí cho chương trình nào? Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Meet urgent needs before investing in uncertain future improvements",
+          "Build shared bargaining power over payment terms",
+          "Increase workers’ ability to set their own prices and find alternatives",
+          "Support fellow members even if my own situation would not improve",
+          "Choose the program most likely to work in the stated conditions",
+          "Other reason"
+        ],
+        "vi": [
+          "Đáp ứng nhu cầu cấp bách trước khi đầu tư vào cải thiện tương lai chưa chắc chắn",
+          "Tạo sức thương lượng chung về điều kiện trả công",
+          "Tăng khả năng tự đặt giá và tìm phương án thay thế của người lao động",
+          "Hỗ trợ các thành viên khác dù hoàn cảnh của bản thân không được cải thiện",
+          "Chọn chương trình có khả năng hiệu quả nhất trong các điều kiện đã nêu",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Putting aside your responsibility as association leader, which of these same programs would you personally prefer with the same members, budget, permissions and uncertainties? This response is optional.",
+        "vi": "Nếu tạm gác trách nhiệm lãnh đạo hội, cá nhân bạn thích chương trình nào trong các chương trình đó, với cùng thành viên, ngân sách, quyền hạn và những điều chưa chắc chắn? Câu trả lời này là tùy chọn."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-12",
@@ -7732,6 +7886,30 @@
           }
         }
       ],
+      "briefings": {
+        "en": "You are an elected local leader in a rural district of your assigned fictional country. A public processing facility is used by small producers and employs local workers. You may select one of three council-approved uses of the same 120,000-unit annual development fund; no other funds or assets may be moved. Each plan pays for maintenance and all existing wages and meets the same safety and access rules. Existing ownership and employment rights remain unchanged. The estimates below have similar uncertainty; no plan guarantees an outcome. Which plan will you approve? You may choose uncertain, none of these, or skip.",
+        "vi": "Bạn là lãnh đạo dân cử của một huyện nông thôn thuộc quốc gia giả định được giao. Một cơ sở chế biến công phục vụ các hộ sản xuất nhỏ và thuê người lao động địa phương. Bạn có quyền chọn một trong ba cách sử dụng đã được hội đồng phê duyệt cho cùng quỹ phát triển hằng năm 120.000 đơn vị; không được điều chuyển quỹ hay tài sản khác. Mỗi phương án đều chi cho bảo trì và toàn bộ tiền lương hiện có, đồng thời đáp ứng cùng các quy định về an toàn và tiếp cận. Quyền sở hữu và quyền lao động hiện tại không đổi. Các ước tính dưới đây có mức độ không chắc chắn tương tự; không phương án nào bảo đảm kết quả. Bạn sẽ phê duyệt phương án nào? Bạn có thể chọn chưa chắc, không phương án nào phù hợp, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Increase future productive capacity",
+          "Increase current income",
+          "Give affected groups a binding voice in future allocation",
+          "Preserve a workable arrangement under uncertainty",
+          "Another reason"
+        ],
+        "vi": [
+          "Tăng năng lực sản xuất trong tương lai",
+          "Tăng thu nhập hiện tại",
+          "Cho các nhóm chịu ảnh hưởng tiếng nói có tính ràng buộc trong phân bổ sau này",
+          "Giữ cách tổ chức có thể hoạt động trong điều kiện không chắc chắn",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Keeping the same costs, powers, facts and constraints, which plan would you personally prefer, setting aside the assigned office? Answering is optional.",
+        "vi": "Giữ nguyên chi phí, thẩm quyền, dữ kiện và các giới hạn, nếu tạm gác vai trò được giao, cá nhân bạn thích phương án nào? Bạn có thể không trả lời."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-13",
@@ -7862,6 +8040,30 @@
           }
         }
       ],
+      "briefings": {
+        "en": "You are a national leader in the capital city of your assigned fictional country. Parliament has authorized a one-year 300,000-unit learning fund and three lawful packages, each costing the full fund. Basic school funding, existing employment protections, freedom of belief and local curriculum rights are identical under all three. You may select one package; you cannot change tax, ownership or other budgets. A pilot suggested each package could help different participants, but no comparable evaluation establishes which produces the largest long-term economic or cultural effect. Which package do you choose? You may choose uncertain, none of these, or skip.",
+        "vi": "Bạn là lãnh đạo quốc gia tại thủ đô của quốc gia giả định được giao. Quốc hội đã cho phép một quỹ học tập một năm trị giá 300.000 đơn vị và ba phương án hợp pháp, mỗi phương án sử dụng toàn bộ quỹ. Kinh phí giáo dục cơ bản, các quyền bảo vệ việc làm hiện có, tự do tín ngưỡng và quyền xây dựng chương trình học của địa phương đều như nhau trong cả ba phương án. Bạn có quyền chọn một phương án; bạn không thể thay đổi thuế, quyền sở hữu hay ngân sách khác. Một thử nghiệm nhỏ cho thấy mỗi phương án có thể giúp những người tham gia khác nhau, nhưng chưa có đánh giá so sánh xác định phương án nào tạo ra tác động kinh tế hoặc văn hóa dài hạn lớn nhất. Bạn chọn phương án nào? Bạn có thể chọn chưa chắc, không phương án nào phù hợp, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Improve material opportunities",
+          "Make competing accounts available for examination",
+          "Let communities decide how to sustain or revise practices",
+          "Support practical change despite uncertain evidence",
+          "Another reason"
+        ],
+        "vi": [
+          "Cải thiện cơ hội vật chất",
+          "Tạo điều kiện xem xét các cách lý giải khác nhau",
+          "Để cộng đồng quyết định cách duy trì hoặc thay đổi thực hành",
+          "Ủng hộ thay đổi thiết thực dù bằng chứng chưa chắc chắn",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Keeping the same authorized packages, costs and constraints, which would you personally prefer if you did not hold the assigned office? Answering is optional.",
+        "vi": "Giữ nguyên các phương án được phép, chi phí và giới hạn, nếu không giữ vai trò được giao, cá nhân bạn thích phương án nào? Bạn có thể không trả lời."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-14",
@@ -7983,6 +8185,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "**Surroundings.** In a rural district of your assigned fictional country, twenty-four farms use one small irrigation system. Half are operated by their owners and half by tenants. All current operators belong to an existing water cooperative. Its legal identity continues when members change. A publicly funded upgrade will serve the same farms under each proposal. Current water access and minimum safety repairs are protected separately.\n\n**Your role and powers.** You are a non-elected district officer authorized to choose one of three approved forms for a twelve-month maintenance agreement. You cannot change land ownership, rents, water shares, or membership of the cooperative. The upgrade costs 120 fictional units; twenty-four more units fund monitoring and administration under each package. All affected owners and operators have accepted all three legal forms.\n\n**What is fixed.** Every package uses the same engineers, schedule, repair standard, total resources, and access protections. Maintenance duties here mean reporting faults and arranging access for the funded repair workers; no additional fees or unpaid repair labor are required. Each provides binding commitments and an appeal route. There is no reliable evidence that one form will perform better here. At least some farm operators may change during the year, but the timing and number are unknown. The three approved forms differ in what carries responsibility through those changes.\n\n**Decision.** Which form would you select? You are choosing a responsible unit for this agreement, not deciding whether any group deserves more water. You may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "**Bối cảnh.** Tại một huyện nông thôn của quốc gia giả định được giao, hai mươi bốn cơ sở canh tác dùng chung một hệ thống tưới nhỏ. Một nửa do chủ đất trực tiếp canh tác và một nửa do người thuê đất canh tác. Mọi người đang canh tác đều là thành viên của một hợp tác xã dùng nước hiện có. Tư cách pháp lý của hợp tác xã tiếp tục tồn tại khi thành viên thay đổi. Việc nâng cấp bằng ngân sách công phục vụ cùng các cơ sở trong mọi đề xuất. Quyền tiếp cận nước hiện có và sửa chữa an toàn tối thiểu được bảo đảm riêng.\n\n**Vai trò và thẩm quyền.** Bạn là viên chức cấp huyện không giữ chức vụ dân cử, được chọn một trong ba hình thức đã được phê duyệt cho thỏa thuận bảo trì mười hai tháng. Bạn không được thay đổi quyền sở hữu đất, tiền thuê, phần nước được hưởng hoặc tư cách thành viên hợp tác xã. Nâng cấp tốn 120 đơn vị giả định; thêm hai mươi bốn đơn vị dành cho giám sát và quản lý trong mỗi phương án. Mọi chủ đất và người canh tác liên quan đã chấp nhận cả ba hình thức pháp lý.\n\n**Những điều giữ nguyên.** Mỗi phương án dùng cùng kỹ sư, tiến độ, tiêu chuẩn sửa chữa, tổng nguồn lực và bảo đảm tiếp cận. Nghĩa vụ bảo trì ở đây là báo hỏng và sắp xếp cho nhân viên sửa chữa đã có kinh phí vào làm việc; không yêu cầu trả thêm phí hay sửa chữa không hưởng công. Mỗi cách đều có cam kết ràng buộc và quyền yêu cầu xem xét lại. Chưa có bằng chứng đáng tin cậy cho biết hình thức nào sẽ hoạt động tốt hơn ở đây. Một số người canh tác có thể thay đổi trong năm, nhưng chưa biết thời điểm và số lượng. Ba hình thức được phê duyệt khác nhau ở điều gì tiếp tục mang trách nhiệm khi có thay đổi đó.\n\n**Quyết định.** Bạn sẽ chọn hình thức nào? Bạn chọn đơn vị chịu trách nhiệm trong thỏa thuận này, không quyết định nhóm nào xứng đáng có nhiều nước hơn. Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Identifiable individual responsibility",
+          "Continuity beyond changes in personnel",
+          "Responsibilities arising from a continuing relationship",
+          "Confidence in the decision or appeal process",
+          "Expected practical reliability",
+          "Other reason"
+        ],
+        "vi": [
+          "Trách nhiệm cá nhân xác định rõ",
+          "Tính liên tục khi người tham gia thay đổi",
+          "Trách nhiệm phát sinh từ quan hệ liên tục",
+          "Tin tưởng quy trình quyết định hoặc xem xét lại",
+          "Độ tin cậy thực tế dự kiến",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Putting aside your administrative responsibility, which form do you personally prefer while keeping the same resources, rights, and obligations? You may choose the same form or leave this optional answer blank.",
+        "vi": "Tạm gác trách nhiệm hành chính, cá nhân bạn thích hình thức nào khi nguồn lực, quyền và nghĩa vụ giữ nguyên? Bạn có thể chọn giống trước hoặc không trả lời câu không bắt buộc này."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-15",
@@ -8113,6 +8341,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "**Your surroundings.** You administer appointments for an existing public-support service in a large city of your assigned fictional country. Some residents miss appointments and must wait for a later date. Across six neighborhoods, records show higher attendance among residents who received a reminder call. Calls were not assigned by lottery: staff first called people who were easiest to reach. The records do not establish what would have happened to the same residents without a call.\n\nTwo researchers with equal access to the records and comparable relevant expertise disagree. One thinks reminders account for much of the difference; the other thinks reliable phone access and predictable working hours account for much of it. Neither has found a decisive error in the other’s analysis. Residents describe several barriers, including forgetting a date, work schedules, and difficulty arranging travel. These accounts identify possible mechanisms but do not establish how common each is.\n\n**Your role and authority.** You are a non-elected service officer authorized to choose one approved support package for the next two weeks. You are not being asked to certify which explanation is true. You cannot change eligibility, add money, make participation compulsory, or penalize someone for declining help. The choice must be made before stronger evidence can be collected.\n\n**What is fixed.** Each package uses exactly 40 additional staff-hours. Existing appointment hours, ordinary reminders, accessible booking, assistance, eligibility, and appeal rules continue under every package. The additional offers below go to residents with appointments due during the two weeks; nobody loses existing support. Within each package, a public lottery allocates offers if demand exceeds the stated capacity. The number of missed appointments prevented by each package is unknown. More offers do not guarantee more completed appointments.\n\n**Which package would you authorize now?** Choose A, B, or C; you may instead answer uncertain, none of these represents my decision, or skip. Keep your reason for acting separate from your confidence about what caused the earlier attendance difference.",
+        "vi": "**Bối cảnh của bạn.** Bạn phụ trách lịch hẹn cho một dịch vụ hỗ trợ công hiện có tại thành phố lớn trong quốc gia giả định được giao. Một số cư dân lỡ hẹn và phải chờ ngày khác. Dữ liệu ở sáu khu phố cho thấy người nhận cuộc gọi nhắc lịch có tỷ lệ đến hẹn cao hơn. Cuộc gọi không được phân bổ bằng bốc thăm: nhân viên gọi trước cho người dễ liên lạc nhất. Dữ liệu không xác định được điều gì sẽ xảy ra với chính những cư dân đó nếu họ không nhận cuộc gọi.\n\nHai nhà nghiên cứu có cùng quyền tiếp cận dữ liệu và chuyên môn liên quan tương đương không đồng ý với nhau. Một người cho rằng lời nhắc giải thích phần lớn khác biệt; người kia cho rằng khả năng liên lạc điện thoại ổn định và giờ làm việc có thể dự liệu giải thích phần lớn khác biệt. Chưa ai tìm thấy lỗi mang tính quyết định trong phân tích của người kia. Cư dân mô tả nhiều trở ngại, gồm quên ngày hẹn, lịch làm việc và khó sắp xếp đi lại. Các lời kể chỉ ra cơ chế có thể xảy ra nhưng chưa xác định được mức độ phổ biến của từng cơ chế.\n\n**Vai trò và thẩm quyền của bạn.** Bạn là viên chức phụ trách dịch vụ, không giữ chức vụ dân cử, được phép chọn một gói hỗ trợ đã phê duyệt cho hai tuần tới. Bạn không được yêu cầu xác nhận cách giải thích nào là đúng. Bạn không có quyền thay đổi điều kiện hưởng dịch vụ, tăng kinh phí, buộc tham gia hoặc phạt người từ chối giúp đỡ. Cần đưa ra lựa chọn trước khi có thể thu thập bằng chứng vững chắc hơn.\n\n**Những điều giữ nguyên.** Mỗi phương án dùng đúng 40 giờ nhân sự bổ sung. Giờ hẹn hiện có, lời nhắc thông thường, cách đặt lịch dễ tiếp cận, hỗ trợ, điều kiện hưởng và quy tắc yêu cầu xem xét lại đều tiếp tục trong mọi phương án. Hỗ trợ bổ sung bên dưới được đề nghị cho cư dân có lịch hẹn trong hai tuần; không ai mất hỗ trợ đang có. Nếu nhu cầu vượt số chỗ nêu trong phương án, các đề nghị được phân bổ bằng bốc thăm công khai. Chưa biết mỗi phương án sẽ ngăn được bao nhiêu trường hợp lỡ hẹn. Có nhiều đề nghị hơn không bảo đảm có nhiều người hoàn thành cuộc hẹn hơn.\n\n**Bạn sẽ cho phép triển khai phương án nào lúc này?** Chọn A, B hoặc C; bạn cũng có thể trả lời chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua. Hãy phân biệt lý do bạn hành động với mức độ chắc chắn về nguyên nhân của khác biệt tỷ lệ đến hẹn trước đây."
+      },
+      "reasons": {
+        "en": [
+          "The observed pattern seems useful for predicting benefit",
+          "A proposed mechanism fits the barriers residents describe",
+          "A flexible response is preferable while informed researchers disagree",
+          "Reaching more residents with the available hours",
+          "Providing more help per person despite reaching fewer people",
+          "Other reason"
+        ],
+        "vi": [
+          "Mối liên hệ quan sát được có vẻ hữu ích để dự đoán lợi ích",
+          "Một cơ chế được đề xuất phù hợp với trở ngại cư dân mô tả",
+          "Nên ứng phó linh hoạt khi các nhà nghiên cứu nắm thông tin vẫn bất đồng",
+          "Tiếp cận nhiều cư dân hơn với số giờ hiện có",
+          "Giúp nhiều hơn cho mỗi người dù tiếp cận ít người hơn",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Optional: setting aside your assigned responsibility as service officer, which of these same packages would you personally prefer under the same evidence, hours, service rules, and consequences? You may be uncertain, find none representative, or skip. This is separate from both your role action and your view of the causal explanation.",
+        "vi": "Không bắt buộc: tạm gác trách nhiệm được giao của viên chức phụ trách dịch vụ, cá nhân bạn muốn chọn phương án nào trong chính các phương án này, với cùng bằng chứng, số giờ, quy tắc dịch vụ và hệ quả? Bạn có thể chưa chắc, thấy không phương án nào phù hợp, hoặc bỏ qua. Câu trả lời này tách biệt với cả hành động theo vai trò lẫn nhận định về cách giải thích nguyên nhân."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-16",
@@ -8225,6 +8479,32 @@
           }
         }
       ],
+      "briefings": {
+        "en": "Your surroundings. In a rural district of your assigned fictional country, a new public minibus service has operated in four villages for one year. Four nearby villages still use the previous service. The new service reaches more stops, but people disagree about its usefulness: some report easier access to work, while others describe unsuitable times or the loss of informal help with travel. The district is considering changes and has invited evidence on what matters, what has changed and what might explain it. It has not required one type of study or promised a policy change.\n\nYour role. You lead a voluntary civil society group. Its members have delegated to you the choice of one inquiry plan from the three below. You cannot alter transport routes, assign villages to a service, require anyone to be interviewed or promise that the district will adopt your findings.\n\nWhat is fixed. You have 120 research-budget units and six weeks. Each plan costs exactly 120 units, including access support, participant compensation where used, staff time and preparation of a public report. The same privacy, voluntary-participation and independent complaint arrangements apply. Reported results must include disagreements and limitations. No plan has begun. At least two residents in each village have volunteered to be considered for the resident inquiry group. Comparable anonymous travel records exist for all eight villages for the year before and the year after the change; they do not explain why those four villages received the new service. Local archives also contain fifteen years of transport decisions, land-use changes and residents’ petitions. Historical records are incomplete accounts of events, even where documents survive.\n\nWhich inquiry would you commission with this budget? You may also answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bối cảnh của bạn. Tại một huyện nông thôn của quốc gia giả định được giao, một dịch vụ xe buýt nhỏ công cộng mới đã hoạt động ở bốn làng trong một năm. Bốn làng gần đó vẫn dùng dịch vụ cũ. Dịch vụ mới đến nhiều điểm dừng hơn, nhưng người dân bất đồng về mức độ hữu ích: một số nói rằng đi làm dễ hơn; những người khác cho biết giờ xe không phù hợp hoặc họ mất sự giúp đỡ đi lại không chính thức. Huyện đang cân nhắc thay đổi và mời cung cấp bằng chứng về điều gì quan trọng, điều gì đã thay đổi và những gì có thể giải thích sự thay đổi. Huyện không yêu cầu một loại nghiên cứu cụ thể và chưa hứa thay đổi chính sách.\n\nVai trò của bạn. Bạn lãnh đạo một nhóm xã hội dân sự tự nguyện. Các thành viên đã giao cho bạn quyền chọn một kế hoạch tìm hiểu trong ba kế hoạch dưới đây. Bạn không có quyền đổi tuyến xe, quyết định làng nào được dùng dịch vụ nào, bắt buộc ai trả lời phỏng vấn hoặc hứa rằng huyện sẽ áp dụng kết quả của nhóm.\n\nNhững điều được giữ nguyên. Bạn có 120 đơn vị ngân sách nghiên cứu và sáu tuần. Mỗi kế hoạch dùng đúng 120 đơn vị, đã gồm hỗ trợ tiếp cận, khoản bù cho người tham gia khi có, thời gian nhân sự và việc chuẩn bị báo cáo công khai. Cùng các quy định về bảo mật, tham gia tự nguyện và cơ chế khiếu nại độc lập được áp dụng. Báo cáo phải nêu cả bất đồng lẫn hạn chế. Chưa kế hoạch nào bắt đầu. Ít nhất hai cư dân ở mỗi làng đã tình nguyện để được xem xét tham gia nhóm cư dân tìm hiểu. Có hồ sơ đi lại ẩn danh có thể so sánh cho cả tám làng, trong một năm trước và một năm sau thay đổi; hồ sơ không giải thích vì sao bốn làng đó nhận dịch vụ mới. Kho lưu trữ địa phương cũng có mười lăm năm quyết định về giao thông, thay đổi sử dụng đất và kiến nghị của người dân. Hồ sơ lịch sử không phản ánh đầy đủ mọi sự kiện, ngay cả khi tài liệu còn được lưu giữ.\n\nBạn sẽ đặt thực hiện kế hoạch tìm hiểu nào với ngân sách này? Bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Assess how much of a recorded change the service might explain",
+          "Understand experiences and consequences that existing measures miss",
+          "Trace how earlier decisions created the present options",
+          "Give affected people authority to shape the inquiry",
+          "Choose evidence most useful for the next practical decision",
+          "Other reason"
+        ],
+        "vi": [
+          "Đánh giá dịch vụ có thể giải thích bao nhiêu phần thay đổi đã được ghi nhận",
+          "Hiểu trải nghiệm và hệ quả mà cách đo hiện có bỏ sót",
+          "Lần theo cách các quyết định trước đây tạo ra những lựa chọn hiện tại",
+          "Cho người chịu ảnh hưởng quyền định hình việc tìm hiểu",
+          "Chọn bằng chứng hữu ích nhất cho quyết định thực tế tiếp theo",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Putting aside your responsibility as group leader, which of the same plans would you personally prefer under the same budget, records, deadline and decision purpose? This response is optional.",
+        "vi": "Nếu tạm gác trách nhiệm lãnh đạo nhóm, cá nhân bạn thích kế hoạch nào trong các kế hoạch đó, với cùng ngân sách, hồ sơ, thời hạn và mục đích ra quyết định? Câu trả lời này là tùy chọn."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-17",
@@ -8346,6 +8626,30 @@
           }
         }
       ],
+      "briefings": {
+        "en": "You are a national leader of your assigned fictional country. Your country and two neighboring states share a river; rural communities in all three face seasonal floods. An existing agreement asks each state to notify the others of major water releases and share incident records. Whether they have complied is unknown. Your legislature has approved one year of cooperation using exactly 120 budget units and has authorized all three packages below. Existing disaster relief, border rules, military obligations and data-protection law remain the same. You cannot compel another state to participate. Both neighbors have offered to participate in any one package, and all plans are technically feasible. Forecasts are uncertain and no plan guarantees fewer losses. Choose one package; you may instead answer uncertain, none of these represents my decision, or skip.",
+        "vi": "Bạn là lãnh đạo quốc gia của quốc gia giả định được giao. Quốc gia của bạn và hai quốc gia láng giềng cùng dùng một con sông; cộng đồng nông thôn ở cả ba đều đối mặt với lũ theo mùa. Một thỏa thuận hiện có yêu cầu mỗi quốc gia báo cho các bên khác về những đợt xả nước lớn và chia sẻ hồ sơ sự cố. Chưa biết họ đã tuân thủ hay chưa. Cơ quan lập pháp đã thông qua một năm hợp tác dùng đúng 120 đơn vị ngân sách và cho phép cả ba phương án dưới đây. Cứu trợ thiên tai hiện có, quy định biên giới, nghĩa vụ quân sự và luật bảo vệ dữ liệu đều giữ nguyên. Bạn không thể buộc quốc gia khác tham gia. Cả hai láng giềng đã đề nghị tham gia bất kỳ một phương án nào, và mọi phương án đều khả thi về kỹ thuật. Dự báo chưa chắc chắn và không phương án nào bảo đảm giảm thiệt hại. Chọn một phương án; bạn cũng có thể chọn chưa chắc, không phương án nào thể hiện quyết định của tôi, hoặc bỏ qua."
+      },
+      "reasons": {
+        "en": [
+          "Earlier warnings",
+          "Shared material protection",
+          "Confidence through independent review",
+          "Preserving national discretion",
+          "Other reason"
+        ],
+        "vi": [
+          "Cảnh báo sớm hơn",
+          "Bảo vệ vật chất chung",
+          "Tin tưởng nhờ xem xét độc lập",
+          "Giữ quyền quyết định quốc gia",
+          "Lý do khác"
+        ]
+      },
+      "personalPreferencePrompt": {
+        "en": "Putting your assigned responsibility aside, which package would you personally prefer under the same budget and constraints? You may skip.",
+        "vi": "Tạm gác trách nhiệm được giao, cá nhân bạn thích phương án nào với cùng ngân sách và các ràng buộc? Bạn có thể bỏ qua."
+      },
       "outcomes": [
         {
           "id": "SCENARIO-18",

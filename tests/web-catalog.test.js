@@ -63,3 +63,28 @@ test('website text, options, outcome links and packages match the author databas
     for (const pkg of catalog.packages) assert.deepEqual(pkg.items, members.all(pkg.id).map(row => row.item_id), `Package mismatch: ${pkg.id}`);
   } finally { db.close(); }
 });
+
+test('playable scenarios preserve authored briefings, reasons and optional preference prompts', async () => {
+  const paths = Object.keys(catalog.provenance.sources).filter(path =>
+    path.startsWith('research/quiz-database/expansion/') && path.endsWith('.json') && !path.endsWith('/sources.json'));
+  const scenarios = (await Promise.all(paths.map(async path => JSON.parse(await readFile(new URL(path, root), 'utf8')))))
+    .flatMap(document => document.scenarios || []);
+  assert.deepEqual(scenarios.map(scene => scene.id).sort(), Array.from({length: 12}, (_, i) => `CR-S${String(i + 7).padStart(2, '0')}`));
+  for (const source of scenarios) {
+    const item = catalog.items.find(entry => entry.id === source.id);
+    assert.ok(item, `Missing scenario ${source.id}`);
+    assert.equal(item.bank, 'candidate');
+    assert.equal(item.status, 'author_draft');
+    assert.deepEqual(item.briefings, source.briefing, `${source.id} briefing`);
+    assert.deepEqual(item.reasons, source.reasons, `${source.id} reasons`);
+    assert.deepEqual(item.personalPreferencePrompt, source.personal_preference_prompt, `${source.id} preference`);
+    for (const language of ['en', 'vi']) {
+      assert.ok(item.briefings[language]);
+      assert.ok(item.personalPreferencePrompt[language]);
+      assert.equal(item.reasons.en.length, item.reasons.vi.length);
+      assert.ok(item.reasons[language].length > 0);
+    }
+  }
+  // The older comprehension-only probe is not part of the new route.
+  assert.equal(catalog.items.find(item => item.id === 'CR-S03').briefings, undefined);
+});

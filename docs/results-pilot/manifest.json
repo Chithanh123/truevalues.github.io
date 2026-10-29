@@ -1,7 +1,7 @@
 {
   "generator": "research/results-pilot/build.py",
   "kit_version": "1.0.0",
-  "application_version": "0.4.5",
+  "application_version": "0.4.6",
   "instrument_version": "0.4.0",
   "fixture_version": "1.0.0",
   "reflection_version": "1.1.0",
@@ -57,7 +57,7 @@
     }
   ],
   "source_sha256": {
-    "package.json": "4735b4d706e59ff152989c083227605b5ff767378e899110c84b1b1244201b7b",
+    "package.json": "0e4a5aaf5cd9d684fd11073613b2b3ddfb32a9a90f625dbb77f84f9f00c1ffdc",
     "js/content.js": "743b72d40451aeb0c1d849fdaec122d1cb5846c43df64d6e710ef74d16737150",
     "js/worlds.js": "1aec6e2f7d55c388e4fbbfd050f8de24199be83cbbe2cea036bbba93aad7cd0f",
     "js/foundations.js": "c1fca23f5d702d7ea3de56161eef0d2a24f892ff2316dbafffa7a26566c7185d",
@@ -73,19 +73,19 @@
     "style.css": "ca3ddd9f41a4266b5e7a77504087cb2bd2272960c9b7bd5923e94e0a8a755f9c",
     "pilot.css": "169082e7175a685034435db9b85f1a8c581db8c33610637beb7c86583e712fdc",
     "research/results-pilot/build.py": "e8d652e55869c5a09d2094c408bd895c2eff1d0134c9dfb1a8fd9701a212b2c7",
-    "docs/results-pilot/README.md": "c7caa34e11c252fcf07be2f865c2f0409d6c3d250fa0eed2a5dff70b32485dc8",
+    "docs/results-pilot/README.md": "867b0ebd3da07f7aa13e3fe49f42464df27b7528414bab69618ad6b955d7b141",
     "docs/results-pilot/PROTOCOL.md": "236bb64e6f63b1088ebafc6d5ed470a25b2fddf58d11443808e5134534dd45c6",
     "docs/results-pilot/SESSION-SCRIPT.md": "d3cde4ef40626276848582aa5a1d7c8f78b1096bb5c310c3fb71249e8f76df5e",
     "docs/results-pilot/OBSERVATION-GUIDE.md": "a99c927a607d82fa81300d25066fc77415ba0179af5ef5e845ecb4a164dd18d7",
     "docs/results-pilot/observation-log-template.csv": "0b291791e92a3cb388bb3818aa745fddef0fbc3adc29478edd446fd637adb9d8"
   },
   "bundle_file_sha256": {
-    "README.md": "c7caa34e11c252fcf07be2f865c2f0409d6c3d250fa0eed2a5dff70b32485dc8",
+    "README.md": "867b0ebd3da07f7aa13e3fe49f42464df27b7528414bab69618ad6b955d7b141",
     "PROTOCOL.md": "236bb64e6f63b1088ebafc6d5ed470a25b2fddf58d11443808e5134534dd45c6",
     "SESSION-SCRIPT.md": "d3cde4ef40626276848582aa5a1d7c8f78b1096bb5c310c3fb71249e8f76df5e",
     "OBSERVATION-GUIDE.md": "a99c927a607d82fa81300d25066fc77415ba0179af5ef5e845ecb4a164dd18d7",
     "observation-log-template.csv": "0b291791e92a3cb388bb3818aa745fddef0fbc3adc29478edd446fd637adb9d8",
-    "EXAMPLES.md": "165b2487c5f697083e845571ebb504a47e6f84cc6911411b9fdde276c8b761aa",
+    "EXAMPLES.md": "c1d8b04bb20045a4707d647b3bb2bdb623ca0956cfb5b5f1cc1d56ff8b38b1fa",
     "reports/SYNTHETIC-RP01.txt": "75ba54933824e65b8b772a212f1db6bc1267cc14a29b9eeb01b9ade72f3fb1d3",
     "reports/SYNTHETIC-RP02.txt": "48d46217550b7378e2c0f9d901b792f668ca2c67becfd588d7f8c43dff1d7b22",
     "reports/SYNTHETIC-RP03.txt": "a96ad82a9ff0cf066aed87e3134824bf3dd9edfadb26dfbde5865916048bf912",

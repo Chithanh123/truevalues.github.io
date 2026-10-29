@@ -1,6 +1,6 @@
 # Political Context: progress ledger
 
-Review date: **27 October 2026**. Current development branch: `site/question-bank`, continuing the v0.4 commit `42a2737` and the earlier v0.3 work; the fork's `master` was verified at `de4743a` on 27 October.
+Review date: **29 October 2026**. Current development branch: `site/question-bank`; the fork’s `master` was verified at `074a485` on 29 October.
 
 This ledger distinguishes working software, drafted research materials, completed human work, and publication evidence. It does not assign a completion percentage: the research gates cannot be inferred from the amount of code or content.
 
@@ -21,7 +21,7 @@ All twelve catalog checks passed on 25 October, including original-content fidel
 - The public project address is expected to be `https://chithanh123.github.io/truevalues.github.io/`. Public-site verification from this environment was blocked by an HTTP 403 network response. Neither a successful Pages run nor the live site's current content is claimed here.
 - [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
 - [Pull request #4](https://github.com/Chithanh123/truevalues.github.io/pull/4) merged the research catalog and `0.4.2` debrief into the user's fork. Fetching `master` on 26 October verified merge commit `de4743ae7e6853366f6ffaeb04ee3dffd6859f09`, containing `fdf5825`. The hosted deployment has not been verified here.
-- The Node 24 / Ubuntu 24.04 workflow maintenance, `0.4.3` interpretations, `0.4.4` results-pilot workspace, the 27 October content expansion, and the `0.4.5` question-bank page continue on `site/question-bank`. Browser-readable package/outcome documentation and repository download bundles are provided so access does not depend on cloud-workspace links. Publishing this branch does not merge these newer changes into `master` or deploy them.
+- [Pull request #5](https://github.com/Chithanh123/truevalues.github.io/pull/5) merged the workflow maintenance, result interpretations, pilot workspace, content expansion, and `0.4.5` question-bank page into the user’s fork. Fetching `master` on 29 October verified merge commit `074a48564c32600270ef74f6da0f00a9e2c21e89`. The hosted deployment has not been verified here. The `0.4.6` playable extension remains on `site/question-bank` for a new review.
 
 ## Milestone audit
 
@@ -46,6 +46,12 @@ Explicit real-country correspondences are withheld in the participant flow until
 
 The v0.4 route and schema are versioned separately from v0.3, preserving the previous-save recovery path rather than silently reinterpreting older progress. Human review and participant findings remain pending.
 
+## Playable question extension 0.4.6
+
+An optional experimental extension presents all 48 recently drafted statements and twelve scenarios as a separate assessment. It uses a versioned response record, describes results without adding new ideology scores, and leaves the existing 49-item quiz, its compatible saves and original profiles unchanged. A fictional setting is assigned for the extension; the new situations use generic authored institutional assumptions, whose country-specific feasibility has not been reviewed. Country inspiration is withheld until the extension is complete. The older draft candidates and the comprehension-only CR-S03 remain research material. The extension saves only with explicit device opt-in, uses a content fingerprint so unchanged catalog rebuilds do not invalidate saved answers, and preserves incompatible data for download or explicit erasure. The optional personal preference remains separate even when the assigned-role action is uncertain, none or skipped.
+
+On 29 October, **107 Node tests**, 18 author-catalog checks, all three content/translation/evidence validators and three pilot-bundle checks passed. The source and packaged-project browser suites completed all 60 questions, checked results and exports, independent personal preferences, saving/recovery, isolation from the original quiz, final-only country reveal and mobile layout. No JavaScript errors, failed requests or external requests were observed. The static build contains 54 files. These are technical checks, not completed human review or research validation.
+
 ## Website question-bank view 0.4.5
 
 The website now provides a searchable view of the 151-item author catalog, including draft English–Vietnamese statements and situations, intended outcomes and source status. The web snapshot excludes the author database’s country correspondences, scores and participant records. The new content is research material and is not added to the existing 49-item assessment. The web export matches its authored database and source fingerprints; 97 Node tests, 18 catalog checks and the content, translation and evidence validators passed. Browser tests passed against the source and packaged project path, including all 151 items, bilingual text, search and filters, outcome/source notes, mobile layout, storage isolation, and no failed or external requests. The static artifact contains 49 files.
@@ -56,7 +62,7 @@ The separate `results-pilot.html` workspace applies the unchanged result rendere
 
 The [pilot kit](results-pilot/README.md) provides an EN–VI facilitator script for eight tasks, a proposed two-wave 6–8-adult protocol, a header-only observation log, a generated example key, source hashes, and six labeled text reports in a downloadable bundle. The kit generator refuses observation data in the public template. The new Node checks detect stale example sources; Python artifact tests check reproducibility and downloaded-file fidelity. These are synthetic materials and technical checks, with no human interviews or findings claimed.
 
-Application `0.4.4` retains instrument `0.4.0`, interpretation rules `1.0.0`, reflection format `1.1.0`, scores, compatible saves, and JSON export format `2`. The site artifact expands to 45 files. Fetching `master` on 27 October still showed `de4743a` (the `0.4.2` merge); the public-site requests on 26 October returned proxy HTTP 403. Consequently the newer source remains review-branch work and live-site behavior is unverified. Final release checks are recorded below.
+Application `0.4.4` retains instrument `0.4.0`, interpretation rules `1.0.0`, reflection format `1.1.0`, scores, compatible saves, and JSON export format `2`. The site artifact expands to 45 files. Fetching `master` on 27 October still showed `de4743a` (the `0.4.2` merge); the public-site requests on 26 October returned proxy HTTP 403. At that time the newer source was review-branch work and live-site behavior was unverified; pull request #5 later merged it into the fork. Final release checks are recorded below.
 
 ## Expanded question research, 27 October
 

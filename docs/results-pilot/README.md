@@ -1,6 +1,6 @@
 # Results-comprehension pilot kit
 
-Kit `1.0.0` · application `0.4.5` · assessment `0.4.0` · interpretation rules `1.0.0`.
+Kit `1.0.0` · application `0.4.6` · assessment `0.4.0` · interpretation rules `1.0.0`.
 
 This kit prepares a small formative review of the result explanations with 6–8 bilingual English–Vietnamese adults. It contains synthetic examples, facilitator instructions, and a blank observation log. **No interviews, participant findings, or independent language review have been completed by generating these materials.**
 
