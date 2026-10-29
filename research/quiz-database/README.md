@@ -2,7 +2,7 @@
 
 This is an **author-facing content catalog** for Political Context. It connects quiz packages, their items, and the interpretations each package is intended to explore. An intended outcome describes what a response might tell us; it is not a preferred political answer, an ideological diagnosis, or a validated result.
 
-The catalog contains the current instrument, the [initial research pack](../../docs/content-research/README.md), and the [27 October expansion](../../docs/content-research/EXPANSION-2026-10-27.md). It does not change the application, its 49-item route, its scores, or its saved responses. It stores authored content and research metadata, with no participant answers or personal records.
+The catalog contains the original 49-item instrument, the [initial research pack](../../docs/content-research/README.md), and the [27 October expansion](../../docs/content-research/EXPANSION-2026-10-27.md). Application 0.5.0 combines those 49 items with 60 additional unscored draft questions in its 109-item route. The original scoring rubric and its answer record remain distinct. It stores authored content and research metadata, with no participant answers or personal records.
 
 ## Open the database
 
@@ -20,7 +20,7 @@ The database is researcher material and includes country-inspiration spoilers. F
 
 | Package ID | Content allocation | Status and intended use |
 | --- | --- | --- |
-| `PILOT-0.4.0` | 40 statements: 24 values and 16 foundations; nine scenario instances; **49 primary tasks** | Implemented, unvalidated prototype. Describes stated commitments, individual premises, contextual actions, and the existing provisional profiles. The route has a fixed order. |
+| `PILOT-0.4.0` | 40 statements: 24 values and 16 foundations; nine scenario instances; **49 primary tasks** | Original section of the combined route; implemented, unvalidated prototype. Describes stated commitments, individual premises, contextual actions, and the existing provisional profiles. The route has a fixed order. |
 | `REVIEW-A` | CR-02, CR-03, CR-05, and CR-06 triads; CR-S01 and CR-S03; **14 primary tasks** | Draft comprehension packet on power, freedom, enterprise authority, and knowledge. CR-S03 is held as a comprehension probe pending redesign, not an ideological indicator. |
 | `REVIEW-B` | CR-01, CR-04, CR-11, and CR-12 triads; CR-S02 and CR-S05; **14 primary tasks** | Draft comprehension packet on social formation, care, ecological standing, and the grounds of authority. |
 | `REVIEW-C` | CR-07, CR-08, CR-09, and CR-10 triads; CR-S04 and CR-S06; **14 primary tasks** | Draft comprehension packet on continuity, membership, religion, inherited status, and repair. |
@@ -29,17 +29,17 @@ The database is researcher material and includes country-inspiration spoilers. F
 | `REVIEW-J` | One international-relations cluster and one scenario; **5 primary tasks** | Author-draft review of security, cooperation, sovereignty and international institutions. |
 | `FUTURE-24` | Budget of 18 statements and six scenarios; **zero items selected** | Unassigned design outline. Its target of 24 tasks is not a completed form, a recommended validated length, or a source of current assessment outcomes. |
 
-The original REVIEW-A–C packets have twelve statements and two scenario families each. REVIEW-D–J allocate the 48 additional statements and twelve additional scenarios once. Their membership is specified; presentation order and formal study allocation are not fixed. They are not equivalent forms and do not give each reader a complete political profile. Briefings, reasons, interviews, language switching, and debriefing add burden beyond the primary-task count.
+The original REVIEW-A–C packets have twelve statements and two scenario families each. REVIEW-D–J allocate the 48 additional statements and twelve additional scenarios once; those 60 drafts also appear in the combined assessment in a fixed authored order. The packets are review allocations; formal study allocation has not been designed. They are not equivalent forms and do not give each reader a complete political profile. Briefings, reasons, interviews, language switching, and debriefing add burden beyond the primary-task count.
 
 The later 24-task form must select from the combined existing and new bank after coverage review. It should not automatically select all six new families and lose existing dissent or international-obligation coverage.
 
 ## Content and language coverage
 
-There are **151 distinct item records**: 49 current items, 84 proposed statements, and 18 proposed scenario families. Options, reasons, and variant instructions are related records rather than extra primary items. The current repeated housing case is one of the existing nine scenario instances.
+There are **151 distinct item records**: 49 original-section items, 84 author-draft statements, and 18 author-draft scenario families. Of the drafts, 48 statements and 12 scenarios are included in the combined assessment; the rest remain review material. Options, reasons, and variant instructions are related records rather than extra primary items. The original repeated housing case is one of the existing nine scenario instances.
 
-English text is available for all 151 items. Vietnamese author drafts are available for **147**: all 49 current items, all 84 proposed statements, and 14 of the 18 proposed scenarios. CR-S03 through CR-S06 have no Vietnamese participant draft. The review packets therefore contain 13, 13, and 12 Vietnamese drafts respectively. These counts establish availability, not translation equivalence. The current participant application remains English.
+English text is available for all 151 items. Vietnamese author drafts are available for **147**: all 49 original-section items, all 84 author-draft statements, and 14 of the 18 proposed scenarios. CR-S03 through CR-S06 have no Vietnamese participant draft. The review packets therefore contain 13, 13, and 12 Vietnamese drafts respectively. These counts establish availability, not translation equivalence. The current participant application remains English.
 
-All eight fictional worlds are represented. The 72 current scenario–world notes are authored and unreviewed. The 144 proposed scenario–world combinations are an authorization and feasibility review queue; their participant context notes remain absent. A populated queue does not mean those 144 contexts have been written, independently reviewed, or checked against real-country law.
+All eight fictional worlds are represented. The 72 original scenario–world notes are authored and unreviewed. The 144 proposed scenario–world combinations are an authorization and feasibility review queue; their participant context notes remain absent. A populated queue does not mean those 144 contexts have been written, independently reviewed, or checked against real-country law.
 
 ## Read the intended outcomes correctly
 

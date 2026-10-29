@@ -3,34 +3,105 @@ import { createSession, makeSteps, setAnswer, summarize, validateSession, valida
 import { buildDebrief, createTextReport } from './debrief.js';
 import { interpretDebrief } from './interpretation.js';
 import { renderResponseReport } from './debrief-view.js';
+import { createExpandedFingerprint } from './expanded-fingerprint.js';
+import { renderExpandedResults, createExpandedTextReport } from './expanded-results.js';
+import { renderCombinedExtension, captureCombinedExtension, syncCombinedExtensionVisibility } from './combined-extension.js';
+import { createCombined, validateCombined, setExpandedAnswer, setExpandedIndex, isCombinedComplete, createCombinedExport, expandedItemIds } from './combined-session.js';
 
 const app = document.querySelector('#app');
 const dialog = document.querySelector('#info-dialog');
 const dialogContent = document.querySelector('#dialog-content');
 const steps = makeSteps(instrument);
 const STORAGE_KEY = 'political-context-session';
+const COMBINED_KEY = 'political-context-combined-v1';
 const labels = { 2: 'Strongly agree', 1: 'Agree', 0: 'Neither agree nor disagree', '-1': 'Disagree', '-2': 'Strongly disagree' };
 const e = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 let storageWarning = '';
 let recoverySave = null;
+let recoverySaveStore = null;
+let combinedRecovery = null;
+let combinedRecoveryStore = null;
+const unreadableLegacyStores = new Set();
+const unreadableCombinedStores = new Set();
+let catalog = null, fingerprint = null, combined = null;
+try {
+  const response = await fetch(new URL('../data/question-catalog.json', import.meta.url));
+  if (!response.ok) throw new Error('Catalog unavailable');
+  catalog = await response.json();
+  fingerprint = await createExpandedFingerprint(catalog, instrument.worlds);
+} catch {
+  storageWarning = 'The complete assessment could not be loaded. Your saved answers have not been changed; please reload or check the site deployment.';
+}
 let session = readSaved();
+if (catalog && fingerprint) {
+  combined = readCombined();
+  if (combined) session = combined.legacy;
+}
 let screen = 'home';
 
-function readSaved() {
+function readCombined() {
+  const candidates = [];
+  combinedRecovery = null;
+  combinedRecoveryStore = null;
+  unreadableCombinedStores.clear();
   for (const storeName of ['sessionStorage', 'localStorage']) {
+    let raw = null;
     try {
-      const raw = window[storeName].getItem(STORAGE_KEY);
-      if (!raw) continue;
+      raw = window[storeName].getItem(COMBINED_KEY);
+      if (raw === null) continue;
       const candidate = JSON.parse(raw);
-      const result = validateSession(instrument, candidate);
-      if (result.valid && (storeName === 'sessionStorage' || candidate.saveOnDevice)) return candidate;
-      recoverySave = raw;
-      storageWarning = 'Saved progress could not be restored because its format or assessment version changed. You can begin a new assessment or erase the old save in Your data.';
+      const valid = validateCombined(candidate, instrument, catalog, fingerprint).valid && (storeName === 'sessionStorage' || candidate.legacy.saveOnDevice);
+      candidates.push({storeName, raw, candidate, valid});
     } catch {
-      storageWarning = 'Saved progress could not be read. You can continue in this page; browser storage may be unavailable.';
+      if (raw !== null) candidates.push({storeName, raw, valid:false});
+      else { unreadableCombinedStores.add(storeName); storageWarning = 'Browser storage could not be read. Your existing data has not been intentionally changed.'; }
     }
   }
-  return null;
+  const active = candidates.find(item => item.valid);
+  // Protect an incompatible or different other-scope copy from automatic writes.
+  const protectedCopy = candidates.find(item => item !== active && (!item.valid || (active && item.raw !== active.raw)));
+  if (protectedCopy) {
+    combinedRecovery = protectedCopy.raw;
+    combinedRecoveryStore = protectedCopy.storeName;
+  } else if (!active && candidates.length) {
+    combinedRecovery = candidates[0].raw;
+    combinedRecoveryStore = candidates[0].storeName;
+  }
+  if (combinedRecovery !== null) storageWarning = 'A different or incompatible complete-assessment save is protected. Download it or explicitly erase that copy before replacing it.';
+  return active?.candidate || null;
+}
+
+function canReveal() {
+  return combined ? isCombinedComplete(combined, instrument, catalog, fingerprint) : !!session?.completed;
+}
+
+function readSaved() {
+  const candidates = [];
+  recoverySave = null;
+  recoverySaveStore = null;
+  unreadableLegacyStores.clear();
+  for (const storeName of ['sessionStorage', 'localStorage']) {
+    let raw = null;
+    try {
+      raw = window[storeName].getItem(STORAGE_KEY);
+      if (raw === null) continue;
+      const candidate = JSON.parse(raw);
+      const valid = validateSession(instrument, candidate).valid && (storeName === 'sessionStorage' || candidate.saveOnDevice);
+      candidates.push({storeName, raw, candidate, valid});
+    } catch {
+      if (raw !== null) candidates.push({storeName, raw, valid:false});
+      else { unreadableLegacyStores.add(storeName); storageWarning = 'Browser storage could not be read. Your existing data has not been intentionally changed.'; }
+    }
+  }
+  const active = candidates.find(item => item.valid);
+  const protectedCopy = candidates.find(item => item !== active && (!item.valid || (active && item.raw !== active.raw)))
+    || (!active ? candidates[0] : null);
+  if (protectedCopy) {
+    recoverySave = protectedCopy.raw;
+    recoverySaveStore = protectedCopy.storeName;
+    storageWarning = 'A different or incompatible previous-assessment save is protected. Download it or explicitly erase that copy before replacing it.';
+  }
+  return active?.candidate || null;
 }
 
 function announce(message) {
@@ -39,17 +110,23 @@ function announce(message) {
 
 function persist() {
   if (!session) return false;
-  const raw = JSON.stringify(session);
+  if (combined) combined = { ...combined, legacy: session };
+  const key = combined ? COMBINED_KEY : STORAGE_KEY;
+  const raw = JSON.stringify(combined || session);
   const failures = [];
-  try { sessionStorage.setItem(STORAGE_KEY, raw); } catch { failures.push('Progress may be lost if you reload this tab.'); }
+  const protectedStore = combined ? combinedRecoveryStore : recoverySaveStore;
+  const unreadableStores = combined ? unreadableCombinedStores : unreadableLegacyStores;
+  if (protectedStore === 'sessionStorage' || unreadableStores.has('sessionStorage')) failures.push('A different or unreadable tab save is protected; progress may be lost on reload.');
+  else try { sessionStorage.setItem(key, raw); } catch { failures.push('Progress may be lost if you reload this tab.'); }
   try {
-    if (session.saveOnDevice) localStorage.setItem(STORAGE_KEY, raw);
-    else localStorage.removeItem(STORAGE_KEY);
+    if (protectedStore === 'localStorage' || unreadableStores.has('localStorage')) failures.push('A different or unreadable device save is protected; it has not been replaced.');
+    else if (session.saveOnDevice) localStorage.setItem(key, raw);
+    else localStorage.removeItem(key);
   } catch { failures.push('Device storage could not be updated. An older save may remain in this browser.'); }
   if (failures.length) {
     storageWarning = failures.join(' ');
-    const notice = document.querySelector('#storage-warning');
-    if (notice) { notice.hidden = false; notice.textContent = storageWarning; }
+    const warning = document.querySelector('#storage-warning');
+    if (warning) warning.outerHTML = notice();
     announce(storageWarning);
   }
   return failures.length === 0;
@@ -57,17 +134,22 @@ function persist() {
 
 function clearSaved() {
   let failed = false;
+  const wasCombined = !!combined;
+  const key = wasCombined ? COMBINED_KEY : STORAGE_KEY;
+  const protectedStore = wasCombined ? combinedRecoveryStore : recoverySaveStore;
+  const unreadableStores = wasCombined ? unreadableCombinedStores : unreadableLegacyStores;
   for (const name of ['sessionStorage', 'localStorage']) {
-    try { window[name].removeItem(STORAGE_KEY); } catch { failed = true; }
+    if (name === protectedStore || unreadableStores.has(name)) continue;
+    try { window[name].removeItem(key); } catch { failed = true; }
   }
   session = null;
-  recoverySave = null;
-  storageWarning = failed ? 'Answers were cleared from this page, but browser storage could not be accessed. Clear this site’s data in your browser settings to remove any older save.' : '';
-  announce(failed ? storageWarning : 'Your answers have been erased from this tab and the saved device copy.');
+  combined = null;
+  storageWarning = failed ? 'Answers were cleared from this page, but browser storage could not be accessed. Clear this site’s data in your browser settings to remove any older save.' : combinedRecovery !== null ? 'An incompatible complete-assessment save remains available for recovery.' : recoverySave !== null ? 'An earlier assessment save remains available for recovery.' : '';
+  announce(failed ? storageWarning : protectedStore || unreadableStores.size ? 'The active assessment was erased; a protected or unreadable copy remains.' : 'Your answers have been erased from this tab and the saved device copy.');
 }
 
 function notice() {
-  return `<div id="storage-warning" class="notice" role="status" ${storageWarning ? '' : 'hidden'}>${e(storageWarning)}${recoverySave ? ' <button class="text-button" data-action="recover-save">Download the previous save</button>' : ''}</div>`;
+  return `<div id="storage-warning" class="notice" role="status" ${storageWarning || recoverySave !== null || combinedRecovery !== null ? '' : 'hidden'}>${e(storageWarning)}${recoverySave !== null ? ' <button class="text-button" data-action="recover-save">Download the previous save</button> <button class="text-button" data-action="erase-legacy-recovery">Erase that previous save</button>' : ''}${combinedRecovery !== null ? ' <button class="text-button" data-action="recover-combined">Download the complete-assessment save</button> <button class="text-button" data-action="erase-combined-recovery">Erase that save</button>' : ''}</div>`;
 }
 
 function focusContent() {
@@ -114,21 +196,21 @@ function renderHome() {
     <section class="hero" aria-labelledby="hero-title">
       <div><span class="eyebrow orange">PRINCIPLES MEET CIRCUMSTANCE</span><h1 id="hero-title">Your values.<br>A world of<br><em>tradeoffs.</em></h1>
         <p class="hero-copy">What matters to you—and what changes when you’re the one making the decision? Explore political values through the lives and responsibilities of others.</p>
-        <div class="hero-actions"><button class="button" data-action="${session ? 'resume' : 'begin'}">${session ? (session.completed ? 'Return to your debrief' : 'Continue assessment') : 'Begin assessment'} <span aria-hidden="true">→</span></button><span class="meta-note">◷ &nbsp; About 25–35 minutes · estimate</span></div>
+        <div class="hero-actions"><button class="button" data-action="${session ? 'resume' : 'begin'}">${session ? (canReveal() ? 'Return to your debrief' : 'Continue assessment') : 'Begin assessment'} <span aria-hidden="true">→</span></button><span class="meta-note">109 questions · duration not yet measured</span></div>
         <p class="hero-note">No account. No answers submitted. A space to think.</p>
-        <p><a href="expanded.html">Explore the 60-question experimental extension →</a><br><small>48 new statements and 12 situations · separate unscored results</small></p>
+        <p class="hero-note">The complete assessment includes the original questions and 60 additional experimental questions.</p>
         ${session ? '<button class="text-button" data-action="restart">Start a fresh assessment</button>' : ''}
       </div>${art()}
     </section>
-    <section class="stats-strip" aria-label="Assessment at a glance"><div class="stat"><strong>${instrument.statements.length + instrument.foundations.items.length}</strong><span>VALUES &amp;<br>ASSUMPTIONS</span></div><div class="stat"><strong>${String(instrument.scenarios.length).padStart(2, '0')}</strong><span>CONTEXTUAL<br>DECISIONS</span></div><div class="stat"><strong>${String(instrument.worlds.length).padStart(2, '0')}</strong><span>FICTIONAL<br>WORLDS</span></div><div class="stat"><strong>01</strong><span>PERSONAL<br>DEBRIEF</span></div></section>
+    <section class="stats-strip" aria-label="Assessment at a glance"><div class="stat"><strong>88</strong><span>VALUES &amp;<br>ASSUMPTIONS</span></div><div class="stat"><strong>21</strong><span>CONTEXTUAL<br>DECISIONS</span></div><div class="stat"><strong>${String(instrument.worlds.length).padStart(2, '0')}</strong><span>FICTIONAL<br>WORLDS</span></div><div class="stat"><strong>01</strong><span>PERSONAL<br>DEBRIEF</span></div></section>
     <section class="worlds-preview" aria-labelledby="worlds-title"><div><span class="eyebrow orange">Different institutions. Shared dilemmas.</span><h2 id="worlds-title">Eight worlds.<br> Five viewpoints.</h2><p>One setting stays with you for the whole assessment. Its real-world inspiration is revealed in your final debrief. Your responsibilities change as you encounter different parts of public life.</p><button class="text-button" data-action="worlds">Explore the fictional settings →</button></div><div class="world-chips">${instrument.worlds.map(world => `<div class="world-chip"><span class="world-code" aria-hidden="true">${e(world.code)}</span><span><strong>${e(world.name)}</strong><small>Institutional setting · fictional</small></span></div>`).join('')}</div></section>
     <section class="intro-section"><div><span class="eyebrow">How it unfolds</span><h2>From principle<br>to perspective.</h2></div><div class="process-grid"><div><span class="process-number">01</span><h3>Start with your values</h3><p>Consider values about rights, resources, and change, then assumptions about people, society, authority, and knowledge.</p></div><div><span class="process-number">02</span><h3>Step into a situation</h3><p>Take a role in a fictional society. Weigh real constraints and competing needs.</p></div><div><span class="process-number">03</span><h3>Reflect on your choices</h3><p>See your stated values and decisions side by side, with the reasons behind them.</p></div></div></section>
     <aside class="research-note"><span class="eyebrow">A work in progress</span><p><strong>A research prototype, with room for nuance.</strong> This edition includes ${instrument.worlds.length} settings and ${instrument.roles.length} roles. Its country briefs and decision rubrics are author drafts awaiting independent review. Its summaries are experimental, not a validated measure of ideology. Every choice comes with context. <button class="text-button" data-action="method">Read the method →</button></p></aside><section class="review-banner"><div><span class="eyebrow">Help shape the next edition</span><h2>Before we measure, we listen.</h2><p>The next research step is to check whether people understand the situations as intended. Browse the <a href="question-bank.html">question bank</a>, including draft questions and their intended outcomes.</p></div><button class="button secondary" data-action="review">For reviewers <span aria-hidden="true">→</span></button></section>`;
 }
 
 function topProgress(step) {
-  const completedItems = steps.slice(0, session.stepIndex).filter(s => ['statement', 'foundation', 'scenario'].includes(s.type)).length;
-  const total = instrument.statements.length + instrument.foundations.items.length + instrument.scenarios.length;
+  const completedItems = steps.slice(0, session.stepIndex).filter(s => ['statement', 'foundation', 'scenario'].includes(s.type)).length + (combined && step.type === 'results' ? combined.expanded.index : 0);
+  const total = combined ? 109 : instrument.statements.length + instrument.foundations.items.length + instrument.scenarios.length;
   const phase = ['statement', 'foundation'].includes(step.type) ? 0 : step.type === 'results' ? 2 : 1;
   return `<div class="assessment-top"><div class="phase-trail" aria-label="Assessment stages">${['Your perspective', 'In context', 'Your debrief'].map((name, i) => `<span class="${i === phase ? 'active' : ''}" ${i === phase ? 'aria-current="step"' : ''}><b>${i + 1}</b>${name}</span>`).join('')}</div><span class="progress-caption">${completedItems} of ${total} responses</span></div><div class="progress-track" role="progressbar" aria-label="Assessment progress" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${completedItems}"><div class="progress-fill" style="width:${completedItems / total * 100}%"></div></div>`;
 }
@@ -141,7 +223,7 @@ function sidebar(step, scene) {
 }
 
 function footer(step, allowSkip = true) {
-  return `<div class="answer-footer"><button class="back-button" data-action="back" ${session.stepIndex === 0 ? 'disabled' : ''}>← Back</button><div>${allowSkip ? '<button class="text-button" data-action="skip">Skip this item</button>' : ''}<button class="button" data-action="next" ${step.type !== 'briefing' && !session.answers[step.id] ? 'disabled' : ''}>${step.type === 'briefing' ? 'Enter the first situation' : session.stepIndex === steps.length - 2 ? 'See your debrief' : 'Continue'} <span aria-hidden="true">→</span></button></div></div><p class="keyboard-note">Use Tab to move between controls and arrow keys to change a selected response.</p>`;
+  return `<div class="answer-footer"><button class="back-button" data-action="back" ${session.stepIndex === 0 ? 'disabled' : ''}>← Back</button><div>${allowSkip ? '<button class="text-button" data-action="skip">Skip this item</button>' : ''}<button class="button" data-action="next" ${step.type !== 'briefing' && !session.answers[step.id] ? 'disabled' : ''}>${step.type === 'briefing' ? 'Enter the first situation' : session.stepIndex === steps.length - 2 ? (combined ? 'Continue to more questions' : 'See your debrief') : 'Continue'} <span aria-hidden="true">→</span></button></div></div><p class="keyboard-note">Use Tab to move between controls and arrow keys to change a selected response.</p>`;
 }
 
 function statementView(step) {
@@ -202,11 +284,12 @@ function foundationDebrief() {
 }
 
 function resultsView() {
+  if (!canReveal()) return '<p class="notice">Complete the assessment before viewing results.</p>';
   const summary = summarize(instrument, session);
   const report = buildDebrief(instrument, session);
   const interpretation = interpretDebrief(instrument, report);
   const world = instrument.worlds.find(w => w.id === session.worldId);
-  const count = Object.keys(session.answers).length;
+  const count = Object.keys(session.answers).length + (combined ? Object.keys(combined.expanded.answers).length : 0);
   const pair = summary.comparisons[0];
   const original = instrument.scenarios.find(s => s.id === pair.originalId);
   const comparison = instrument.scenarios.find(s => s.id === pair.scenarioId);
@@ -217,8 +300,9 @@ function resultsView() {
   <details class="raw-response-record" id="raw-foundations"><summary>Review all starting assumptions and research traditions</summary>${foundationDebrief()}</details>
   <section class="comparison-card"><span class="eyebrow orange">A closer look · Context comparison</span><h2>When the deadline changed.</h2><p>${e(comparison.changedCondition)}</p><div class="comparison-pair"><div><h3>Urgent school repairs</h3><p>${e(answerText(original, session.answers[`scenario:${original.id}`]))}</p></div><div><h3>More time for repairs</h3><p>${e(answerText(comparison, session.answers[`scenario:${comparison.id}`]))}</p></div></div><p><strong>${pair.changed === null ? 'There is not enough information to compare two actions.' : pair.changed ? 'You chose a different action in the second version.' : 'You chose the same action in both versions.'}</strong> This describes these answers. The fixed order and repeated dilemma mean we cannot establish why a choice changed, or infer a general trait.</p></section>
   <details class="raw-response-record" id="raw-decisions"><summary>Review the full decision and value-statement record</summary><section class="evidence-section"><span class="eyebrow">The detail behind the summary</span><h2 style="margin-top:10px">Your recorded decisions.</h2>${instrument.scenarios.map(scene => { const answer = session.answers[`scenario:${scene.id}`]; const reason = scene.reasons.find(r => r.id === answer?.reasonId); return `<details><summary>${e(scene.title)}${scene.comparisonOf ? ' — comparison' : scene.scoring === 'descriptive' ? ' — exploratory' : ''}</summary><div class="evidence-body"><p>${e(scene.roleLabel)} · ${e(scene.setting)}</p><p><strong>Your response in this role:</strong> ${e(answerText(scene, answer))}</p><p><strong>Your personal preference:</strong> ${e(personalPreferenceText(scene, answer))}</p><p><strong>Your selected reason:</strong> ${reason ? e(reason.label) : 'No reason selected'}</p><p><strong>Responsibility:</strong> ${e(scene.authority)}</p>${scene.scoring === 'descriptive' ? '<p><strong>Interpretation:</strong> This exploratory exercise does not contribute to the civil marker. Choosing request-led access within the same legal safeguards does not establish support for public-order restrictions.</p>' : ''}</div></details>`; }).join('')}<details><summary>Review your ${instrument.statements.length} value statements</summary><div class="evidence-body">${instrument.statements.map(item => `<p><strong>${e(item.text)}</strong><br>${e(answerText(item, session.answers[`statement:${item.id}`], true))}</p>`).join('')}</div></details></section></details>
+  ${combined ? renderExpandedResults(catalog, {answers: combined.expanded.answers}) : ''}
   <section id="country-reveal" class="comparison-card"><span class="eyebrow orange">The setting revealed</span><h2>${e(world.name)}</h2><p><strong>${e(world.inspiration)}.</strong> Its real-world inspiration was withheld during the decisions to give you room to consider the stated institutions and constraints.</p><p>The setting combines selected institutional features with invented events, permissions, and geography. It is not a simulation of a country or a description of its people. These facts can suggest an inspiration; concealing its label does not establish a blinded experiment.</p><button class="text-button" data-action="worlds">Reveal all eight correspondences →</button></section>
-  <section class="comparison-card"><span class="eyebrow orange">Continue exploring · optional</span><h2>More questions, more contexts.</h2><p>Try 48 additional draft statements and 12 situations about political economy, institutions, ways of knowing, and international relations. Their separate results are descriptive and do not change this report or its scores.</p><a class="button secondary" href="expanded.html">Open the experimental extension →</a></section>
+  ${combined ? '' : '<section class="comparison-card"><span class="eyebrow orange">Continue your previous assessment</span><h2>Explore the complete question set.</h2><p>You can retain these answers and continue with the 60 additional questions. Your previous setting has already been revealed in this earlier result.</p><button class="button secondary" data-action="migrate-legacy">Continue to the complete assessment →</button></section>'}
   <div id="report-downloads" class="results-actions"><button class="button" data-action="report">Download readable report <span aria-hidden="true">↓</span></button><button class="button secondary" data-action="print-report">Print / save as PDF</button><button class="button secondary" data-action="export">Export response data (JSON) <span aria-hidden="true">↓</span></button><button class="button secondary" data-action="back">Review previous answer</button><button class="button secondary" data-action="restart">Start again</button><button class="text-button" data-action="erase">Erase my answers</button></div><p class="full-width-note">The readable report is a text file; the JSON export preserves structured response data. Printing lets you save a PDF where your browser supports it. All include personal answers and the revealed setting. Nothing is uploaded.</p>`;
 }
 
@@ -226,36 +310,47 @@ function renderAssessment(shouldFocus = true) {
   if (!session) { renderHome(); return; }
   screen = 'assessment';
   const step = steps[session.stepIndex];
-  document.title = step.type === 'results' ? 'Your debrief — Political Context' : 'Assessment — Political Context';
-  const body = ['statement', 'foundation'].includes(step.type) ? statementView(step) : step.type === 'briefing' ? briefingView(step) : step.type === 'scenario' ? scenarioView(step) : resultsView();
-  app.innerHTML = notice() + topProgress(step) + body;
+  const isExpanded = combined && step.type === 'results' && !canReveal();
+  document.title = step.type === 'results' && !isExpanded ? 'Your debrief — Political Context' : 'Assessment — Political Context';
+  const body = isExpanded ? renderCombinedExtension(catalog, combined) : ['statement', 'foundation'].includes(step.type) ? statementView(step) : step.type === 'briefing' ? briefingView(step) : step.type === 'scenario' ? scenarioView(step) : resultsView();
+  app.innerHTML = notice() + (isExpanded ? '' : topProgress(step)) + body + (isExpanded ? saveControl() : '');
   if (shouldFocus) focusContent();
 }
 
 function showDialog(kind) {
   if (kind === 'method') {
-    dialogContent.innerHTML = `<h2 id="dialog-title">An inquiry, in progress.</h2><p>Political Context explores the relationship between values expressed in general and choices made with specific responsibilities. This is an early instrument prototype, not a validated political test or an active recruitment study.</p><ul><li><strong>${instrument.statements.length} statements:</strong> six each about economic priorities, shared obligations, rights, and cultural change.</li><li><strong>${instrument.foundations.items.length} assumption statements:</strong> exploratory premises about social reality, values, knowledge, and institutions. Responses are shown individually and never contribute to the four profile markers.</li><li><strong>${instrument.worlds.length} fictional worlds:</strong> one is assigned randomly. Institutional facts are visible throughout; real-world inspirations are revealed in the final debrief. These are authored settings, not representations of national populations.</li><li><strong>${instrument.scenarios.filter(scene => !scene.comparisonOf).length} main situations:</strong> all five roles, in city and rural settings. One of these, public records, is descriptive only. A further situation revisits housing with a different repair deadline.</li></ul><p>Statement agreement runs from −2 to +2, with item direction recorded in the content bank. Scored actions use a provisional −2 to +2 rubric. The public-records exercise is excluded because its transparency and staff-capacity tradeoff does not establish a civil-liberties preference. Each domain’s mean is shown separately for statements and main decisions. Reasons and optional personal preferences do not score. The personal-preference prompt keeps the same packages and material constraints, and does not establish a hidden or more authentic ideology. The comparison is excluded from the main summary.</p><p>Two scenarios per domain cannot establish a stable ideological scale. Country and role descriptions bundle several conditions; statements may prime later choices. Fixed question and option order may also affect responses. Independent review, cognitive interviews, and validation studies remain ahead.</p>${session?.completed ? '<p><a href="docs/RESEARCH.md">Read the research specification</a> · <a href="docs/FOUNDATIONS.md">Read the assumptions framework</a> · <a href="js/content.js">Inspect the items and provisional rubric</a></p>' : '<p>Research documents and author-review materials reveal the country inspirations and research lenses. Links become available after your debrief.</p>'}<p class="version-note">Pilot ${e(instrument.version)}. Built on the MIT-licensed 8values fork. This edition includes all eight planned country inspirations and all five roles. The content is awaiting independent review.</p>`;
+    dialogContent.innerHTML = `<h2 id="dialog-title">An inquiry, in progress.</h2><p>Political Context explores the relationship between values expressed in general and choices made with specific responsibilities. This is an early instrument prototype, not a validated political test or an active recruitment study.</p><ul><li><strong>${instrument.statements.length} statements:</strong> six each about economic priorities, shared obligations, rights, and cultural change.</li><li><strong>${instrument.foundations.items.length} assumption statements:</strong> exploratory premises about social reality, values, knowledge, and institutions. Responses are shown individually and never contribute to the four profile markers.</li><li><strong>${instrument.worlds.length} fictional worlds:</strong> one is assigned randomly. Institutional facts are visible throughout; real-world inspirations are revealed in the final debrief. These are authored settings, not representations of national populations.</li><li><strong>${instrument.scenarios.filter(scene => !scene.comparisonOf).length} main situations:</strong> all five roles, in city and rural settings. One of these, public records, is descriptive only. A further situation revisits housing with a different repair deadline.</li><li><strong>48 additional statements and 12 additional situations:</strong> experimental questions on political economy, institutions, social assumptions, knowledge, methods and international relations. They produce separate descriptive readings and do not alter the original profile markers. Their country-specific institutional adaptations remain unreviewed.</li></ul><p>Statement agreement runs from −2 to +2, with item direction recorded in the content bank. Scored actions use a provisional −2 to +2 rubric. The public-records exercise is excluded because its transparency and staff-capacity tradeoff does not establish a civil-liberties preference. Each domain’s mean is shown separately for statements and main decisions. Reasons and optional personal preferences do not score. The personal-preference prompt keeps the same packages and material constraints, and does not establish a hidden or more authentic ideology. The comparison is excluded from the main summary.</p><p>Two scenarios per domain cannot establish a stable ideological scale. Country and role descriptions bundle several conditions; statements may prime later choices. Fixed question and option order may also affect responses. Independent review, cognitive interviews, and validation studies remain ahead.</p>${canReveal() ? '<p><a href="docs/RESEARCH.md">Read the research specification</a> · <a href="docs/FOUNDATIONS.md">Read the assumptions framework</a> · <a href="js/content.js">Inspect the items and provisional rubric</a></p>' : '<p>Research documents and author-review materials reveal the country inspirations and research lenses. Links become available after your debrief.</p>'}<p class="version-note">Pilot ${e(instrument.version)}. Built on the MIT-licensed 8values fork. This edition includes all eight planned country inspirations and all five roles. The content is awaiting independent review.</p>`;
   } else if (kind === 'worlds') {
-    dialogContent.innerHTML = `<h2 id="dialog-title">Eight fictional societies.</h2><p>Each briefing is an author draft describing institutions in the exercise, not the people of a real country. Real-world correspondences are revealed after the assessment. The settings have not yet undergone independent country-context review.</p><p>Browsing does not choose your assignment or change an existing assessment.</p><div class="world-review-list">${instrument.worlds.map(world => `<details><summary><span class="world-code" aria-hidden="true">${e(world.code)}</span><span>${e(world.name)}${session?.completed ? `<small>${e(world.inspiration)}</small>` : ''}</span></summary><div><p>${e(world.summary)}</p>${world.institutions.map(fact => `<p><strong>${e(fact.label)}:</strong> ${e(fact.text)}</p>`).join('')}</div></details>`).join('')}</div><p class="version-note">All ${instrument.roles.length} roles appear in every route. The same decision families are used across settings, with explicit institutional notes. This does not establish cross-country measurement equivalence.</p>`;
+    dialogContent.innerHTML = `<h2 id="dialog-title">Eight fictional societies.</h2><p>Each briefing is an author draft describing institutions in the exercise, not the people of a real country. Real-world correspondences are revealed after the assessment. The settings have not yet undergone independent country-context review.</p><p>Browsing does not choose your assignment or change an existing assessment.</p><div class="world-review-list">${instrument.worlds.map(world => `<details><summary><span class="world-code" aria-hidden="true">${e(world.code)}</span><span>${e(world.name)}${canReveal() ? `<small>${e(world.inspiration)}</small>` : ''}</span></summary><div><p>${e(world.summary)}</p>${world.institutions.map(fact => `<p><strong>${e(fact.label)}:</strong> ${e(fact.text)}</p>`).join('')}</div></details>`).join('')}</div><p class="version-note">All ${instrument.roles.length} roles appear in every route. Original decision families use authored institutional notes; the additional situations use generic fictional rules. Neither approach establishes cross-country measurement equivalence.</p>`;
   } else if (kind === 'review') {
-    if (!session?.completed) {
+    if (!canReveal()) {
       dialogContent.innerHTML = `<h2 id="dialog-title">Research materials after your debrief.</h2><p>The bilingual review workspace and author packet include the real-world country inspirations, item rationales, and political-tradition lenses. To keep these details out of your decisions, participant links become available after the assessment.</p><p>This does not enroll you in research. Independent content review and comprehension interviews are still pending.</p><div class="dialog-actions"><button class="button" data-action="close-dialog">Return to the assessment</button></div>`;
     } else dialogContent.innerHTML = `<h2 id="dialog-title">Make the assumptions visible.</h2><p>This edition is ready for content inspection and technical testing. Human comprehension interviews and independent rubric review are still pending.</p><ol><li>Can readers explain their role’s powers and limits?</li><li>Are the actions feasible and the tradeoffs equally clear?</li><li>Does the country briefing introduce assumptions the scenario does not state?</li><li>Does the housing pair preserve everything except the repair deadline?</li></ol><p><a href="review.html">Open the bilingual review workspace / Không gian rà soát song ngữ</a> · <a href="docs/PILOT-GUIDE.md">Open the cognitive interview guide</a> · <a href="docs/review-log-template.csv" download>Download an empty review log</a></p><div class="dialog-actions"><button class="button" data-action="packet">Download review packet <span aria-hidden="true">↓</span></button><button class="button secondary" data-action="close-dialog">Done</button></div><p class="version-note">The packet contains the complete authored instrument and provisional rubric. It contains no personal responses or saved session. Downloading it does not enroll anyone in a study.</p>`;
   } else if (kind === 'privacy') {
     dialogContent.innerHTML = `<h2 id="dialog-title">Your answers stay with you.</h2><p>This prototype processes your responses in your browser. It has no response-collection endpoint, advertising, tracking scripts, or remote fonts. As with any hosted site, the host may keep ordinary request logs; answers are not included in those requests.</p><p>Progress is saved for the current tab when browser storage is available. Choosing device storage also keeps a copy after you close the tab, until you erase it. Other open tabs may retain separate copies after erasure. Anyone using this browser profile may be able to access that copy.</p>${session ? saveControl() : '<p>Device storage is off by default. You can enable it during the assessment.</p>'}<p>An export contains your answers, assignment, instrument version, and provisional summary. Downloading does not submit it to a study.</p><div class="dialog-actions"><button class="button secondary" data-action="erase">Erase saved answers</button><button class="button" data-action="close-dialog">Got it</button></div><p class="version-note">Future research collection needs a separate study protocol and informed consent. This prototype does not collect research data.</p>`;
   } else if (kind === 'begin') {
-    dialogContent.innerHTML = `<h2 id="dialog-title">A little room to think.</h2><p>Begin with value statements and exploratory assumptions about political life. Then you’ll take five roles in one randomly assigned fictional society. Its real-world inspiration is revealed at the end. Read each role’s powers and constraints before choosing.</p><p>You can go back, skip an item, or choose “uncertain.” Your responses stay in your browser. This is a self-guided prototype, not enrollment in a research study.</p>${recoverySave ? '<p class="notice">Your previous save is incompatible with this edition. Download it before beginning; a new assessment replaces the stored save. <button class="text-button" data-action="recover-save">Download the previous save</button></p>' : ''}<label class="check-label"><input id="initial-save" type="checkbox"><span>Remember my progress on this device.<br><small>Leave unchecked to keep progress in this tab only.</small></span></label><div class="dialog-actions"><button class="button" data-action="start">Let’s begin <span aria-hidden="true">→</span></button><button class="button secondary" data-action="close-dialog">Not now</button></div>`;
+    dialogContent.innerHTML = `<h2 id="dialog-title">A little room to think.</h2><p>The complete assessment has 109 questions and includes values, assumptions, and decisions in one fictional society. Its duration has not yet been measured. The additional situations use generic fictional institutions, not reviewed country-specific rules. The country inspiration appears only in the final debrief.</p><p>You can go back, skip an item, or choose “uncertain.” Your responses stay in your browser. This is a self-guided prototype, not enrollment in a research study.</p>${combinedRecovery !== null ? '<p class="notice">A previous complete-assessment save needs recovery. Close this dialog and download or explicitly erase that save before starting.</p>' : ''}${!catalog ? '<p class="notice">The complete question set is unavailable. Reload after checking your connection.</p>' : ''}<label class="check-label"><input id="initial-save" type="checkbox"><span>Remember my progress on this device.<br><small>Leave unchecked to keep progress in this tab only.</small></span></label><div class="dialog-actions"><button class="button" data-action="start" ${combinedRecovery !== null || !catalog ? 'disabled' : ''}>Let’s begin <span aria-hidden="true">→</span></button><button class="button secondary" data-action="close-dialog">Not now</button></div>`;
+  } else if (kind === 'legacy-choice') {
+    dialogContent.innerHTML = `<h2 id="dialog-title">Continue your saved assessment.</h2><p>Your previous answers and fictional setting are still available. Continue with the original 49-question version, or copy your progress into the complete 109-question assessment. Your original saved record is not deleted.</p>${session?.completed ? '<p>Your previous results already revealed this setting’s inspiration; continuing cannot make you forget that information.</p>' : ''}${combinedRecovery !== null ? '<p class="notice">Recover or explicitly erase the incompatible complete-assessment save before creating another.</p>' : ''}<div class="dialog-actions"><button class="button" data-action="migrate-legacy" ${combinedRecovery !== null || !catalog ? 'disabled' : ''}>Continue with all 109 questions →</button><button class="button secondary" data-action="continue-legacy">Continue previous version</button><button class="button secondary" data-action="close-dialog">Not now</button></div>`;
+  } else if (kind === 'erase-combined-recovery') {
+    dialogContent.innerHTML = `<h2 id="dialog-title">Erase this protected save?</h2><p>Only the protected complete-assessment copy will be removed. An active assessment and other saved copies stay available. Download this copy first if you want to keep it.</p><div class="dialog-actions"><button class="button" data-action="confirm-erase-combined-recovery">Erase the incompatible save</button><button class="button secondary" data-action="close-dialog">Keep it</button></div>`;
+  } else if (kind === 'erase-legacy-recovery') {
+    dialogContent.innerHTML = `<h2 id="dialog-title">Erase this previous save?</h2><p>Only the protected previous-assessment copy will be removed. An active assessment and other saved copies stay available. Download this copy first if you want to keep it.</p><div class="dialog-actions"><button class="button" data-action="confirm-erase-legacy-recovery">Erase the previous save</button><button class="button secondary" data-action="close-dialog">Keep it</button></div>`;
   } else if (kind === 'erase' || kind === 'restart') {
-    dialogContent.innerHTML = `<h2 id="dialog-title">${kind === 'restart' ? 'Begin with a clean page?' : 'Erase your answers?'}</h2><p>This removes this assessment’s saved answers from the current tab and the saved device copy. Other open tabs may retain their own copies. ${kind === 'restart' ? 'A fresh assessment will receive a new random setting assignment.' : 'Files you already exported are not deleted.'}</p><div class="dialog-actions"><button class="button" data-action="${kind === 'restart' ? 'confirm-restart' : 'confirm-erase'}">${kind === 'restart' ? 'Erase and start again' : 'Erase my answers'}</button><button class="button secondary" data-action="close-dialog">Keep my progress</button></div>`;
+    dialogContent.innerHTML = `<h2 id="dialog-title">${kind === 'restart' ? 'Begin with a clean page?' : 'Erase your answers?'}</h2><p>This removes this assessment’s saved answers from the current tab and the saved device copy. ${combined ? 'Earlier separate assessment and follow-up saves remain untouched.' : 'Other assessment saves remain untouched.'} Other open tabs may retain their own copies. ${kind === 'restart' ? 'A fresh assessment will receive a new random setting assignment.' : 'Files you already exported are not deleted.'}</p><div class="dialog-actions"><button class="button" data-action="${kind === 'restart' ? 'confirm-restart' : 'confirm-erase'}">${kind === 'restart' ? 'Erase and start again' : 'Erase my answers'}</button><button class="button secondary" data-action="close-dialog">Keep my progress</button></div>`;
   }
   if (!dialog.open) dialog.showModal();
 }
 
 function startAssessment(remember = false) {
   try {
+    if (!catalog || !fingerprint || combinedRecovery !== null) throw new Error('The complete assessment is unavailable or an earlier save needs recovery.');
     storageWarning = '';
-    session = createSession(instrument);
-    session.saveOnDevice = remember;
+    const nextSession = createSession(instrument);
+    nextSession.saveOnDevice = remember;
+    const nextCombined = createCombined(nextSession, fingerprint);
+    session = nextSession;
+    combined = nextCombined;
     persist();
     dialog.close();
     renderAssessment();
@@ -280,7 +375,12 @@ function advance(skip = false) {
 }
 
 function exportResponses() {
-  if (!session?.completed) return;
+  if (!canReveal()) return;
+  if (combined) {
+    downloadJson(createCombinedExport(combined, instrument, catalog, fingerprint), 'political-context-complete-assessment.json');
+    announce('Your complete responses were exported to a file on your device.');
+    return;
+  }
   const payload = {
     format: 'political-context-response-export',
     exportVersion: 2,
@@ -304,8 +404,9 @@ function downloadJson(payload, filename) {
 }
 
 function exportReadableReport() {
-  if (!session?.completed) return;
-  const url = URL.createObjectURL(new Blob([createTextReport(instrument, session)], { type: 'text/plain;charset=utf-8' }));
+  if (!canReveal()) return;
+  const text = combined ? createExpandedTextReport(catalog, {answers: combined.expanded.answers}) + '\n\n' + createTextReport(instrument, session) : createTextReport(instrument, session);
+  const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
   const link = document.createElement('a');
   link.href = url;
   link.download = `political-context-reflection-${instrument.version}.txt`;
@@ -316,8 +417,8 @@ function exportReadableReport() {
 
 let printDetailState = null;
 function prepareReportPrint() {
-  if (!session?.completed || screen !== 'assessment' || printDetailState) return;
-  printDetailState = [...app.querySelectorAll('.report-theme, .theme-evidence, .decision-circumstances')].map(detail => [detail, detail.open]);
+  if (!canReveal() || screen !== 'assessment' || printDetailState) return;
+  printDetailState = [...app.querySelectorAll('.report-theme, .theme-evidence, .decision-circumstances, .expanded-result-theme, .expanded-result-theme details, .expanded-reading details')].map(detail => [detail, detail.open]);
   printDetailState.forEach(([detail]) => { detail.open = true; });
   document.body.classList.add('printing-debrief');
 }
@@ -330,13 +431,40 @@ window.addEventListener('beforeprint', prepareReportPrint);
 window.addEventListener('afterprint', restoreReportPrint);
 
 function exportRecoveredSave() {
-  if (!recoverySave) return;
+  if (recoverySave === null) return;
   downloadJson({format: 'political-context-save-recovery', note: 'Unvalidated previous browser save, preserved as text. Not migrated or used in the current assessment.', previousSave: recoverySave}, 'political-context-previous-save.json');
   announce('The previous save was downloaded. It has not been migrated into this assessment.');
 }
 
+/** Erase only the exact protected copy the user reviewed, not the active copy. */
+function eraseProtectedSave(kind) {
+  const isCombined = kind === 'combined';
+  const scope = isCombined ? combinedRecoveryStore : recoverySaveStore;
+  const expected = isCombined ? combinedRecovery : recoverySave;
+  const key = isCombined ? COMBINED_KEY : STORAGE_KEY;
+  if (!['sessionStorage', 'localStorage'].includes(scope) || expected === null) return;
+  try {
+    const store = window[scope];
+    if (store.getItem(key) !== expected) {
+      announce('The protected save changed in another tab. Reload and review it before erasing.');
+      return;
+    }
+    store.removeItem(key);
+    storageWarning = '';
+    if (isCombined) readCombined(); else readSaved();
+    if (!storageWarning && combinedRecovery !== null) storageWarning = 'Another complete-assessment copy remains available for recovery.';
+    if (!storageWarning && recoverySave !== null) storageWarning = 'Another previous-assessment copy remains available for recovery.';
+    if (dialog.open) dialog.close();
+    if (session && screen === 'assessment') { persist(); renderAssessment(false); }
+    else renderHome();
+    announce('The selected protected copy was erased. Other saved copies remain available.');
+  } catch {
+    announce('The protected save could not be erased. Check browser storage.');
+  }
+}
+
 function exportReviewPacket() {
-  if (!session?.completed) return;
+  if (!canReveal()) return;
   const main = instrument.scenarios.filter(scene => !scene.comparisonOf);
   const coverage = {
     worlds: instrument.worlds.map(world => world.id),
@@ -359,17 +487,48 @@ document.addEventListener('click', event => {
   if (!button || button.disabled) return;
   const action = button.dataset.action;
   event.preventDefault();
-  if (['method', 'privacy', 'begin', 'erase', 'restart', 'worlds', 'review'].includes(action)) { showDialog(action); return; }
+  if (['method', 'privacy', 'begin', 'erase', 'restart', 'worlds', 'review', 'erase-combined-recovery', 'erase-legacy-recovery'].includes(action)) { showDialog(action); return; }
   if (action === 'packet') { exportReviewPacket(); return; }
   if (action === 'recover-save') { exportRecoveredSave(); return; }
+  if (action === 'recover-combined') { if (combinedRecovery !== null) downloadJson({format:'political-context-save-recovery',previousSave:combinedRecovery}, 'political-context-complete-previous-save.json'); return; }
+  if (action === 'confirm-erase-combined-recovery') { eraseProtectedSave('combined'); return; }
+  if (action === 'confirm-erase-legacy-recovery') { eraseProtectedSave('legacy'); return; }
   if (action === 'close-dialog') { dialog.close(); return; }
   if (action === 'start') { startAssessment(document.querySelector('#initial-save').checked); return; }
-  if (action === 'resume') { renderAssessment(); return; }
+  if (action === 'resume') { if (session && !combined) showDialog('legacy-choice'); else renderAssessment(); return; }
+  if (action === 'continue-legacy') { if (dialog.open) dialog.close(); renderAssessment(); return; }
+  if (action === 'migrate-legacy') {
+    if (!session || combined || combinedRecovery !== null || !catalog || !fingerprint) return;
+    combined = createCombined(session, fingerprint); session = combined.legacy;
+    if (dialog.open) dialog.close();
+    persist(); renderAssessment(); return;
+  }
   if (action === 'home') { renderHome(); focusContent(); return; }
   if (action === 'confirm-erase') { clearSaved(); dialog.close(); renderHome(); focusContent(); return; }
-  if (action === 'confirm-restart') { clearSaved(); startAssessment(false); return; }
+  if (action === 'confirm-restart') {
+    if (combinedRecovery !== null || !catalog || !fingerprint) {
+      dialog.close();
+      storageWarning = 'A new complete assessment cannot start until the question set is available and any incompatible complete-assessment save is recovered or erased. Your current answers were kept.';
+      renderHome(); focusContent(); return;
+    }
+    clearSaved(); startAssessment(false); return;
+  }
   if (!session) return;
-  if (action === 'show-evidence' && session.completed && screen === 'assessment') {
+  if (action === 'combined-next' && combined && session.completed && combined.expanded.index < expandedItemIds.length) {
+    const answer = captureCombinedExtension(app, catalog, combined);
+    if (answer === null) { const error = document.querySelector('#combined-error'); error.hidden = false; error.textContent = 'Choose a response, uncertainty, or skip before continuing.'; error.focus?.(); return; }
+    combined = setExpandedAnswer(combined, expandedItemIds[combined.expanded.index], answer);
+    combined = setExpandedIndex(combined, combined.expanded.index + 1);
+    persist(); renderAssessment(); return;
+  }
+  if (action === 'combined-back' && combined && session.completed) {
+    const answer = captureCombinedExtension(app, catalog, combined);
+    if (answer !== null) combined = setExpandedAnswer(combined, expandedItemIds[combined.expanded.index], answer);
+    if (combined.expanded.index > 0) combined = setExpandedIndex(combined, combined.expanded.index - 1);
+    else { session.stepIndex = steps.length - 2; session.completed = false; }
+    persist(); renderAssessment(); return;
+  }
+  if (action === 'show-evidence' && canReveal() && screen === 'assessment') {
     const record = document.getElementById(`evidence-${button.dataset.evidenceTarget}`);
     if (!record || !app.contains(record)) return;
     for (let details = record.parentElement.closest('details'); details; details = details.parentElement?.closest('details')) details.open = true;
@@ -380,6 +539,10 @@ document.addEventListener('click', event => {
   }
   if (action === 'next') advance();
   if (action === 'skip') advance(true);
+  if (action === 'back' && combined && canReveal()) {
+    combined = setExpandedIndex(combined, expandedItemIds.length - 1);
+    persist(); renderAssessment(); return;
+  }
   if (action === 'back' && session.stepIndex > 0) {
     session.stepIndex -= 1;
     session.completed = false;
@@ -388,7 +551,7 @@ document.addEventListener('click', event => {
   }
   if (action === 'export') exportResponses();
   if (action === 'report') exportReadableReport();
-  if (action === 'print-report' && session.completed) {
+  if (action === 'print-report' && canReveal()) {
     prepareReportPrint();
     try { window.print(); } catch { restoreReportPrint(); announce('Printing is unavailable. You can download the readable report instead.'); }
   }
@@ -404,6 +567,13 @@ document.addEventListener('change', event => {
     return;
   }
   if (!session || screen !== 'assessment') return;
+  if (combined && session.completed && !canReveal() && (target.matches('[name="combined-response"]') || target.id === 'combined-reason' || target.id === 'combined-preference')) {
+    syncCombinedExtensionVisibility(app);
+    const answer = captureCombinedExtension(app, catalog, combined);
+    if (answer !== null) { combined = setExpandedAnswer(combined, expandedItemIds[combined.expanded.index], answer); persist(); }
+    const error = document.querySelector('#combined-error'); if (error) error.hidden = true;
+    return;
+  }
   const step = steps[session.stepIndex];
   if (target.matches('[data-response]')) {
     const kind = target.dataset.response;

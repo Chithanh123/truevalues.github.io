@@ -244,9 +244,9 @@ def add_research_records(db, data):
 
 def add_packages(db, data):
     common = 'No validated ideology labels, causal effects, population comparisons, or equivalent-form claims.'
-    insert(db, 'packages', id='PILOT-0.4.0', title='Current Political Context prototype', version='0.4.0',
+    insert(db, 'packages', id='PILOT-0.4.0', title='Original 49-item Political Context instrument', version='0.4.0',
            kind='current_quiz', status='implemented_unvalidated',
-           purpose='Record general values, separate foundations, role decisions and a descriptive housing comparison.',
+           purpose='Document the original 49-item section: general values, foundations, role decisions and a descriptive housing comparison. The main assessment also includes 60 additional unscored draft questions.',
            audience='Prototype readers; intended first comprehension pilot: bilingual English–Vietnamese adults.',
            target_statements=40, target_scenarios=9, order_status='fixed_current_route',
            language_note='English participant route; all Vietnamese text is author-review material, not an implemented Vietnamese route.',
@@ -354,7 +354,8 @@ def export(db, directory):
                   'unassigned_blueprint': 'Design budget; content not selected'}[row['status']]
         overview.append(f'| {row["id"]} | {row["assigned_items"]} / {row["planned_primary_tasks"]} | {status} |')
     overview += ['', 'REVIEW-A/B/C each allocate twelve statements and two scenarios; REVIEW-D/E/F/G/H each allocate eight statements and two scenarios; '
-                 'REVIEW-I/J each allocate four statements and one scenario. '
+                 'REVIEW-I/J each allocate four statements and one scenario. The original 49-item instrument is the first section of the 109-item assessment; '
+                 'the 60 questions from REVIEW-D–J are included as descriptive, unscored drafts. '
                  'Reasons, interviews, briefing and debrief add burden beyond these counts. '
                  'CR-S03 is held as a comprehension probe pending redesign. '
                  'The participant application remains English; all Vietnamese text is an author draft.', '']
