@@ -1,6 +1,6 @@
 {
   "name": "political-context",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "type": "module",
   "description": "A local, research-first political values and context prototype.",

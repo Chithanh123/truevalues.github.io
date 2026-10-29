@@ -1,0 +1,356 @@
+/* Bilingual research workspaces: visual treatment only. The original styles
+   retain control behavior, disclosures and print-specific visibility. */
+@media screen {
+  /* Shared page introduction and supporting guidance. */
+  .catalog-page .catalog-intro,
+  .review-page .review-intro,
+  .pilot-page .pilot-intro,
+  .expanded-page .expanded-intro {
+    padding-top: clamp(42px, 6vw, 76px);
+    padding-bottom: 32px;
+  }
+  .catalog-page .catalog-intro h1,
+  .review-page .review-intro h1,
+  .pilot-page .pilot-intro h1,
+  .expanded-page .expanded-intro h1 {
+    max-width: 880px;
+    margin-block: 18px 24px;
+    letter-spacing: -0.035em;
+    line-height: 1.04;
+  }
+  .catalog-page .catalog-intro-grid,
+  .review-page .review-intro-grid,
+  .pilot-page .pilot-language-pair {
+    gap: clamp(24px, 4vw, 48px);
+  }
+  .catalog-page .catalog-intro-grid p,
+  .review-page .review-intro-grid p,
+  .pilot-page .pilot-language-pair p,
+  .pilot-page .pilot-materials p,
+  .expanded-page .expanded-intro p {
+    max-width: 62ch;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .catalog-page .catalog-intro > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-block: 14px 0;
+  }
+  .review-page .review-vietnamese-title {
+    color: var(--muted);
+    font-size: clamp(20px, 2.3vw, 25px);
+  }
+  .catalog-page .catalog-note,
+  .review-page .review-draft-note,
+  .pilot-page .pilot-spoiler-note {
+    background: #eaf2ed;
+    border: 0;
+    border-left: 3px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 24px;
+  }
+  .catalog-page .catalog-note { margin-block: 22px; }
+  .review-page .review-draft-note + .review-draft-note { margin-top: 10px; }
+  .catalog-page .catalog-note p,
+  .review-page .review-draft-note p,
+  .pilot-page .pilot-spoiler-note p {
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .catalog-page .catalog-note p + p,
+  .pilot-page .pilot-spoiler-note p + p { margin-top: 10px; }
+
+  /* Filters remain native inputs for keyboard and assistive-technology use. */
+  .catalog-page .catalog-controls,
+  .review-page .review-controls {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: clamp(18px, 2.5vw, 28px);
+    gap: 18px;
+  }
+  .catalog-page .catalog-controls label,
+  .review-page .review-controls label,
+  .pilot-page .pilot-controls label,
+  .review-page #review-note-form label:not(.check-label) {
+    min-height: 0;
+    margin-bottom: 7px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.4;
+  }
+  .catalog-page .catalog-controls input,
+  .catalog-page .catalog-controls select,
+  .review-page .review-controls input,
+  .review-page .review-controls select,
+  .review-page #review-note-form input[type="text"],
+  .review-page #review-note-form select,
+  .review-page #review-note-form textarea,
+  .pilot-page .pilot-controls select {
+    width: 100%;
+    min-height: 48px;
+    min-width: 0;
+    padding: 11px 13px;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid #b9ccc4;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .review-page #review-note-form textarea { min-height: 96px; }
+  .review-page .review-controls select:disabled,
+  .review-page #review-note-form select:disabled {
+    background: #edf1ed;
+    color: #526965;
+  }
+  .catalog-page .catalog-toolbar,
+  .review-page .review-toolbar { margin: 0; padding: 18px 2px 20px; }
+  .catalog-page .catalog-toolbar p,
+  .review-page .review-toolbar p,
+  .pilot-page .pilot-status { color: var(--muted); font-size: 14px; }
+
+  /* Question bank: distinguish summary, original wording and research notes. */
+  .catalog-page .catalog-package-note {
+    background: #edf4ef;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 24px;
+  }
+  .catalog-page .catalog-package-note h2 { font-size: 20px; line-height: 1.3; }
+  .catalog-page .catalog-package-note p { font-size: 14px; }
+  .catalog-page .catalog-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--white);
+    margin-bottom: 14px;
+  }
+  .catalog-page .catalog-card-header {
+    background: transparent;
+    padding: 22px 24px 16px;
+  }
+  .catalog-page .catalog-card-header h2 {
+    color: var(--ink);
+    font-size: clamp(22px, 2vw, 26px);
+    line-height: 1.25;
+    margin-block: 10px;
+  }
+  .catalog-page .catalog-card-meta {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+    gap: 6px 14px;
+  }
+  .catalog-page .catalog-card-meta strong { color: var(--orange); }
+  .catalog-page .catalog-card-preview { font-size: 14px; line-height: 1.65; }
+  .catalog-page .catalog-detail {
+    border-top: 1px solid var(--line);
+    padding: 0 24px 12px;
+  }
+  .catalog-page .catalog-detail > summary,
+  .catalog-page .catalog-outcomes > summary,
+  .catalog-page .catalog-readings > summary {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.5;
+    padding-block: 14px;
+    cursor: pointer;
+  }
+  .catalog-page .catalog-languages { gap: 28px; margin-top: 12px; }
+  .catalog-page .catalog-text { color: var(--ink); font-size: 15px; line-height: 1.75; }
+  .catalog-page .catalog-text h3 { color: var(--muted); font-size: 12px; letter-spacing: .07em; }
+  .catalog-page .catalog-text table { font-size: 13px; }
+  .catalog-page .catalog-text th,
+  .catalog-page .catalog-text td { padding: 10px; }
+  .catalog-page .catalog-research { margin-top: 20px; padding-top: 18px; }
+  .catalog-page .catalog-research > p,
+  .catalog-page .catalog-outcome p,
+  .catalog-page .catalog-readings li { color: var(--muted); font-size: 14px; }
+  .catalog-page .catalog-outcomes,
+  .catalog-page .catalog-readings { padding: 0; }
+  .catalog-page .catalog-outcome { background: #edf4ef; border-radius: 8px; padding: 16px; }
+  .catalog-page .catalog-empty { background: var(--white); border-radius: 10px; font-size: 15px; }
+  .catalog-page .catalog-pagination { gap: 16px; }
+  .catalog-page .catalog-pagination span { color: var(--muted); font-size: 13px; }
+
+  /* Review notebook and paired text maintain their separate meaning and data. */
+  .review-page .review-workbench {
+    background: #edf4ef;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: clamp(20px, 3vw, 32px);
+  }
+  .review-page .review-workbench h2 { font-size: clamp(27px, 3vw, 34px); }
+  .review-page .review-workbench-heading p,
+  .review-page .review-notes-status,
+  .review-page .review-notebook-empty,
+  .review-page .review-entry-observation { color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .review-page .review-notebook-summary,
+  .review-page .review-notes-summary,
+  .review-page .review-target-coverage { color: var(--muted); font-size: 13px; }
+  .review-page .review-notebook-entry,
+  .review-page .review-card { border-color: var(--line); border-radius: 10px; background: var(--white); }
+  .review-page .review-card { margin-bottom: 18px; }
+  .review-page .review-card-header {
+    background: #edf4ef;
+    padding: 15px 24px;
+  }
+  .review-page .review-card-header code,
+  .review-page .review-card-header > span { font-size: 12px; }
+  .review-page .review-pair { gap: clamp(24px, 3vw, 40px); padding: 26px 24px; }
+  .review-page .review-language-label { color: var(--muted); font-size: 11px; font-weight: 650; letter-spacing: .08em; }
+  .review-page .review-column[lang="vi"] .review-language-label { color: var(--orange); }
+  .review-page .review-column h2 { font-size: clamp(23px, 2vw, 27px); line-height: 1.35; }
+  .review-page .review-column p,
+  .review-page .review-column .review-rubric,
+  .review-page .review-facts dd,
+  .review-page .review-options p,
+  .review-page .review-context p,
+  .review-page .review-reasons ul,
+  .review-page .review-evidence p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .review-page .review-options li { border-radius: 8px; padding: 16px; }
+  .review-page .review-authority { background: #edf4ef; border-left-color: #77a38d; border-radius: 0 8px 8px 0; }
+  .review-page .review-card-actions { background: #f5f8f5; padding: 14px 24px; }
+  .review-page .review-evidence summary,
+  .review-page .review-context summary,
+  .review-page .review-reasons summary,
+  .review-page .review-followup > summary { font-size: 14px; font-weight: 600; }
+  .review-page .review-closing p { color: var(--muted); font-size: 14px; }
+
+  /* Pilot examples remain visibly synthetic and facilitator-only notes remain
+     governed by the pre-existing print rules. */
+  .pilot-page .pilot-controls { align-items: end; gap: 14px; padding-top: 26px; }
+  .pilot-page .pilot-controls select { min-height: 50px; }
+  .pilot-page .pilot-spoiler-note { margin-top: 22px; }
+  .pilot-page .pilot-synthetic-banner {
+    color: var(--ink);
+    background: #e4efe8;
+    border: 1px solid #a8c2b3;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.65;
+    padding: 18px 20px;
+  }
+  .pilot-page .pilot-example-heading > p:not(.pilot-synthetic-banner),
+  .pilot-page .pilot-version { color: var(--muted); font-size: 13px; }
+  .pilot-page .pilot-facilitator-key {
+    background: #edf4ef;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 24px;
+  }
+  .pilot-page .pilot-facilitator-key > summary { font-size: 14px; font-weight: 650; }
+  .pilot-page .pilot-materials ul { font-size: 14px; }
+  .pilot-page .pilot-materials a { display: inline-block; min-height: 36px; }
+
+  /* Previous standalone follow-up is retained for existing saved answers. */
+  .expanded-page .expanded-storage {
+    background: #edf4ef;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 24px;
+  }
+  .expanded-page .expanded-check { min-height: 44px; }
+  .expanded-page .expanded-storage p { color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 720px) {
+    .catalog-page .catalog-intro,
+    .review-page .review-intro,
+    .pilot-page .pilot-intro,
+    .expanded-page .expanded-intro { padding-top: 34px; }
+    .catalog-page .catalog-intro h1,
+    .review-page .review-intro h1,
+    .pilot-page .pilot-intro h1,
+    .expanded-page .expanded-intro h1 { font-size: clamp(38px, 10vw, 48px); letter-spacing: -.035em; }
+    .catalog-page .catalog-intro-grid,
+    .review-page .review-intro-grid,
+    .pilot-page .pilot-language-pair { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .catalog-page .catalog-note,
+    .review-page .review-draft-note,
+    .pilot-page .pilot-spoiler-note { padding: 16px 18px; }
+    .review-page .review-draft-note { gap: 14px; }
+    .catalog-page .catalog-controls,
+    .review-page .review-controls { padding: 18px; gap: 15px 12px; }
+    .catalog-page .catalog-controls input,
+    .catalog-page .catalog-controls select,
+    .review-page .review-controls input,
+    .review-page .review-controls select,
+    .review-page #review-note-form input[type="text"],
+    .review-page #review-note-form select,
+    .review-page #review-note-form textarea,
+    .pilot-page .pilot-controls select { font-size: 16px; }
+    .catalog-page .catalog-card-header { padding: 18px 17px 14px; }
+    .catalog-page .catalog-detail { padding-inline: 17px; }
+    .catalog-page .catalog-languages { gap: 16px; }
+    .catalog-page .catalog-text[lang="vi"] { border-top: 1px solid var(--line); padding-top: 16px; }
+    .catalog-page .catalog-languages.single .catalog-text[lang="vi"] { border-top: 0; padding-top: 0; }
+    .review-page .review-card-header { padding: 14px 17px; }
+    .review-page .review-pair { padding: 20px 17px; gap: 18px; }
+    .review-page .review-card-actions { padding-inline: 17px; }
+    .pilot-page .pilot-controls { gap: 14px; }
+    .pilot-page .pilot-actions .button { min-height: 48px; font-size: 14px; }
+    .expanded-page .expanded-storage { padding: 17px 18px; }
+  }
+}
+
+/* The research workspaces use the same colorless glass rim as the rest of
+   the site. Repeated result cards use the inexpensive CSS-only treatment;
+   native form controls keep an opaque surface for clear input states. */
+@media screen {
+  .catalog-page .catalog-controls,
+  .review-page .review-controls,
+  .review-page .review-workbench,
+  .pilot-page .pilot-facilitator-key {
+    border: 1px solid var(--glass-border, rgba(30, 33, 45, .12));
+    background: linear-gradient(180deg, var(--glass-tint-top, rgba(255, 255, 255, .06)), var(--glass-tint-bottom, rgba(179, 179, 179, .06)));
+    box-shadow: var(--glass-shadow, 0 10px 30px rgba(30, 33, 45, .1)),
+      inset 0 1px 0 var(--glass-rim-top, rgba(255, 255, 255, .55)),
+      inset 0 0 0 1px var(--glass-rim-hairline, rgba(255, 255, 255, .12)),
+      inset 0 -1px 0 var(--glass-rim-bottom, rgba(255, 255, 255, .06));
+    -webkit-backdrop-filter: blur(3px) saturate(125%);
+    backdrop-filter: blur(3px) saturate(125%);
+  }
+
+  .catalog-page .catalog-card,
+  .review-page .review-card {
+    border: 1px solid var(--glass-border, rgba(30, 33, 45, .12));
+    background: linear-gradient(180deg, var(--glass-tint-top, rgba(255, 255, 255, .06)), var(--glass-tint-bottom, rgba(179, 179, 179, .06)));
+    box-shadow: inset 0 1px 0 var(--glass-rim-top, rgba(255, 255, 255, .55));
+    -webkit-backdrop-filter: blur(6px) saturate(125%);
+    backdrop-filter: blur(6px) saturate(125%);
+  }
+
+  .catalog-page .catalog-card-header,
+  .review-page .review-card-header,
+  .review-page .review-card-actions,
+  .review-page .review-notebook-entry {
+    background: transparent;
+  }
+  .catalog-page .catalog-detail,
+  .review-page .review-card-header,
+  .review-page .review-card-actions,
+  .review-page .review-notebook-entry {
+    border-color: transparent;
+  }
+}
+
+/* Opaque fallback keeps text and controls readable when transparency is
+   reduced; these rules intentionally do not apply to printed reports. */
+@media screen and (prefers-reduced-transparency: reduce) {
+  .catalog-page .catalog-controls,
+  .review-page .review-controls,
+  .review-page .review-workbench,
+  .pilot-page .pilot-facilitator-key,
+  .catalog-page .catalog-card,
+  .review-page .review-card {
+    background: var(--white);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}

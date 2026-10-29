@@ -22,6 +22,7 @@ SOURCE_FILES = [
     'js/engine.js', 'js/debrief-content.js', 'js/debrief.js',
     'js/interpretation-content.js', 'js/interpretation.js', 'js/debrief-view.js',
     'js/pilot-fixtures.js', 'js/pilot.js', 'results-pilot.html', 'style.css', 'pilot.css',
+    'design-system.css', 'design-assessment.css', 'design-workspaces.css',
     'research/results-pilot/build.py',
     *['docs/results-pilot/' + name for name in AUTHORED_DOCS],
 ]
