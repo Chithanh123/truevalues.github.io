@@ -21,6 +21,7 @@ export const SITE_FILES = Object.freeze([
   'question-bank.html', 'question-bank.css', 'js/question-bank.js', 'data/question-catalog.json',
   'expanded.html', 'expanded.css', 'js/expanded.js', 'js/expanded-results.js', 'js/expanded-fingerprint.js',
   'js/combined-session.js', 'js/combined-extension.js',
+  'design-system.css', 'design-assessment.css', 'design-workspaces.css', 'glass-refraction.js', 'THIRD-PARTY-NOTICES.txt',
   'docs/results-pilot/README.md', 'docs/results-pilot/PROTOCOL.md',
   'docs/results-pilot/SESSION-SCRIPT.md', 'docs/results-pilot/OBSERVATION-GUIDE.md',
   'docs/results-pilot/observation-log-template.csv', 'docs/results-pilot/EXAMPLES.md',

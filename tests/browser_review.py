@@ -328,6 +328,10 @@ with sync_playwright() as playwright:
     page.locator("#review-save-device").check()
     page.goto(BASE + "/", wait_until="networkidle")
     page.locator('[data-action="resume"]').click()
+    # The integrated assessment asks whether to keep the original 49-item
+    # route or migrate its answers into the complete 109-question route.
+    expect(page.locator("#info-dialog")).to_be_visible()
+    page.locator('[data-action="continue-legacy"]').click()
     response = download(page, '[data-action="export"]')
     assert response["format"] == "political-context-response-export"
     assert MARKER not in json.dumps(response)

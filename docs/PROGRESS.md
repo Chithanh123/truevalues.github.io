@@ -1,8 +1,14 @@
 # Political Context: progress ledger
 
-Review date: **29 October 2026**. Current development branch: `site/question-bank`; the fork’s `master` was verified at `484a613` on 29 October.
+Review date: **30 October 2026**. Current development branch: `site/question-bank`; the fork’s `master` was verified at `e82c548` on 29 October.
 
 This ledger distinguishes working software, drafted research materials, completed human work, and publication evidence. It does not assign a completion percentage: the research gates cannot be inferred from the amount of code or content.
+
+## Liquid Glass interface 0.5.1
+
+The interface refresh applies the [Liquid Glass skill](https://github.com/stormaref/LiquidGlassSkill) to the home page, assessment, results, and research workspaces. It uses a quiet ambient backdrop, translucent surfaces and a Chromium refraction enhancement, with a blur fallback and an opaque reduced-transparency option. The assessment contents, scoring, country-reveal timing and save formats are unchanged. Source attribution appears in `THIRD-PARTY-NOTICES.txt` and `glass-refraction.js`. This work is prepared on a feature branch; a live deployment is not implied.
+
+On 30 October, 113 Node tests, 18 catalog checks, three pilot-bundle tests and the content, translation and evidence validators passed. Packaged-site browser checks completed the 109-question route and exercised the question bank, review and pilot workspaces, and glass enhancement, including simulated non-Chromium and reduced-transparency fallbacks. The review test was updated to select the existing legacy-save continuation before checking response export. These checks do not establish research validity or a successful public deployment.
 
 ## Content preparation following reviewer tooling
 
@@ -22,6 +28,7 @@ All twelve catalog checks passed on 25 October, including original-content fidel
 - [Pull request #3](https://github.com/Chithanh123/truevalues.github.io/pull/3) merged the v0.3, v0.4 and `0.4.1` reviewer-tooling work into the user's fork. Fetching `master` on 25 October verified merge commit `5d173d1215f6b6aba47dbd27b66abbbec0656e42` and the ancestry of `d0252e7`. This establishes source integration; the live deployment was not checked in this access-repair task.
 - [Pull request #4](https://github.com/Chithanh123/truevalues.github.io/pull/4) merged the research catalog and `0.4.2` debrief into the user's fork. Fetching `master` on 26 October verified merge commit `de4743ae7e6853366f6ffaeb04ee3dffd6859f09`, containing `fdf5825`. The hosted deployment has not been verified here.
 - [Pull request #5](https://github.com/Chithanh123/truevalues.github.io/pull/5) merged the workflow maintenance, result interpretations, pilot workspace, content expansion, and `0.4.5` question-bank page into the user’s fork. Fetching `master` on 29 October verified merge commit `074a48564c32600270ef74f6da0f00a9e2c21e89`. The hosted deployment has not been verified here. [Pull request #6](https://github.com/Chithanh123/truevalues.github.io/pull/6) subsequently merged the `0.4.6` playable extension into the user’s fork; fetching `master` verified merge commit `484a6137a2df5341b5ccd2b9ffe55628dd15d28b`. The integrated route remains under development.
+- [Pull request #7](https://github.com/Chithanh123/truevalues.github.io/pull/7) merged the 109-question integrated route into the user's fork; the fetched `master` pointed to merge commit `e82c5483a5d695989793f7e94f5c6a1ede4c598e`. The hosted deployment remains unverified here.
 
 ## Milestone audit
 
