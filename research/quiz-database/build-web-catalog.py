@@ -23,6 +23,23 @@ def load():
             if not path.is_relative_to(ROOT) or not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != source['sha256']:
                 raise ValueError('Catalog source is missing or stale; rebuild the catalog: ' + source['path'])
             sources[source['path']] = source['sha256']
+        # The full catalog text deliberately embeds choices and follow-ups for
+        # reading. The playable route needs the original structured briefing,
+        # reason labels, and personal-preference question without duplicating
+        # those choices. Read only the already fingerprinted author sources.
+        scenes = {}
+        expansion_prefix = 'research/quiz-database/expansion/'
+        for path in sources:
+            if not path.startswith(expansion_prefix) or not path.endswith('.json') or path.endswith('/sources.json'):
+                continue
+            document = json.loads((ROOT / path).read_text(encoding='utf-8'))
+            for scene in document.get('scenarios', []):
+                if scene['id'] in scenes:
+                    raise ValueError('Duplicate authored scenario: ' + scene['id'])
+                scenes[scene['id']] = scene
+        expected_scenes = {f'CR-S{i:02}' for i in range(7, 19)}
+        if set(scenes) != expected_scenes:
+            raise ValueError('Expanded route requires exactly CR-S07 through CR-S18')
         integrity = db.execute('PRAGMA integrity_check').fetchone()[0]
         if integrity != 'ok' or db.execute('PRAGMA foreign_key_check').fetchone():
             raise ValueError('Catalog database failed integrity checks')
@@ -43,6 +60,24 @@ def load():
                 texts = {r['language']: {'label': r['label'], 'description': r['description'], 'tradeoff': r['tradeoff']}
                          for r in db.execute('SELECT language,label,description,tradeoff FROM option_texts WHERE item_id=? AND option_id=? ORDER BY language', (iid, oid))}
                 item['options'].append({'id': oid, 'texts': texts})
+            if iid in scenes:
+                scene = scenes[iid]
+                if item['kind'] != 'scenario' or item['bank'] != 'candidate':
+                    raise ValueError('Expanded scene is not a candidate scenario: ' + iid)
+                item['briefings'] = scene['briefing']
+                item['reasons'] = scene['reasons']
+                item['personalPreferencePrompt'] = scene['personal_preference_prompt']
+                for language in ('en', 'vi'):
+                    if (not isinstance(item['briefings'].get(language), str)
+                        or not item['briefings'][language].strip()
+                        or not isinstance(item['personalPreferencePrompt'].get(language), str)
+                        or not item['personalPreferencePrompt'][language].strip()
+                        or not isinstance(item['reasons'].get(language), list)
+                        or not item['reasons'][language]
+                        or any(not isinstance(reason, str) or not reason.strip() for reason in item['reasons'][language])):
+                        raise ValueError('Expanded scene has incomplete bilingual fields: ' + iid)
+                if len(item['reasons']['en']) != len(item['reasons']['vi']):
+                    raise ValueError('Expanded scene has unequal bilingual reason counts: ' + iid)
             item['outcomes'] = [dict(r) for r in db.execute('''SELECT o.id,o.title,o.claim_kind,o.intended_interpretation,
                          o.evidence_required,o.unsupported_inferences,o.status,io.relationship FROM outcomes o
                          JOIN item_outcomes io ON io.outcome_id=o.id WHERE io.item_id=? ORDER BY o.id''', (iid,))]
@@ -55,6 +90,8 @@ def load():
                           SELECT cr.reading_id FROM cluster_readings cr WHERE cr.cluster_id=?) ORDER BY r.id''', (iid,iid,item['cluster_id']))]
             items.append(item)
         ids = {item['id'] for item in items}
+        if not expected_scenes <= ids:
+            raise ValueError('Expanded scenario missing from the author catalog')
         packages = []
         for row in db.execute('''SELECT p.id,p.title,p.status,p.purpose,p.language_note,p.inference_limit,
                            s.planned_primary_tasks FROM package_summary s JOIN packages p ON s.id=p.id ORDER BY p.id''').fetchall():
